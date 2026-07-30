@@ -675,6 +675,7 @@
       background: var(--c-white);
       border-top: 1px solid rgba(108,93,211,0.12);
       padding: var(--section-padding-y-desktop) 0;
+      overflow: hidden;
     }
     .customer-driven-panel {
       background: linear-gradient(180deg, rgba(248,245,255,0.74), rgba(255,255,255,0.98));
@@ -839,9 +840,65 @@
       font-weight: 700;
       color: var(--c-grey);
     }
+    .customer-features-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      min-width: 0;
+    }
+    .customer-feature-item {
+      padding: 28px 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      min-width: 0;
+    }
+    .customer-feature-item.border-right {
+      border-right: 1px solid rgba(108,93,211,0.16);
+    }
+    .customer-feature-item.border-bottom {
+      border-bottom: 1px solid rgba(108,93,211,0.16);
+    }
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      background: rgba(0,137,123,0.12);
+      color: var(--c-green);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .feature-icon .lucide-icon {
+      width: 24px;
+      height: 24px;
+      margin: 0;
+    }
+    .feature-text h3 {
+      font-size: 19px;
+      font-weight: 800;
+      color: var(--c-dark);
+      margin-bottom: 6px;
+      line-height: 1.2;
+    }
+    .feature-text p {
+      font-size: 14px;
+      line-height: 1.5;
+      color: var(--c-grey);
+      margin: 0;
+    }
     @media (max-width: 1023px) {
       .customer-driven-panel {
         grid-template-columns: 1fr;
+      }
+      .customer-features-grid {
+        grid-template-columns: 1fr;
+      }
+      .customer-feature-item.border-right {
+        border-right: none;
+      }
+      .customer-feature-item:not(:last-child) {
+        border-bottom: 1px solid rgba(108,93,211,0.16);
       }
       .customer-driven-copy h2,
       .customer-driven-copy p {
@@ -3342,36 +3399,40 @@
   </div><section class="customer-driven-section library-section" id="about__section-customer-driven" data-section-id="04" data-section-name="Customer-Driven Solutions" data-section-type="feature-stats" data-section-use="Two-column feature section with image, supporting bullet points, and proof stats" aria-label="Customer-Driven Solutions" data-page-variant="about" data-source-id="section-customer-driven" data-content-key="about.section-customer-driven">
     <div class="container">
       <div class="customer-driven-panel">
-        <div class="customer-driven-media">
-          <div class="customer-driven-image">
-            <img loading="lazy" decoding="async" src="https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200" alt="Business professional reviewing finance options on a laptop">
-          </div>
+        <div class="customer-driven-copy">
+          <span class="section-eyebrow" style="color: var(--c-dark); background: transparent; padding: 0; font-weight: 700; border-bottom: 2px solid var(--c-purple); border-radius: 0; margin-bottom: 24px;">FEATURES</span>
+          <h2>Why People <span style="color: var(--c-purple);">Choose Us?</span></h2>
+          <p>Stonebridge was founded to make business finance easier to understand and access for UK SMEs. Our process is quick, straightforward, and built to remove confusion from funding decisions.</p>
+          <a href="/Stonebridge_Website/contact" class="btn btn-primary" style="margin-top: 32px; display: inline-flex;"><span>Explore Solutions</span></a>
         </div>
 
-        <div class="customer-driven-copy">
-          <span class="section-eyebrow">Our Story</span>
-          <h2>Business finance made simpler for UK business owners</h2>
-          <p>Stonebridge was founded to make business finance easier to understand and access for UK SMEs. Our process is quick, straightforward, and built to remove confusion from funding decisions.</p>
-
-          <ul class="customer-driven-features" aria-label="Customer-driven solution benefits">
-            <li><i data-lucide="circle-check-big" class="lucide-icon"></i><span>Award-winning finance brokerage support</span></li>
-            <li><i data-lucide="circle-check-big" class="lucide-icon"></i><span>Fast and simple application process</span></li>
-            <li><i data-lucide="circle-check-big" class="lucide-icon"></i><span>Tailored lender matching</span></li>
-            <li><i data-lucide="circle-check-big" class="lucide-icon"></i><span>Guidance from enquiry through to payout</span></li>
-          </ul>
-
-          <div class="customer-driven-stats" aria-label="Customer-driven proof points">
-            <div class="customer-driven-stat">
-              <strong>60+</strong>
-              <span>years of collective commercial finance experience</span>
+        <div class="customer-features-grid">
+          <div class="customer-feature-item border-right border-bottom">
+            <div class="feature-icon"><i data-lucide="award" class="lucide-icon"></i></div>
+            <div class="feature-text">
+              <h3>Award-winning support</h3>
+              <p>Expert guidance and support throughout your finance journey.</p>
             </div>
-            <div class="customer-driven-stat">
-              <strong>£20k-£25m</strong>
-              <span>funding range available across suitable products</span>
+          </div>
+          <div class="customer-feature-item border-bottom">
+            <div class="feature-icon"><i data-lucide="zap" class="lucide-icon"></i></div>
+            <div class="feature-text">
+              <h3>Fast applications</h3>
+              <p>Quick, straightforward, and built to remove confusion.</p>
             </div>
-            <div class="customer-driven-stat">
-              <strong>24 hrs</strong>
-              <span>fast decisions available in many cases</span>
+          </div>
+          <div class="customer-feature-item border-right">
+            <div class="feature-icon"><i data-lucide="crosshair" class="lucide-icon"></i></div>
+            <div class="feature-text">
+              <h3>Tailored matching</h3>
+              <p>Bespoke solutions matched to your exact business needs.</p>
+            </div>
+          </div>
+          <div class="customer-feature-item">
+            <div class="feature-icon"><i data-lucide="handshake" class="lucide-icon"></i></div>
+            <div class="feature-text">
+              <h3>End-to-end guidance</h3>
+              <p>From initial enquiry through to successful payout.</p>
             </div>
           </div>
         </div>
