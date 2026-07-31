@@ -2536,19 +2536,52 @@
   min-height: var(--io-card-height);
   height: var(--io-card-height);
 }
-.investment-opportunity-cards-four .io-card-image {
-  background: var(--c-purple);
-  border-color: var(--c-purple);
+/* Make top side rounded proportionally (circular curve, not stretched oval) */
+#section-investment-opportunity .io-card-image,
+#section-investment-opportunity-grid .io-card-image {
+  border-radius: 140px 140px var(--radius-lg) var(--radius-lg) !important;
 }
-.investment-opportunity-cards-four .io-card-image .io-card-copy {
-  background: var(--c-purple);
+#section-investment-opportunity .io-card-image img,
+#section-investment-opportunity-grid .io-card-image img {
+  border-radius: 130px 130px 0 0 !important;
 }
-.investment-opportunity-cards-four .io-card-image:nth-child(even) {
+
+/* Brand light color shades */
+.investment-opportunity-cards-four .io-card-image:nth-child(4n+1) {
+  background: #eee7f7;
+  border-color: #eee7f7;
+}
+.investment-opportunity-cards-four .io-card-image:nth-child(4n+1) .io-card-copy {
+  background: #f8f5ff;
+}
+.investment-opportunity-cards-four .io-card-image:nth-child(4n+2) {
   background: #e6f3f1;
-  border-color: #cde7e3;
+  border-color: #e6f3f1;
 }
-.investment-opportunity-cards-four .io-card-image:nth-child(even) .io-card-copy {
+.investment-opportunity-cards-four .io-card-image:nth-child(4n+2) .io-card-copy {
   background: #eff8f7;
+}
+.investment-opportunity-cards-four .io-card-image:nth-child(4n+3) {
+  background: #e8def3;
+  border-color: #e8def3;
+}
+.investment-opportunity-cards-four .io-card-image:nth-child(4n+3) .io-card-copy {
+  background: #f3eef9;
+}
+.investment-opportunity-cards-four .io-card-image:nth-child(4n+4) {
+  background: #e8def3 !important;
+  border-color: #e8def3 !important;
+}
+.investment-opportunity-cards-four .io-card-image:nth-child(4n+4) .io-card-copy {
+  background: #f3eef9 !important;
+}
+
+/* Update text colors to be readable on light background */
+.investment-opportunity-cards-four .io-card-image .io-card-copy-title {
+  color: var(--c-dark) !important;
+}
+.investment-opportunity-cards-four .io-card-image .io-card-copy-body {
+  color: var(--c-grey) !important;
 }
 .investment-opportunity-actions {
   margin-top: 28px;
@@ -2591,6 +2624,14 @@
   object-fit: cover;
   border-radius: 6px 6px 0 0;
   background: var(--c-purple-bg);
+}
+
+#section-investment-opportunity .io-card-image {
+  border-radius: 50% 50% var(--radius-lg) var(--radius-lg) !important;
+}
+
+#section-investment-opportunity .io-card-image img {
+  border-radius: 50% 50% 0 0 / calc(var(--io-card-height) / 2 - 10px) calc(var(--io-card-height) / 2 - 10px) 0 0 !important;
 }
 .io-card-copy {
   padding: 12px 14px;
