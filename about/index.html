@@ -160,6 +160,23 @@
     .btn-primary:hover { background-color: var(--c-purple-dark) !important; }
     .btn-secondary { background-color: var(--c-green) !important; color: var(--c-white) !important; border: 2px solid transparent !important; }
     .btn-secondary:hover { background-color: var(--c-green-light) !important; }
+
+    /* Features section CTA button - white on purple bg with roll-up effect */
+    .features-cta {
+      background: #ffffff !important;
+      color: var(--c-purple) !important;
+      border: 2px solid #ffffff !important;
+    }
+    .features-cta span {
+      color: var(--c-purple) !important;
+    }
+    .features-cta::after {
+      color: #ffffff !important;
+    }
+    .features-cta:hover {
+      background: var(--c-purple-dark) !important;
+      border-color: #ffffff !important;
+    }
     
     .hero {
       background-color: var(--c-purple-bg) !important;
@@ -678,9 +695,9 @@
       overflow: hidden;
     }
     .customer-driven-panel {
-      background: linear-gradient(180deg, rgba(248,245,255,0.74), rgba(255,255,255,0.98));
-      border: 1px solid rgba(108,93,211,0.14);
-      border-radius: 6px;
+      background: var(--c-purple);
+      border: 1px solid var(--c-purple);
+      border-radius: 6px 6px 120px 6px;
       padding: clamp(28px, 4vw, 56px);
       display: grid;
       grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
@@ -770,8 +787,8 @@
       gap: 8px;
       padding: 8px 12px;
       border-radius: 999px;
-      background: rgba(0,137,123,0.08);
-      color: var(--c-green);
+      background: rgba(255,255,255,0.12);
+      color: var(--c-white);
       font-size: 13px;
       font-weight: 800;
       letter-spacing: 0.03em;
@@ -780,16 +797,19 @@
     }
     .customer-driven-copy h2 {
       font-size: clamp(34px, 4vw, 54px);
-      line-height: 1.05;
+      line-height: 1.15;
       letter-spacing: -0.03em;
       margin-bottom: 16px;
-      color: var(--c-dark);
-      max-width: 14ch;
+      color: #ffffff !important;
+      max-width: none !important;
+    }
+    .customer-driven-copy h2 .heading-playfair-word {
+      color: #ffffff !important;
     }
     .customer-driven-copy p {
       font-size: 17px;
       line-height: 1.7;
-      color: var(--c-grey);
+      color: rgba(255,255,255,0.8);
       margin: 0;
       max-width: 62ch;
     }
@@ -805,7 +825,7 @@
       display: flex;
       align-items: flex-start;
       gap: 10px;
-      color: var(--c-dark);
+      color: rgba(255,255,255,0.9);
       font-size: 15px;
       font-weight: 750;
       line-height: 1.45;
@@ -815,7 +835,7 @@
       width: 18px;
       height: 18px;
       margin: 1px 0 0;
-      color: var(--c-green);
+      color: rgba(255,255,255,0.8);
     }
     .customer-driven-stats {
       display: grid;
@@ -823,14 +843,14 @@
       gap: 18px;
       margin-top: 30px;
       padding-top: 24px;
-      border-top: 1px solid rgba(108,93,211,0.12);
+      border-top: 1px solid rgba(255,255,255,0.18);
     }
     .customer-driven-stat strong {
       display: block;
       font-size: clamp(30px, 3vw, 42px);
       line-height: 1;
       font-weight: 900;
-      color: var(--c-dark);
+      color: var(--c-white);
       margin-bottom: 8px;
     }
     .customer-driven-stat span {
@@ -838,7 +858,7 @@
       font-size: 13px;
       line-height: 1.45;
       font-weight: 700;
-      color: var(--c-grey);
+      color: rgba(255,255,255,0.7);
     }
     .customer-features-grid {
       display: grid;
@@ -853,18 +873,18 @@
       min-width: 0;
     }
     .customer-feature-item.border-right {
-      border-right: 1px solid rgba(108,93,211,0.16);
+      border-right: 1px solid rgba(255,255,255,0.18);
     }
     .customer-feature-item.border-bottom {
-      border-bottom: 1px solid rgba(108,93,211,0.16);
+      border-bottom: 1px solid rgba(255,255,255,0.18);
     }
     .feature-icon {
       width: 48px;
       height: 48px;
       flex-shrink: 0;
       border-radius: 50%;
-      background: rgba(0,137,123,0.12);
-      color: var(--c-green);
+      background: rgba(255,255,255,0.15);
+      color: var(--c-white);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -877,14 +897,14 @@
     .feature-text h3 {
       font-size: 19px;
       font-weight: 800;
-      color: var(--c-dark);
+      color: var(--c-white);
       margin-bottom: 6px;
       line-height: 1.2;
     }
     .feature-text p {
       font-size: 14px;
       line-height: 1.5;
-      color: var(--c-grey);
+      color: rgba(255,255,255,0.75);
       margin: 0;
     }
     @media (max-width: 1023px) {
@@ -3400,10 +3420,10 @@
     <div class="container">
       <div class="customer-driven-panel">
         <div class="customer-driven-copy">
-          <span class="section-eyebrow" style="color: var(--c-dark); background: transparent; padding: 0; font-weight: 700; border-bottom: 2px solid var(--c-purple); border-radius: 0; margin-bottom: 24px;">FEATURES</span>
-          <h2>Why People <span style="color: var(--c-purple);">Choose Us?</span></h2>
+          <span class="section-eyebrow" style="color: var(--c-white); background: rgba(255,255,255,0.12); border-bottom: none; border-radius: 999px; padding: 8px 12px; font-weight: 800; margin-bottom: 24px;">FEATURES</span>
+          <h2 style="color: #ffffff !important; max-width: none;">Why People Choose Us?</h2>
           <p>Stonebridge was founded to make business finance easier to understand and access for UK SMEs. Our process is quick, straightforward, and built to remove confusion from funding decisions.</p>
-          <a href="/Stonebridge_Website/contact" class="btn btn-primary" style="margin-top: 32px; display: inline-flex;"><span>Explore Solutions</span></a>
+          <a href="/Stonebridge_Website/contact" class="btn features-cta" data-text="Explore Solutions" style="margin-top: 32px; display: inline-flex;"><span>Explore Solutions</span></a>
         </div>
 
         <div class="customer-features-grid">

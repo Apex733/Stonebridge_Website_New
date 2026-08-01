@@ -59,6 +59,10 @@ h2 {
   color: var(--c-purple) !important;
 }
 
+.customer-driven-copy h2 .heading-playfair-word {
+  color: #ffffff !important;
+}
+
 p.subtext {
   font-size: var(--body-lg-fs);
   line-height: var(--body-lg-lh);
@@ -1565,3 +1569,164 @@ p.subtext {
     font-size: 14.5px !important;
   }
 }
+
+    .sector-testimonials {
+      width: 100%;
+      min-width: 0;
+      margin-top: var(--space-lg);
+      overflow: hidden;
+    }
+    .sector-testimonial-row {
+      --testimonial-card-width: clamp(560px, 62vw, 760px);
+      --testimonial-gap: 24px;
+      display: flex;
+      gap: var(--testimonial-gap);
+      align-items: stretch;
+      width: max-content;
+      animation: sectorCardsLoop 54s linear infinite;
+      backface-visibility: hidden;
+      transform: translate3d(0,0,0);
+      will-change: transform;
+    }
+    .sector-flip-card {
+      width: var(--testimonial-card-width);
+      flex: 0 0 auto;
+    }
+    .sector-flip-inner {
+      width: 100%;
+      height: 100%;
+    }
+    .sector-card-face {
+      position: relative;
+      display: grid;
+      grid-template-columns: minmax(220px, 0.82fr) minmax(300px, 1.18fr);
+      gap: 18px;
+      align-items: stretch;
+      padding: 18px;
+      height: auto;
+      min-height: 330px;
+      border-radius: 10px 10px 100px 10px;
+      border: 1px solid var(--c-purple);
+      background: var(--c-purple);
+      box-shadow: none;
+    }
+    .sector-person-portrait {
+      min-height: 294px;
+      border-radius: 8px;
+      overflow: hidden;
+      background: linear-gradient(160deg, rgba(108,93,211,0.13), rgba(0,137,123,0.10));
+      position: relative;
+    }
+    .sector-person-portrait img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .sector-testimonial-copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      min-width: 0;
+      padding: 4px 6px 4px 0;
+      height: 100%;
+    }
+    .sector-stars {
+      font-size: 26px;
+      letter-spacing: 2px;
+      color: #f2b400;
+      margin-bottom: 12px;
+    }
+    .sector-testimonial-copy blockquote {
+      margin: 0 0 18px;
+      font-size: clamp(26px, 2.4vw, 38px);
+      line-height: 1.08;
+      color: var(--c-white);
+      font-weight: 500;
+      letter-spacing: -0.03em;
+    }
+    .sector-quote-person {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 12px;
+      color: var(--c-white);
+      margin-top: auto;
+      margin-bottom: 0;
+    }
+    .sector-quote-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--c-purple), var(--c-green));
+      color: var(--c-white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+    }
+    .sector-slider-hint {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+      color: var(--c-dark);
+      margin-top: 26px;
+    }
+    .sector-slider-hint span {
+      width: 120px;
+      height: 2px;
+      border-radius: 999px;
+      background: linear-gradient(90deg, var(--c-purple), var(--c-green));
+      opacity: 0.45;
+    }
+    .sector-testimonials > div[style] {
+      display: none !important;
+    }
+    .sector-expertise .container {
+      display: block !important;
+    }
+    .sector-copy {
+      max-width: 860px;
+      text-align: left;
+    }
+    @media (max-width: 1023px) {
+      .sector-testimonial-row { --testimonial-card-width: 620px; }
+      .sector-card-face {
+        grid-template-columns: minmax(200px, 0.8fr) minmax(280px, 1.2fr);
+      }
+    }
+    @media (max-width: 1280px) {
+      .sector-testimonial-row { --testimonial-card-width: 680px; }
+      .sector-card-face {
+        grid-template-columns: minmax(220px, 0.78fr) minmax(320px, 1.22fr);
+      }
+      .sector-testimonial-copy blockquote {
+        font-size: clamp(22px, 2vw, 30px);
+      }
+    }
+    @media (max-width: 620px) {
+      .sector-testimonials {
+        min-width: 0;
+        width: 100%;
+      }
+      .sector-testimonial-row { --testimonial-card-width: min(88vw, 420px); }
+      .sector-card-face {
+        grid-template-columns: 1fr;
+        height: auto;
+        min-height: 0;
+      }
+      .sector-person-portrait {
+        min-height: 180px;
+      }
+      .sector-testimonial-copy {
+        padding-right: 0;
+      }
+      .sector-testimonial-copy blockquote {
+        font-size: 24px;
+      }
+    }
+    @keyframes sectorCardsLoop {
+      0% { transform: translate3d(0,0,0); }
+      100% { transform: translate3d(calc(-1 * ((var(--testimonial-card-width) + var(--testimonial-gap)) * 4)),0,0); }
+    }
