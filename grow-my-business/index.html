@@ -159,23 +159,102 @@
     .btn-secondary { background-color: var(--c-green) !important; color: var(--c-white) !important; border: 2px solid transparent !important; }
     .btn-secondary:hover { background-color: var(--c-green-light) !important; }
     
-    .hero {
-      background-color: var(--c-purple-bg) !important;
-      display: flex !important;
-      align-items: stretch !important;
-      padding-top: 0 !important;
-      padding-bottom: 0 !important;
-      border-bottom: 0;
+    .hero.hero-fullbleed {
       position: relative;
-      z-index: 1;
       min-height: calc(100vh - 80px);
       min-height: calc(100svh - 80px);
+      display: flex !important;
+      align-items: center !important;
+      justify-content: flex-start !important;
+      padding: 80px 0 !important;
+      background-image: url('https://images.pexels.com/photos/3765114/pexels-photo-3765114.jpeg?auto=compress&cs=tinysrgb&w=1920') !important;
+      background-position: center right !important;
+      background-size: cover !important;
+      background-repeat: no-repeat !important;
+      overflow: hidden;
     }
-    .hero .container { width: 100%; position: relative; z-index: 10; display: flex; flex-direction: column; justify-content: center; margin: 0; padding: 0; }
-    .hero-content-wrapper { display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); align-items: stretch; gap: 0; width: 100%; flex-grow: 1; }
-    .hero-text-col { display: flex; flex-direction: column; justify-content: center; text-align: left; opacity: 1 !important; visibility: visible !important; color: var(--c-dark); background: var(--c-white); padding: 88px 24px 36px 24px; }
-    .hero h1 { color: var(--c-dark) !important; display: block !important; }
-    .hero p { color: rgba(26,26,46,0.78) !important; display: block !important; }
+    .hero-bg-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, rgba(16, 16, 26, 0.88) 0%, rgba(16, 16, 26, 0.65) 50%, rgba(16, 16, 26, 0.20) 100%);
+      z-index: 1;
+    }
+    .hero-fullbleed-content {
+      max-width: 650px;
+      position: relative;
+      z-index: 5;
+      text-align: left;
+    }
+    .hero-fullbleed-title {
+      font-size: clamp(38px, 4.8vw, 64px) !important;
+      line-height: 1.08 !important;
+      font-weight: 700 !important;
+      color: #ffffff !important;
+      margin-top: 16px;
+      margin-bottom: 20px;
+      letter-spacing: -0.02em;
+    }
+    .hero-fullbleed-subtext {
+      font-size: clamp(16px, 1.8vw, 20px) !important;
+      line-height: 1.5 !important;
+      color: rgba(255, 255, 255, 0.88) !important;
+      margin-bottom: 32px;
+      max-width: 580px;
+    }
+    .hero-fullbleed-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+      margin-bottom: 36px;
+    }
+    .btn-green-hero {
+      background-color: var(--c-green) !important;
+      color: #ffffff !important;
+      font-weight: 700 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.05em !important;
+      padding: 16px 32px !important;
+      border-radius: 6px !important;
+      border: none !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      box-shadow: 0 8px 20px rgba(0, 183, 147, 0.3) !important;
+      transition: transform 0.2s ease, background-color 0.2s ease !important;
+    }
+    .btn-green-hero:hover {
+      background-color: #00897b !important;
+      transform: translateY(-2px);
+    }
+    .btn-outline-hero {
+      background-color: transparent !important;
+      color: #ffffff !important;
+      font-weight: 700 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.05em !important;
+      padding: 16px 32px !important;
+      border-radius: 6px !important;
+      border: 1px solid rgba(255, 255, 255, 0.5) !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      backdrop-filter: blur(4px);
+      transition: border-color 0.2s ease, background-color 0.2s ease !important;
+    }
+    .btn-outline-hero:hover {
+      border-color: #ffffff !important;
+      background-color: rgba(255, 255, 255, 0.1) !important;
+    }
+    .hero-fullbleed-trust {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .hero-trust-label {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
     .hero-rating-pill {
       display: inline-flex;
       align-items: center;
@@ -184,9 +263,9 @@
       margin-bottom: 12px;
       padding: 10px 16px;
       border-radius: 12px;
-      background: var(--c-purple-bg);
-      border: 1px solid rgba(108,93,211,0.22);
-      color: var(--c-dark);
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: #ffffff;
       font-size: 14px;
       font-weight: 800;
       line-height: 1;
@@ -3330,53 +3409,32 @@
     <a href="/Stonebridge_Website/check-eligibility" class="btn btn-primary" data-text="Check Eligibility"><span>Check Eligibility</span></a>
     <a href="/Stonebridge_Website/apply" class="btn btn-secondary" data-text="Apply Now"><span>Apply Now</span></a>
   </div>
-</div> <main> <section class="hero library-section" id="grow__section-hero" data-section-id="01" data-section-name="Hero - Split Finance Intro" data-section-type="hero" data-section-use="Homepage opening section with headline, CTAs, partner trust signal, and finance proof cards" aria-label="Hero - Split Finance Intro" data-page-variant="grow" data-source-id="section-hero" data-content-key="grow.section-hero">
-    <div class="container">
-      <div class="hero-content-wrapper">
-        <div class="hero-text-col">
-          <div class="hero-rating-pill">
-            <span>4.8 stars rating</span>
-            <span class="hero-rating-stars" aria-label="5 stars">
-              <i data-lucide="star" class="lucide-icon"></i>
-              <i data-lucide="star" class="lucide-icon"></i>
-              <i data-lucide="star" class="lucide-icon"></i>
-              <i data-lucide="star" class="lucide-icon"></i>
-              <i data-lucide="star" class="lucide-icon"></i>
-            </span>
-          </div>
-          <h1><span class="hero-title-line"><span class="heading-playfair-word">Fast</span> <span class="heading-playfair-word">and</span> Flexible</span><span class="hero-title-line">Business Loans</span><span class="hero-title-line">for UK Companies</span></h1>
-          <p class="subtext">Secure working capital quickly when you need it most. From equipment and stock to cash flow support, Stonebridge provides fast, affordable business loans tailored to your needs.</p>
-          
-          <div class="hero-actions">
-            <a href="/Stonebridge_Website/check-eligibility" class="btn btn-primary" data-text="Check Your Eligibility"><span>Check Your Eligibility</span></a>
-            <a href="/Stonebridge_Website/apply" class="btn btn-secondary" data-text="Start Your Application"><span>Start Your Application</span></a>
-          </div>
-          <div class="hero-partner-label">Trusted by:</div>
-          <div class="hero-partner-logo">
-            <img src="/Stonebridge_Website/img/NACFB_Logo_with_strapline_Inverse_RGB.png" alt="NACFB logo">
-          </div>
-
+</div> <main>  <section class="hero library-section hero-fullbleed" id="grow__section-hero" data-section-id="01" data-section-name="Hero - Fullbleed Overlay Intro" data-section-type="hero" data-section-use="Full-bleed background hero with overlay text and CTAs" aria-label="Hero - Business Loans Intro" data-page-variant="grow" data-source-id="section-hero" data-content-key="grow.section-hero">
+    <div class="hero-bg-overlay"></div>
+    <div class="container" style="position: relative; z-index: 5; width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px;">
+      <div class="hero-fullbleed-content">
+        <div class="hero-rating-pill" style="background: rgba(255, 255, 255, 0.15); border: 1px solid rgba(255, 255, 255, 0.3); color: #ffffff;">
+          <span>4.8 stars rating</span>
+          <span class="hero-rating-stars" aria-label="5 stars">
+            <i data-lucide="star" class="lucide-icon"></i>
+            <i data-lucide="star" class="lucide-icon"></i>
+            <i data-lucide="star" class="lucide-icon"></i>
+            <i data-lucide="star" class="lucide-icon"></i>
+            <i data-lucide="star" class="lucide-icon"></i>
+          </span>
         </div>
+        <h1 class="hero-fullbleed-title">The Most Transparent & Flexible Business Loans</h1>
+        <p class="hero-fullbleed-subtext">Secure working capital quickly when you need it most. From equipment and stock to cash flow support, Stonebridge provides fast, affordable business loans tailored to your needs.</p>
         
-        <div class="hero-img-col">
-          <div class="hero-image-placeholder">
-            <div class="hero-image-slider-viewport" aria-label="Business finance hero image slider">
-              <div class="hero-image-slider-track"><div class="hero-image-slide"><img src="https://images.pexels.com/photos/7433867/pexels-photo-7433867.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;w=1600&amp;h=1000&amp;dpr=1" alt="Business partners reviewing plans in an office meeting" decoding="async" loading="eager" fetchpriority="high"></div><div class="hero-image-slide"><img src="https://images.pexels.com/photos/5918386/pexels-photo-5918386.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;w=1600&amp;h=1000&amp;dpr=1" alt="Business professional working with reports and laptop in an office" decoding="async" loading="lazy"></div><div class="hero-image-slide"><img src="https://images.pexels.com/photos/7652054/pexels-photo-7652054.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;w=1600&amp;h=1000&amp;dpr=1" alt="Team discussing strategy around laptops in a modern office" decoding="async" loading="lazy"></div><div class="hero-image-slide"><img src="https://images.pexels.com/photos/10375897/pexels-photo-10375897.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;w=1600&amp;h=1000&amp;dpr=1" alt="Business team collaborating in a conference room" decoding="async" loading="lazy"></div></div>
-            </div>
-            <div class="hero-benefits">
-              <div class="hero-benefit-card">
-                <strong data-roll-number="50+">50+</strong>
-                <span>Lenders searched for the right fit</span>
-              </div>
-              <div class="hero-benefit-card">
-                <strong data-roll-number="24h">24h</strong>
-                <span>Fast decisions to keep plans moving</span>
-              </div>
-              <div class="hero-benefit-card">
-                <strong data-roll-number="£25m">£25m</strong>
-                <span>Funding support for bigger goals</span>
-              </div>
-            </div>
+        <div class="hero-fullbleed-actions">
+          <a href="/Stonebridge_Website/check-eligibility" class="btn btn-green-hero" data-text="GET STARTED →"><span>GET STARTED <i data-lucide="arrow-right" class="lucide-icon" style="margin-left: 8px;"></i></span></a>
+          <a href="/Stonebridge_Website/apply" class="btn btn-outline-hero" data-text="LEARN MORE"><span>LEARN MORE</span></a>
+        </div>
+
+        <div class="hero-fullbleed-trust">
+          <span class="hero-trust-label">Trusted by:</span>
+          <div class="hero-partner-logo" style="background: rgba(255, 255, 255, 0.12); backdrop-filter: blur(8px); margin: 0;">
+            <img src="/Stonebridge_Website/img/NACFB_Logo_with_strapline_Inverse_RGB.png" alt="NACFB logo">
           </div>
         </div>
       </div>
