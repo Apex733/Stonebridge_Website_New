@@ -24,7 +24,7 @@
   --space-2xl: 128px;
   
   /* Layout Spacing Constants */
-  --section-padding-y-desktop: var(--space-xl);
+  --section-padding-y-desktop: 76px;
   --section-padding-y-mobile: var(--space-lg);
   --gap-cards-desktop: var(--space-md);
   --gap-cards-mobile: var(--space-sm);
