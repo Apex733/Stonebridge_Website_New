@@ -1122,9 +1122,9 @@
     .finance-process .step-card {
       opacity: 1;
       transform: none;
-      background: #f1effb !important;
-      border: 1px solid rgba(108,93,211,0.12) !important;
-      border-radius: 6px !important;
+      background: var(--c-purple) !important;
+      border: 1px solid var(--c-purple) !important;
+      border-radius: 6px 999px 999px 6px !important;
       padding: 34px 28px;
       text-align: left;
       min-height: 148px;
@@ -1136,29 +1136,30 @@
       position: relative;
     }
     .finance-process .step-card:nth-child(even) {
-      background: #e7f4f2 !important;
-      border-color: rgba(0,137,123,0.12) !important;
+      background: var(--c-green) !important;
+      border-color: var(--c-green) !important;
     }
     .finance-process .step-num {
       width: 42px;
       height: 42px;
       border-radius: 6px !important;
       margin: 0;
-      background: rgba(0,137,123,0.14);
-      color: var(--c-green);
+      background: rgba(255,255,255,0.2) !important;
+      color: var(--c-white) !important;
       font-size: 15px;
     }
     .finance-process .step-card:nth-child(even) .step-num {
-      background: rgba(0,137,123,0.14);
-      color: var(--c-green);
+      background: rgba(255,255,255,0.2) !important;
+      color: var(--c-white) !important;
     }
     .finance-process .step-card h3 {
       font-size: 19px;
       line-height: 1.2;
       margin: 0 0 8px;
+      color: var(--c-white) !important;
     }
     .finance-process .step-card p {
-      color: var(--c-grey);
+      color: var(--c-white) !important;
       font-size: 15px;
       line-height: 1.45;
       margin: 0;
