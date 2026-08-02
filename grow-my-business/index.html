@@ -181,15 +181,11 @@
       z-index: 1;
     }
     .hero-fullbleed-content {
-      max-width: 800px;
-      margin: 0 auto;
+      max-width: 650px;
       position: relative;
       z-index: 5;
-      text-align: center;
+      text-align: left;
       transform: translateY(15px);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
     }
     .hero-fullbleed-title {
       font-size: clamp(38px, 4.8vw, 64px) !important;
@@ -205,17 +201,14 @@
       line-height: 1.5 !important;
       color: rgba(255, 255, 255, 0.88) !important;
       margin-bottom: 32px;
-      max-width: 650px;
-      text-align: center;
+      max-width: 580px;
     }
     .hero-fullbleed-actions {
       display: flex;
       align-items: center;
-      justify-content: center;
       gap: 16px;
       flex-wrap: wrap;
       margin-bottom: 36px;
-      width: 100%;
     }
     .btn-green-hero {
       background-color: var(--c-green) !important;
@@ -254,10 +247,12 @@
       background-color: rgba(255, 255, 255, 0.15) !important;
     }
     .hero-fullbleed-trust {
-      position: relative;
+      position: absolute;
+      bottom: 36px;
+      right: 36px;
+      z-index: 10;
       display: flex;
       align-items: center;
-      justify-content: center;
       gap: 12px;
       background: rgba(16, 16, 26, 0.5);
       padding: 10px 18px;
@@ -266,7 +261,6 @@
       border: 1px solid rgba(255, 255, 255, 0.18);
       width: max-content;
       max-width: 90vw;
-      margin: 0 auto;
     }
     .hero-trust-label {
       color: rgba(255, 255, 255, 0.9);
@@ -277,8 +271,28 @@
     @media (max-width: 768px) {
       .hero.hero-fullbleed {
         background-position: center center !important;
+        padding-bottom: 120px !important;
+      }
+      .hero-fullbleed-content {
+        text-align: center !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+      }
+      .hero-fullbleed-title, .hero-fullbleed-subtext {
+        text-align: center !important;
+      }
+      .hero-fullbleed-trust {
+        position: absolute !important;
+        bottom: 32px !important;
+        right: auto !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+        margin: 0 !important;
       }
       .hero-fullbleed-actions {
+        width: 100%;
         flex-direction: column;
         align-items: stretch;
       }
@@ -2777,6 +2791,12 @@
   border-radius: 6px 6px 0 0;
   background: var(--c-purple-bg);
 }
+#section-investment-opportunity .io-card-image {
+  border-radius: 50% 50% var(--radius-lg) var(--radius-lg) !important;
+}
+#section-investment-opportunity .io-card-image img {
+  border-radius: 50% 50% 0 0 / calc(var(--io-card-height) / 2 - 10px) calc(var(--io-card-height) / 2 - 10px) 0 0 !important;
+}
 .io-card-copy {
   padding: 12px 14px;
   background: var(--c-purple);
@@ -3324,6 +3344,158 @@
         grid-template-columns: 1fr;
       }
     }
+
+    .grow-benefits-grid {
+      display: flex !important;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: stretch;
+    }
+
+    .grow-benefits-grid > div {
+      flex: 0 1 calc((100% - 72px) / 4);
+      max-width: calc((100% - 72px) / 4);
+      min-width: 0;
+    }
+
+    .grow-benefits-cta {
+      position: relative;
+      overflow: hidden;
+      margin-top: 4px;
+      padding: clamp(28px, 4vw, 42px);
+      min-height: 320px;
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 8px 120px 120px 8px;
+      background: linear-gradient(135deg, var(--c-purple) 0%, #45348f 100%);
+      color: var(--c-white);
+    }
+
+    .grow-benefits-cta::before,
+    .grow-benefits-cta::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+    }
+
+    .grow-benefits-cta::before {
+      left: auto;
+      width: 58%;
+      background: url('/Stonebridge_Website/img/why-simple-application.jpg') center right / cover no-repeat;
+      opacity: 0.58;
+      -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.24) 18%, #000 48%);
+      mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.24) 18%, #000 48%);
+    }
+
+    .grow-benefits-cta::after {
+      background:
+        linear-gradient(90deg, rgba(91,45,142,1) 0%, rgba(91,45,142,0.96) 36%, rgba(91,45,142,0.68) 62%, rgba(91,45,142,0.24) 100%),
+        linear-gradient(0deg, rgba(0,137,123,0.16), rgba(255,255,255,0.08));
+    }
+
+    .grow-benefits-cta-copy {
+      position: relative;
+      z-index: 2;
+      max-width: 620px;
+    }
+
+    .grow-benefits-cta-kicker {
+      display: inline-flex;
+      align-items: center;
+      min-height: 28px;
+      margin-bottom: 14px;
+      padding: 0 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.12);
+      color: rgba(255,255,255,0.78);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .grow-benefits-cta h3 {
+      margin: 0 0 10px;
+      color: var(--c-white);
+      font-size: clamp(28px, 3vw, 42px);
+      line-height: 1.08;
+      font-weight: 900;
+      letter-spacing: 0;
+    }
+
+    .grow-benefits-cta p {
+      max-width: 680px;
+      margin: 0;
+      color: rgba(255,255,255,0.82);
+      font-size: 17px;
+      line-height: 1.65;
+      font-weight: 650;
+    }
+
+    .grow-benefits-cta-actions {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      margin-top: 24px;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+
+    .grow-benefits-cta-primary {
+      background: var(--c-white) !important;
+      color: var(--c-purple) !important;
+    }
+
+    .grow-benefits-cta-primary span,
+    .grow-benefits-cta-primary::after {
+      color: var(--c-purple) !important;
+    }
+
+    .grow-benefits-cta-primary:hover {
+      background: var(--c-green) !important;
+      color: var(--c-white) !important;
+    }
+
+    .grow-benefits-cta-primary:hover span,
+    .grow-benefits-cta-primary:hover::after {
+      color: var(--c-white) !important;
+    }
+
+    @media (max-width: 1023px) {
+      .grow-benefits-grid > div {
+        flex-basis: calc((100% - 24px) / 2);
+        max-width: calc((100% - 24px) / 2);
+      }
+
+      .grow-benefits-cta-actions {
+        justify-content: flex-start;
+      }
+
+      .grow-benefits-cta::before {
+        width: 100%;
+        opacity: 0.24;
+      }
+
+      .grow-benefits-cta::after {
+        background: linear-gradient(90deg, rgba(91,45,142,0.98) 0%, rgba(91,45,142,0.9) 100%);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .grow-benefits-grid > div {
+        flex-basis: 100%;
+        max-width: 100%;
+      }
+
+      .grow-benefits-cta-actions .btn {
+        width: 100%;
+      }
+
+      .grow-benefits-cta {
+        border-radius: 8px 64px 64px 8px;
+      }
+    }
   </style></head> <body>  <header class="header" id="header">
   <div class="container header-inner">
     <a href="/Stonebridge_Website/" class="logo">
@@ -3625,13 +3797,12 @@
           <a href="/Stonebridge_Website/check-eligibility" class="btn btn-primary" data-text="Check Eligibility"><span>Check Eligibility</span></a>
           <a href="/Stonebridge_Website/apply" class="btn btn-secondary" data-text="Apply Now"><span>Apply Now</span></a>
         </div>
-
-        <div class="hero-fullbleed-trust">
-          <span class="hero-trust-label">Trusted by:</span>
-          <div class="hero-partner-logo" style="background: rgba(255, 255, 255, 0.12); backdrop-filter: blur(8px); margin: 0;">
-            <img src="/Stonebridge_Website/img/NACFB_Logo_with_strapline_Inverse_RGB.png" alt="NACFB logo">
-          </div>
-        </div>
+      </div>
+    </div>
+    <div class="hero-fullbleed-trust">
+      <span class="hero-trust-label">Trusted by:</span>
+      <div class="hero-partner-logo" style="background: rgba(255, 255, 255, 0.12); backdrop-filter: blur(8px); margin: 0;">
+        <img src="/Stonebridge_Website/img/NACFB_Logo_with_strapline_Inverse_RGB.png" alt="NACFB logo">
       </div>
     </div>
   </section><section class="customer-driven-section library-section" id="grow__section-customer-driven-features" data-section-id="04-features" data-section-name="Customer-Driven Solutions Features" data-section-type="feature-stats" aria-label="Features" data-page-variant="grow" data-source-id="section-customer-driven-features" data-content-key="grow.section-customer-driven-features">
@@ -3713,7 +3884,7 @@
       </div>
 
       <!-- Benefits Grid -->
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: var(--space-xl);">
+      <div class="grow-benefits-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: var(--space-xl);">
 
         <!-- Benefit 1 -->
         <div style="background: rgba(108,93,211,0.04); border: 1px solid rgba(108,93,211,0.14); border-radius: 16px 80px 16px 16px; padding: 32px 28px;">
@@ -3772,14 +3943,14 @@
       </div>
 
       <!-- CTA strip -->
-      <div style="background: linear-gradient(135deg, var(--c-purple) 0%, #5a4abf 100%); border-radius: 16px; padding: 36px 40px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;">
-        <div>
-          <p style="font-size: 13px; font-weight: 800; letter-spacing: 0.07em; text-transform: uppercase; color: rgba(255,255,255,0.65); margin: 0 0 6px;">Ready to get started?</p>
-          <p style="font-size: 22px; font-weight: 800; color: #fff; margin: 0; line-height: 1.2;">Apply for a Grow My Business loan today — no upfront fees, no credit check to start.</p>
-        </div>
-        <div style="display: flex; gap: 12px; flex-shrink: 0; flex-wrap: wrap;">
-          <a href="/Stonebridge_Website/check-eligibility" class="btn btn-primary" data-text="Check Eligibility" style="background: #fff !important; color: var(--c-purple) !important;"><span style="color: var(--c-purple) !important;">Check Eligibility</span></a>
-          <a href="/Stonebridge_Website/apply" class="btn btn-secondary" data-text="Apply Now"><span>Apply Now</span></a>
+      <div class="grow-benefits-cta">
+        <div class="grow-benefits-cta-copy">
+          <span class="grow-benefits-cta-kicker">Ready to move forward?</span>
+          <h3>Apply now for a Grow My Business loan</h3>
+          <p>Give your business the funding support it needs to recover, build momentum, and grow with confidence. Our finance experts will help you find a suitable solution from our lender panel.</p>
+          <div class="grow-benefits-cta-actions">
+            <a href="/Stonebridge_Website/apply" class="btn btn-primary grow-benefits-cta-primary" data-text="Apply Now"><span>Apply Now</span></a>
+          </div>
         </div>
       </div>
 
@@ -3856,6 +4027,65 @@
           </div>
         </div>
 
+      </div>
+    </div>
+  </section><section class="investment-opportunity-section library-section" id="section-investment-opportunity" data-section-id="12C" data-section-name="Investment Opportunity - Pathway" data-section-type="visual-proof-card" data-section-use="Three-card visual proof section for business growth messaging, trust cues, and performance snapshot" aria-label="Investment Opportunity - Pathway">
+    <div class="container">
+      <div class="investment-opportunity-wrap">
+        <h2>Explore Our Products and Services</h2>
+        <div class="investment-opportunity-cards" role="list" aria-label="Investment opportunity highlights">
+          <article class="io-card io-card-image" role="listitem">
+            <img loading="lazy" decoding="async" src="https://images.pexels.com/photos/34654336/pexels-photo-34654336.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900&amp;h=560&amp;fit=crop" srcset="https://images.pexels.com/photos/34654336/pexels-photo-34654336.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640&amp;h=398&amp;fit=crop 640w, https://images.pexels.com/photos/34654336/pexels-photo-34654336.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900&amp;h=560&amp;fit=crop 900w, https://images.pexels.com/photos/34654336/pexels-photo-34654336.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200&amp;h=747&amp;fit=crop 1200w" sizes="(max-width: 900px) 100vw, 33vw" width="900" height="560" alt="Business owners discussing long-term finance plans">
+            <div class="io-card-copy">
+              <p class="io-card-copy-title">Checkout our all solutions</p>
+              <p class="io-card-copy-body">Explore funding pathways designed around your goals, with clear options and practical support at every step.</p>
+            </div>
+            <a class="io-explore-pill" href="/Stonebridge_Website/services" aria-label="Explore finance services">Explore</a>
+          </article>
+          <div class="io-center-stack" role="listitem" aria-label="Pathway to financial prosperity">
+            <article class="io-card io-card-content" aria-label="Stonebridge brand highlight">
+              <div class="io-brand-loop" aria-hidden="true">
+                <div class="io-brand-track">
+                  <span>STONEBRIDGE</span>
+                  <span>STONEBRIDGE</span>
+                  <span>STONEBRIDGE</span>
+                  <span>STONEBRIDGE</span>
+                  <span>STONEBRIDGE</span>
+                  <span>STONEBRIDGE</span>
+                  <span>STONEBRIDGE</span>
+                  <span>STONEBRIDGE</span>
+                </div>
+              </div>
+            </article>
+            <article class="io-card io-card-info" aria-label="Investment performance snapshot">
+              <div class="io-info-top">
+                <div class="io-avatar-group" aria-hidden="true">
+                  <img class="io-avatar" loading="lazy" decoding="async" src="/Stonebridge_Website/img/freepik_prompt-usercentric-hero-i_2834767635.webp" alt="">
+                  <img class="io-avatar" loading="lazy" decoding="async" src="/Stonebridge_Website/img/freepik_a-white-american-female-f_2834912496.webp" alt="">
+                  <img class="io-avatar" loading="lazy" decoding="async" src="/Stonebridge_Website/img/freepik_prompt-usercentric-hero-i_2834767635.webp" alt="">
+                  <img class="io-avatar" loading="lazy" decoding="async" src="/Stonebridge_Website/img/freepik_a-white-american-female-f_2834912496.webp" alt="">
+                </div>
+                <p class="io-growth-metric"><span class="arrow" aria-hidden="true">▲</span>44K+</p>
+              </div>
+              <div class="io-info-label-row">
+                <p class="io-info-label">Products &amp; Services</p>
+                <p class="io-info-percent">100+</p>
+              </div>
+              <div class="io-progress" aria-hidden="true">
+                <span style="width:100%;"></span>
+              </div>
+              <p class="io-info-body">Browse our full range of products and services to find the right finance route for your business goals.</p>
+            </article>
+          </div>
+          <article class="io-card io-card-image" role="listitem">
+            <img loading="lazy" decoding="async" src="https://images.pexels.com/photos/12437059/pexels-photo-12437059.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900&amp;h=560&amp;fit=crop" srcset="https://images.pexels.com/photos/12437059/pexels-photo-12437059.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640&amp;h=398&amp;fit=crop 640w, https://images.pexels.com/photos/12437059/pexels-photo-12437059.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900&amp;h=560&amp;fit=crop 900w, https://images.pexels.com/photos/12437059/pexels-photo-12437059.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200&amp;h=747&amp;fit=crop 1200w" sizes="(max-width: 900px) 100vw, 33vw" width="900" height="560" alt="Business partners planning next-generation growth goals">
+            <div class="io-card-copy">
+              <p class="io-card-copy-title">Checkout our all products</p>
+              <p class="io-card-copy-body">Browse our product range to find flexible business finance options tailored to your sector, timing, and growth plans.</p>
+            </div>
+            <a class="io-explore-pill" href="/Stonebridge_Website/products" aria-label="Explore finance products">Explore</a>
+          </article>
+        </div>
       </div>
     </div>
   </section><section class="sector-expertise library-section" id="grow__section-sector-expertise" data-section-id="08" data-section-name="Sector Expertise - Testimonials" data-section-type="sector-testimonials" data-section-use="Sector-led credibility section with testimonial cards and expertise messaging" aria-label="Sector Expertise - Testimonials" style="padding: var(--section-padding-y-desktop) 0; background-color: var(--c-white);" data-page-variant="grow" data-source-id="section-sector-expertise" data-content-key="grow.section-sector-expertise">
