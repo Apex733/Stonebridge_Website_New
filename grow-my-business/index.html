@@ -181,11 +181,15 @@
       z-index: 1;
     }
     .hero-fullbleed-content {
-      max-width: 650px;
+      max-width: 800px;
+      margin: 0 auto;
       position: relative;
       z-index: 5;
-      text-align: left;
+      text-align: center;
       transform: translateY(15px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
     .hero-fullbleed-title {
       font-size: clamp(38px, 4.8vw, 64px) !important;
@@ -201,14 +205,17 @@
       line-height: 1.5 !important;
       color: rgba(255, 255, 255, 0.88) !important;
       margin-bottom: 32px;
-      max-width: 580px;
+      max-width: 650px;
+      text-align: center;
     }
     .hero-fullbleed-actions {
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 16px;
       flex-wrap: wrap;
       margin-bottom: 36px;
+      width: 100%;
     }
     .btn-green-hero {
       background-color: var(--c-green) !important;
@@ -247,12 +254,10 @@
       background-color: rgba(255, 255, 255, 0.15) !important;
     }
     .hero-fullbleed-trust {
-      position: absolute;
-      bottom: 36px;
-      right: 36px;
-      z-index: 10;
+      position: relative;
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 12px;
       background: rgba(16, 16, 26, 0.5);
       padding: 10px 18px;
@@ -261,6 +266,7 @@
       border: 1px solid rgba(255, 255, 255, 0.18);
       width: max-content;
       max-width: 90vw;
+      margin: 0 auto;
     }
     .hero-trust-label {
       color: rgba(255, 255, 255, 0.9);
@@ -269,12 +275,16 @@
       letter-spacing: 0.02em;
     }
     @media (max-width: 768px) {
-      .hero-fullbleed-trust {
-        position: relative;
-        bottom: auto;
-        right: auto;
-        margin-top: 24px;
-        align-self: flex-start;
+      .hero.hero-fullbleed {
+        background-position: center center !important;
+      }
+      .hero-fullbleed-actions {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .hero-fullbleed-actions .btn {
+        width: 100%;
+        justify-content: center;
       }
     }
     .hero-rating-pill {
@@ -1653,20 +1663,36 @@
         min-width: 0;
         width: 100%;
       }
-      .sector-testimonial-row { --testimonial-card-width: min(88vw, 420px); }
+      .sector-testimonial-row { --testimonial-card-width: min(88vw, 340px); }
       .sector-card-face {
         grid-template-columns: 1fr;
         height: auto;
         min-height: 0;
+        padding: 14px;
+        gap: 12px;
       }
       .sector-person-portrait {
-        min-height: 180px;
+        min-height: 120px;
+        max-height: 140px;
       }
       .sector-testimonial-copy {
         padding-right: 0;
+        padding-bottom: 4px;
+      }
+      .sector-stars {
+        font-size: 18px;
+        margin-bottom: 8px;
       }
       .sector-testimonial-copy blockquote {
-        font-size: 24px;
+        font-size: 16px;
+        line-height: 1.35;
+        margin-bottom: 12px;
+      }
+      .sector-quote-name {
+        font-size: 14px;
+      }
+      .sector-quote-role {
+        font-size: 12px;
       }
     }
     @keyframes sectorCardsLoop {
@@ -3599,12 +3625,13 @@
           <a href="/Stonebridge_Website/check-eligibility" class="btn btn-primary" data-text="Check Eligibility"><span>Check Eligibility</span></a>
           <a href="/Stonebridge_Website/apply" class="btn btn-secondary" data-text="Apply Now"><span>Apply Now</span></a>
         </div>
-      </div>
-    </div>
-    <div class="hero-fullbleed-trust">
-      <span class="hero-trust-label">Trusted by:</span>
-      <div class="hero-partner-logo" style="background: rgba(255, 255, 255, 0.12); backdrop-filter: blur(8px); margin: 0;">
-        <img src="/Stonebridge_Website/img/NACFB_Logo_with_strapline_Inverse_RGB.png" alt="NACFB logo">
+
+        <div class="hero-fullbleed-trust">
+          <span class="hero-trust-label">Trusted by:</span>
+          <div class="hero-partner-logo" style="background: rgba(255, 255, 255, 0.12); backdrop-filter: blur(8px); margin: 0;">
+            <img src="/Stonebridge_Website/img/NACFB_Logo_with_strapline_Inverse_RGB.png" alt="NACFB logo">
+          </div>
+        </div>
       </div>
     </div>
   </section><section class="customer-driven-section library-section" id="grow__section-customer-driven-features" data-section-id="04-features" data-section-name="Customer-Driven Solutions Features" data-section-type="feature-stats" aria-label="Features" data-page-variant="grow" data-source-id="section-customer-driven-features" data-content-key="grow.section-customer-driven-features">
@@ -3686,10 +3713,10 @@
       </div>
 
       <!-- Benefits Grid -->
-      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: var(--space-xl);">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: var(--space-xl);">
 
         <!-- Benefit 1 -->
-        <div style="background: rgba(108,93,211,0.04); border: 1px solid rgba(108,93,211,0.14); border-radius: 16px 24px 16px 16px; padding: 32px 28px;">
+        <div style="background: rgba(108,93,211,0.04); border: 1px solid rgba(108,93,211,0.14); border-radius: 16px 80px 16px 16px; padding: 32px 28px;">
           <div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(108,93,211,0.10); color: var(--c-purple); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
             <i data-lucide="plus-circle" class="lucide-icon" style="width: 26px; height: 26px;"></i>
           </div>
@@ -3698,7 +3725,7 @@
         </div>
 
         <!-- Benefit 2 -->
-        <div style="background: rgba(108,93,211,0.04); border: 1px solid rgba(108,93,211,0.14); border-radius: 16px 24px 16px 16px; padding: 32px 28px;">
+        <div style="background: rgba(108,93,211,0.04); border: 1px solid rgba(108,93,211,0.14); border-radius: 16px 80px 16px 16px; padding: 32px 28px;">
           <div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(108,93,211,0.10); color: var(--c-purple); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
             <i data-lucide="sliders-horizontal" class="lucide-icon" style="width: 26px; height: 26px;"></i>
           </div>
@@ -3707,7 +3734,7 @@
         </div>
 
         <!-- Benefit 3 -->
-        <div style="background: rgba(108,93,211,0.04); border: 1px solid rgba(108,93,211,0.14); border-radius: 16px 24px 16px 16px; padding: 32px 28px;">
+        <div style="background: rgba(108,93,211,0.04); border: 1px solid rgba(108,93,211,0.14); border-radius: 16px 80px 16px 16px; padding: 32px 28px;">
           <div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(108,93,211,0.10); color: var(--c-purple); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
             <i data-lucide="tag" class="lucide-icon" style="width: 26px; height: 26px;"></i>
           </div>
@@ -3716,7 +3743,7 @@
         </div>
 
         <!-- Benefit 4 -->
-        <div style="background: rgba(108,93,211,0.04); border: 1px solid rgba(108,93,211,0.14); border-radius: 16px 24px 16px 16px; padding: 32px 28px;">
+        <div style="background: rgba(108,93,211,0.04); border: 1px solid rgba(108,93,211,0.14); border-radius: 16px 80px 16px 16px; padding: 32px 28px;">
           <div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(108,93,211,0.10); color: var(--c-purple); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
             <i data-lucide="calendar-check" class="lucide-icon" style="width: 26px; height: 26px;"></i>
           </div>
@@ -3725,7 +3752,7 @@
         </div>
 
         <!-- Benefit 5 -->
-        <div style="background: rgba(108,93,211,0.04); border: 1px solid rgba(108,93,211,0.14); border-radius: 16px 24px 16px 16px; padding: 32px 28px;">
+        <div style="background: rgba(108,93,211,0.04); border: 1px solid rgba(108,93,211,0.14); border-radius: 16px 80px 16px 16px; padding: 32px 28px;">
           <div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(108,93,211,0.10); color: var(--c-purple); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
             <i data-lucide="layout-grid" class="lucide-icon" style="width: 26px; height: 26px;"></i>
           </div>
@@ -3734,7 +3761,7 @@
         </div>
 
         <!-- Benefit 6 -->
-        <div style="background: rgba(108,93,211,0.04); border: 1px solid rgba(108,93,211,0.14); border-radius: 16px 24px 16px 16px; padding: 32px 28px;">
+        <div style="background: rgba(108,93,211,0.04); border: 1px solid rgba(108,93,211,0.14); border-radius: 16px 80px 16px 16px; padding: 32px 28px;">
           <div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(108,93,211,0.10); color: var(--c-purple); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
             <i data-lucide="trending-up" class="lucide-icon" style="width: 26px; height: 26px;"></i>
           </div>
