@@ -161,6 +161,7 @@
     
     .hero.hero-fullbleed {
       position: relative;
+      margin-top: 72px !important;
       min-height: calc(100vh - 80px);
       min-height: calc(100svh - 80px);
       display: flex !important;
@@ -2580,30 +2581,33 @@
 .team-story-header {
   display: block;
   margin-bottom: var(--space-md);
+  text-align: center;
 }
 .team-story-header-left {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
+  text-align: center;
   gap: var(--space-sm);
+  margin: 0 auto;
 }
 .team-story-title {
-  margin: 0;
+  margin: 0 auto;
   font-size: var(--h1-fs);
   line-height: var(--h1-lh);
   letter-spacing: -0.02em;
   color: var(--c-dark);
-  text-align: left;
-  max-width: 620px;
+  text-align: center;
+  max-width: 720px;
 }
 .team-story-copy {
-  margin: 0;
+  margin: 0 auto;
   font-size: var(--h4-fs);
   line-height: var(--h4-lh);
   font-weight: 600;
   color: var(--c-grey);
-  text-align: left;
-  max-width: none;
+  text-align: center;
+  max-width: 720px;
   width: 100%;
 }
 .team-story-grid {
@@ -3136,6 +3140,164 @@
     main [id] {
       scroll-margin-top: 150px;
     }
+
+    /* Features section CTA button - white on purple bg with roll-up effect */
+    .features-cta {
+      background: #ffffff !important;
+      color: var(--c-purple) !important;
+      border: 2px solid #ffffff !important;
+    }
+    .features-cta span {
+      color: var(--c-purple) !important;
+    }
+    .features-cta::after {
+      color: #ffffff !important;
+    }
+    .features-cta:hover {
+      background: var(--c-purple-dark) !important;
+      border-color: #ffffff !important;
+    }
+
+    #grow__section-customer-driven-features::before {
+      display: none !important;
+    }
+    .customer-driven-copy .section-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.12);
+      color: var(--c-white);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .customer-driven-copy h2 {
+      font-size: clamp(34px, 4vw, 54px);
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      margin-bottom: 16px;
+      color: #ffffff !important;
+      max-width: none !important;
+    }
+    .customer-driven-copy h2 .heading-playfair-word {
+      color: #ffffff !important;
+    }
+    .customer-driven-copy p {
+      font-size: 17px;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.8);
+      margin: 0;
+      max-width: 62ch;
+    }
+
+    .customer-driven-panel {
+      background: var(--c-purple);
+      border: 1px solid var(--c-purple);
+      border-radius: 6px 6px 120px 6px;
+      padding: clamp(28px, 4vw, 56px);
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+      gap: clamp(28px, 4vw, 54px);
+      align-items: center;
+    }
+    .customer-driven-features {
+      list-style: none;
+      padding: 0;
+      margin: 24px 0 0;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px 18px;
+    }
+    .customer-driven-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      color: rgba(255,255,255,0.9);
+      font-size: 15px;
+      font-weight: 750;
+      line-height: 1.45;
+    }
+    .customer-driven-features .lucide-icon {
+      flex-shrink: 0;
+      width: 18px;
+      height: 18px;
+      margin: 1px 0 0;
+      color: rgba(255,255,255,0.8);
+    }
+    .customer-features-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+      min-width: 0;
+    }
+    .customer-feature-item {
+      padding: 28px 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      min-width: 0;
+    }
+    .customer-feature-item.border-right {
+      border-right: 1px solid rgba(255,255,255,0.18);
+    }
+    .customer-feature-item.border-bottom {
+      border-bottom: 1px solid rgba(255,255,255,0.18);
+    }
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      flex-shrink: 0;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.15);
+      color: var(--c-white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .feature-icon .lucide-icon {
+      width: 24px;
+      height: 24px;
+      margin: 0;
+    }
+    .feature-text h3 {
+      font-size: 19px;
+      font-weight: 800;
+      color: var(--c-white);
+      margin-bottom: 6px;
+      line-height: 1.2;
+    }
+    .feature-text p {
+      font-size: 14px;
+      line-height: 1.5;
+      color: rgba(255,255,255,0.75);
+      margin: 0;
+    }
+    @media (max-width: 1023px) {
+      .customer-driven-panel {
+        grid-template-columns: 1fr;
+      }
+      .customer-features-grid {
+        grid-template-columns: 1fr;
+      }
+      .customer-feature-item.border-right {
+        border-right: none;
+      }
+      .customer-feature-item:not(:last-child) {
+        border-bottom: 1px solid rgba(108,93,211,0.16);
+      }
+      .customer-driven-copy h2,
+      .customer-driven-copy p {
+        max-width: none;
+      }
+    }
+    @media (max-width: 767px) {
+      .customer-driven-features {
+        grid-template-columns: 1fr;
+      }
+    }
   </style></head> <body>  <header class="header" id="header">
   <div class="container header-inner">
     <a href="/Stonebridge_Website/" class="logo">
@@ -3430,8 +3592,8 @@
     <div class="hero-bg-overlay"></div>
     <div class="container" style="position: relative; z-index: 5; width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px;">
       <div class="hero-fullbleed-content">
-        <h1 class="hero-fullbleed-title">The Most Transparent & Flexible Business Loans</h1>
-        <p class="hero-fullbleed-subtext">Secure working capital quickly when you need it most. From equipment and stock to cash flow support, Stonebridge provides fast, affordable business loans tailored to your needs.</p>
+        <h1 class="hero-fullbleed-title">Fuel Your Business with a Grow My Business Loan</h1>
+        <p class="hero-fullbleed-subtext">Our Grow My Business solutions unlock vital funding for UK businesses, giving you the financial backing to expand and thrive in today's economy. Please note: this is a commercial finance facility, not a government grant.</p>
         
         <div class="hero-fullbleed-actions">
           <a href="/Stonebridge_Website/check-eligibility" class="btn btn-primary" data-text="Check Eligibility"><span>Check Eligibility</span></a>
@@ -3443,6 +3605,48 @@
       <span class="hero-trust-label">Trusted by:</span>
       <div class="hero-partner-logo" style="background: rgba(255, 255, 255, 0.12); backdrop-filter: blur(8px); margin: 0;">
         <img src="/Stonebridge_Website/img/NACFB_Logo_with_strapline_Inverse_RGB.png" alt="NACFB logo">
+      </div>
+    </div>
+  </section><section class="customer-driven-section library-section" id="grow__section-customer-driven-features" data-section-id="04-features" data-section-name="Customer-Driven Solutions Features" data-section-type="feature-stats" aria-label="Features" data-page-variant="grow" data-source-id="section-customer-driven-features" data-content-key="grow.section-customer-driven-features">
+    <div class="container">
+      <div class="customer-driven-panel">
+        <div class="customer-driven-copy">
+          <span class="section-eyebrow" style="color: var(--c-white); background: rgba(255,255,255,0.12); border-bottom: none; border-radius: 999px; padding: 8px 12px; font-weight: 800; margin-bottom: 24px;">FEATURES</span>
+          <h2 style="color: #ffffff !important; max-width: none;">What is a Grow My Business loan?</h2>
+          <p>The UK government is extending its support for SMEs with new Grow My Business initiatives, launching on 1st July 2024. Announced in the Spring 2024 Budget, the Grow My Business scheme is an extension of the Recovery Loan Scheme (RLS), ensuring continued financial support for businesses across the UK.</p>
+          <a href="/Stonebridge_Website/contact" class="btn features-cta" data-text="Explore Solutions" style="margin-top: 32px; display: inline-flex;"><span>Explore Solutions</span></a>
+        </div>
+
+        <div class="customer-features-grid">
+          <div class="customer-feature-item border-right border-bottom">
+            <div class="feature-icon"><i data-lucide="award" class="lucide-icon"></i></div>
+            <div class="feature-text">
+              <h3>Award-winning support</h3>
+              <p>Expert guidance and support throughout your finance journey.</p>
+            </div>
+          </div>
+          <div class="customer-feature-item border-bottom">
+            <div class="feature-icon"><i data-lucide="zap" class="lucide-icon"></i></div>
+            <div class="feature-text">
+              <h3>Fast applications</h3>
+              <p>Quick, straightforward, and built to remove confusion.</p>
+            </div>
+          </div>
+          <div class="customer-feature-item border-right">
+            <div class="feature-icon"><i data-lucide="crosshair" class="lucide-icon"></i></div>
+            <div class="feature-text">
+              <h3>Tailored matching</h3>
+              <p>Bespoke solutions matched to your exact business needs.</p>
+            </div>
+          </div>
+          <div class="customer-feature-item">
+            <div class="feature-icon"><i data-lucide="handshake" class="lucide-icon"></i></div>
+            <div class="feature-text">
+              <h3>End-to-end guidance</h3>
+              <p>From initial enquiry through to successful payout.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section><section class="team-story-section library-section" id="grow__section-team-story" data-section-id="12B" data-section-name="Team Story - Success" data-section-type="editorial-image-feature" data-section-use="Editorial product explanation section with feature cards and compact value props" aria-label="What Stonebridge does for your business" data-page-variant="grow" data-source-id="section-team-story" data-content-key="grow.section-team-story">
@@ -3471,6 +3675,87 @@
           <p class="meta">We only get paid when your finance completes. Our interests are aligned with yours.</p>
         </article>
       </div>
+    </div>
+  </section><section id="grow__section-benefits" style="padding: var(--section-padding-y-desktop) 0; background: var(--c-white); border-top: 1px solid rgba(108,93,211,0.10);">
+    <div class="container">
+      <!-- Section Header -->
+      <div style="text-align: center; max-width: 760px; margin: 0 auto var(--space-xl);">
+        <span class="section-eyebrow">Grow My Business</span>
+        <h2>Benefits of a Grow My Business Loan</h2>
+        <p style="font-size: 17px; color: var(--c-grey); line-height: 1.7; margin: 0;">Whether your goal is to expand, innovate, or stabilise your operations, our Grow My Business loans offer flexible terms and competitive rates tailored to your needs. Stonebridge can be the partner to guide your business on the path to future success.</p>
+      </div>
+
+      <!-- Benefits Grid -->
+      <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: var(--space-xl);">
+
+        <!-- Benefit 1 -->
+        <div style="background: rgba(108,93,211,0.04); border: 1px solid rgba(108,93,211,0.14); border-radius: 16px 24px 16px 16px; padding: 32px 28px;">
+          <div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(108,93,211,0.10); color: var(--c-purple); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+            <i data-lucide="plus-circle" class="lucide-icon" style="width: 26px; height: 26px;"></i>
+          </div>
+          <h3 style="font-size: 19px; font-weight: 800; color: var(--c-dark); margin-bottom: 10px; line-height: 1.25;">Additional Funding Source</h3>
+          <p style="font-size: 15px; color: var(--c-grey); line-height: 1.6; margin: 0;">An extra avenue of finance for businesses looking to grow or stabilise, making it easier to obtain the backing you need to move forward with confidence.</p>
+        </div>
+
+        <!-- Benefit 2 -->
+        <div style="background: rgba(108,93,211,0.04); border: 1px solid rgba(108,93,211,0.14); border-radius: 16px 24px 16px 16px; padding: 32px 28px;">
+          <div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(108,93,211,0.10); color: var(--c-purple); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+            <i data-lucide="sliders-horizontal" class="lucide-icon" style="width: 26px; height: 26px;"></i>
+          </div>
+          <h3 style="font-size: 19px; font-weight: 800; color: var(--c-dark); margin-bottom: 10px; line-height: 1.25;">Flexible Financing Options</h3>
+          <p style="font-size: 15px; color: var(--c-grey); line-height: 1.6; margin: 0;">Choose from a range of loan structures with varied interest rates and repayment terms. Borrow up to £2 million in Great Britain and £1 million in Northern Ireland.</p>
+        </div>
+
+        <!-- Benefit 3 -->
+        <div style="background: rgba(108,93,211,0.04); border: 1px solid rgba(108,93,211,0.14); border-radius: 16px 24px 16px 16px; padding: 32px 28px;">
+          <div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(108,93,211,0.10); color: var(--c-purple); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+            <i data-lucide="tag" class="lucide-icon" style="width: 26px; height: 26px;"></i>
+          </div>
+          <h3 style="font-size: 19px; font-weight: 800; color: var(--c-dark); margin-bottom: 10px; line-height: 1.25;">Reduced Costs</h3>
+          <p style="font-size: 15px; color: var(--c-grey); line-height: 1.6; margin: 0;">Backed by a 70% UK government guarantee to lenders, increasing your chances of securing favourable loan terms and lower overall borrowing costs.</p>
+        </div>
+
+        <!-- Benefit 4 -->
+        <div style="background: rgba(108,93,211,0.04); border: 1px solid rgba(108,93,211,0.14); border-radius: 16px 24px 16px 16px; padding: 32px 28px;">
+          <div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(108,93,211,0.10); color: var(--c-purple); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+            <i data-lucide="calendar-check" class="lucide-icon" style="width: 26px; height: 26px;"></i>
+          </div>
+          <h3 style="font-size: 19px; font-weight: 800; color: var(--c-dark); margin-bottom: 10px; line-height: 1.25;">Longer Repayment Terms</h3>
+          <p style="font-size: 15px; color: var(--c-grey); line-height: 1.6; margin: 0;">Repay over up to six years, giving your business the breathing room to manage repayments comfortably alongside day-to-day operations.</p>
+        </div>
+
+        <!-- Benefit 5 -->
+        <div style="background: rgba(108,93,211,0.04); border: 1px solid rgba(108,93,211,0.14); border-radius: 16px 24px 16px 16px; padding: 32px 28px;">
+          <div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(108,93,211,0.10); color: var(--c-purple); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+            <i data-lucide="layout-grid" class="lucide-icon" style="width: 26px; height: 26px;"></i>
+          </div>
+          <h3 style="font-size: 19px; font-weight: 800; color: var(--c-dark); margin-bottom: 10px; line-height: 1.25;">Versatile Use of Funds</h3>
+          <p style="font-size: 15px; color: var(--c-grey); line-height: 1.6; margin: 0;">Use the funds for a wide range of business purposes — from cash flow management and investment in growth to refinancing existing debt on better terms.</p>
+        </div>
+
+        <!-- Benefit 6 -->
+        <div style="background: rgba(108,93,211,0.04); border: 1px solid rgba(108,93,211,0.14); border-radius: 16px 24px 16px 16px; padding: 32px 28px;">
+          <div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(108,93,211,0.10); color: var(--c-purple); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
+            <i data-lucide="trending-up" class="lucide-icon" style="width: 26px; height: 26px;"></i>
+          </div>
+          <h3 style="font-size: 19px; font-weight: 800; color: var(--c-dark); margin-bottom: 10px; line-height: 1.25;">Improved Cash Flow</h3>
+          <p style="font-size: 15px; color: var(--c-grey); line-height: 1.6; margin: 0;">Prevent cash flow shortages and give your business the financial stability it needs to operate smoothly, meet commitments, and pursue growth without disruption.</p>
+        </div>
+
+      </div>
+
+      <!-- CTA strip -->
+      <div style="background: linear-gradient(135deg, var(--c-purple) 0%, #5a4abf 100%); border-radius: 16px; padding: 36px 40px; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap;">
+        <div>
+          <p style="font-size: 13px; font-weight: 800; letter-spacing: 0.07em; text-transform: uppercase; color: rgba(255,255,255,0.65); margin: 0 0 6px;">Ready to get started?</p>
+          <p style="font-size: 22px; font-weight: 800; color: #fff; margin: 0; line-height: 1.2;">Apply for a Grow My Business loan today — no upfront fees, no credit check to start.</p>
+        </div>
+        <div style="display: flex; gap: 12px; flex-shrink: 0; flex-wrap: wrap;">
+          <a href="/Stonebridge_Website/check-eligibility" class="btn btn-primary" data-text="Check Eligibility" style="background: #fff !important; color: var(--c-purple) !important;"><span style="color: var(--c-purple) !important;">Check Eligibility</span></a>
+          <a href="/Stonebridge_Website/apply" class="btn btn-secondary" data-text="Apply Now"><span>Apply Now</span></a>
+        </div>
+      </div>
+
     </div>
   </section><section class="customer-driven-section library-section" id="grow__section-customer-driven" data-section-id="04" data-section-name="Customer-Driven Solutions" data-section-type="feature-stats" data-section-use="Two-column feature section with image, supporting bullet points, and proof stats" aria-label="Customer-Driven Solutions" data-page-variant="grow" data-source-id="section-customer-driven" data-content-key="grow.section-customer-driven">
     <div class="container">
@@ -3513,13 +3798,19 @@
         <!-- Right: light teal feature panel -->
         <div class="cdp-right">
           <div>
-            <p class="cdp-right-label">Why Stonebridge</p>
-            <h3 class="cdp-right-title">Funding aligned to your goals</h3>
-            <ul class="cdp-features" aria-label="Customer-driven solution benefits">
-              <li><i data-lucide="circle-check-big" class="lucide-icon"></i><span>Funding aligned to your business goals</span></li>
-              <li><i data-lucide="circle-check-big" class="lucide-icon"></i><span>Secured and unsecured loan options</span></li>
-              <li><i data-lucide="circle-check-big" class="lucide-icon"></i><span>Tailored terms and repayment structures</span></li>
-              <li><i data-lucide="circle-check-big" class="lucide-icon"></i><span>Clear guidance from enquiry to payout</span></li>
+            <p class="cdp-right-label">Grow My Business</p>
+            <h3 class="cdp-right-title">What can the loan be used for?</h3>
+            <ul class="cdp-features" aria-label="Grow My Business loan uses">
+              <li><i data-lucide="circle-check-big" class="lucide-icon"></i><span>Managing cash flow</span></li>
+              <li><i data-lucide="circle-check-big" class="lucide-icon"></i><span>Covering overheads</span></li>
+              <li><i data-lucide="circle-check-big" class="lucide-icon"></i><span>Equipment &amp; machinery</span></li>
+              <li><i data-lucide="circle-check-big" class="lucide-icon"></i><span>Inventory &amp; materials</span></li>
+              <li><i data-lucide="circle-check-big" class="lucide-icon"></i><span>Technology upgrades</span></li>
+              <li><i data-lucide="circle-check-big" class="lucide-icon"></i><span>Marketing &amp; advertising</span></li>
+              <li><i data-lucide="circle-check-big" class="lucide-icon"></i><span>Refinancing existing debt</span></li>
+              <li><i data-lucide="circle-check-big" class="lucide-icon"></i><span>Commercial rent</span></li>
+              <li><i data-lucide="circle-check-big" class="lucide-icon"></i><span>Staff salaries</span></li>
+              <li><i data-lucide="circle-check-big" class="lucide-icon"></i><span>Unexpected costs</span></li>
             </ul>
           </div>
           <div class="cdp-stats" aria-label="Customer-driven proof points">

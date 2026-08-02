@@ -1758,5 +1758,8 @@ p.subtext {
   text-align: center !important;
   margin-left: auto !important;
   margin-right: auto !important;
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
   max-width: 720px !important;
+  width: 100% !important;
 }
