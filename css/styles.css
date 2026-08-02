@@ -271,6 +271,31 @@ p.subtext {
   color: var(--c-purple);
 }
 
+.dropdown-menu .menu-label,
+.accordion-content .menu-label {
+  display: block;
+  color: var(--c-grey);
+  font-weight: 500;
+  cursor: default;
+}
+
+.dropdown-menu .menu-label {
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: var(--radius-sm);
+}
+
+.accordion-content .menu-label {
+  padding: 12px 16px;
+  font-size: 15px;
+}
+
+a[data-disabled-product-link],
+.product-link-disabled {
+  pointer-events: none;
+  cursor: default;
+}
+
 /* Hero Section (S1) */
 .hero {
   position: relative;
