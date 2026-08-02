@@ -258,6 +258,8 @@
       border-radius: 12px;
       backdrop-filter: blur(12px);
       border: 1px solid rgba(255, 255, 255, 0.18);
+      width: max-content;
+      max-width: 90vw;
     }
     .hero-trust-label {
       color: rgba(255, 255, 255, 0.9);
@@ -461,7 +463,7 @@
       margin-top: 14px;
       display: inline-flex;
       align-items: center;
-      max-width: min(140px, 36%);
+      max-width: 140px;
       background: var(--c-dark);
       padding: 12px 14px;
       border-radius: 8px;
@@ -3540,10 +3542,10 @@
     </div>
   </section><section class="sector-expertise library-section" id="grow__section-sector-expertise" data-section-id="08" data-section-name="Sector Expertise - Testimonials" data-section-type="sector-testimonials" data-section-use="Sector-led credibility section with testimonial cards and expertise messaging" aria-label="Sector Expertise - Testimonials" style="padding: var(--section-padding-y-desktop) 0; background-color: var(--c-white);" data-page-variant="grow" data-source-id="section-sector-expertise" data-content-key="grow.section-sector-expertise">
     <div class="container" style="display: flex; flex-wrap: wrap; gap: var(--space-xl); align-items: center;">
-      <div class="sector-copy" style="text-align: center; max-width: 800px; margin: 0 auto; flex: 1 1 100%; display: flex; flex-direction: column; align-items: center;">
+      <div class="sector-copy" style="text-align: center; width: 100%; max-width: 100%; margin: 0 auto; flex: 1 1 100%; display: flex; flex-direction: column; align-items: center; background: rgba(108, 93, 211, 0.08); padding: 48px 36px; border-radius: 24px; border: 1px solid rgba(108, 93, 211, 0.18); box-shadow: 0 10px 30px rgba(108, 93, 211, 0.05);">
         <h2 style="font-size: clamp(36px, 5vw, 56px); line-height: 1.1; margin-bottom: var(--space-sm); color: var(--c-dark);">Financing businesses like yours</h2>
         <h3 style="color: var(--c-purple); font-size: 20px; font-weight: 700; margin-bottom: var(--space-md);">Sector Expertise</h3>
-        <p style="font-size: 18px; color: var(--c-grey); line-height: 1.6; margin-bottom: var(--space-lg);">
+        <p style="font-size: 18px; color: var(--c-grey); line-height: 1.6; margin-bottom: var(--space-lg); max-width: 800px;">
           We understand building a successful business takes dedication. Every business has a story, and our finance helps you write yours. Our business finance specialists have over 60 years of collective experience working in commercial finance. We support companies across a wide variety of industries and have access to 100+ UK lenders to approve finance in almost any sector.
         </p>
         <a href="/Stonebridge_Website/sectors" class="btn btn-outline" data-text="Find Your Sector" style="color:var(--c-purple); border-color:var(--c-purple);"><span>Find Your Sector <i data-lucide="arrow-right" style="margin-left:8px;" class="lucide-icon"></i></span></a>
@@ -4449,7 +4451,7 @@ document.addEventListener('DOMContentLoaded', function() {
           }
         };
 
-        document.querySelectorAll("main section h1, main section h2").forEach((heading) => {
+        document.querySelectorAll("main section h1:not(.hero-fullbleed-title), main section h2").forEach((heading) => {
           wrapFirstTwoWords(heading);
         });
       })();

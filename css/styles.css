@@ -1730,3 +1730,33 @@ p.subtext {
       0% { transform: translate3d(0,0,0); }
       100% { transform: translate3d(calc(-1 * ((var(--testimonial-card-width) + var(--testimonial-gap)) * 4)),0,0); }
     }
+
+.sector-expertise .sector-copy {
+  width: 100% !important;
+  max-width: 100% !important;
+  background: rgba(108, 93, 211, 0.08) !important;
+  padding: 48px 36px !important;
+  border-radius: 24px !important;
+  border: 1px solid rgba(108, 93, 211, 0.18) !important;
+  box-shadow: 0 10px 30px rgba(108, 93, 211, 0.05) !important;
+}
+
+.sector-expertise .sector-copy p {
+  max-width: 800px !important;
+}
+
+.team-story-header,
+.team-story-header-left {
+  text-align: center !important;
+  align-items: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.team-story-title,
+.team-story-copy {
+  text-align: center !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  max-width: 720px !important;
+}
