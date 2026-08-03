@@ -282,7 +282,7 @@
       overflow: hidden;
       border-radius: 8px 8px 8px 50%;
       background: var(--c-purple-bg);
-      box-shadow: 0 28px 70px rgba(26,26,46,0.14);
+      box-shadow: none;
     }
     .business-loans-hero-media img {
       width: 100%;
@@ -890,19 +890,19 @@
     }
     .customer-driven-panels {
       display: grid;
-      grid-template-columns: minmax(0, 0.55fr) minmax(0, 1fr);
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
       gap: 16px;
-      align-items: stretch;
-      min-height: 420px;
+      align-items: start;
     }
     /* Left panel - dark purple */
     .cdp-left {
       background: var(--c-purple);
       border-radius: 24px 120px 24px 120px;
-      padding: clamp(28px, 3.5vw, 48px);
+      padding: clamp(26px, 3vw, 40px);
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: flex-start;
+      gap: 20px;
       overflow: hidden;
       position: relative;
     }
@@ -915,12 +915,12 @@
       margin: 0 0 12px;
     }
     .cdp-left-title {
-      font-size: clamp(28px, 3.5vw, 42px);
+      font-size: clamp(28px, 3vw, 38px);
       font-weight: 900;
       line-height: 1.1;
       color: #fff;
       letter-spacing: -0.02em;
-      margin: 0 0 auto;
+      margin: 0;
     }
     .cdp-stat-row {
       display: flex;
@@ -1025,20 +1025,21 @@
     .cdp-stats {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 0;
+      gap: 18px;
       border-top: 1px solid rgba(0,137,123,0.18);
       padding-top: 24px;
     }
     .cdp-stat {
-      padding: 0 20px 0 0;
+      min-width: 0;
+      padding: 0;
     }
     .cdp-stat + .cdp-stat {
       border-left: 1px solid rgba(0,137,123,0.18);
-      padding-left: 20px;
+      padding-left: 18px;
     }
     .cdp-stat strong {
       display: block;
-      font-size: clamp(28px, 3vw, 40px);
+      font-size: clamp(24px, 2.4vw, 34px);
       font-weight: 900;
       line-height: 1;
       color: var(--c-dark);
@@ -1051,6 +1052,10 @@
       font-weight: 700;
       color: #4a7a74;
       line-height: 1.35;
+    }
+    .cdp-left > div:last-child {
+      margin-top: 8px !important;
+      gap: 12px !important;
     }
     @media (max-width: 1023px) {
       .customer-driven-panels {
@@ -2775,18 +2780,45 @@
   height: var(--io-card-height);
 }
 .investment-opportunity-cards-four .io-card-image {
-  background: var(--c-purple);
-  border-color: var(--c-purple);
+  background: #eee7f7;
+  border-color: #eee7f7;
 }
 .investment-opportunity-cards-four .io-card-image .io-card-copy {
-  background: var(--c-purple);
+  background: #f8f5ff;
 }
-.investment-opportunity-cards-four .io-card-image:nth-child(even) {
+.investment-opportunity-cards-four .io-card-image:nth-child(4n+1) {
+  background: #eee7f7;
+  border-color: #eee7f7;
+}
+.investment-opportunity-cards-four .io-card-image:nth-child(4n+1) .io-card-copy {
+  background: #f8f5ff;
+}
+.investment-opportunity-cards-four .io-card-image:nth-child(4n+2) {
   background: #e6f3f1;
   border-color: #cde7e3;
 }
-.investment-opportunity-cards-four .io-card-image:nth-child(even) .io-card-copy {
+.investment-opportunity-cards-four .io-card-image:nth-child(4n+2) .io-card-copy {
   background: #eff8f7;
+}
+.investment-opportunity-cards-four .io-card-image:nth-child(4n+3),
+.investment-opportunity-cards-four .io-card-image:nth-child(4n+4) {
+  background: #e8def3 !important;
+  border-color: #e8def3 !important;
+}
+.investment-opportunity-cards-four .io-card-image:nth-child(4n+3) .io-card-copy,
+.investment-opportunity-cards-four .io-card-image:nth-child(4n+4) .io-card-copy {
+  background: #f3eef9 !important;
+}
+.investment-opportunity-cards-four .io-card-image .io-card-copy-title {
+  color: var(--c-dark) !important;
+}
+.investment-opportunity-cards-four .io-card-image .io-card-copy-body {
+  color: var(--c-grey) !important;
+}
+.section-include-loading {
+  margin: 0;
+  text-align: center;
+  color: var(--c-grey);
 }
 .investment-opportunity-actions {
   margin-top: 28px;
@@ -2830,11 +2862,13 @@
   border-radius: 6px 6px 0 0;
   background: var(--c-purple-bg);
 }
-#business-loans__section-investment-opportunity .io-card-image {
-  border-radius: 50% 50% var(--radius-lg) var(--radius-lg) !important;
+#business-loans__section-investment-opportunity .io-card-image,
+#section-investment-opportunity-grid .io-card-image {
+  border-radius: 140px 140px var(--radius-lg) var(--radius-lg) !important;
 }
-#business-loans__section-investment-opportunity .io-card-image img {
-  border-radius: 50% 50% 0 0 / calc(var(--io-card-height) / 2 - 10px) calc(var(--io-card-height) / 2 - 10px) 0 0 !important;
+#business-loans__section-investment-opportunity .io-card-image img,
+#section-investment-opportunity-grid .io-card-image img {
+  border-radius: 130px 130px 0 0 !important;
 }
 .io-card-copy {
   padding: 12px 14px;
@@ -3395,6 +3429,33 @@
       flex: 0 1 calc((100% - 72px) / 4);
       max-width: calc((100% - 72px) / 4);
       min-width: 0;
+      border-radius: 100% 100% 16px 16px !important;
+      text-align: center !important;
+    }
+
+    .grow-benefits-grid > div:nth-child(odd) {
+      background: #f8f5ff !important;
+      border-color: #e8def3 !important;
+    }
+
+    .grow-benefits-grid > div:nth-child(even) {
+      background: #eff8f7 !important;
+      border-color: #cde7e3 !important;
+    }
+
+    .grow-benefits-grid > div:nth-child(odd) > div:first-child {
+      background: #e8def3 !important;
+      color: var(--c-purple) !important;
+    }
+
+    .grow-benefits-grid > div:nth-child(even) > div:first-child {
+      background: #dff0ed !important;
+      color: var(--c-green) !important;
+    }
+
+    .grow-benefits-grid > div > div:first-child {
+      margin-left: auto !important;
+      margin-right: auto !important;
     }
 
     .grow-benefits-cta {
@@ -3435,6 +3496,8 @@
       position: relative;
       z-index: 2;
       max-width: 620px;
+      margin: 0 auto;
+      text-align: center;
     }
 
     .grow-benefits-cta-copy::before {
@@ -3476,7 +3539,7 @@
 
     .grow-benefits-cta p {
       max-width: 680px;
-      margin: 0;
+      margin: 0 auto;
       color: rgba(255,255,255,0.82);
       font-size: 17px;
       line-height: 1.65;
@@ -3490,7 +3553,7 @@
       margin-top: 24px;
       gap: 12px;
       flex-wrap: wrap;
-      justify-content: flex-start;
+      justify-content: center;
     }
 
     .grow-benefits-cta-primary {
@@ -3520,7 +3583,7 @@
       }
 
       .grow-benefits-cta-actions {
-        justify-content: flex-start;
+        justify-content: center;
       }
 
       .grow-benefits-cta::before {
@@ -3679,7 +3742,24 @@
 <a href="/Stonebridge_Website/sectors/wholesale">Wholesale</a>
 </div>
 </li>
-<li><a class="nav-link" href="/Stonebridge_Website/partner-with-us">Partners</a></li>
+<li>
+<a class="nav-link" href="/Stonebridge_Website/partner-with-us">Partner with us <i class="lucide-icon" data-lucide="chevron-down"></i></a>
+<div class="dropdown-menu compact-menu">
+<a href="/Stonebridge_Website/partner-with-us">Partner Finance</a>
+<a href="/Stonebridge_Website/partner-with-us/partners-hub">Partners Hub</a>
+<a href="/Stonebridge_Website/partner-with-us/how-it-works">How it works</a>
+<a href="/Stonebridge_Website/partner-with-us/for-accountants">For Accountants</a>
+<a href="/Stonebridge_Website/partner-with-us/become-a-partner">Become Partner</a>
+</div>
+</li>
+<li>
+<a class="nav-link" href="/Stonebridge_Website/knowledge-hub/industry-insights">Knowledge Hub <i class="lucide-icon" data-lucide="chevron-down"></i></a>
+<div class="dropdown-menu compact-menu">
+<a href="/Stonebridge_Website/knowledge-hub/industry-insights">Industry Insights</a>
+<a href="/Stonebridge_Website/knowledge-hub/solution-guides">Solution Guides</a>
+<a href="/Stonebridge_Website/knowledge-hub/finance-calculator">Finance Calculator</a>
+</div>
+</li>
 <li>
 <a class="nav-link" href="/Stonebridge_Website/careers">Careers <i class="lucide-icon" data-lucide="chevron-down"></i></a>
 <div class="dropdown-menu compact-menu">
@@ -3828,7 +3908,20 @@
 </ul>
 </div>
 </div>
-<div class="accordion-item"><a class="accordion-header" href="/Stonebridge_Website/partner-with-us">Partners</a></div>
+<div class="accordion-item">
+<div class="accordion-header" onclick="toggleAccordion(this)">
+        Partner with us <i class="lucide-icon" data-lucide="chevron-down"></i>
+</div>
+<div class="accordion-content">
+<ul>
+<li><a href="/Stonebridge_Website/partner-with-us">Partner Finance</a></li>
+<li><a href="/Stonebridge_Website/partner-with-us/partners-hub">Partners Hub</a></li>
+<li><a href="/Stonebridge_Website/partner-with-us/how-it-works">How it works</a></li>
+<li><a href="/Stonebridge_Website/partner-with-us/for-accountants">For Accountants</a></li>
+<li><a href="/Stonebridge_Website/partner-with-us/become-a-partner">Become Partner</a></li>
+</ul>
+</div>
+</div>
 <div class="accordion-item">
 <div class="accordion-header" onclick="toggleAccordion(this)">
         Careers <i class="lucide-icon" data-lucide="chevron-down"></i>
@@ -3913,8 +4006,8 @@
 <!-- Section Header -->
 <div style="text-align: center; max-width: 760px; margin: 0 auto var(--space-xl);">
 <span class="section-eyebrow">Business Loans</span>
-<h2>Business loan funding built around your next move</h2>
-<p style="font-size: 17px; color: var(--c-grey); line-height: 1.7; margin: 0;">From working capital and cash flow support to expansion, equipment, stock, or refinancing, Stonebridge helps you compare secured and unsecured business loan options from a wide UK lender panel.</p>
+<h2>Flexible business loans for everyday cash flow and growth</h2>
+<p style="font-size: 17px; color: var(--c-grey); line-height: 1.7; margin: 0;">Whether you need short-term working capital, funding for a planned investment, or a structured loan to support expansion, Stonebridge helps you compare business loan options matched to your trading position and goals.</p>
 </div>
 <!-- Benefits Grid -->
 <div class="grow-benefits-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: var(--space-xl);">
@@ -3923,48 +4016,48 @@
 <div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(108,93,211,0.10); color: var(--c-purple); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
 <i class="lucide-icon" data-lucide="plus-circle" style="width: 26px; height: 26px;"></i>
 </div>
-<h3 style="font-size: 19px; font-weight: 800; color: var(--c-dark); margin-bottom: 10px; line-height: 1.25;">Working Capital Support</h3>
-<p style="font-size: 15px; color: var(--c-grey); line-height: 1.6; margin: 0;">Access funding to cover everyday costs, bridge short-term gaps, or keep operations moving while you wait for income, invoices, or seasonal sales to land.</p>
+<h3 style="font-size: 19px; font-weight: 800; color: var(--c-dark); margin-bottom: 10px; line-height: 1.25;">Working Capital Loans</h3>
+<p style="font-size: 15px; color: var(--c-grey); line-height: 1.6; margin: 0;">Keep day-to-day operations moving with funding for wages, suppliers, rent, bills, or short-term gaps while income or invoices are still due.</p>
 </div>
 <!-- Benefit 2 -->
 <div style="background: rgba(108,93,211,0.04); border: 1px solid rgba(108,93,211,0.14); border-radius: 16px 80px 16px 16px; padding: 32px 28px;">
 <div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(108,93,211,0.10); color: var(--c-purple); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
 <i class="lucide-icon" data-lucide="sliders-horizontal" style="width: 26px; height: 26px;"></i>
 </div>
-<h3 style="font-size: 19px; font-weight: 800; color: var(--c-dark); margin-bottom: 10px; line-height: 1.25;">Secured &amp; Unsecured Options</h3>
-<p style="font-size: 15px; color: var(--c-grey); line-height: 1.6; margin: 0;">Compare loan structures that fit your business profile, funding purpose, security position, and preferred repayment approach.</p>
+<h3 style="font-size: 19px; font-weight: 800; color: var(--c-dark); margin-bottom: 10px; line-height: 1.25;">Secured &amp; Unsecured Routes</h3>
+<p style="font-size: 15px; color: var(--c-grey); line-height: 1.6; margin: 0;">Explore suitable borrowing routes based on your loan amount, available security, business history, credit profile, and repayment preferences.</p>
 </div>
 <!-- Benefit 3 -->
 <div style="background: rgba(108,93,211,0.04); border: 1px solid rgba(108,93,211,0.14); border-radius: 16px 80px 16px 16px; padding: 32px 28px;">
 <div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(108,93,211,0.10); color: var(--c-purple); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
 <i class="lucide-icon" data-lucide="tag" style="width: 26px; height: 26px;"></i>
 </div>
-<h3 style="font-size: 19px; font-weight: 800; color: var(--c-dark); margin-bottom: 10px; line-height: 1.25;">Competitive Market Search</h3>
-<p style="font-size: 15px; color: var(--c-grey); line-height: 1.6; margin: 0;">We review lender options across our panel to help you find suitable terms, clear pricing, and a route that matches your affordability.</p>
+<h3 style="font-size: 19px; font-weight: 800; color: var(--c-dark); margin-bottom: 10px; line-height: 1.25;">Lender Panel Comparison</h3>
+<p style="font-size: 15px; color: var(--c-grey); line-height: 1.6; margin: 0;">We compare options across our lender panel to help identify a business loan with appropriate pricing, terms, and eligibility criteria.</p>
 </div>
 <!-- Benefit 4 -->
 <div style="background: rgba(108,93,211,0.04); border: 1px solid rgba(108,93,211,0.14); border-radius: 16px 80px 16px 16px; padding: 32px 28px;">
 <div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(108,93,211,0.10); color: var(--c-purple); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
 <i class="lucide-icon" data-lucide="calendar-check" style="width: 26px; height: 26px;"></i>
 </div>
-<h3 style="font-size: 19px; font-weight: 800; color: var(--c-dark); margin-bottom: 10px; line-height: 1.25;">Repayments That Fit</h3>
-<p style="font-size: 15px; color: var(--c-grey); line-height: 1.6; margin: 0;">Explore repayment terms designed around cash flow, trading cycles, and the reason you are borrowing, rather than forcing your business into a rigid structure.</p>
+<h3 style="font-size: 19px; font-weight: 800; color: var(--c-dark); margin-bottom: 10px; line-height: 1.25;">Repayments Around Cash Flow</h3>
+<p style="font-size: 15px; color: var(--c-grey); line-height: 1.6; margin: 0;">Choose from loan terms and repayment structures that can be shaped around trading cycles, affordability, and the purpose of the borrowing.</p>
 </div>
 <!-- Benefit 5 -->
 <div style="background: rgba(108,93,211,0.04); border: 1px solid rgba(108,93,211,0.14); border-radius: 16px 80px 16px 16px; padding: 32px 28px;">
 <div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(108,93,211,0.10); color: var(--c-purple); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
 <i class="lucide-icon" data-lucide="layout-grid" style="width: 26px; height: 26px;"></i>
 </div>
-<h3 style="font-size: 19px; font-weight: 800; color: var(--c-dark); margin-bottom: 10px; line-height: 1.25;">Funding for Many Purposes</h3>
-<p style="font-size: 15px; color: var(--c-grey); line-height: 1.6; margin: 0;">Use business loan funding for growth, stock, equipment, refurbishment, marketing, tax bills, recruitment, or refinancing existing borrowing.</p>
+<h3 style="font-size: 19px; font-weight: 800; color: var(--c-dark); margin-bottom: 10px; line-height: 1.25;">Funding for Key Priorities</h3>
+<p style="font-size: 15px; color: var(--c-grey); line-height: 1.6; margin: 0;">Use a business loan for stock, equipment, refurbishment, marketing, tax bills, recruitment, expansion, or refinancing existing borrowing.</p>
 </div>
 <!-- Benefit 6 -->
 <div style="background: rgba(108,93,211,0.04); border: 1px solid rgba(108,93,211,0.14); border-radius: 16px 80px 16px 16px; padding: 32px 28px;">
 <div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(108,93,211,0.10); color: var(--c-purple); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
 <i class="lucide-icon" data-lucide="trending-up" style="width: 26px; height: 26px;"></i>
 </div>
-<h3 style="font-size: 19px; font-weight: 800; color: var(--c-dark); margin-bottom: 10px; line-height: 1.25;">Guided From Enquiry to Payout</h3>
-<p style="font-size: 15px; color: var(--c-grey); line-height: 1.6; margin: 0;">A dedicated finance specialist helps package your application, answer lender questions, and keep the process moving through to completion.</p>
+<h3 style="font-size: 19px; font-weight: 800; color: var(--c-dark); margin-bottom: 10px; line-height: 1.25;">Support Through the Application</h3>
+<p style="font-size: 15px; color: var(--c-grey); line-height: 1.6; margin: 0;">Your Stonebridge finance specialist helps package the application, manage lender questions, and keep the process moving toward a decision.</p>
 </div>
 </div>
 <!-- CTA strip -->
@@ -3972,11 +4065,166 @@
 <div class="grow-benefits-cta-copy">
 <span class="grow-benefits-cta-kicker">Ready to compare your options?</span>
 <h3>Apply now for a Business Loan</h3>
-<p>Tell us how much you need and what the funding is for. Our finance experts will help you compare suitable business loan options and guide you through the next steps.</p>
+<p>Tell us how much you want to borrow, what the loan will be used for, and a little about your business. Our finance experts will help compare suitable options and guide your application.</p>
 <div class="grow-benefits-cta-actions">
 <a class="btn btn-primary grow-benefits-cta-primary" data-text="Apply Now" href="/Stonebridge_Website/apply"><span>Apply Now</span></a>
 </div>
 </div>
+</div>
+</div>
+</section><section aria-label="Product Cards - Finance Solutions" class="products-section library-section" data-content-key="business-loans.section-products" data-page-variant="business-loans" data-section-id="03" data-section-name="Product Cards - Finance Solutions" data-section-type="product-grid" data-section-use="Reusable finance product and solution card grid with CTA" data-source-id="section-products" id="business-loans__section-products" style="padding: calc(var(--section-padding-y-desktop) * 1.2) 0;">
+<div class="container">
+<div class="section-header" style="text-align: center;">
+<h2>Business loan solutions to support your goals</h2>
+<p class="subtext" style="margin: var(--space-sm) 0 0;">From unsecured working capital to secured growth funding, Stonebridge helps you compare suitable options with clear guidance and competitive structures.</p>
+<div style="margin-top: var(--space-md);">
+<a class="btn btn-outline" data-text="Explore Business Loans" href="/Stonebridge_Website/finance-products/business-loans" style="color:var(--c-purple); border-color:var(--c-purple);"><span>Explore Business Loans <i class="lucide-icon" data-lucide="arrow-right" style="margin-left: 8px;"></i></span></a>
+</div>
+</div>
+<div class="products-grid" style="display: flex; flex-wrap: wrap; gap: var(--gap-cards-desktop); justify-content: center;">
+<div class="product-card">
+<div class="product-card-header">
+<div class="product-icon"><i class="lucide-icon" data-lucide="briefcase"></i></div>
+<h3>Business Loans</h3>
+</div>
+<div class="product-card-body">
+<p>Get fast unsecured and secured business finance from £20k–£25m.</p>
+<ul>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> For any business purpose</li>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Up to 10 years repayment terms</li>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Funding approved within 8 hours</li>
+</ul>
+</div>
+<div class="product-card-footer">
+<a class="product-link" href="/Stonebridge_Website/finance-products/business-loans">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></a>
+</div>
+</div>
+<div class="product-card">
+<div class="product-card-header">
+<div class="product-icon"><i class="lucide-icon" data-lucide="trending-up"></i></div>
+<h3>Growth Guarantee Scheme</h3>
+</div>
+<div class="product-card-body">
+<p>Flexible terms and competitive rates tailored to your specific needs.</p>
+<ul>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> 70% government backed</li>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Up to £2m per business</li>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Available with CBILs &amp; BBLs</li>
+</ul>
+</div>
+<div class="product-card-footer">
+<span class="product-link product-link-disabled" data-disabled-product-link="true">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></span>
+</div>
+</div>
+<div class="product-card">
+<div class="product-card-header">
+<div class="product-icon"><i class="lucide-icon" data-lucide="truck"></i></div>
+<h3>Asset &amp; Equipment</h3>
+</div>
+<div class="product-card-body">
+<p>Support your business growth without impacting your cash flow.</p>
+<ul>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Purchase any asset</li>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Simple application process</li>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Repayment terms up to 7 years</li>
+</ul>
+</div>
+<div class="product-card-footer">
+<span class="product-link product-link-disabled" data-disabled-product-link="true">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></span>
+</div>
+</div>
+<div class="product-card">
+<div class="product-card-header">
+<div class="product-icon"><i class="lucide-icon" data-lucide="car"></i></div>
+<h3>Vehicle Finance</h3>
+</div>
+<div class="product-card-body">
+<p>Fund any vehicle purchases, from vans and lorries to supercars.</p>
+<ul>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Flexible deposits available</li>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Tailored balloon payments</li>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Hire purchase, lease or refinance</li>
+</ul>
+</div>
+<div class="product-card-footer">
+<span class="product-link product-link-disabled" data-disabled-product-link="true">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></span>
+</div>
+</div>
+<div class="product-card">
+<div class="product-card-header">
+<div class="product-icon"><i class="lucide-icon" data-lucide="git-merge"></i></div>
+<h3>Refinance</h3>
+</div>
+<div class="product-card-body">
+<p>Release cash equity from equipment or get better terms on existing finance.</p>
+<ul>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Release cash from equipment</li>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Obtain improved finance terms</li>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Great for debt consolidation</li>
+</ul>
+</div>
+<div class="product-card-footer">
+<span class="product-link product-link-disabled" data-disabled-product-link="true">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></span>
+</div>
+</div>
+<div class="product-card">
+<div class="product-card-header">
+<div class="product-icon"><i class="lucide-icon" data-lucide="credit-card"></i></div>
+<h3>Merchant Cash Advance</h3>
+</div>
+<div class="product-card-body">
+<p>Quickly raise working capital against your company's card sales.</p>
+<ul>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> No interest or fixed repayments</li>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Borrow up to double monthly sales</li>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> 90% approval rate</li>
+</ul>
+</div>
+<div class="product-card-footer">
+<span class="product-link product-link-disabled" data-disabled-product-link="true">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></span>
+</div>
+</div>
+<div class="product-card">
+<div class="product-card-header">
+<div class="product-icon"><i class="lucide-icon" data-lucide="building-2"></i></div>
+<h3>Commercial Property</h3>
+</div>
+<div class="product-card-body">
+<p>Get quick access to robust property-related finance.</p>
+<ul>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Repayment up to 30 years</li>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Interest-only products available</li>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> 80% LTV or 100% with security</li>
+</ul>
+</div>
+<div class="product-card-footer">
+<span class="product-link product-link-disabled" data-disabled-product-link="true">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></span>
+</div>
+</div>
+<div class="product-card">
+<div class="product-card-header">
+<div class="product-icon"><i class="lucide-icon" data-lucide="receipt"></i></div>
+<h3>Invoice Finance</h3>
+</div>
+<div class="product-card-body">
+<p>Unlock funds tied up in outstanding invoices.</p>
+<ul>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Up to 90% of invoices’ value</li>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Your facility grows with you</li>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Fast and simple to release cash</li>
+</ul>
+</div>
+<div class="product-card-footer">
+<span class="product-link product-link-disabled" data-disabled-product-link="true">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></span>
+</div>
+</div>
+</div>
+</div>
+</section> <section aria-label="Sector Showcase - Four Card Grid" class="investment-opportunity-section library-section" data-include-section="section-investment-opportunity-grid" data-include-source="/Stonebridge_Website/sections/" data-section-id="12D" data-section-name="Sector Showcase - Four Card Grid" data-section-type="visual-proof-card" data-section-use="Live include from sections page" id="section-investment-opportunity-grid">
+<div class="container">
+<div class="investment-opportunity-wrap">
+<h2>Explore Finance by Sector</h2>
+<p class="section-include-loading">Loading sector showcase...</p>
 </div>
 </div>
 </section><section aria-label="Customer-Driven Solutions" class="customer-driven-section library-section" data-content-key="business-loans.section-customer-driven" data-page-variant="business-loans" data-section-id="04" data-section-name="Customer-Driven Solutions" data-section-type="feature-stats" data-section-use="Two-column feature section with image, supporting bullet points, and proof stats" data-source-id="section-customer-driven" id="business-loans__section-customer-driven">
@@ -3984,65 +4232,69 @@
 <!-- Centered header -->
 <div class="customer-driven-header">
 <span class="section-eyebrow">How to get a business loan</span>
-<h2>Unlock your business potential with tailored financing</h2>
-<p>Whether you need to sustain day-to-day activity, seize new opportunities, or expand with confidence, Stonebridge helps you compare suitable secured and unsecured business loan options.</p>
+<h2>Simple steps to finding the right business loan</h2>
+<p>Tell us what you need to borrow, how the funding will be used, and a few key details about your business. Stonebridge will help you compare suitable lenders, prepare your application, and move toward a clear funding decision.</p>
 </div>
 <!-- Two panels -->
 <div class="customer-driven-panels">
-<!-- Left: dark purple stat panel -->
-<div class="cdp-left">
-<div>
-<p class="cdp-left-label">Business Finance</p>
-<p class="cdp-left-title">Get funded faster than the high street</p>
-</div>
-<div class="cdp-stat-row">
-<span class="cdp-stat-number">100+</span>
-<span class="cdp-stat-label">UK lenders<br/>on our panel</span>
-</div>
-<div class="cdp-bars">
-<div class="cdp-bar" style="height:35%"></div>
-<div class="cdp-bar" style="height:55%"></div>
-<div class="cdp-bar active" style="height:80%"></div>
-<div class="cdp-bar active" style="height:100%"></div>
-<div class="cdp-bar" style="height:65%"></div>
-</div>
-<div class="cdp-arrow-wrap">
-<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24">
-<line x1="12" x2="12" y1="19" y2="5"></line>
-<polyline points="5 12 12 5 19 12"></polyline>
-</svg>
-</div>
-</div>
-<!-- Right: light teal feature panel -->
+<!-- Left: light teal feature panel -->
 <div class="cdp-right">
 <div>
-<p class="cdp-right-label">Grow My Business</p>
-<h3 class="cdp-right-title">What can the loan be used for?</h3>
-<ul aria-label="Grow My Business loan uses" class="cdp-features">
-<li><i class="lucide-icon" data-lucide="circle-check-big"></i><span>Managing cash flow</span></li>
-<li><i class="lucide-icon" data-lucide="circle-check-big"></i><span>Covering overheads</span></li>
-<li><i class="lucide-icon" data-lucide="circle-check-big"></i><span>Equipment &amp; machinery</span></li>
-<li><i class="lucide-icon" data-lucide="circle-check-big"></i><span>Inventory &amp; materials</span></li>
-<li><i class="lucide-icon" data-lucide="circle-check-big"></i><span>Technology upgrades</span></li>
-<li><i class="lucide-icon" data-lucide="circle-check-big"></i><span>Marketing &amp; advertising</span></li>
-<li><i class="lucide-icon" data-lucide="circle-check-big"></i><span>Refinancing existing debt</span></li>
-<li><i class="lucide-icon" data-lucide="circle-check-big"></i><span>Commercial rent</span></li>
-<li><i class="lucide-icon" data-lucide="circle-check-big"></i><span>Staff salaries</span></li>
-<li><i class="lucide-icon" data-lucide="circle-check-big"></i><span>Unexpected costs</span></li>
+<p class="cdp-right-label">Business Loans</p>
+<h3 class="cdp-right-title">What lenders usually review</h3>
+<ul aria-label="Business loan application details" class="cdp-features">
+<li><i class="lucide-icon" data-lucide="circle-check-big"></i><span>How much you want to borrow</span></li>
+<li><i class="lucide-icon" data-lucide="circle-check-big"></i><span>What the loan will be used for</span></li>
+<li><i class="lucide-icon" data-lucide="circle-check-big"></i><span>Trading history and business structure</span></li>
+<li><i class="lucide-icon" data-lucide="circle-check-big"></i><span>Turnover, cash flow, and affordability</span></li>
+<li><i class="lucide-icon" data-lucide="circle-check-big"></i><span>Recent bank statements or accounts</span></li>
+<li><i class="lucide-icon" data-lucide="circle-check-big"></i><span>Whether security is available or required</span></li>
+<li><i class="lucide-icon" data-lucide="circle-check-big"></i><span>Preferred repayment term</span></li>
+<li><i class="lucide-icon" data-lucide="circle-check-big"></i><span>Existing finance commitments</span></li>
 </ul>
 </div>
 <div aria-label="Customer-driven proof points" class="cdp-stats">
 <div class="cdp-stat">
-<strong>Fast</strong>
-<span>access to funds when you need them</span>
+<strong>Clear</strong>
+<span>guidance before you apply</span>
 </div>
 <div class="cdp-stat">
-<strong>Flexible</strong>
-<span>loan structures for different scenarios</span>
+<strong>Matched</strong>
+<span>options from suitable lenders</span>
 </div>
 <div class="cdp-stat">
-<strong>Bespoke</strong>
-<span>solutions for short and long-term growth</span>
+<strong>Supported</strong>
+<span>from enquiry to payout</span>
+</div>
+</div>
+</div>
+<!-- Right: dark purple stat panel -->
+<div class="cdp-left">
+<div>
+<p class="cdp-left-label">Application Journey</p>
+<p class="cdp-left-title">From enquiry to lender decision</p>
+</div>
+<div style="display: grid; gap: 14px; margin-top: 28px;">
+<div style="display: grid; grid-template-columns: 44px 1fr; gap: 14px; align-items: flex-start;">
+<span style="width: 44px; height: 44px; border-radius: 999px; background: rgba(255,255,255,0.14); color: var(--c-white); display: inline-flex; align-items: center; justify-content: center; font-weight: 900;">1</span>
+<div>
+<strong style="display: block; color: var(--c-white); font-size: 18px; margin-bottom: 4px;">Share your funding need</strong>
+<span style="display: block; color: rgba(255,255,255,0.76); line-height: 1.55;">Tell us the loan amount, purpose, trading position, and preferred repayment term.</span>
+</div>
+</div>
+<div style="display: grid; grid-template-columns: 44px 1fr; gap: 14px; align-items: flex-start;">
+<span style="width: 44px; height: 44px; border-radius: 999px; background: rgba(255,255,255,0.14); color: var(--c-white); display: inline-flex; align-items: center; justify-content: center; font-weight: 900;">2</span>
+<div>
+<strong style="display: block; color: var(--c-white); font-size: 18px; margin-bottom: 4px;">Compare lender options</strong>
+<span style="display: block; color: rgba(255,255,255,0.76); line-height: 1.55;">We review suitable secured and unsecured routes from our lender panel.</span>
+</div>
+</div>
+<div style="display: grid; grid-template-columns: 44px 1fr; gap: 14px; align-items: flex-start;">
+<span style="width: 44px; height: 44px; border-radius: 999px; background: rgba(255,255,255,0.14); color: var(--c-white); display: inline-flex; align-items: center; justify-content: center; font-weight: 900;">3</span>
+<div>
+<strong style="display: block; color: var(--c-white); font-size: 18px; margin-bottom: 4px;">Apply with support</strong>
+<span style="display: block; color: rgba(255,255,255,0.76); line-height: 1.55;">Your finance specialist helps prepare the application and manage lender questions.</span>
+</div>
 </div>
 </div>
 </div>
@@ -4408,155 +4660,7 @@
 </div>
 </div>
 </div>
-</section><section aria-label="Product Cards - Finance Solutions" class="products-section library-section" data-content-key="business-loans.section-products" data-page-variant="business-loans" data-section-id="03" data-section-name="Product Cards - Finance Solutions" data-section-type="product-grid" data-section-use="Reusable finance product and solution card grid with CTA" data-source-id="section-products" id="business-loans__section-products" style="padding: calc(var(--section-padding-y-desktop) * 1.2) 0;">
-<div class="container">
-<div class="section-header" style="text-align: center;">
-<h2>Business loan solutions to support your goals</h2>
-<p class="subtext" style="margin: var(--space-sm) 0 0;">From unsecured working capital to secured growth funding, Stonebridge helps you compare suitable options with clear guidance and competitive structures.</p>
-<div style="margin-top: var(--space-md);">
-<a class="btn btn-outline" data-text="Explore Business Loans" href="/Stonebridge_Website/finance-products/business-loans" style="color:var(--c-purple); border-color:var(--c-purple);"><span>Explore Business Loans <i class="lucide-icon" data-lucide="arrow-right" style="margin-left: 8px;"></i></span></a>
-</div>
-</div>
-<div class="products-grid" style="display: flex; flex-wrap: wrap; gap: var(--gap-cards-desktop); justify-content: center;">
-<div class="product-card">
-<div class="product-card-header">
-<div class="product-icon"><i class="lucide-icon" data-lucide="briefcase"></i></div>
-<h3>Business Loans</h3>
-</div>
-<div class="product-card-body">
-<p>Get fast unsecured and secured business finance from £20k–£25m.</p>
-<ul>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> For any business purpose</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Up to 10 years repayment terms</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Funding approved within 8 hours</li>
-</ul>
-</div>
-<div class="product-card-footer">
-<a class="product-link" href="/Stonebridge_Website/finance-products/business-loans">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></a>
-</div>
-</div>
-<div class="product-card">
-<div class="product-card-header">
-<div class="product-icon"><i class="lucide-icon" data-lucide="trending-up"></i></div>
-<h3>Growth Guarantee Scheme</h3>
-</div>
-<div class="product-card-body">
-<p>Flexible terms and competitive rates tailored to your specific needs.</p>
-<ul>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> 70% government backed</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Up to £2m per business</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Available with CBILs &amp; BBLs</li>
-</ul>
-</div>
-<div class="product-card-footer">
-<span class="product-link product-link-disabled" data-disabled-product-link="true">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></span>
-</div>
-</div>
-<div class="product-card">
-<div class="product-card-header">
-<div class="product-icon"><i class="lucide-icon" data-lucide="truck"></i></div>
-<h3>Asset &amp; Equipment</h3>
-</div>
-<div class="product-card-body">
-<p>Support your business growth without impacting your cash flow.</p>
-<ul>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Purchase any asset</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Simple application process</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Repayment terms up to 7 years</li>
-</ul>
-</div>
-<div class="product-card-footer">
-<span class="product-link product-link-disabled" data-disabled-product-link="true">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></span>
-</div>
-</div>
-<div class="product-card">
-<div class="product-card-header">
-<div class="product-icon"><i class="lucide-icon" data-lucide="car"></i></div>
-<h3>Vehicle Finance</h3>
-</div>
-<div class="product-card-body">
-<p>Fund any vehicle purchases, from vans and lorries to supercars.</p>
-<ul>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Flexible deposits available</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Tailored balloon payments</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Hire purchase, lease or refinance</li>
-</ul>
-</div>
-<div class="product-card-footer">
-<span class="product-link product-link-disabled" data-disabled-product-link="true">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></span>
-</div>
-</div>
-<div class="product-card">
-<div class="product-card-header">
-<div class="product-icon"><i class="lucide-icon" data-lucide="git-merge"></i></div>
-<h3>Refinance</h3>
-</div>
-<div class="product-card-body">
-<p>Release cash equity from equipment or get better terms on existing finance.</p>
-<ul>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Release cash from equipment</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Obtain improved finance terms</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Great for debt consolidation</li>
-</ul>
-</div>
-<div class="product-card-footer">
-<span class="product-link product-link-disabled" data-disabled-product-link="true">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></span>
-</div>
-</div>
-<div class="product-card">
-<div class="product-card-header">
-<div class="product-icon"><i class="lucide-icon" data-lucide="credit-card"></i></div>
-<h3>Merchant Cash Advance</h3>
-</div>
-<div class="product-card-body">
-<p>Quickly raise working capital against your company's card sales.</p>
-<ul>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> No interest or fixed repayments</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Borrow up to double monthly sales</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> 90% approval rate</li>
-</ul>
-</div>
-<div class="product-card-footer">
-<span class="product-link product-link-disabled" data-disabled-product-link="true">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></span>
-</div>
-</div>
-<div class="product-card">
-<div class="product-card-header">
-<div class="product-icon"><i class="lucide-icon" data-lucide="building-2"></i></div>
-<h3>Commercial Property</h3>
-</div>
-<div class="product-card-body">
-<p>Get quick access to robust property-related finance.</p>
-<ul>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Repayment up to 30 years</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Interest-only products available</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> 80% LTV or 100% with security</li>
-</ul>
-</div>
-<div class="product-card-footer">
-<span class="product-link product-link-disabled" data-disabled-product-link="true">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></span>
-</div>
-</div>
-<div class="product-card">
-<div class="product-card-header">
-<div class="product-icon"><i class="lucide-icon" data-lucide="receipt"></i></div>
-<h3>Invoice Finance</h3>
-</div>
-<div class="product-card-body">
-<p>Unlock funds tied up in outstanding invoices.</p>
-<ul>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Up to 90% of invoices’ value</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Your facility grows with you</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Fast and simple to release cash</li>
-</ul>
-</div>
-<div class="product-card-footer">
-<span class="product-link product-link-disabled" data-disabled-product-link="true">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></span>
-</div>
-</div>
-</div>
-</div>
-</section> <section aria-label="CTA - Final Conversion Band" class="cta-band library-section" data-content-key="business-loans.cta" data-page-variant="business-loans" data-section-id="13" data-section-name="CTA - Final Conversion Band" data-section-type="conversion-cta" data-section-use="High-intent final call-to-action band with benefit pills, buttons, and supporting image" data-source-id="section-cta" id="business-loans__section-cta">
+</section><section aria-label="CTA - Final Conversion Band" class="cta-band library-section" data-content-key="business-loans.cta" data-page-variant="business-loans" data-section-id="13" data-section-name="CTA - Final Conversion Band" data-section-type="conversion-cta" data-section-use="High-intent final call-to-action band with benefit pills, buttons, and supporting image" data-source-id="section-cta" id="business-loans__section-cta">
 <div class="container">
 <div class="cta-card-inner">
 <div class="cta-card-copy">
@@ -4650,9 +4754,9 @@
 <ul class="footer-accordion-panel">
 <li><a href="/Stonebridge_Website/partner-with-us">Partner Finance</a></li>
 <li><a href="/Stonebridge_Website/partner-with-us/partners-hub">Partners Hub</a></li>
-<li><a href="/Stonebridge_Website/partner-with-us/how-it-works">How It Works</a></li>
+<li><a href="/Stonebridge_Website/partner-with-us/how-it-works">How it works</a></li>
 <li><a href="/Stonebridge_Website/partner-with-us/for-accountants">For Accountants</a></li>
-<li><a href="/Stonebridge_Website/partner-with-us/become-a-partner">Become a Partner</a></li>
+<li><a href="/Stonebridge_Website/partner-with-us/become-a-partner">Become Partner</a></li>
 <li><a href="/Stonebridge_Website/careers">Careers at Stonebridge</a></li>
 <li><a href="/Stonebridge_Website/careers/graduates-internships">Graduates &amp; Internships</a></li>
 <li><a href="/Stonebridge_Website/careers/vacancies">Current Vacancies</a></li>
@@ -4774,6 +4878,58 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 <script>lucide.createIcons();</script>
 <script>
+  function attachInvestmentOpportunityPills(scope = document) {
+    const canUseCustomPill = window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+    if (!canUseCustomPill) return;
+
+    scope.querySelectorAll('.investment-opportunity-cards > .io-card-image').forEach((card) => {
+      if (card.dataset.pillBound === 'true') return;
+      card.dataset.pillBound = 'true';
+
+      const movePill = (event) => {
+        const rect = card.getBoundingClientRect();
+        const x = Math.max(0, Math.min(event.clientX - rect.left, rect.width));
+        const y = Math.max(0, Math.min(event.clientY - rect.top, rect.height));
+        card.style.setProperty('--io-pill-x', `${x}px`);
+        card.style.setProperty('--io-pill-y', `${y}px`);
+      };
+
+      card.addEventListener('mouseenter', movePill);
+      card.addEventListener('mousemove', movePill);
+    });
+  }
+
+  function loadIncludedSections() {
+    document.querySelectorAll('[data-include-section][data-include-source]').forEach(async (mount) => {
+      const source = mount.dataset.includeSource;
+      const sectionId = mount.dataset.includeSection;
+
+      try {
+        const response = await fetch(source, { cache: 'no-cache' });
+        if (!response.ok) throw new Error(`Unable to load ${source}`);
+
+        const html = await response.text();
+        const doc = new DOMParser().parseFromString(html, 'text/html');
+        const section = doc.getElementById(sectionId);
+        if (!section) throw new Error(`Missing section #${sectionId}`);
+
+        const clone = section.cloneNode(true);
+        clone.dataset.includeSection = sectionId;
+        clone.dataset.includeSource = source;
+        clone.dataset.includeMode = 'live';
+        mount.replaceWith(clone);
+
+        attachInvestmentOpportunityPills(clone);
+        if (window.lucide) lucide.createIcons();
+      } catch (error) {
+        mount.classList.add('is-include-error');
+        console.warn(error);
+      }
+    });
+  }
+
+  loadIncludedSections();
+
   document.querySelectorAll('.products-section .product-link .lucide-icon').forEach((icon) => {
     if (icon.parentElement && icon.parentElement.classList.contains('product-link-icon-wrap')) return;
     const wrap = document.createElement('span');
@@ -4801,21 +4957,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  const canUseCustomPill = window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
-  if (canUseCustomPill) {
-    document.querySelectorAll('.investment-opportunity-cards > .io-card-image').forEach((card) => {
-      const movePill = (event) => {
-        const rect = card.getBoundingClientRect();
-        const x = Math.max(0, Math.min(event.clientX - rect.left, rect.width));
-        const y = Math.max(0, Math.min(event.clientY - rect.top, rect.height));
-        card.style.setProperty('--io-pill-x', `${x}px`);
-        card.style.setProperty('--io-pill-y', `${y}px`);
-      };
-
-      card.addEventListener('mouseenter', movePill);
-      card.addEventListener('mousemove', movePill);
-    });
-  }
+  attachInvestmentOpportunityPills();
 
   function initWhyChooseCarousel() {
     document.querySelectorAll('.why-carousel').forEach((carousel) => {
