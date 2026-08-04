@@ -169,11 +169,14 @@
       align-items: center !important;
       justify-content: flex-start !important;
       padding: 80px 0 !important;
-      background-image: url('https://images.pexels.com/photos/3765114/pexels-photo-3765114.jpeg?auto=compress&cs=tinysrgb&w=1920') !important;
+      background-image: none !important;
       background-position: center right !important;
       background-size: cover !important;
       background-repeat: no-repeat !important;
       overflow: hidden;
+    }
+    .hero.hero-fullbleed.is-bg-loaded {
+      background-image: var(--lazy-bg) !important;
     }
     .hero-bg-overlay {
       position: absolute;
@@ -3836,7 +3839,7 @@
 <a class="btn btn-primary" data-text="Check Eligibility" href="/Stonebridge_Website/check-eligibility"><span>Check Eligibility</span></a>
 <a class="btn btn-secondary" data-text="Apply Now" href="/Stonebridge_Website/apply"><span>Apply Now</span></a>
 </div>
-</div> <main> <section aria-label="Hero - Business Loans Intro" class="hero library-section hero-fullbleed" data-content-key="grow.section-hero" data-page-variant="grow" data-section-id="01" data-section-name="Hero - Fullbleed Overlay Intro" data-section-type="hero" data-section-use="Full-bleed background hero with overlay text and CTAs" data-source-id="section-hero" id="grow__section-hero">
+</div> <main> <section aria-label="Hero - Business Loans Intro" class="hero library-section hero-fullbleed" data-content-key="grow.section-hero" data-page-variant="grow" data-section-id="01" data-section-name="Hero - Fullbleed Overlay Intro" data-section-type="hero" data-section-use="Full-bleed background hero with overlay text and CTAs" data-source-id="section-hero" id="grow__section-hero" data-lazy-bg="https://images.pexels.com/photos/7582629/pexels-photo-7582629.jpeg">
 <div class="hero-bg-overlay"></div>
 <div class="container" style="position: relative; z-index: 5; width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px;">
 <div class="hero-fullbleed-content">
@@ -5024,4 +5027,35 @@ document.addEventListener('DOMContentLoaded', function() {
           window.lucide.createIcons();
         }
       });
-    </script> </body> </html>
+    </script> <script>
+(() => {
+  const lazyBackgrounds = document.querySelectorAll('[data-lazy-bg]');
+  const loadBackground = (element) => {
+    const imageUrl = element.getAttribute('data-lazy-bg');
+    if (!imageUrl || element.classList.contains('is-bg-loaded')) return;
+    element.style.setProperty('--lazy-bg', `url("${imageUrl}")`);
+    element.classList.add('is-bg-loaded');
+  };
+
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        loadBackground(entry.target);
+        observer.unobserve(entry.target);
+      });
+    }, { rootMargin: '300px 0px' });
+
+    lazyBackgrounds.forEach((element) => observer.observe(element));
+  } else {
+    lazyBackgrounds.forEach(loadBackground);
+  }
+
+  if ('serviceWorker' in navigator && window.location.protocol !== 'file:') {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('/Stonebridge_Website/sw.js').catch(() => {});
+    });
+  }
+})();
+</script>
+</body> </html>
