@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="en"> <head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Grow My Business | Stonebridge</title><meta content="Discover tailored business funding options to help you grow, with expert guidance across sectors and access to a wide UK lender panel." name="description"/><link href="/Stonebridge_Website/img/SVG/updated_fav.svg" rel="icon" type="image/svg+xml"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;family=Playfair+Display:ital,wght@1,400&amp;display=swap" rel="stylesheet"/><script src="/Stonebridge_Website/_astro/BaseLayout.astro_astro_type_script_index_0_lang.CN6pKSHs.js" type="module"></script><link href="/Stonebridge_Website/css/design-tokens.css?v=v2" rel="stylesheet"/><link href="/Stonebridge_Website/css/styles.css?v=v2" rel="stylesheet"/><style>
+
+<html lang="en"> <head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/><meta http-equiv="Pragma" content="no-cache"/><meta http-equiv="Expires" content="0"/><title>E-commerce E-commerce Business Loans | Stonebridge</title><meta content="Compare secured and unsecured e-commerce business loan options with Stonebridge and get expert guidance from enquiry to funding." name="description"/><link href="/Stonebridge_Website/img/SVG/updated_fav.svg" rel="icon" type="image/svg+xml"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;family=Playfair+Display:ital,wght@1,400&amp;display=swap" rel="stylesheet"/><script src="/Stonebridge_Website/_astro/BaseLayout.astro_astro_type_script_index_0_lang.CN6pKSHs.js" type="module"></script><link href="/Stonebridge_Website/css/design-tokens.css?v=v2" rel="stylesheet"/><link href="/Stonebridge_Website/css/styles.css?v=v2" rel="stylesheet"/><style>
     /* STRICT ENFORCEMENT OF DESIGN TOKENS & WOW-FACTOR UPGRADES */
     /* 1. Global Reset for Lucide SVG Setup & Layout Constraints */
     .container { width: 100%; max-width: none; margin: 0; padding: 0 20.4px; }
@@ -167,41 +168,49 @@
       min-height: calc(100svh - 80px);
       display: flex !important;
       align-items: center !important;
-      justify-content: flex-start !important;
-      padding: 80px 0 !important;
-      background-image: url('https://images.pexels.com/photos/3765114/pexels-photo-3765114.jpeg?auto=compress&cs=tinysrgb&w=1920') !important;
-      background-position: center right !important;
-      background-size: cover !important;
-      background-repeat: no-repeat !important;
+      justify-content: center !important;
+      padding: clamp(52px, 7vw, 88px) 0 !important;
+      background: linear-gradient(135deg, #f8f5ff 0%, #eff8f7 100%) !important;
       overflow: hidden;
     }
     .hero-bg-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(90deg, rgba(16, 16, 26, 0.88) 0%, rgba(16, 16, 26, 0.65) 50%, rgba(16, 16, 26, 0.20) 100%);
-      z-index: 1;
+      display: none;
+    }
+    .ecommerce-business-loans-hero-layout {
+      position: relative;
+      z-index: 5;
+      display: grid;
+      grid-template-columns: minmax(0, 0.9fr) minmax(360px, 1.1fr);
+      gap: clamp(28px, 5vw, 64px);
+      align-items: center;
+      width: 100%;
     }
     .hero-fullbleed-content {
-      max-width: 650px;
+      max-width: 640px;
       position: relative;
       z-index: 5;
       text-align: left;
-      transform: translateY(15px);
+      transform: none;
+      padding: 0;
+      background: transparent;
+      border: 0;
+      border-radius: 0;
+      box-shadow: none;
     }
     .hero-fullbleed-title {
       font-size: clamp(38px, 4.8vw, 64px) !important;
       line-height: 1.08 !important;
-      font-weight: 700 !important;
-      color: #ffffff !important;
-      margin-top: 16px;
+      font-weight: 800 !important;
+      color: var(--c-dark) !important;
+      margin-top: 0;
       margin-bottom: 20px;
-      letter-spacing: -0.02em;
+      letter-spacing: 0;
     }
     .hero-fullbleed-subtext {
       font-size: clamp(16px, 1.8vw, 20px) !important;
-      line-height: 1.5 !important;
-      color: rgba(255, 255, 255, 0.88) !important;
-      margin-bottom: 32px;
+      line-height: 1.55 !important;
+      color: var(--c-grey) !important;
+      margin-bottom: 28px;
       max-width: 580px;
     }
     .hero-fullbleed-actions {
@@ -209,7 +218,7 @@
       align-items: center;
       gap: 16px;
       flex-wrap: wrap;
-      margin-bottom: 36px;
+      margin-bottom: 24px;
     }
     .btn-green-hero {
       background-color: var(--c-green) !important;
@@ -248,20 +257,18 @@
       background-color: rgba(255, 255, 255, 0.15) !important;
     }
     .hero-fullbleed-trust {
-      position: absolute;
-      bottom: 36px;
-      right: 36px;
+      position: relative;
       z-index: 10;
       display: flex;
       align-items: center;
       gap: 12px;
-      background: rgba(16, 16, 26, 0.5);
+      align-self: flex-start;
+      background: var(--c-dark);
       padding: 10px 18px;
-      border-radius: 12px;
-      backdrop-filter: blur(12px);
-      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 8px;
+      border: 1px solid rgba(26,26,46,0.12);
       width: max-content;
-      max-width: 90vw;
+      max-width: 100%;
     }
     .hero-trust-label {
       color: rgba(255, 255, 255, 0.9);
@@ -269,10 +276,34 @@
       font-weight: 700;
       letter-spacing: 0.02em;
     }
+    .ecommerce-business-loans-hero-media {
+      position: relative;
+      min-height: clamp(420px, 52vw, 620px);
+      overflow: hidden;
+      border-radius: 8px 8px 8px 50%;
+      background: var(--c-purple-bg);
+      box-shadow: none;
+    }
+    .ecommerce-business-loans-hero-media img {
+      width: 100%;
+      height: 100%;
+      min-height: inherit;
+      object-fit: cover;
+      display: block;
+    }
+    .ecommerce-business-loans-hero-media::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(91,45,142,0.12), rgba(0,137,123,0.16));
+      pointer-events: none;
+    }
     @media (max-width: 768px) {
       .hero.hero-fullbleed {
-        background-position: center center !important;
-        padding-bottom: 120px !important;
+        padding: 36px 0 !important;
+      }
+      .ecommerce-business-loans-hero-layout {
+        grid-template-columns: 1fr;
       }
       .hero-fullbleed-content {
         text-align: center !important;
@@ -280,17 +311,19 @@
         flex-direction: column;
         align-items: center;
         margin: 0 auto;
+        padding: 0;
       }
       .hero-fullbleed-title, .hero-fullbleed-subtext {
         text-align: center !important;
       }
       .hero-fullbleed-trust {
-        position: absolute !important;
-        bottom: 32px !important;
+        position: relative !important;
+        bottom: auto !important;
         right: auto !important;
-        left: 50% !important;
-        transform: translateX(-50%) !important;
+        left: auto !important;
+        transform: none !important;
         margin: 0 !important;
+        align-self: center;
       }
       .hero-fullbleed-actions {
         width: 100%;
@@ -300,6 +333,10 @@
       .hero-fullbleed-actions .btn {
         width: 100%;
         justify-content: center;
+      }
+      .ecommerce-business-loans-hero-media {
+        min-height: 360px;
+        border-radius: 8px 8px 8px 42%;
       }
     }
     .hero-rating-pill {
@@ -853,19 +890,19 @@
     }
     .customer-driven-panels {
       display: grid;
-      grid-template-columns: minmax(0, 0.55fr) minmax(0, 1fr);
+      grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.85fr);
       gap: 16px;
-      align-items: stretch;
-      min-height: 420px;
+      align-items: start;
     }
     /* Left panel - dark purple */
     .cdp-left {
       background: var(--c-purple);
       border-radius: 24px 120px 24px 120px;
-      padding: clamp(28px, 3.5vw, 48px);
+      padding: clamp(26px, 3vw, 40px);
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      justify-content: flex-start;
+      gap: 20px;
       overflow: hidden;
       position: relative;
     }
@@ -878,12 +915,12 @@
       margin: 0 0 12px;
     }
     .cdp-left-title {
-      font-size: clamp(28px, 3.5vw, 42px);
+      font-size: clamp(28px, 3vw, 38px);
       font-weight: 900;
       line-height: 1.1;
       color: #fff;
       letter-spacing: -0.02em;
-      margin: 0 0 auto;
+      margin: 0;
     }
     .cdp-stat-row {
       display: flex;
@@ -988,20 +1025,21 @@
     .cdp-stats {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 0;
+      gap: 18px;
       border-top: 1px solid rgba(0,137,123,0.18);
       padding-top: 24px;
     }
     .cdp-stat {
-      padding: 0 20px 0 0;
+      min-width: 0;
+      padding: 0;
     }
     .cdp-stat + .cdp-stat {
       border-left: 1px solid rgba(0,137,123,0.18);
-      padding-left: 20px;
+      padding-left: 18px;
     }
     .cdp-stat strong {
       display: block;
-      font-size: clamp(28px, 3vw, 40px);
+      font-size: clamp(24px, 2.4vw, 34px);
       font-weight: 900;
       line-height: 1;
       color: var(--c-dark);
@@ -1014,6 +1052,10 @@
       font-weight: 700;
       color: #4a7a74;
       line-height: 1.35;
+    }
+    .cdp-left > div:last-child {
+      margin-top: 8px !important;
+      gap: 12px !important;
     }
     @media (max-width: 1023px) {
       .customer-driven-panels {
@@ -2678,8 +2720,9 @@
 }
 .team-story-feature-card.is-compact:nth-child(odd) {
   border-top-right-radius: 100px;
-  background: var(--c-purple) !important;
-  border-color: var(--c-purple) !important;
+  border-bottom-right-radius: 100px;
+  background: var(--c-green) !important;
+  border-color: var(--c-green) !important;
 }
 .team-story-feature-card.is-compact:nth-child(odd) .rate,
 .team-story-feature-card.is-compact:nth-child(odd) .meta {
@@ -2730,6 +2773,9 @@
   align-items: stretch;
 }
 .investment-opportunity-cards-four {
+  --io-card-height: 460px;
+  --io-side-copy-height: 160px;
+  --io-side-media-height: calc(var(--io-card-height) - var(--io-side-copy-height) - 20px);
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
 .investment-opportunity-cards-four .io-card {
@@ -2737,18 +2783,45 @@
   height: var(--io-card-height);
 }
 .investment-opportunity-cards-four .io-card-image {
-  background: var(--c-purple);
-  border-color: var(--c-purple);
+  background: #eee7f7;
+  border-color: #eee7f7;
 }
 .investment-opportunity-cards-four .io-card-image .io-card-copy {
-  background: var(--c-purple);
+  background: #f8f5ff;
 }
-.investment-opportunity-cards-four .io-card-image:nth-child(even) {
+.investment-opportunity-cards-four .io-card-image:nth-child(4n+1) {
+  background: #eee7f7;
+  border-color: #eee7f7;
+}
+.investment-opportunity-cards-four .io-card-image:nth-child(4n+1) .io-card-copy {
+  background: #f8f5ff;
+}
+.investment-opportunity-cards-four .io-card-image:nth-child(4n+2) {
   background: #e6f3f1;
   border-color: #cde7e3;
 }
-.investment-opportunity-cards-four .io-card-image:nth-child(even) .io-card-copy {
+.investment-opportunity-cards-four .io-card-image:nth-child(4n+2) .io-card-copy {
   background: #eff8f7;
+}
+.investment-opportunity-cards-four .io-card-image:nth-child(4n+3),
+.investment-opportunity-cards-four .io-card-image:nth-child(4n+4) {
+  background: #e8def3 !important;
+  border-color: #e8def3 !important;
+}
+.investment-opportunity-cards-four .io-card-image:nth-child(4n+3) .io-card-copy,
+.investment-opportunity-cards-four .io-card-image:nth-child(4n+4) .io-card-copy {
+  background: #f3eef9 !important;
+}
+.investment-opportunity-cards-four .io-card-image .io-card-copy-title {
+  color: var(--c-dark) !important;
+}
+.investment-opportunity-cards-four .io-card-image .io-card-copy-body {
+  color: var(--c-grey) !important;
+}
+.section-include-loading {
+  margin: 0;
+  text-align: center;
+  color: var(--c-grey);
 }
 .investment-opportunity-actions {
   margin-top: 28px;
@@ -2792,11 +2865,11 @@
   border-radius: 6px 6px 0 0;
   background: var(--c-purple-bg);
 }
-#section-investment-opportunity .io-card-image {
-  border-radius: 50% 50% var(--radius-lg) var(--radius-lg) !important;
+#section-investment-opportunity-grid .io-card-image {
+  border-radius: 140px 140px var(--radius-lg) var(--radius-lg) !important;
 }
-#section-investment-opportunity .io-card-image img {
-  border-radius: 50% 50% 0 0 / calc(var(--io-card-height) / 2 - 10px) calc(var(--io-card-height) / 2 - 10px) 0 0 !important;
+#section-investment-opportunity-grid .io-card-image img {
+  border-radius: 130px 130px 0 0 !important;
 }
 .io-card-copy {
   padding: 12px 14px;
@@ -3015,6 +3088,11 @@
     --io-side-copy-height: 100px;
     --io-side-media-height: calc(var(--io-card-height) - var(--io-side-copy-height) - 20px);
     grid-template-columns: 1fr;
+  }
+  .investment-opportunity-cards-four {
+    --io-card-height: 390px;
+    --io-side-copy-height: 145px;
+    --io-side-media-height: calc(var(--io-card-height) - var(--io-side-copy-height) - 20px);
   }
   .io-card-image {
     cursor: pointer;
@@ -3357,6 +3435,33 @@
       flex: 0 1 calc((100% - 72px) / 4);
       max-width: calc((100% - 72px) / 4);
       min-width: 0;
+      border-radius: 100% 100% 16px 16px !important;
+      text-align: center !important;
+    }
+
+    .grow-benefits-grid > div:nth-child(odd) {
+      background: #f8f5ff !important;
+      border-color: #e8def3 !important;
+    }
+
+    .grow-benefits-grid > div:nth-child(even) {
+      background: #eff8f7 !important;
+      border-color: #cde7e3 !important;
+    }
+
+    .grow-benefits-grid > div:nth-child(odd) > div:first-child {
+      background: #e8def3 !important;
+      color: var(--c-purple) !important;
+    }
+
+    .grow-benefits-grid > div:nth-child(even) > div:first-child {
+      background: #dff0ed !important;
+      color: var(--c-green) !important;
+    }
+
+    .grow-benefits-grid > div > div:first-child {
+      margin-left: auto !important;
+      margin-right: auto !important;
     }
 
     .grow-benefits-cta {
@@ -3367,7 +3472,7 @@
       min-height: 320px;
       border: 1px solid rgba(255,255,255,0.12);
       border-radius: 8px 120px 120px 8px;
-      background: linear-gradient(135deg, var(--c-purple) 0%, #45348f 100%);
+      background: #1a1a2e;
       color: var(--c-white);
     }
 
@@ -3380,24 +3485,38 @@
     }
 
     .grow-benefits-cta::before {
-      left: auto;
-      width: 58%;
-      background: url('/Stonebridge_Website/img/why-simple-application.jpg') center right / cover no-repeat;
-      opacity: 0.58;
-      -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.24) 18%, #000 48%);
-      mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.24) 18%, #000 48%);
+      width: 64%;
+      background:
+        radial-gradient(110% 130% at 72% 50%, rgba(0,137,123,0.92) 0 46%, transparent 47%),
+        linear-gradient(135deg, rgba(0,137,123,0.68) 0 32%, transparent 33%);
+      opacity: 0.96;
     }
 
     .grow-benefits-cta::after {
       background:
-        linear-gradient(90deg, rgba(91,45,142,1) 0%, rgba(91,45,142,0.96) 36%, rgba(91,45,142,0.68) 62%, rgba(91,45,142,0.24) 100%),
-        linear-gradient(0deg, rgba(0,137,123,0.16), rgba(255,255,255,0.08));
+        radial-gradient(86% 118% at 74% 112%, rgba(91,45,142,0.68) 0 54%, transparent 55%),
+        linear-gradient(90deg, transparent 0 58%, rgba(26,26,46,0.72) 59% 100%);
     }
 
     .grow-benefits-cta-copy {
       position: relative;
       z-index: 2;
       max-width: 620px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .grow-benefits-cta-copy::before {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      width: 420px;
+      height: 420px;
+      left: -260px;
+      top: -210px;
+      border-radius: 50%;
+      background: rgba(26,26,46,0.76);
+      pointer-events: none;
     }
 
     .grow-benefits-cta-kicker {
@@ -3426,7 +3545,7 @@
 
     .grow-benefits-cta p {
       max-width: 680px;
-      margin: 0;
+      margin: 0 auto;
       color: rgba(255,255,255,0.82);
       font-size: 17px;
       line-height: 1.65;
@@ -3440,7 +3559,7 @@
       margin-top: 24px;
       gap: 12px;
       flex-wrap: wrap;
-      justify-content: flex-start;
+      justify-content: center;
     }
 
     .grow-benefits-cta-primary {
@@ -3470,16 +3589,19 @@
       }
 
       .grow-benefits-cta-actions {
-        justify-content: flex-start;
+        justify-content: center;
       }
 
       .grow-benefits-cta::before {
         width: 100%;
-        opacity: 0.24;
+        opacity: 0.72;
+        background:
+          radial-gradient(120% 110% at 80% 40%, rgba(0,137,123,0.74) 0 34%, transparent 35%),
+          linear-gradient(135deg, rgba(0,137,123,0.42) 0 38%, transparent 39%);
       }
 
       .grow-benefits-cta::after {
-        background: linear-gradient(90deg, rgba(91,45,142,0.98) 0%, rgba(91,45,142,0.9) 100%);
+        background: radial-gradient(120% 100% at 94% 105%, rgba(91,45,142,0.55) 0 52%, transparent 53%);
       }
     }
 
@@ -3539,7 +3661,7 @@
 <li>
 <a class="nav-link" href="/Stonebridge_Website/services">Solutions <i class="lucide-icon" data-lucide="chevron-down"></i></a>
 <div class="dropdown-menu mega-menu">
-<a href="/Stonebridge_Website/finance-products/business-loans">Grow My Business</a>
+<a href="/Stonebridge_Website/finance-solutions/grow-my-business">Grow My Business</a>
 <a href="/Stonebridge_Website/finance-solutions/manage-cashflow">Manage Cashflow</a>
 <a href="/Stonebridge_Website/finance-solutions/pay-a-tax-bill">Pay a Tax Bill</a>
 <a href="/Stonebridge_Website/finance-solutions/working-capital">Working Capital</a>
@@ -3563,32 +3685,32 @@
 <a class="nav-link" href="/Stonebridge_Website/products">Products <i class="lucide-icon" data-lucide="chevron-down"></i></a>
 <div class="dropdown-menu mega-menu">
 <a href="/Stonebridge_Website/finance-products/business-loans">Business Loans</a>
-<span class="menu-label">Growth Guarantee Scheme</span>
-<span class="menu-label">Flexible Business Loans</span>
-<span class="menu-label">Cashflow Loans</span>
-<span class="menu-label">Working Capital Loans</span>
-<span class="menu-label">Tax Bill Loans</span>
-<span class="menu-label">Business Growth Loans</span>
-<span class="menu-label">Commercial Vehicle Finance</span>
-<span class="menu-label">Same Day Business Loans</span>
-<span class="menu-label">Quick Business Loans</span>
-<span class="menu-label">Large Business Loans</span>
-<span class="menu-label">Small Business Loans</span>
-<span class="menu-label">Refinance Business Loans</span>
-<span class="menu-label">Unsecured Business Loans</span>
-<span class="menu-label">Commercial Property Finance</span>
-<span class="menu-label">Business Bridging Loans</span>
-<span class="menu-label">Business Asset Loans</span>
-<span class="menu-label">Business Consolidation Loans</span>
-<span class="menu-label">Equipment Purchase Loans</span>
-<span class="menu-label">Long-Term Business Loans</span>
-<span class="menu-label">Refurbishment Loans</span>
-<span class="menu-label">Secured Business Loans</span>
-<span class="menu-label">Stock Finance Loans</span>
-<span class="menu-label">Limited Company Business Loans</span>
-<span class="menu-label">E-commerce Business Loans</span>
-<span class="menu-label">Invoice Finance</span>
-<span class="menu-label">Merchant Cash Advance</span>
+<a href="/Stonebridge_Website/finance-products/growth-guarantee-scheme">Growth Guarantee Scheme</a>
+<a href="/Stonebridge_Website/finance-products/flexible-business-loans">Flexible Business Loans</a>
+<a href="/Stonebridge_Website/finance-products/cashflow-loans">Cashflow Loans</a>
+<a href="/Stonebridge_Website/finance-products/working-capital-loans">Working Capital Loans</a>
+<a href="/Stonebridge_Website/finance-products/tax-bill-loans">Tax Bill Loans</a>
+<a href="/Stonebridge_Website/finance-products/business-growth-loans">Business Growth Loans</a>
+<a href="/Stonebridge_Website/finance-products/commercial-vehicle-finance">Commercial Vehicle Finance</a>
+<a href="/Stonebridge_Website/finance-products/same-day-business-loans">Same Day Business Loans</a>
+<a href="/Stonebridge_Website/finance-products/quick-business-loans">Quick Business Loans</a>
+<a href="/Stonebridge_Website/finance-products/large-business-loans">Large Business Loans</a>
+<a href="/Stonebridge_Website/finance-products/small-business-loans">Small Business Loans</a>
+<a href="/Stonebridge_Website/finance-products/refinance-business-loans">Refinance Business Loans</a>
+<a href="/Stonebridge_Website/finance-products/unsecured-business-loans">Unsecured Business Loans</a>
+<a href="/Stonebridge_Website/finance-products/commercial-property-finance">Commercial Property Finance</a>
+<a href="/Stonebridge_Website/finance-products/business-bridging-loans">Business Bridging Loans</a>
+<a href="/Stonebridge_Website/finance-products/business-asset-loans">Business Asset Loans</a>
+<a href="/Stonebridge_Website/finance-products/business-consolidation-loans">Business Consolidation Loans</a>
+<a href="/Stonebridge_Website/finance-products/equipment-purchase-loans">Equipment Purchase Loans</a>
+<a href="/Stonebridge_Website/finance-products/long-term-business-loans">Long-Term Business Loans</a>
+<a href="/Stonebridge_Website/finance-products/refurbishment-loans">Refurbishment Loans</a>
+<a href="/Stonebridge_Website/finance-products/secured-business-loans">Secured Business Loans</a>
+<a href="/Stonebridge_Website/finance-products/stock-finance-loans">Stock Finance Loans</a>
+<a href="/Stonebridge_Website/finance-products/limited-company-business-loans">Limited Company Business Loans</a>
+<a href="/Stonebridge_Website/finance-products/ecommerce-business-loans">E-commerce Business Loans</a>
+<a href="/Stonebridge_Website/finance-products/invoice-finance">Invoice Finance</a>
+<a href="/Stonebridge_Website/finance-products/merchant-cash-advance">Merchant Cash Advance</a>
 </div>
 </li>
 <li>
@@ -3695,7 +3817,7 @@
 <div class="accordion-content">
 <ul>
 <li><a href="/Stonebridge_Website/services">All Services</a></li>
-<li><a href="/Stonebridge_Website/finance-products/business-loans">Grow My Business</a></li>
+<li><a href="/Stonebridge_Website/finance-solutions/grow-my-business">Grow My Business</a></li>
 <li><a href="/Stonebridge_Website/finance-solutions/manage-cashflow">Manage Cashflow</a></li>
 <li><a href="/Stonebridge_Website/finance-solutions/pay-a-tax-bill">Pay a Tax Bill</a></li>
 <li><a href="/Stonebridge_Website/finance-solutions/working-capital">Working Capital</a></li>
@@ -3724,32 +3846,32 @@
 <ul>
 <li><a href="/Stonebridge_Website/products">All Products</a></li>
 <li><a href="/Stonebridge_Website/finance-products/business-loans">Business Loans</a></li>
-<li><span class="menu-label">Growth Guarantee Scheme</span></li>
-<li><span class="menu-label">Flexible Business Loans</span></li>
-<li><span class="menu-label">Cashflow Loans</span></li>
-<li><span class="menu-label">Working Capital Loans</span></li>
-<li><span class="menu-label">Tax Bill Loans</span></li>
-<li><span class="menu-label">Business Growth Loans</span></li>
-<li><span class="menu-label">Commercial Vehicle Finance</span></li>
-<li><span class="menu-label">Same Day Business Loans</span></li>
-<li><span class="menu-label">Quick Business Loans</span></li>
-<li><span class="menu-label">Large Business Loans</span></li>
-<li><span class="menu-label">Small Business Loans</span></li>
-<li><span class="menu-label">Refinance Business Loans</span></li>
-<li><span class="menu-label">Unsecured Business Loans</span></li>
-<li><span class="menu-label">Commercial Property Finance</span></li>
-<li><span class="menu-label">Business Bridging Loans</span></li>
-<li><span class="menu-label">Business Asset Loans</span></li>
-<li><span class="menu-label">Business Consolidation Loans</span></li>
-<li><span class="menu-label">Equipment Purchase Loans</span></li>
-<li><span class="menu-label">Long-Term Business Loans</span></li>
-<li><span class="menu-label">Refurbishment Loans</span></li>
-<li><span class="menu-label">Secured Business Loans</span></li>
-<li><span class="menu-label">Stock Finance Loans</span></li>
-<li><span class="menu-label">Limited Company Business Loans</span></li>
-<li><span class="menu-label">E-commerce Business Loans</span></li>
-<li><span class="menu-label">Invoice Finance</span></li>
-<li><span class="menu-label">Merchant Cash Advance</span></li>
+<li><a href="/Stonebridge_Website/finance-products/growth-guarantee-scheme">Growth Guarantee Scheme</a></li>
+<li><a href="/Stonebridge_Website/finance-products/flexible-business-loans">Flexible Business Loans</a></li>
+<li><a href="/Stonebridge_Website/finance-products/cashflow-loans">Cashflow Loans</a></li>
+<li><a href="/Stonebridge_Website/finance-products/working-capital-loans">Working Capital Loans</a></li>
+<li><a href="/Stonebridge_Website/finance-products/tax-bill-loans">Tax Bill Loans</a></li>
+<li><a href="/Stonebridge_Website/finance-products/business-growth-loans">Business Growth Loans</a></li>
+<li><a href="/Stonebridge_Website/finance-products/commercial-vehicle-finance">Commercial Vehicle Finance</a></li>
+<li><a href="/Stonebridge_Website/finance-products/same-day-business-loans">Same Day Business Loans</a></li>
+<li><a href="/Stonebridge_Website/finance-products/quick-business-loans">Quick Business Loans</a></li>
+<li><a href="/Stonebridge_Website/finance-products/large-business-loans">Large Business Loans</a></li>
+<li><a href="/Stonebridge_Website/finance-products/small-business-loans">Small Business Loans</a></li>
+<li><a href="/Stonebridge_Website/finance-products/refinance-business-loans">Refinance Business Loans</a></li>
+<li><a href="/Stonebridge_Website/finance-products/unsecured-business-loans">Unsecured Business Loans</a></li>
+<li><a href="/Stonebridge_Website/finance-products/commercial-property-finance">Commercial Property Finance</a></li>
+<li><a href="/Stonebridge_Website/finance-products/business-bridging-loans">Business Bridging Loans</a></li>
+<li><a href="/Stonebridge_Website/finance-products/business-asset-loans">Business Asset Loans</a></li>
+<li><a href="/Stonebridge_Website/finance-products/business-consolidation-loans">Business Consolidation Loans</a></li>
+<li><a href="/Stonebridge_Website/finance-products/equipment-purchase-loans">Equipment Purchase Loans</a></li>
+<li><a href="/Stonebridge_Website/finance-products/long-term-business-loans">Long-Term Business Loans</a></li>
+<li><a href="/Stonebridge_Website/finance-products/refurbishment-loans">Refurbishment Loans</a></li>
+<li><a href="/Stonebridge_Website/finance-products/secured-business-loans">Secured Business Loans</a></li>
+<li><a href="/Stonebridge_Website/finance-products/stock-finance-loans">Stock Finance Loans</a></li>
+<li><a href="/Stonebridge_Website/finance-products/limited-company-business-loans">Limited Company Business Loans</a></li>
+<li><a href="/Stonebridge_Website/finance-products/ecommerce-business-loans">E-commerce Business Loans</a></li>
+<li><a href="/Stonebridge_Website/finance-products/invoice-finance">Invoice Finance</a></li>
+<li><a href="/Stonebridge_Website/finance-products/merchant-cash-advance">Merchant Cash Advance</a></li>
 </ul>
 </div>
 </div>
@@ -3836,17 +3958,16 @@
 <a class="btn btn-primary" data-text="Check Eligibility" href="/Stonebridge_Website/check-eligibility"><span>Check Eligibility</span></a>
 <a class="btn btn-secondary" data-text="Apply Now" href="/Stonebridge_Website/apply"><span>Apply Now</span></a>
 </div>
-</div> <main> <section aria-label="Hero - Business Loans Intro" class="hero library-section hero-fullbleed" data-content-key="grow.section-hero" data-page-variant="grow" data-section-id="01" data-section-name="Hero - Fullbleed Overlay Intro" data-section-type="hero" data-section-use="Full-bleed background hero with overlay text and CTAs" data-source-id="section-hero" id="grow__section-hero">
+</div> <main> <section aria-label="Hero - E-commerce E-commerce Business Loans Intro" class="hero library-section hero-fullbleed" data-content-key="ecommerce-business-loans.section-hero" data-page-variant="ecommerce-business-loans" data-section-id="01" data-section-name="Hero - Fullbleed Overlay Intro" data-section-type="hero" data-section-use="Full-bleed background hero with overlay text and CTAs" data-source-id="section-hero" id="ecommerce-business-loans__section-hero">
 <div class="hero-bg-overlay"></div>
-<div class="container" style="position: relative; z-index: 5; width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 24px;">
+<div class="container" style="position: relative; z-index: 5; width: 100%; max-width: none; margin: 0; padding: 0 20.4px;">
+<div class="ecommerce-business-loans-hero-layout">
 <div class="hero-fullbleed-content">
-<h1 class="hero-fullbleed-title">Fuel Your Business with a Grow My Business Loan</h1>
-<p class="hero-fullbleed-subtext">Our Grow My Business solutions unlock vital funding for UK businesses, giving you the financial backing to expand and thrive in today's economy. Please note: this is a commercial finance facility, not a government grant.</p>
+<h1 class="hero-fullbleed-title">E-commerce E-commerce Business Loans for UK Businesses</h1>
+<p class="hero-fullbleed-subtext">Compare secured and unsecured e-commerce business loan options with Stonebridge and get expert guidance from enquiry to funding.</p>
 <div class="hero-fullbleed-actions">
 <a class="btn btn-primary" data-text="Check Eligibility" href="/Stonebridge_Website/check-eligibility"><span>Check Eligibility</span></a>
 <a class="btn btn-secondary" data-text="Apply Now" href="/Stonebridge_Website/apply"><span>Apply Now</span></a>
-</div>
-</div>
 </div>
 <div class="hero-fullbleed-trust">
 <span class="hero-trust-label">Trusted by:</span>
@@ -3854,48 +3975,12 @@
 <img alt="NACFB logo" src="/Stonebridge_Website/img/NACFB_Logo_with_strapline_Inverse_RGB.png"/>
 </div>
 </div>
-</section><section aria-label="Features" class="customer-driven-section library-section" data-content-key="grow.section-customer-driven-features" data-page-variant="grow" data-section-id="04-features" data-section-name="Customer-Driven Solutions Features" data-section-type="feature-stats" data-source-id="section-customer-driven-features" id="grow__section-customer-driven-features">
-<div class="container">
-<div class="customer-driven-panel">
-<div class="customer-driven-copy">
-<span class="section-eyebrow" style="color: var(--c-white); background: rgba(255,255,255,0.12); border-bottom: none; border-radius: 999px; padding: 8px 12px; font-weight: 800; margin-bottom: 24px;">FEATURES</span>
-<h2 style="color: #ffffff !important; max-width: none;">What is a Grow My Business loan?</h2>
-<p>The UK government is extending its support for SMEs with new Grow My Business initiatives, launching on 1st July 2024. Announced in the Spring 2024 Budget, the Grow My Business scheme is an extension of the Recovery Loan Scheme (RLS), ensuring continued financial support for businesses across the UK.</p>
-<a class="btn features-cta" data-text="Explore Solutions" href="/Stonebridge_Website/contact" style="margin-top: 32px; display: inline-flex;"><span>Explore Solutions</span></a>
 </div>
-<div class="customer-features-grid">
-<div class="customer-feature-item border-right border-bottom">
-<div class="feature-icon"><i class="lucide-icon" data-lucide="award"></i></div>
-<div class="feature-text">
-<h3>Award-winning support</h3>
-<p>Expert guidance and support throughout your finance journey.</p>
+<div class="ecommerce-business-loans-hero-media">
+<img alt="Business owners reviewing finance options" src="https://images.pexels.com/photos/7964536/pexels-photo-7964536.jpeg?auto=compress&cs=tinysrgb&w=900&h=520&fit=crop"/>
 </div>
 </div>
-<div class="customer-feature-item border-bottom">
-<div class="feature-icon"><i class="lucide-icon" data-lucide="zap"></i></div>
-<div class="feature-text">
-<h3>Fast applications</h3>
-<p>Quick, straightforward, and built to remove confusion.</p>
-</div>
-</div>
-<div class="customer-feature-item border-right">
-<div class="feature-icon"><i class="lucide-icon" data-lucide="crosshair"></i></div>
-<div class="feature-text">
-<h3>Tailored matching</h3>
-<p>Bespoke solutions matched to your exact business needs.</p>
-</div>
-</div>
-<div class="customer-feature-item">
-<div class="feature-icon"><i class="lucide-icon" data-lucide="handshake"></i></div>
-<div class="feature-text">
-<h3>End-to-end guidance</h3>
-<p>From initial enquiry through to successful payout.</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section><section aria-label="What Stonebridge does for your business" class="team-story-section library-section" data-content-key="grow.section-team-story" data-page-variant="grow" data-section-id="12B" data-section-name="Team Story - Success" data-section-type="editorial-image-feature" data-section-use="Editorial product explanation section with feature cards and compact value props" data-source-id="section-team-story" id="grow__section-team-story">
+</div></section><section aria-label="What Stonebridge does for your business" class="team-story-section library-section" data-content-key="ecommerce-business-loans.section-team-story" data-page-variant="ecommerce-business-loans" data-section-id="12B" data-section-name="Team Story - Success" data-section-type="editorial-image-feature" data-section-use="Editorial product explanation section with feature cards and compact value props" data-source-id="section-team-story" id="ecommerce-business-loans__section-team-story">
 <div class="container">
 <div class="team-story-header">
 <div class="team-story-header-left">
@@ -3922,13 +4007,13 @@
 </article>
 </div>
 </div>
-</section><section id="grow__section-benefits" style="padding: var(--section-padding-y-desktop) 0; background: var(--c-white); border-top: 1px solid rgba(108,93,211,0.10);">
+</section><section id="ecommerce-business-loans__section-benefits" style="padding: var(--section-padding-y-desktop) 0; background: var(--c-white); border-top: 1px solid rgba(108,93,211,0.10);">
 <div class="container">
 <!-- Section Header -->
 <div style="text-align: center; max-width: 760px; margin: 0 auto var(--space-xl);">
-<span class="section-eyebrow">Grow My Business</span>
-<h2>Benefits of a Grow My Business Loan</h2>
-<p style="font-size: 17px; color: var(--c-grey); line-height: 1.7; margin: 0;">Whether your goal is to expand, innovate, or stabilise your operations, our Grow My Business loans offer flexible terms and competitive rates tailored to your needs. Stonebridge can be the partner to guide your business on the path to future success.</p>
+<span class="section-eyebrow">E-commerce E-commerce Business Loans</span>
+<h2>E-commerce E-commerce Business Loans arranged around your business goals</h2>
+<p style="font-size: 17px; color: var(--c-grey); line-height: 1.7; margin: 0;">Compare secured and unsecured e-commerce business loan options with Stonebridge and get expert guidance from enquiry to funding.</p>
 </div>
 <!-- Benefits Grid -->
 <div class="grow-benefits-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: var(--space-xl);">
@@ -3937,191 +4022,143 @@
 <div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(108,93,211,0.10); color: var(--c-purple); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
 <i class="lucide-icon" data-lucide="plus-circle" style="width: 26px; height: 26px;"></i>
 </div>
-<h3 style="font-size: 19px; font-weight: 800; color: var(--c-dark); margin-bottom: 10px; line-height: 1.25;">Additional Funding Source</h3>
-<p style="font-size: 15px; color: var(--c-grey); line-height: 1.6; margin: 0;">An extra avenue of finance for businesses looking to grow or stabilise, making it easier to obtain the backing you need to move forward with confidence.</p>
+<h3 style="font-size: 19px; font-weight: 800; color: var(--c-dark); margin-bottom: 10px; line-height: 1.25;">Working Capital Loans</h3>
+<p style="font-size: 15px; color: var(--c-grey); line-height: 1.6; margin: 0;">Keep day-to-day operations moving with funding for wages, suppliers, rent, bills, or short-term gaps while income or invoices are still due.</p>
 </div>
 <!-- Benefit 2 -->
 <div style="background: rgba(108,93,211,0.04); border: 1px solid rgba(108,93,211,0.14); border-radius: 16px 80px 16px 16px; padding: 32px 28px;">
 <div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(108,93,211,0.10); color: var(--c-purple); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
 <i class="lucide-icon" data-lucide="sliders-horizontal" style="width: 26px; height: 26px;"></i>
 </div>
-<h3 style="font-size: 19px; font-weight: 800; color: var(--c-dark); margin-bottom: 10px; line-height: 1.25;">Flexible Financing Options</h3>
-<p style="font-size: 15px; color: var(--c-grey); line-height: 1.6; margin: 0;">Choose from a range of loan structures with varied interest rates and repayment terms. Borrow up to £2 million in Great Britain and £1 million in Northern Ireland.</p>
+<h3 style="font-size: 19px; font-weight: 800; color: var(--c-dark); margin-bottom: 10px; line-height: 1.25;">Secured &amp; Unsecured Routes</h3>
+<p style="font-size: 15px; color: var(--c-grey); line-height: 1.6; margin: 0;">Explore suitable borrowing routes based on your loan amount, available security, business history, credit profile, and repayment preferences.</p>
 </div>
 <!-- Benefit 3 -->
 <div style="background: rgba(108,93,211,0.04); border: 1px solid rgba(108,93,211,0.14); border-radius: 16px 80px 16px 16px; padding: 32px 28px;">
 <div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(108,93,211,0.10); color: var(--c-purple); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
 <i class="lucide-icon" data-lucide="tag" style="width: 26px; height: 26px;"></i>
 </div>
-<h3 style="font-size: 19px; font-weight: 800; color: var(--c-dark); margin-bottom: 10px; line-height: 1.25;">Reduced Costs</h3>
-<p style="font-size: 15px; color: var(--c-grey); line-height: 1.6; margin: 0;">Backed by a 70% UK government guarantee to lenders, increasing your chances of securing favourable loan terms and lower overall borrowing costs.</p>
+<h3 style="font-size: 19px; font-weight: 800; color: var(--c-dark); margin-bottom: 10px; line-height: 1.25;">Lender Panel Comparison</h3>
+<p style="font-size: 15px; color: var(--c-grey); line-height: 1.6; margin: 0;">We compare options across our lender panel to help identify a e-commerce business loan with appropriate pricing, terms, and eligibility criteria.</p>
 </div>
 <!-- Benefit 4 -->
 <div style="background: rgba(108,93,211,0.04); border: 1px solid rgba(108,93,211,0.14); border-radius: 16px 80px 16px 16px; padding: 32px 28px;">
 <div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(108,93,211,0.10); color: var(--c-purple); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
 <i class="lucide-icon" data-lucide="calendar-check" style="width: 26px; height: 26px;"></i>
 </div>
-<h3 style="font-size: 19px; font-weight: 800; color: var(--c-dark); margin-bottom: 10px; line-height: 1.25;">Longer Repayment Terms</h3>
-<p style="font-size: 15px; color: var(--c-grey); line-height: 1.6; margin: 0;">Repay over up to six years, giving your business the breathing room to manage repayments comfortably alongside day-to-day operations.</p>
+<h3 style="font-size: 19px; font-weight: 800; color: var(--c-dark); margin-bottom: 10px; line-height: 1.25;">Repayments Around Cash Flow</h3>
+<p style="font-size: 15px; color: var(--c-grey); line-height: 1.6; margin: 0;">Choose from loan terms and repayment structures that can be shaped around trading cycles, affordability, and the purpose of the borrowing.</p>
 </div>
 <!-- Benefit 5 -->
 <div style="background: rgba(108,93,211,0.04); border: 1px solid rgba(108,93,211,0.14); border-radius: 16px 80px 16px 16px; padding: 32px 28px;">
 <div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(108,93,211,0.10); color: var(--c-purple); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
 <i class="lucide-icon" data-lucide="layout-grid" style="width: 26px; height: 26px;"></i>
 </div>
-<h3 style="font-size: 19px; font-weight: 800; color: var(--c-dark); margin-bottom: 10px; line-height: 1.25;">Versatile Use of Funds</h3>
-<p style="font-size: 15px; color: var(--c-grey); line-height: 1.6; margin: 0;">Use the funds for a wide range of business purposes — from cash flow management and investment in growth to refinancing existing debt on better terms.</p>
+<h3 style="font-size: 19px; font-weight: 800; color: var(--c-dark); margin-bottom: 10px; line-height: 1.25;">Funding for Key Priorities</h3>
+<p style="font-size: 15px; color: var(--c-grey); line-height: 1.6; margin: 0;">Use a e-commerce business loan for stock, equipment, refurbishment, marketing, tax bills, recruitment, expansion, or refinancing existing borrowing.</p>
 </div>
 <!-- Benefit 6 -->
 <div style="background: rgba(108,93,211,0.04); border: 1px solid rgba(108,93,211,0.14); border-radius: 16px 80px 16px 16px; padding: 32px 28px;">
 <div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(108,93,211,0.10); color: var(--c-purple); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
 <i class="lucide-icon" data-lucide="trending-up" style="width: 26px; height: 26px;"></i>
 </div>
-<h3 style="font-size: 19px; font-weight: 800; color: var(--c-dark); margin-bottom: 10px; line-height: 1.25;">Improved Cash Flow</h3>
-<p style="font-size: 15px; color: var(--c-grey); line-height: 1.6; margin: 0;">Prevent cash flow shortages and give your business the financial stability it needs to operate smoothly, meet commitments, and pursue growth without disruption.</p>
+<h3 style="font-size: 19px; font-weight: 800; color: var(--c-dark); margin-bottom: 10px; line-height: 1.25;">Support Through the Application</h3>
+<p style="font-size: 15px; color: var(--c-grey); line-height: 1.6; margin: 0;">Your Stonebridge finance specialist helps package the application, manage lender questions, and keep the process moving toward a decision.</p>
 </div>
 </div>
 <!-- CTA strip -->
 <div class="grow-benefits-cta">
 <div class="grow-benefits-cta-copy">
-<span class="grow-benefits-cta-kicker">Ready to move forward?</span>
-<h3>Apply now for a Grow My Business loan</h3>
-<p>Give your business the funding support it needs to recover, build momentum, and grow with confidence. Our finance experts will help you find a suitable solution from our lender panel.</p>
+<span class="grow-benefits-cta-kicker">Ready to compare your options?</span>
+<h3>Apply now for E-commerce E-commerce Business Loans</h3>
+<p>Tell us how much you want to borrow, what the loan will be used for, and a little about your business. Our finance experts will help compare suitable options and guide your application.</p>
 <div class="grow-benefits-cta-actions">
 <a class="btn btn-primary grow-benefits-cta-primary" data-text="Apply Now" href="/Stonebridge_Website/apply"><span>Apply Now</span></a>
 </div>
 </div>
 </div>
 </div>
-</section><section aria-label="Customer-Driven Solutions" class="customer-driven-section library-section" data-content-key="grow.section-customer-driven" data-page-variant="grow" data-section-id="04" data-section-name="Customer-Driven Solutions" data-section-type="feature-stats" data-section-use="Two-column feature section with image, supporting bullet points, and proof stats" data-source-id="section-customer-driven" id="grow__section-customer-driven">
+</section> <section aria-label="Sector Showcase - Four Card Grid" class="investment-opportunity-section library-section" data-include-section="section-investment-opportunity-grid" data-include-source="/Stonebridge_Website/sections/" data-section-id="12D" data-section-name="Sector Showcase - Four Card Grid" data-section-type="visual-proof-card" data-section-use="Live include from sections page" id="section-investment-opportunity-grid">
+<div class="container">
+<div class="investment-opportunity-wrap">
+<h2>Explore Finance by Sector</h2>
+<p class="section-include-loading">Loading sector showcase...</p>
+</div>
+</div>
+</section><section aria-label="Customer-Driven Solutions" class="customer-driven-section library-section" data-content-key="ecommerce-business-loans.section-customer-driven" data-page-variant="ecommerce-business-loans" data-section-id="04" data-section-name="Customer-Driven Solutions" data-section-type="feature-stats" data-section-use="Two-column feature section with image, supporting bullet points, and proof stats" data-source-id="section-customer-driven" id="ecommerce-business-loans__section-customer-driven">
 <div class="container">
 <!-- Centered header -->
 <div class="customer-driven-header">
-<span class="section-eyebrow">How to get a business loan</span>
-<h2>Unlock your business potential with tailored financing</h2>
-<p>Whether you need to sustain day-to-day activity, seize new opportunities, or expand with confidence, Stonebridge helps you compare suitable secured and unsecured business loan options.</p>
+<span class="section-eyebrow">How to get a e-commerce business loan</span>
+<h2>Simple steps to finding the right e-commerce business loan</h2>
+<p>Tell us what you need to borrow, how the funding will be used, and a few key details about your business. Stonebridge will help you compare suitable lenders, prepare your application, and move toward a clear funding decision.</p>
 </div>
 <!-- Two panels -->
 <div class="customer-driven-panels">
-<!-- Left: dark purple stat panel -->
-<div class="cdp-left">
-<div>
-<p class="cdp-left-label">Business Finance</p>
-<p class="cdp-left-title">Get funded faster than the high street</p>
-</div>
-<div class="cdp-stat-row">
-<span class="cdp-stat-number">100+</span>
-<span class="cdp-stat-label">UK lenders<br/>on our panel</span>
-</div>
-<div class="cdp-bars">
-<div class="cdp-bar" style="height:35%"></div>
-<div class="cdp-bar" style="height:55%"></div>
-<div class="cdp-bar active" style="height:80%"></div>
-<div class="cdp-bar active" style="height:100%"></div>
-<div class="cdp-bar" style="height:65%"></div>
-</div>
-<div class="cdp-arrow-wrap">
-<svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" viewbox="0 0 24 24">
-<line x1="12" x2="12" y1="19" y2="5"></line>
-<polyline points="5 12 12 5 19 12"></polyline>
-</svg>
-</div>
-</div>
-<!-- Right: light teal feature panel -->
+<!-- Left: light teal feature panel -->
 <div class="cdp-right">
 <div>
-<p class="cdp-right-label">Grow My Business</p>
-<h3 class="cdp-right-title">What can the loan be used for?</h3>
-<ul aria-label="Grow My Business loan uses" class="cdp-features">
-<li><i class="lucide-icon" data-lucide="circle-check-big"></i><span>Managing cash flow</span></li>
-<li><i class="lucide-icon" data-lucide="circle-check-big"></i><span>Covering overheads</span></li>
-<li><i class="lucide-icon" data-lucide="circle-check-big"></i><span>Equipment &amp; machinery</span></li>
-<li><i class="lucide-icon" data-lucide="circle-check-big"></i><span>Inventory &amp; materials</span></li>
-<li><i class="lucide-icon" data-lucide="circle-check-big"></i><span>Technology upgrades</span></li>
-<li><i class="lucide-icon" data-lucide="circle-check-big"></i><span>Marketing &amp; advertising</span></li>
-<li><i class="lucide-icon" data-lucide="circle-check-big"></i><span>Refinancing existing debt</span></li>
-<li><i class="lucide-icon" data-lucide="circle-check-big"></i><span>Commercial rent</span></li>
-<li><i class="lucide-icon" data-lucide="circle-check-big"></i><span>Staff salaries</span></li>
-<li><i class="lucide-icon" data-lucide="circle-check-big"></i><span>Unexpected costs</span></li>
+<p class="cdp-right-label">E-commerce E-commerce Business Loans</p>
+<h3 class="cdp-right-title">What lenders usually review</h3>
+<ul aria-label="Business loan application details" class="cdp-features">
+<li><i class="lucide-icon" data-lucide="circle-check-big"></i><span>How much you want to borrow</span></li>
+<li><i class="lucide-icon" data-lucide="circle-check-big"></i><span>What the loan will be used for</span></li>
+<li><i class="lucide-icon" data-lucide="circle-check-big"></i><span>Trading history and business structure</span></li>
+<li><i class="lucide-icon" data-lucide="circle-check-big"></i><span>Turnover, cash flow, and affordability</span></li>
+<li><i class="lucide-icon" data-lucide="circle-check-big"></i><span>Recent bank statements or accounts</span></li>
+<li><i class="lucide-icon" data-lucide="circle-check-big"></i><span>Whether security is available or required</span></li>
+<li><i class="lucide-icon" data-lucide="circle-check-big"></i><span>Preferred repayment term</span></li>
+<li><i class="lucide-icon" data-lucide="circle-check-big"></i><span>Existing finance commitments</span></li>
 </ul>
 </div>
 <div aria-label="Customer-driven proof points" class="cdp-stats">
 <div class="cdp-stat">
-<strong>Fast</strong>
-<span>access to funds when you need them</span>
+<strong>Clear</strong>
+<span>guidance before you apply</span>
 </div>
 <div class="cdp-stat">
-<strong>Flexible</strong>
-<span>loan structures for different scenarios</span>
+<strong>Matched</strong>
+<span>options from suitable lenders</span>
 </div>
 <div class="cdp-stat">
-<strong>Bespoke</strong>
-<span>solutions for short and long-term growth</span>
+<strong>Supported</strong>
+<span>from enquiry to payout</span>
+</div>
+</div>
+</div>
+<!-- Right: dark purple stat panel -->
+<div class="cdp-left">
+<div>
+<p class="cdp-left-label">Application Journey</p>
+<p class="cdp-left-title">From enquiry to lender decision</p>
+</div>
+<div style="display: grid; gap: 14px; margin-top: 28px;">
+<div style="display: grid; grid-template-columns: 44px 1fr; gap: 14px; align-items: flex-start;">
+<span style="width: 44px; height: 44px; border-radius: 999px; background: rgba(255,255,255,0.14); color: var(--c-white); display: inline-flex; align-items: center; justify-content: center; font-weight: 900;">1</span>
+<div>
+<strong style="display: block; color: var(--c-white); font-size: 18px; margin-bottom: 4px;">Share your funding need</strong>
+<span style="display: block; color: rgba(255,255,255,0.76); line-height: 1.55;">Tell us the loan amount, purpose, trading position, and preferred repayment term.</span>
+</div>
+</div>
+<div style="display: grid; grid-template-columns: 44px 1fr; gap: 14px; align-items: flex-start;">
+<span style="width: 44px; height: 44px; border-radius: 999px; background: rgba(255,255,255,0.14); color: var(--c-white); display: inline-flex; align-items: center; justify-content: center; font-weight: 900;">2</span>
+<div>
+<strong style="display: block; color: var(--c-white); font-size: 18px; margin-bottom: 4px;">Compare lender options</strong>
+<span style="display: block; color: rgba(255,255,255,0.76); line-height: 1.55;">We review suitable secured and unsecured routes from our lender panel.</span>
+</div>
+</div>
+<div style="display: grid; grid-template-columns: 44px 1fr; gap: 14px; align-items: flex-start;">
+<span style="width: 44px; height: 44px; border-radius: 999px; background: rgba(255,255,255,0.14); color: var(--c-white); display: inline-flex; align-items: center; justify-content: center; font-weight: 900;">3</span>
+<div>
+<strong style="display: block; color: var(--c-white); font-size: 18px; margin-bottom: 4px;">Apply with support</strong>
+<span style="display: block; color: rgba(255,255,255,0.76); line-height: 1.55;">Your finance specialist helps prepare the application and manage lender questions.</span>
 </div>
 </div>
 </div>
 </div>
 </div>
-</section><section aria-label="Investment Opportunity - Pathway" class="investment-opportunity-section library-section" data-section-id="12C" data-section-name="Investment Opportunity - Pathway" data-section-type="visual-proof-card" data-section-use="Three-card visual proof section for business growth messaging, trust cues, and performance snapshot" id="section-investment-opportunity">
-<div class="container">
-<div class="investment-opportunity-wrap">
-<h2>Explore Our Products and Services</h2>
-<div aria-label="Investment opportunity highlights" class="investment-opportunity-cards" role="list">
-<article class="io-card io-card-image" role="listitem">
-<img alt="Business owners discussing long-term finance plans" decoding="async" height="560" loading="lazy" sizes="(max-width: 900px) 100vw, 33vw" src="https://images.pexels.com/photos/34654336/pexels-photo-34654336.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900&amp;h=560&amp;fit=crop" srcset="https://images.pexels.com/photos/34654336/pexels-photo-34654336.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640&amp;h=398&amp;fit=crop 640w, https://images.pexels.com/photos/34654336/pexels-photo-34654336.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900&amp;h=560&amp;fit=crop 900w, https://images.pexels.com/photos/34654336/pexels-photo-34654336.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200&amp;h=747&amp;fit=crop 1200w" width="900"/>
-<div class="io-card-copy">
-<p class="io-card-copy-title">Checkout our all solutions</p>
-<p class="io-card-copy-body">Explore funding pathways designed around your goals, with clear options and practical support at every step.</p>
 </div>
-<a aria-label="Explore finance services" class="io-explore-pill" href="/Stonebridge_Website/services">Explore</a>
-</article>
-<div aria-label="Pathway to financial prosperity" class="io-center-stack" role="listitem">
-<article aria-label="Stonebridge brand highlight" class="io-card io-card-content">
-<div aria-hidden="true" class="io-brand-loop">
-<div class="io-brand-track">
-<span>STONEBRIDGE</span>
-<span>STONEBRIDGE</span>
-<span>STONEBRIDGE</span>
-<span>STONEBRIDGE</span>
-<span>STONEBRIDGE</span>
-<span>STONEBRIDGE</span>
-<span>STONEBRIDGE</span>
-<span>STONEBRIDGE</span>
-</div>
-</div>
-</article>
-<article aria-label="Investment performance snapshot" class="io-card io-card-info">
-<div class="io-info-top">
-<div aria-hidden="true" class="io-avatar-group">
-<img alt="" class="io-avatar" decoding="async" loading="lazy" src="/Stonebridge_Website/img/freepik_prompt-usercentric-hero-i_2834767635.webp"/>
-<img alt="" class="io-avatar" decoding="async" loading="lazy" src="/Stonebridge_Website/img/freepik_a-white-american-female-f_2834912496.webp"/>
-<img alt="" class="io-avatar" decoding="async" loading="lazy" src="/Stonebridge_Website/img/freepik_prompt-usercentric-hero-i_2834767635.webp"/>
-<img alt="" class="io-avatar" decoding="async" loading="lazy" src="/Stonebridge_Website/img/freepik_a-white-american-female-f_2834912496.webp"/>
-</div>
-<p class="io-growth-metric"><span aria-hidden="true" class="arrow">▲</span>44K+</p>
-</div>
-<div class="io-info-label-row">
-<p class="io-info-label">Products &amp; Services</p>
-<p class="io-info-percent">100+</p>
-</div>
-<div aria-hidden="true" class="io-progress">
-<span style="width:100%;"></span>
-</div>
-<p class="io-info-body">Browse our full range of products and services to find the right finance route for your business goals.</p>
-</article>
-</div>
-<article class="io-card io-card-image" role="listitem">
-<img alt="Business partners planning next-generation growth goals" decoding="async" height="560" loading="lazy" sizes="(max-width: 900px) 100vw, 33vw" src="https://images.pexels.com/photos/12437059/pexels-photo-12437059.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900&amp;h=560&amp;fit=crop" srcset="https://images.pexels.com/photos/12437059/pexels-photo-12437059.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=640&amp;h=398&amp;fit=crop 640w, https://images.pexels.com/photos/12437059/pexels-photo-12437059.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900&amp;h=560&amp;fit=crop 900w, https://images.pexels.com/photos/12437059/pexels-photo-12437059.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=1200&amp;h=747&amp;fit=crop 1200w" width="900"/>
-<div class="io-card-copy">
-<p class="io-card-copy-title">Checkout our all products</p>
-<p class="io-card-copy-body">Browse our product range to find flexible business finance options tailored to your sector, timing, and growth plans.</p>
-</div>
-<a aria-label="Explore finance products" class="io-explore-pill" href="/Stonebridge_Website/products">Explore</a>
-</article>
-</div>
-</div>
-</div>
-</section><section aria-label="Sector Expertise - Testimonials" class="sector-expertise library-section" data-content-key="grow.section-sector-expertise" data-page-variant="grow" data-section-id="08" data-section-name="Sector Expertise - Testimonials" data-section-type="sector-testimonials" data-section-use="Sector-led credibility section with testimonial cards and expertise messaging" data-source-id="section-sector-expertise" id="grow__section-sector-expertise" style="padding: var(--section-padding-y-desktop) 0; background-color: var(--c-white);">
+</section><section aria-label="Sector Expertise - Testimonials" class="sector-expertise library-section" data-content-key="ecommerce-business-loans.section-sector-expertise" data-page-variant="ecommerce-business-loans" data-section-id="08" data-section-name="Sector Expertise - Testimonials" data-section-type="sector-testimonials" data-section-use="Sector-led credibility section with testimonial cards and expertise messaging" data-source-id="section-sector-expertise" id="ecommerce-business-loans__section-sector-expertise" style="padding: var(--section-padding-y-desktop) 0; background-color: var(--c-white);">
 <div class="container" style="display: flex; flex-wrap: wrap; gap: var(--space-xl); align-items: center;">
 <div class="sector-copy" style="text-align: center; width: 100%; max-width: 100%; margin: 0 auto; flex: 1 1 100%; display: flex; flex-direction: column; align-items: center; background: rgba(108, 93, 211, 0.08); padding: 48px 36px; border-radius: 24px; border: 1px solid rgba(108, 93, 211, 0.18); box-shadow: 0 10px 30px rgba(108, 93, 211, 0.05);">
 <h2 style="font-size: clamp(36px, 5vw, 56px); line-height: 1.1; margin-bottom: var(--space-sm); color: var(--c-dark);">Financing businesses like yours</h2>
@@ -4259,14 +4296,14 @@
 <div style="position: absolute; top: 12px; left: 12px; width: 100%; height: 100%; background-color: var(--c-purple-bg); border-radius: var(--radius-md); z-index: 1;"></div>
 </div>
 </div>
-</section><section aria-label="Benefits Grid - Why Choose Us" class="why-choose-us library-section" data-content-key="grow.section-why-choose-us" data-page-variant="grow" data-section-id="07" data-section-name="Benefits Grid - Why Choose Us" data-section-type="benefits-grid" data-section-use="Reusable benefit cards with imagery, headings, and explanatory copy" data-source-id="section-why-choose-us" id="grow__section-why-choose-us">
+</section><section aria-label="Benefits Grid - Why Choose Us" class="why-choose-us library-section" data-content-key="ecommerce-business-loans.section-why-choose-us" data-page-variant="ecommerce-business-loans" data-section-id="07" data-section-name="Benefits Grid - Why Choose Us" data-section-type="benefits-grid" data-section-use="Reusable benefit cards with imagery, headings, and explanatory copy" data-source-id="section-why-choose-us" id="ecommerce-business-loans__section-why-choose-us">
 <div class="container">
 <div class="why-panel">
 <span class="why-kicker"><i class="lucide-icon" data-lucide="sparkles"></i> Built around better finance</span>
-<h2>Why choose our business loans?</h2>
+<h2>Why choose our e-commerce e-commerce business loans?</h2>
 <p class="subtext">Stonebridge provides flexible business funding designed for real-world trading conditions, whether you are managing cash flow, expanding, or covering short-term pressure.</p>
 <p class="subtext" style="margin: var(--space-sm) 0 var(--space-md); color: var(--c-purple-light);">For larger requirements, secured facilities can unlock higher borrowing limits and longer repayment terms.</p>
-<a class="btn btn-primary" data-text="Secure Your Funding" href="/Stonebridge_Website/finance-products/business-loans" style="background-color: var(--c-green) !important;"><span>Secure Your Funding</span></a>
+<a class="btn btn-primary" data-text="Secure Your Funding" href="/Stonebridge_Website/finance-products/ecommerce-business-loans" style="background-color: var(--c-green) !important;"><span>Secure Your Funding</span></a>
 </div>
 <div aria-label="Why choose Stonebridge carousel" class="why-carousel">
 <div class="why-carousel-viewport">
@@ -4357,16 +4394,16 @@
 </div>
 </div>
 </div>
-</section><section aria-label="FAQ - Accordion" class="faq-section library-section" data-content-key="grow.section-faq" data-page-variant="grow" data-section-id="12" data-section-name="FAQ - Accordion" data-section-type="faq-accordion" data-section-use="Two-column FAQ accordion section for common objections and support questions" data-source-id="section-faq" id="grow__section-faq">
+</section><section aria-label="FAQ - Accordion" class="faq-section library-section" data-content-key="ecommerce-business-loans.section-faq" data-page-variant="ecommerce-business-loans" data-section-id="12" data-section-name="FAQ - Accordion" data-section-type="faq-accordion" data-section-use="Two-column FAQ accordion section for common objections and support questions" data-source-id="section-faq" id="ecommerce-business-loans__section-faq">
 <div class="container">
 <div class="faq-layout">
 <div class="faq-heading">
-<span class="faq-pill">Business Loans</span>
-<h2>Business loans FAQs<span>Helpful answers before you apply</span></h2>
+<span class="faq-pill">E-commerce E-commerce Business Loans</span>
+<h2>E-commerce E-commerce Business Loans FAQs<span>Helpful answers before you apply</span></h2>
 </div>
 <div class="faq-list">
 <details class="faq-item">
-<summary class="faq-question">How do I get a business loan?</summary>
+<summary class="faq-question">How do I get a e-commerce business loan?</summary>
 <div class="faq-answer">
 <p>Start with an eligibility check, then we compare suitable lenders and guide you through application, approval, and payout.</p>
 </div>
@@ -4422,36 +4459,7 @@
 </div>
 </div>
 </div>
-</section><section aria-label="Product Cards - Finance Solutions" class="products-section library-section" data-content-key="grow.section-products" data-page-variant="grow" data-section-id="03" data-section-name="Product Cards - Finance Solutions" data-section-type="product-grid" data-section-use="Reusable finance product and solution card grid with CTA" data-source-id="section-products" id="grow__section-products" style="padding: calc(var(--section-padding-y-desktop) * 1.2) 0;">
-<div class="container">
-<div class="section-header" style="text-align: center;">
-<h2>Business loan solutions to support your goals</h2>
-<p class="subtext" style="margin: var(--space-sm) 0 0;">From unsecured working capital to secured growth funding, Stonebridge helps you compare suitable options with clear guidance and competitive structures.</p>
-<div style="margin-top: var(--space-md);">
-<a class="btn btn-outline" data-text="Explore Business Loans" href="/Stonebridge_Website/finance-products/business-loans" style="color:var(--c-purple); border-color:var(--c-purple);"><span>Explore Business Loans <i class="lucide-icon" data-lucide="arrow-right" style="margin-left: 8px;"></i></span></a>
-</div>
-</div>
-<div class="products-grid" style="display: flex; flex-wrap: wrap; gap: var(--gap-cards-desktop); justify-content: center;">
-<div class="product-card">
-<div class="product-card-header">
-<div class="product-icon"><i class="lucide-icon" data-lucide="briefcase"></i></div>
-<h3>Business Loans</h3>
-</div>
-<div class="product-card-body">
-<p>Get fast unsecured and secured business finance from £20k–£25m.</p>
-<ul>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> For any business purpose</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Up to 10 years repayment terms</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Funding approved within 8 hours</li>
-</ul>
-</div>
-<div class="product-card-footer">
-<a class="product-link" href="/Stonebridge_Website/finance-products/business-loans">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></a>
-</div>
-</div>
-</div>
-</div>
-</section> <section aria-label="CTA - Final Conversion Band" class="cta-band library-section" data-content-key="grow-my-business.cta" data-page-variant="grow-my-business" data-section-id="13" data-section-name="CTA - Final Conversion Band" data-section-type="conversion-cta" data-section-use="High-intent final call-to-action band with benefit pills, buttons, and supporting image" data-source-id="section-cta" id="grow-my-business__section-cta">
+</section><section aria-label="CTA - Final Conversion Band" class="cta-band library-section" data-content-key="ecommerce-business-loans.cta" data-page-variant="ecommerce-business-loans" data-section-id="13" data-section-name="CTA - Final Conversion Band" data-section-type="conversion-cta" data-section-use="High-intent final call-to-action band with benefit pills, buttons, and supporting image" data-source-id="section-cta" id="ecommerce-business-loans__section-cta">
 <div class="container">
 <div class="cta-card-inner">
 <div class="cta-card-copy">
@@ -4662,6 +4670,58 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 <script>lucide.createIcons();</script>
 <script>
+  function attachInvestmentOpportunityPills(scope = document) {
+    const canUseCustomPill = window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+    if (!canUseCustomPill) return;
+
+    scope.querySelectorAll('.investment-opportunity-cards > .io-card-image').forEach((card) => {
+      if (card.dataset.pillBound === 'true') return;
+      card.dataset.pillBound = 'true';
+
+      const movePill = (event) => {
+        const rect = card.getBoundingClientRect();
+        const x = Math.max(0, Math.min(event.clientX - rect.left, rect.width));
+        const y = Math.max(0, Math.min(event.clientY - rect.top, rect.height));
+        card.style.setProperty('--io-pill-x', `${x}px`);
+        card.style.setProperty('--io-pill-y', `${y}px`);
+      };
+
+      card.addEventListener('mouseenter', movePill);
+      card.addEventListener('mousemove', movePill);
+    });
+  }
+
+  function loadIncludedSections() {
+    document.querySelectorAll('[data-include-section][data-include-source]').forEach(async (mount) => {
+      const source = mount.dataset.includeSource;
+      const sectionId = mount.dataset.includeSection;
+
+      try {
+        const response = await fetch(source, { cache: 'no-cache' });
+        if (!response.ok) throw new Error(`Unable to load ${source}`);
+
+        const html = await response.text();
+        const doc = new DOMParser().parseFromString(html, 'text/html');
+        const section = doc.getElementById(sectionId);
+        if (!section) throw new Error(`Missing section #${sectionId}`);
+
+        const clone = section.cloneNode(true);
+        clone.dataset.includeSection = sectionId;
+        clone.dataset.includeSource = source;
+        clone.dataset.includeMode = 'live';
+        mount.replaceWith(clone);
+
+        attachInvestmentOpportunityPills(clone);
+        if (window.lucide) lucide.createIcons();
+      } catch (error) {
+        mount.classList.add('is-include-error');
+        console.warn(error);
+      }
+    });
+  }
+
+  loadIncludedSections();
+
   document.querySelectorAll('.products-section .product-link .lucide-icon').forEach((icon) => {
     if (icon.parentElement && icon.parentElement.classList.contains('product-link-icon-wrap')) return;
     const wrap = document.createElement('span');
@@ -4689,21 +4749,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   });
 
-  const canUseCustomPill = window.matchMedia && window.matchMedia('(hover: hover) and (pointer: fine)').matches;
-  if (canUseCustomPill) {
-    document.querySelectorAll('.investment-opportunity-cards > .io-card-image').forEach((card) => {
-      const movePill = (event) => {
-        const rect = card.getBoundingClientRect();
-        const x = Math.max(0, Math.min(event.clientX - rect.left, rect.width));
-        const y = Math.max(0, Math.min(event.clientY - rect.top, rect.height));
-        card.style.setProperty('--io-pill-x', `${x}px`);
-        card.style.setProperty('--io-pill-y', `${y}px`);
-      };
-
-      card.addEventListener('mouseenter', movePill);
-      card.addEventListener('mousemove', movePill);
-    });
-  }
+  attachInvestmentOpportunityPills();
 
   function initWhyChooseCarousel() {
     document.querySelectorAll('.why-carousel').forEach((carousel) => {
