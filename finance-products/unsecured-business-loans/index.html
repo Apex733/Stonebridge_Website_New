@@ -170,7 +170,7 @@
       align-items: center !important;
       justify-content: center !important;
       padding: clamp(52px, 7vw, 88px) 0 !important;
-      background: linear-gradient(135deg, #f8f5ff 0%, #eff8f7 100%) !important;
+      background: var(--c-purple) !important;
       overflow: hidden;
     }
     .hero-bg-overlay {
@@ -201,7 +201,7 @@
       font-size: clamp(38px, 4.8vw, 64px) !important;
       line-height: 1.08 !important;
       font-weight: 800 !important;
-      color: var(--c-dark) !important;
+      color: var(--c-white) !important;
       margin-top: 0;
       margin-bottom: 20px;
       letter-spacing: 0;
@@ -209,10 +209,19 @@
     .hero-fullbleed-subtext {
       font-size: clamp(16px, 1.8vw, 20px) !important;
       line-height: 1.55 !important;
-      color: var(--c-grey) !important;
+      color: rgba(255, 255, 255, 0.85) !important;
       margin-bottom: 28px;
       max-width: 580px;
     }
+    .hero-fullbleed-actions .btn-primary {
+      background-color: var(--c-purple-light, #E8E0F5) !important;
+      color: var(--c-purple, #4b17a6) !important;
+      border: none !important;
+    }
+    .hero-fullbleed-actions .btn-primary:hover {
+      background-color: var(--c-white, #ffffff) !important;
+    }
+
     .hero-fullbleed-actions {
       display: flex;
       align-items: center;
