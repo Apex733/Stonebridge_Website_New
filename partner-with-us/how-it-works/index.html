@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"> <head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>404 | Stonebridge</title><meta content="The page you are looking for could not be found." name="description"/><link href="/Stonebridge_Website/img/SVG/updated_fav.svg" rel="icon" type="image/svg+xml"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;family=Playfair+Display:ital,wght@1,400&amp;display=swap" rel="stylesheet"/><script src="/Stonebridge_Website/_astro/BaseLayout.astro_astro_type_script_index_0_lang.CN6pKSHs.js" type="module"></script><link href="/Stonebridge_Website/css/design-tokens.css?v=v2" rel="stylesheet"/><link href="/Stonebridge_Website/css/styles.css?v=v2" rel="stylesheet"/><style>
+<html lang="en"> <head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>How It Works — Partner Finance | Stonebridge Business Finance</title><meta content="Offer partner and vendor finance through Stonebridge to help your customers buy with confidence and grow your sales." name="description"/><link href="/Stonebridge_Website/img/SVG/updated_fav.svg" rel="icon" type="image/svg+xml"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;family=Playfair+Display:ital,wght@1,400&amp;display=swap" rel="stylesheet"/><script src="/Stonebridge_Website/_astro/BaseLayout.astro_astro_type_script_index_0_lang.CN6pKSHs.js" type="module"></script><link href="/Stonebridge_Website/css/design-tokens.css?v=v2" rel="stylesheet"/><link href="/Stonebridge_Website/css/styles.css?v=v2" rel="stylesheet"/><style>
     /* STRICT ENFORCEMENT OF DESIGN TOKENS & WOW-FACTOR UPGRADES */
     /* 1. Global Reset for Lucide SVG Setup & Layout Constraints */
     .container { width: 100%; max-width: none; margin: 0; padding: 0 20.4px; }
@@ -112,15 +112,6 @@
     .product-card:hover { transform: none; border-color: inherit !important; box-shadow: none; }
     .product-card:hover .product-card-header { background: var(--c-purple-bg); }
 
-    .product-card:hover .product-link .lucide-icon { transform: rotate(-45deg); filter: blur(0.2px); }
-    .products-grid:has(.product-card:hover) .product-card {
-      filter: blur(1.8px);
-      opacity: 0.78;
-    }
-    .products-grid:has(.product-card:hover) .product-card:hover {
-      filter: blur(0);
-      opacity: 1;
-    }
     .product-card:nth-child(4n+1) .product-card-header,
     .product-card:nth-child(4n+1) .product-card-body { background: #f8f5ff; }
     .product-card:nth-child(4n+1) .product-card-body ul li,
@@ -2979,10 +2970,964 @@
         grid-template-columns: 1fr;
       }
     }
+
+    /* ═══════════════════════════════════════════════════
+       PARTNER FINANCE PAGE — NEW SECTION STYLES
+       ═══════════════════════════════════════════════════ */
+
+    /* ── Why Choose section (dark bg) ── */
+    .partner-why-section {
+      background: var(--c-dark);
+      padding: var(--section-padding-y-desktop) 0;
+    }
+    .partner-why-inner { text-align: center; }
+    .partner-why-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: rgba(108,93,211,0.22);
+      border: 1px solid rgba(108,93,211,0.35);
+      color: rgba(255,255,255,0.74);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+    .partner-why-inner h2 {
+      font-size: clamp(30px, 3.8vw, 52px);
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: var(--c-white);
+      max-width: 820px;
+      margin: 0 auto 16px;
+    }
+    .partner-why-inner > p {
+      font-size: 17px;
+      line-height: 1.65;
+      color: rgba(255,255,255,0.54);
+      max-width: 700px;
+      margin: 0 auto 52px;
+    }
+    .partner-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      max-width: 1020px;
+      margin: 0 auto;
+    }
+    .partner-stat-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 6px;
+      padding: 28px 24px;
+      text-align: left;
+      transition: background 0.24s ease, border-color 0.24s ease;
+    }
+    .partner-stat-card:hover {
+      background: rgba(108,93,211,0.16);
+      border-color: rgba(108,93,211,0.42);
+    }
+    .partner-stat-icon {
+      width: 40px; height: 40px;
+      border-radius: 6px;
+      background: rgba(108,93,211,0.28);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 18px; color: var(--c-white);
+    }
+    .partner-stat-icon svg, .partner-stat-icon i { width: 20px; height: 20px; margin: 0; }
+    .partner-stat-value {
+      display: block;
+      font-size: clamp(24px, 2.6vw, 36px);
+      font-weight: 900;
+      color: var(--c-white);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .partner-stat-label {
+      display: block;
+      font-size: 14px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.52);
+      line-height: 1.45;
+    }
+    @media (max-width: 900px) { .partner-stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; } }
+    @media (max-width: 480px) { .partner-stats-grid { grid-template-columns: 1fr; } }
+
+    /* ── Partnership Tiers section ── */
+    .partner-tiers-section {
+      background: var(--c-purple-bg);
+      padding: var(--section-padding-y-desktop) 0;
+      border-top: 1px solid var(--c-purple-light);
+    }
+    .partner-tiers-header {
+      text-align: center;
+      max-width: 820px;
+      margin: 0 auto var(--space-lg);
+    }
+    .partner-tiers-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: rgba(0,137,123,0.10);
+      color: var(--c-green);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    .partner-tiers-header h2 {
+      font-size: clamp(30px, 3.8vw, 52px);
+      line-height: 1.08;
+      color: var(--c-dark);
+      margin: 0 0 14px;
+      letter-spacing: -0.02em;
+    }
+    .partner-tiers-header p {
+      font-size: 17px;
+      line-height: 1.65;
+      color: var(--c-grey);
+      margin: 0;
+    }
+    .partner-tiers-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+    .partner-tier-card {
+      background: var(--c-white);
+      border: 1px solid rgba(108,93,211,0.14);
+      border-radius: 6px 50px 6px 6px;
+      padding: 32px 28px 28px;
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.24s ease, box-shadow 0.24s ease;
+    }
+    .partner-tier-card:hover {
+      border-color: var(--c-purple);
+      box-shadow: 0 14px 40px rgba(91,45,142,0.10);
+    }
+    .partner-tier-card.is-featured {
+      background: var(--c-purple);
+      border-color: var(--c-purple);
+    }
+    .partner-tier-card.is-featured .partner-tier-label,
+    .partner-tier-card.is-featured .partner-tier-name,
+    .partner-tier-card.is-featured .partner-tier-desc { color: rgba(255,255,255,0.90) !important; }
+    .partner-tier-card.is-featured .partner-tier-label { background: rgba(255,255,255,0.14); color: var(--c-white) !important; }
+    .partner-tier-card.is-featured .partner-tier-icon-wrap { background: rgba(255,255,255,0.14); }
+    .partner-tier-card.is-featured .partner-tier-icon-wrap svg,
+    .partner-tier-card.is-featured .partner-tier-icon-wrap i { color: var(--c-white); }
+    .partner-tier-card.is-featured .btn-tier-cta { background: var(--c-white) !important; color: var(--c-purple) !important; }
+    .partner-tier-card.is-featured:hover { box-shadow: 0 14px 40px rgba(91,45,142,0.28); }
+    .partner-tier-icon-wrap {
+      width: 48px; height: 48px;
+      border-radius: 6px;
+      background: rgba(91,45,142,0.08);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 20px;
+    }
+    .partner-tier-icon-wrap svg, .partner-tier-icon-wrap i { width: 22px; height: 22px; color: var(--c-purple); margin: 0; }
+    .partner-tier-label {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: rgba(108,93,211,0.10);
+      color: var(--c-purple);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      width: fit-content;
+    }
+    .partner-tier-name {
+      font-size: clamp(22px, 2vw, 28px);
+      font-weight: 900;
+      line-height: 1.1;
+      color: var(--c-dark);
+      margin: 0 0 12px;
+    }
+    .partner-tier-desc {
+      font-size: 15px;
+      line-height: 1.62;
+      color: var(--c-grey);
+      margin: 0 0 28px;
+      flex: 1;
+    }
+    .btn-tier-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 48px;
+      padding: 0 22px;
+      border-radius: var(--radius-btn);
+      background: var(--c-purple);
+      color: var(--c-white);
+      font: inherit;
+      font-size: 14px;
+      font-weight: 900;
+      text-decoration: none;
+      transition: background 0.22s ease, transform 0.22s ease;
+      width: 100%;
+      border: 0;
+      cursor: pointer;
+    }
+    .btn-tier-cta:hover { background: var(--c-purple-dark); transform: translateY(-1px); }
+    .btn-tier-cta i, .btn-tier-cta svg { width: 15px; height: 15px; margin: 0; }
+    @media (max-width: 900px) {
+      .partner-tiers-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+    }
+
+    /* ── Success Stories / Testimonials ── */
+    .partner-stories-section {
+      background: var(--c-white);
+      padding: var(--section-padding-y-desktop) 0;
+      border-top: 1px solid rgba(108,93,211,0.10);
+    }
+    .partner-stories-header {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto var(--space-lg);
+    }
+    .partner-stories-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: rgba(108,93,211,0.08);
+      color: var(--c-purple);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    .partner-stories-header h2 {
+      font-size: clamp(30px, 3.8vw, 50px);
+      line-height: 1.08;
+      color: var(--c-dark);
+      margin: 0 0 14px;
+      letter-spacing: -0.02em;
+    }
+    .partner-stories-header p {
+      font-size: 17px;
+      line-height: 1.65;
+      color: var(--c-grey);
+      margin: 0;
+    }
+    .partner-stories-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: 24px;
+      align-items: stretch;
+    }
+    .partner-case-card {
+      background: linear-gradient(135deg, rgba(91,45,142,0.03), rgba(0,137,123,0.05));
+      border: 1px solid rgba(108,93,211,0.14);
+      border-radius: 6px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .partner-case-image {
+      position: relative;
+      height: 220px;
+      overflow: hidden;
+      background: var(--c-purple-bg);
+    }
+    .partner-case-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .partner-case-image::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 40%, rgba(26,26,46,0.48));
+      pointer-events: none;
+    }
+    .partner-case-content { padding: 28px; flex: 1; display: flex; flex-direction: column; }
+    .partner-case-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: rgba(0,137,123,0.10);
+      color: var(--c-green);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+      width: fit-content;
+    }
+    .partner-case-tag i, .partner-case-tag svg { width: 12px; height: 12px; margin: 0; }
+    .partner-case-title {
+      font-size: clamp(20px, 1.9vw, 26px);
+      font-weight: 900;
+      line-height: 1.2;
+      color: var(--c-dark);
+      margin: 0 0 12px;
+    }
+    .partner-case-desc {
+      font-size: 15px;
+      line-height: 1.62;
+      color: var(--c-grey);
+      margin: 0 0 22px;
+      flex: 1;
+    }
+    .partner-case-outcomes { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+    .partner-case-outcome {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(0,137,123,0.08);
+      color: var(--c-green);
+      font-size: 13px;
+      font-weight: 800;
+    }
+    .partner-case-outcome i, .partner-case-outcome svg { width: 12px; height: 12px; margin: 0; color: var(--c-green); }
+    .partner-case-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--c-purple);
+      font-size: 14px;
+      font-weight: 900;
+      text-decoration: none;
+      transition: gap 0.22s ease;
+    }
+    .partner-case-link:hover { gap: 13px; }
+    .partner-case-link i, .partner-case-link svg { width: 15px; height: 15px; margin: 0; }
+    .partner-testi-card {
+      background: var(--c-purple);
+      border-radius: 6px;
+      padding: 36px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      color: var(--c-white);
+    }
+    .partner-testi-quote-wrap { opacity: 0.28; }
+    .partner-testi-quote-wrap svg { width: 48px; height: 48px; }
+    .partner-testi-quote {
+      font-size: clamp(16px, 1.5vw, 19px);
+      line-height: 1.70;
+      font-weight: 500;
+      color: rgba(255,255,255,0.88);
+      margin: 0;
+      flex: 1;
+      font-style: italic;
+    }
+    .partner-testi-author {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.16);
+    }
+    .partner-testi-avatar {
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.16);
+      border: 2px solid rgba(255,255,255,0.32);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px; font-weight: 900; color: var(--c-white);
+      flex-shrink: 0;
+    }
+    .partner-testi-name { display: block; font-size: 16px; font-weight: 900; color: var(--c-white); margin-bottom: 3px; }
+    .partner-testi-role { display: block; font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.54); }
+    .partner-testi-stars { display: flex; gap: 3px; margin-top: 7px; }
+    .partner-testi-stars i, .partner-testi-stars svg { width: 14px; height: 14px; margin: 0; color: #f4b400; fill: #f4b400; }
+    @media (max-width: 900px) { .partner-stories-grid { grid-template-columns: 1fr; } }
+
+    /* ── How It Works ── */
+    .partner-how-section {
+      background: var(--c-dark);
+      padding: var(--section-padding-y-desktop) 0;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+    .partner-how-header {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto var(--space-lg);
+    }
+    .partner-how-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: rgba(0,137,123,0.20);
+      color: var(--c-green);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    .partner-how-header h2 {
+      font-size: clamp(28px, 3.6vw, 50px);
+      line-height: 1.08;
+      color: var(--c-white);
+      margin: 0 0 14px;
+      letter-spacing: -0.02em;
+    }
+    .partner-how-header p {
+      font-size: 17px;
+      line-height: 1.65;
+      color: rgba(255,255,255,0.50);
+      margin: 0;
+    }
+    .partner-how-steps {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 0;
+      position: relative;
+    }
+    .partner-how-steps::before {
+      content: '';
+      position: absolute;
+      top: 27px;
+      left: calc(10% + 14px);
+      right: calc(10% + 14px);
+      height: 2px;
+      background: linear-gradient(90deg, rgba(108,93,211,0.55), rgba(0,137,123,0.55));
+      z-index: 0;
+    }
+    .partner-how-step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0 14px;
+      position: relative;
+      z-index: 1;
+    }
+    .partner-how-step-num {
+      width: 56px; height: 56px;
+      border-radius: 50%;
+      background: var(--c-purple);
+      border: 3px solid rgba(108,93,211,0.45);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; font-weight: 900; color: var(--c-white);
+      margin-bottom: 22px;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+    }
+    .partner-how-step:nth-child(2) .partner-how-step-num { background: rgba(108,93,211,0.78); }
+    .partner-how-step:nth-child(3) .partner-how-step-num { background: rgba(0,137,123,0.58); }
+    .partner-how-step:nth-child(4) .partner-how-step-num { background: rgba(0,137,123,0.80); }
+    .partner-how-step:nth-child(5) .partner-how-step-num { background: var(--c-green); border-color: rgba(0,137,123,0.45); }
+    .partner-how-step-title {
+      font-size: 16px;
+      font-weight: 900;
+      color: var(--c-white);
+      margin: 0 0 8px;
+      line-height: 1.2;
+    }
+    .partner-how-step-desc {
+      font-size: 13px;
+      line-height: 1.55;
+      color: rgba(255,255,255,0.48);
+      margin: 0;
+    }
+    .partner-how-cta {
+      display: flex;
+      justify-content: center;
+      margin-top: 58px;
+    }
+    @media (max-width: 900px) {
+      .partner-how-steps {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        max-width: 480px;
+        margin: 0 auto;
+      }
+      .partner-how-steps::before { display: none; }
+      .partner-how-step {
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+        gap: 20px;
+      }
+      .partner-how-step-num { flex-shrink: 0; margin-bottom: 0; }
+    }
+
+    /* ── Inline CTA band tweaks ── */
+    .cta-band .cta-pills li { padding: 6px 14px; }
+
     main [id] {
       scroll-margin-top: 150px;
     }
-  </style><style>.not-found-page{min-height:calc(100vh - 72px);display:flex;align-items:center;padding:clamp(96px,10vw,140px) 0 clamp(48px,7vw,92px);background:radial-gradient(1200px 500px at 10% 0%,rgba(108,93,211,.13),transparent 55%),radial-gradient(900px 500px at 100% 10%,rgba(0,137,123,.14),transparent 50%),linear-gradient(180deg,#fff,#f6f8ff)}.not-found-card{max-width:920px;margin:0 auto;text-align:center;padding:clamp(28px,5vw,56px);border:0!important;border-radius:0!important;background:transparent!important;box-shadow:none!important;backdrop-filter:none!important}.not-found-kicker{margin:0 auto 14px;width:fit-content;padding:var(--space-xs) var(--space-sm);border-radius:var(--radius-btn);border:1px solid rgba(108,93,211,.28);background:#6c5dd314;color:var(--c-purple);font-size:var(--caption-fs);font-weight:900;letter-spacing:.14em;line-height:var(--caption-lh)}.not-found-card h1{margin:0 0 12px;font-size:clamp(38px,6.2vw,68px);line-height:1.02}.not-found-copy{margin:0 auto;max-width:680px;color:var(--c-grey);font-size:clamp(16px,2.4vw,20px);line-height:1.55}.not-found-actions{margin-top:28px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+  
+    /* ═══════════════════════════════════════════
+       HOW IT WORKS PAGE — SPECIFIC STYLES
+       ═══════════════════════════════════════════ */
+
+    /* Breadcrumb bar */
+    .hiw-breadcrumb-bar {
+      background: var(--c-purple-bg);
+      border-bottom: 1px solid var(--c-purple-light);
+      padding: 12px 0;
+    }
+    .hiw-breadcrumb {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 700;
+      flex-wrap: wrap;
+    }
+    .hiw-breadcrumb a { color: var(--c-purple); text-decoration: none; transition: opacity 0.2s; }
+    .hiw-breadcrumb a:hover { opacity: 0.72; }
+    .hiw-breadcrumb span { color: var(--c-grey); }
+    .hiw-breadcrumb .lucide-icon { width: 14px; height: 14px; color: var(--c-grey); margin: 0; }
+
+    /* Hero */
+    .hiw-hero {
+      background: var(--c-dark);
+      padding: 100px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hiw-hero-bg {
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 80% 60% at 70% 50%, rgba(108,93,211,0.22) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hiw-hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+    .hiw-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: rgba(0,137,123,0.18);
+      color: var(--c-green);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+    .hiw-hero-text h1 {
+      font-size: clamp(30px, 3.8vw, 52px);
+      line-height: 1.08;
+      color: var(--c-white);
+      margin: 0 0 18px;
+      letter-spacing: -0.02em;
+    }
+    .hiw-hero-text > p {
+      font-size: 17px;
+      line-height: 1.65;
+      color: rgba(255,255,255,0.60);
+      margin: 0 0 28px;
+    }
+    .hiw-hero-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 32px;
+    }
+    .hiw-hero-pills span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 7px 14px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.12);
+      color: rgba(255,255,255,0.80);
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .hiw-hero-pills span .lucide-icon { width: 14px; height: 14px; color: var(--c-green); margin: 0; }
+    .hiw-hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+    .hiw-hero-visual { position: relative; }
+    .hiw-hero-img-wrap {
+      border-radius: 12px 48px 12px 12px;
+      overflow: hidden;
+      height: 420px;
+      background: var(--c-purple);
+    }
+    .hiw-hero-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .hiw-hero-badge {
+      position: absolute;
+      bottom: -18px;
+      left: -18px;
+      background: var(--c-green);
+      border-radius: 12px;
+      padding: 18px 22px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      box-shadow: 0 8px 32px rgba(0,137,123,0.30);
+    }
+    .hiw-badge-num {
+      font-size: 42px;
+      font-weight: 900;
+      color: var(--c-white);
+      line-height: 1;
+    }
+    .hiw-hero-badge span {
+      font-size: 14px;
+      font-weight: 800;
+      color: rgba(255,255,255,0.90);
+      line-height: 1.35;
+    }
+    @media (max-width: 900px) {
+      .hiw-hero-inner { grid-template-columns: 1fr; gap: 40px; }
+      .hiw-hero-visual { display: none; }
+      .hiw-hero { padding: 80px 0 64px; }
+    }
+
+    /* Stats bar */
+    .hiw-stats-bar {
+      background: var(--c-purple);
+      padding: 32px 0;
+    }
+    .hiw-stats-grid {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      flex-wrap: wrap;
+    }
+    .hiw-stat {
+      text-align: center;
+      padding: 0 40px;
+      flex-shrink: 0;
+    }
+    .hiw-stat strong {
+      display: block;
+      font-size: clamp(26px, 2.8vw, 38px);
+      font-weight: 900;
+      color: var(--c-white);
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .hiw-stat span {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.58);
+    }
+    .hiw-stat-divider {
+      width: 1px;
+      height: 48px;
+      background: rgba(255,255,255,0.16);
+      flex-shrink: 0;
+    }
+    @media (max-width: 768px) {
+      .hiw-stats-grid { gap: 24px; }
+      .hiw-stat-divider { display: none; }
+      .hiw-stat { padding: 0 20px; }
+    }
+
+    /* Steps section */
+    .hiw-steps-section {
+      background: var(--c-white);
+      padding: var(--section-padding-y-desktop) 0;
+    }
+    .hiw-steps-header {
+      text-align: center;
+      max-width: 680px;
+      margin: 0 auto 80px;
+    }
+    .hiw-steps-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: rgba(108,93,211,0.08);
+      color: var(--c-purple);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .hiw-steps-header h2 {
+      font-size: clamp(28px, 3.6vw, 48px);
+      line-height: 1.08;
+      color: var(--c-dark);
+      margin: 0 0 14px;
+      letter-spacing: -0.02em;
+    }
+    .hiw-steps-header p {
+      font-size: 17px;
+      line-height: 1.65;
+      color: var(--c-grey);
+      margin: 0;
+    }
+    /* Individual step */
+    .hiw-step {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+      margin-bottom: 0;
+    }
+    .hiw-step--right .hiw-step-content { order: -1; }
+    .hiw-step-media { position: relative; }
+    .hiw-step-num-badge {
+      position: absolute;
+      top: -20px;
+      left: -20px;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--c-purple);
+      border: 4px solid var(--c-white);
+      box-shadow: 0 4px 20px rgba(91,45,142,0.28);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 900;
+      color: var(--c-white);
+      z-index: 2;
+    }
+    .hiw-step-num-badge--green { background: var(--c-green); box-shadow: 0 4px 20px rgba(0,137,123,0.28); }
+    .hiw-step-img-wrap {
+      border-radius: 10px 40px 10px 10px;
+      overflow: hidden;
+      height: 380px;
+      background: var(--c-purple-bg);
+      box-shadow: 0 12px 40px rgba(91,45,142,0.10);
+    }
+    .hiw-step--right .hiw-step-img-wrap { border-radius: 40px 10px 10px 10px; }
+    .hiw-step-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .hiw-step-label {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: rgba(108,93,211,0.08);
+      color: var(--c-purple);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+    .hiw-step-content h3 {
+      font-size: clamp(28px, 3vw, 42px);
+      font-weight: 900;
+      line-height: 1.08;
+      color: var(--c-dark);
+      margin: 0 0 16px;
+      letter-spacing: -0.02em;
+    }
+    .hiw-step-content > p {
+      font-size: 16px;
+      line-height: 1.68;
+      color: var(--c-grey);
+      margin: 0 0 24px;
+    }
+    .hiw-step-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .hiw-step-bullets li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--c-dark);
+    }
+    .hiw-step-bullets li .lucide-icon { width: 16px; height: 16px; color: var(--c-green); flex-shrink: 0; margin: 0; }
+    .hiw-step-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 8px 16px;
+      border-radius: 999px;
+      background: rgba(108,93,211,0.08);
+      color: var(--c-purple);
+      font-size: 13px;
+      font-weight: 900;
+    }
+    .hiw-step-tag .lucide-icon { width: 14px; height: 14px; margin: 0; }
+    .hiw-step-tag--green { background: rgba(0,137,123,0.10); color: var(--c-green); }
+    /* Connector between steps */
+    .hiw-connector {
+      display: flex;
+      justify-content: center;
+      padding: 40px 0;
+    }
+    .hiw-connector-line {
+      width: 2px;
+      height: 60px;
+      background: linear-gradient(180deg, rgba(108,93,211,0.35), rgba(108,93,211,0.10));
+      border-radius: 2px;
+    }
+    .hiw-connector-line--green { background: linear-gradient(180deg, rgba(0,137,123,0.35), rgba(0,137,123,0.10)); }
+    @media (max-width: 900px) {
+      .hiw-step { grid-template-columns: 1fr; gap: 32px; }
+      .hiw-step--right .hiw-step-content { order: 0; }
+      .hiw-step-img-wrap { height: 260px; }
+    }
+
+    /* Timeline */
+    .hiw-timeline-section {
+      background: var(--c-dark);
+      padding: var(--section-padding-y-desktop) 0;
+    }
+    .hiw-timeline-header {
+      text-align: center;
+      max-width: 640px;
+      margin: 0 auto 60px;
+    }
+    .hiw-timeline-header .hiw-steps-eyebrow {
+      background: rgba(0,137,123,0.18);
+      color: var(--c-green);
+    }
+    .hiw-timeline-header h2 {
+      font-size: clamp(26px, 3.4vw, 46px);
+      line-height: 1.10;
+      color: var(--c-white);
+      margin: 0;
+      letter-spacing: -0.02em;
+    }
+    .hiw-timeline-track {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 0;
+      position: relative;
+    }
+    .hiw-timeline-track::before {
+      content: '';
+      position: absolute;
+      top: 20px;
+      left: calc(10% + 8px);
+      right: calc(10% + 8px);
+      height: 2px;
+      background: linear-gradient(90deg, rgba(108,93,211,0.5), rgba(0,137,123,0.6));
+    }
+    .hiw-timeline-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0 12px;
+      position: relative;
+      z-index: 1;
+    }
+    .hiw-tl-dot {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--c-purple);
+      border: 3px solid rgba(108,93,211,0.40);
+      margin-bottom: 20px;
+      flex-shrink: 0;
+    }
+    .hiw-tl-dot--5 { background: var(--c-green); border-color: rgba(0,137,123,0.40); }
+    .hiw-tl-dot--4 { background: rgba(0,137,123,0.70); border-color: rgba(0,137,123,0.35); }
+    .hiw-tl-dot--3 { background: rgba(91,45,142,0.65); }
+    .hiw-tl-content { display: flex; flex-direction: column; gap: 4px; }
+    .hiw-tl-time {
+      display: block;
+      font-size: 11px;
+      font-weight: 900;
+      color: var(--c-green);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+    .hiw-timeline-item strong {
+      display: block;
+      font-size: 15px;
+      font-weight: 900;
+      color: var(--c-white);
+      line-height: 1.2;
+    }
+    .hiw-timeline-item p {
+      font-size: 13px;
+      line-height: 1.45;
+      color: rgba(255,255,255,0.46);
+      margin: 0;
+    }
+    @media (max-width: 900px) {
+      .hiw-timeline-track { grid-template-columns: 1fr; gap: 24px; max-width: 400px; margin: 0 auto; }
+      .hiw-timeline-track::before { display: none; }
+      .hiw-timeline-item { flex-direction: row; text-align: left; gap: 16px; }
+      .hiw-tl-dot { flex-shrink: 0; margin-bottom: 0; }
+    }
+
+    /* FAQ */
+    .hiw-faq-section {
+      background: var(--c-purple-bg);
+      padding: var(--section-padding-y-desktop) 0;
+      border-top: 1px solid var(--c-purple-light);
+    }
+    .hiw-faq-inner {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 72px;
+      align-items: start;
+    }
+    .hiw-faq-header .hiw-steps-eyebrow { background: rgba(108,93,211,0.10); color: var(--c-purple); }
+    .hiw-faq-header h2 {
+      font-size: clamp(24px, 2.8vw, 38px);
+      line-height: 1.10;
+      color: var(--c-dark);
+      margin: 0 0 12px;
+      letter-spacing: -0.02em;
+    }
+    .hiw-faq-header p { font-size: 15px; line-height: 1.65; color: var(--c-grey); margin: 0; }
+    .hiw-faq-list { display: flex; flex-direction: column; gap: 0; }
+    .hiw-faq-item {
+      border-bottom: 1px solid var(--c-purple-light);
+      padding: 0;
+    }
+    .hiw-faq-item:first-child { border-top: 1px solid var(--c-purple-light); }
+    .hiw-faq-q {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 20px 0;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--c-dark);
+      list-style: none;
+      transition: color 0.2s;
+    }
+    .hiw-faq-q::-webkit-details-marker { display: none; }
+    .hiw-faq-q .lucide-icon { width: 18px; height: 18px; flex-shrink: 0; color: var(--c-purple); margin: 0; transition: transform 0.3s ease; }
+    details[open] .hiw-faq-q .lucide-icon { transform: rotate(45deg); }
+    details[open] .hiw-faq-q { color: var(--c-purple); }
+    .hiw-faq-a { padding: 0 0 20px; }
+    .hiw-faq-a p { font-size: 15px; line-height: 1.68; color: var(--c-grey); margin: 0; }
+    @media (max-width: 900px) {
+      .hiw-faq-inner { grid-template-columns: 1fr; gap: 40px; }
+    }
 </style></head> <body> <header class="header" id="header">
 <div class="container header-inner">
 <a class="logo" href="/Stonebridge_Website/">
@@ -3277,9 +4222,331 @@
 <a class="btn btn-primary" data-text="Check Eligibility" href="/Stonebridge_Website/check-eligibility"><span>Check Eligibility</span></a>
 <a class="btn btn-secondary" data-text="Apply Now" href="/Stonebridge_Website/apply"><span>Apply Now</span></a>
 </div>
-</div> <main> <section class="not-found-page"> <div class="container"> <div class="not-found-card"> <p class="not-found-kicker">404</p> <h1>This page is not live yet</h1> <p class="not-found-copy">
-We could not find <strong>/partner-with-us/how-it-works</strong>. The link may be outdated, or this section is still being built.
-</p> <div class="not-found-actions"> <a class="btn btn-primary" data-text="Back to Home" href="/Stonebridge_Website/"><span>Back to Home</span></a> <a class="btn btn-secondary" data-text="Contact Us" href="/Stonebridge_Website/contact"><span>Contact Us</span></a> </div> </div> </div> </section> </main> <footer class="footer" id="section-footer">
+</div> <main>
+
+<!-- ── BREADCRUMB ──────────────────────────────── -->
+<div class="hiw-breadcrumb-bar">
+  <div class="container">
+    <nav class="hiw-breadcrumb" aria-label="Breadcrumb">
+      <a href="/Stonebridge_Website/">Home</a>
+      <i class="lucide-icon" data-lucide="chevron-right"></i>
+      <a href="/Stonebridge_Website/partner-with-us">Partner Finance</a>
+      <i class="lucide-icon" data-lucide="chevron-right"></i>
+      <span>How It Works</span>
+    </nav>
+  </div>
+</div>
+
+<!-- ── HERO ────────────────────────────────────── -->
+<section class="hiw-hero library-section" id="hiw-hero" aria-label="How It Works Hero">
+  <div class="hiw-hero-bg"></div>
+  <div class="container hiw-hero-inner">
+    <div class="hiw-hero-text">
+      <div class="hiw-eyebrow">HOW IT WORKS</div>
+      <h1>Offering finance to your customers couldn't be simpler</h1>
+      <p>Becoming a Stonebridge partner is quick, easy and free. There are no set-up fees, no complicated paperwork and no ongoing obligation. We handle everything — you simply refer a customer and we do the rest.</p>
+      <div class="hiw-hero-pills">
+        <span><i class="lucide-icon" data-lucide="check-circle-2"></i> No set-up fees</span>
+        <span><i class="lucide-icon" data-lucide="check-circle-2"></i> We handle the paperwork</span>
+        <span><i class="lucide-icon" data-lucide="check-circle-2"></i> Contact within the hour</span>
+        <span><i class="lucide-icon" data-lucide="check-circle-2"></i> 100+ UK lenders</span>
+      </div>
+      <div class="hiw-hero-actions">
+        <a class="btn btn-primary" href="/Stonebridge_Website/partner-with-us/become-a-partner" style="background: var(--c-green) !important; color: var(--c-white) !important;"><span>Become a Partner</span></a>
+        <a class="btn btn-outline" href="/Stonebridge_Website/contact" style="color: var(--c-white) !important; border-color: rgba(255,255,255,0.38) !important;"><span>Talk to our team</span></a>
+      </div>
+    </div>
+    <div class="hiw-hero-visual">
+      <div class="hiw-hero-img-wrap">
+        <img src="https://images.pexels.com/photos/7792829/pexels-photo-7792829.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=900&h=700&dpr=1" alt="Business partners in a meeting" loading="eager" decoding="async"/>
+      </div>
+      <div class="hiw-hero-badge">
+        <div class="hiw-badge-num">5</div>
+        <span>simple steps to<br>get your customer funded</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── OVERVIEW STATS BAR ───────────────────────── -->
+<div class="hiw-stats-bar library-section" aria-label="Partner finance quick stats">
+  <div class="container">
+    <div class="hiw-stats-grid">
+      <div class="hiw-stat">
+        <strong>£0</strong>
+        <span>Partner set-up fees</span>
+      </div>
+      <div class="hiw-stat-divider"></div>
+      <div class="hiw-stat">
+        <strong>1hr</strong>
+        <span>Customer contact time</span>
+      </div>
+      <div class="hiw-stat-divider"></div>
+      <div class="hiw-stat">
+        <strong>100+</strong>
+        <span>Lenders on our panel</span>
+      </div>
+      <div class="hiw-stat-divider"></div>
+      <div class="hiw-stat">
+        <strong>24hr</strong>
+        <span>Typical decision time</span>
+      </div>
+      <div class="hiw-stat-divider"></div>
+      <div class="hiw-stat">
+        <strong>10yr</strong>
+        <span>Maximum term available</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── 5-STEP PROCESS ───────────────────────────── -->
+<section class="hiw-steps-section library-section" id="hiw-steps" aria-label="5-step partner finance process">
+  <div class="container">
+    <div class="hiw-steps-header">
+      <div class="hiw-steps-eyebrow">THE PROCESS</div>
+      <h2>Five steps to getting your customer financed</h2>
+      <p>From first referral to funds released — here's exactly what happens at every stage.</p>
+    </div>
+
+    <!-- Step 1 -->
+    <div class="hiw-step hiw-step--left">
+      <div class="hiw-step-media">
+        <div class="hiw-step-num-badge">01</div>
+        <div class="hiw-step-img-wrap">
+          <img src="https://images.pexels.com/photos/7693114/pexels-photo-7693114.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=700&h=520&dpr=1" alt="Customer enquiry" loading="lazy" decoding="async"/>
+        </div>
+      </div>
+      <div class="hiw-step-content">
+        <div class="hiw-step-label">Step 1</div>
+        <h3>Enquiry</h3>
+        <p>Refer a customer to us by phone, email, or by completing our simple online referral form. It takes under two minutes. You'll give us the customer's name, contact details, and a brief summary of what they're looking to finance.</p>
+        <ul class="hiw-step-bullets">
+          <li><i class="lucide-icon" data-lucide="check"></i> Refer by phone, email or online form</li>
+          <li><i class="lucide-icon" data-lucide="check"></i> No lengthy pre-qualification needed</li>
+          <li><i class="lucide-icon" data-lucide="check"></i> Takes less than two minutes</li>
+        </ul>
+        <div class="hiw-step-tag"><i class="lucide-icon" data-lucide="clock"></i> Takes &lt;2 minutes</div>
+      </div>
+    </div>
+
+    <div class="hiw-connector"><div class="hiw-connector-line"></div></div>
+
+    <!-- Step 2 -->
+    <div class="hiw-step hiw-step--right">
+      <div class="hiw-step-content">
+        <div class="hiw-step-label">Step 2</div>
+        <h3>Contact</h3>
+        <p>Our experienced business finance specialists contact your customer within the hour to introduce themselves, discuss the customer's requirements in detail, and understand the best finance options available to them.</p>
+        <ul class="hiw-step-bullets">
+          <li><i class="lucide-icon" data-lucide="check"></i> Response within 60 minutes</li>
+          <li><i class="lucide-icon" data-lucide="check"></i> Dedicated finance specialist assigned</li>
+          <li><i class="lucide-icon" data-lucide="check"></i> Full needs assessment carried out</li>
+        </ul>
+        <div class="hiw-step-tag"><i class="lucide-icon" data-lucide="clock"></i> Within 1 hour</div>
+      </div>
+      <div class="hiw-step-media">
+        <div class="hiw-step-num-badge">02</div>
+        <div class="hiw-step-img-wrap">
+          <img src="https://images.pexels.com/photos/36712901/pexels-photo-36712901.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=700&h=520&dpr=1" alt="Finance specialist contacting customer" loading="lazy" decoding="async"/>
+        </div>
+      </div>
+    </div>
+
+    <div class="hiw-connector"><div class="hiw-connector-line"></div></div>
+
+    <!-- Step 3 -->
+    <div class="hiw-step hiw-step--left">
+      <div class="hiw-step-media">
+        <div class="hiw-step-num-badge">03</div>
+        <div class="hiw-step-img-wrap">
+          <img src="https://images.pexels.com/photos/7792829/pexels-photo-7792829.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=700&h=520&dpr=1" alt="Finance application process" loading="lazy" decoding="async"/>
+        </div>
+      </div>
+      <div class="hiw-step-content">
+        <div class="hiw-step-label">Step 3</div>
+        <h3>Application</h3>
+        <p>Our specialists search across our panel of 100+ UK commercial lenders to identify the most suitable finance solution. We then prepare and submit the application on behalf of your customer — no paperwork headaches for you or them.</p>
+        <ul class="hiw-step-bullets">
+          <li><i class="lucide-icon" data-lucide="check"></i> 100+ lenders searched simultaneously</li>
+          <li><i class="lucide-icon" data-lucide="check"></i> Application prepared and submitted for you</li>
+          <li><i class="lucide-icon" data-lucide="check"></i> Best-fit solution identified</li>
+        </ul>
+        <div class="hiw-step-tag"><i class="lucide-icon" data-lucide="clock"></i> Within 24 hours</div>
+      </div>
+    </div>
+
+    <div class="hiw-connector"><div class="hiw-connector-line"></div></div>
+
+    <!-- Step 4 -->
+    <div class="hiw-step hiw-step--right">
+      <div class="hiw-step-content">
+        <div class="hiw-step-label">Step 4</div>
+        <h3>Approval</h3>
+        <p>Once the lender has approved the finance, we send the customer their tailored finance agreement for review and signature. Our team is on hand to answer any questions and guide the customer through the documentation.</p>
+        <ul class="hiw-step-bullets">
+          <li><i class="lucide-icon" data-lucide="check"></i> Lender decision issued</li>
+          <li><i class="lucide-icon" data-lucide="check"></i> Finance agreement sent to customer</li>
+          <li><i class="lucide-icon" data-lucide="check"></i> Full guidance provided throughout</li>
+        </ul>
+        <div class="hiw-step-tag hiw-step-tag--green"><i class="lucide-icon" data-lucide="check-circle-2"></i> Finance approved</div>
+      </div>
+      <div class="hiw-step-media">
+        <div class="hiw-step-num-badge hiw-step-num-badge--green">04</div>
+        <div class="hiw-step-img-wrap">
+          <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=700&h=520&dpr=1" alt="Finance approval" loading="lazy" decoding="async"/>
+        </div>
+      </div>
+    </div>
+
+    <div class="hiw-connector"><div class="hiw-connector-line hiw-connector-line--green"></div></div>
+
+    <!-- Step 5 -->
+    <div class="hiw-step hiw-step--left">
+      <div class="hiw-step-media">
+        <div class="hiw-step-num-badge hiw-step-num-badge--green">05</div>
+        <div class="hiw-step-img-wrap">
+          <img src="https://images.pexels.com/photos/7433867/pexels-photo-7433867.jpeg?auto=compress&cs=tinysrgb&fit=crop&w=700&h=520&dpr=1" alt="Payment released" loading="lazy" decoding="async"/>
+        </div>
+      </div>
+      <div class="hiw-step-content">
+        <div class="hiw-step-label">Step 5</div>
+        <h3>Payment</h3>
+        <p>Upon receipt of the signed finance agreement, payment is released directly to you. You get paid faster, with no credit risk and no chasing. Your customer pays their monthly finance repayments to the lender directly.</p>
+        <ul class="hiw-step-bullets">
+          <li><i class="lucide-icon" data-lucide="check"></i> Funds released upon signed agreement</li>
+          <li><i class="lucide-icon" data-lucide="check"></i> No credit risk to your business</li>
+          <li><i class="lucide-icon" data-lucide="check"></i> You get paid faster, every time</li>
+        </ul>
+        <div class="hiw-step-tag hiw-step-tag--green"><i class="lucide-icon" data-lucide="banknote"></i> You get paid</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ── TIMELINE SUMMARY ──────────────────────────── -->
+<section class="hiw-timeline-section library-section" id="hiw-timeline" aria-label="Process timeline summary">
+  <div class="container">
+    <div class="hiw-timeline-header">
+      <div class="hiw-steps-eyebrow">TIMELINE AT A GLANCE</div>
+      <h2>From referral to funded — typically in 48 hours</h2>
+    </div>
+    <div class="hiw-timeline-track">
+      <div class="hiw-timeline-item">
+        <div class="hiw-tl-dot hiw-tl-dot--1"></div>
+        <div class="hiw-tl-content">
+          <span class="hiw-tl-time">Minute 1</span>
+          <strong>You refer your customer</strong>
+          <p>Via phone, email or online form</p>
+        </div>
+      </div>
+      <div class="hiw-timeline-item">
+        <div class="hiw-tl-dot hiw-tl-dot--2"></div>
+        <div class="hiw-tl-content">
+          <span class="hiw-tl-time">Within 1 hour</span>
+          <strong>We call your customer</strong>
+          <p>A dedicated specialist makes contact</p>
+        </div>
+      </div>
+      <div class="hiw-timeline-item">
+        <div class="hiw-tl-dot hiw-tl-dot--3"></div>
+        <div class="hiw-tl-content">
+          <span class="hiw-tl-time">Same day</span>
+          <strong>Application submitted</strong>
+          <p>We search 100+ lenders and apply</p>
+        </div>
+      </div>
+      <div class="hiw-timeline-item">
+        <div class="hiw-tl-dot hiw-tl-dot--4"></div>
+        <div class="hiw-tl-content">
+          <span class="hiw-tl-time">24–48 hours</span>
+          <strong>Finance approved</strong>
+          <p>Agreement sent for signature</p>
+        </div>
+      </div>
+      <div class="hiw-timeline-item">
+        <div class="hiw-tl-dot hiw-tl-dot--5"></div>
+        <div class="hiw-tl-content">
+          <span class="hiw-tl-time">On signature</span>
+          <strong>You get paid</strong>
+          <p>Funds released directly to you</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── FAQ ──────────────────────────────────────── -->
+<section class="hiw-faq-section library-section" id="hiw-faq" aria-label="Partner finance FAQs">
+  <div class="container">
+    <div class="hiw-faq-inner">
+      <div class="hiw-faq-header">
+        <div class="hiw-steps-eyebrow">FAQs</div>
+        <h2>Common questions about our partner finance process</h2>
+        <p>Everything you need to know before getting started.</p>
+        <a class="btn btn-outline" href="/Stonebridge_Website/partner-with-us/become-a-partner" style="color: var(--c-purple); border-color: var(--c-purple); margin-top: 24px; display: inline-flex;"><span>Become a Partner</span></a>
+      </div>
+      <div class="hiw-faq-list">
+        <details class="hiw-faq-item" open>
+          <summary class="hiw-faq-q">Is there a cost to join as a partner? <i class="lucide-icon" data-lucide="plus"></i></summary>
+          <div class="hiw-faq-a"><p>No — joining the Stonebridge partner network is completely free. There are no set-up fees, no annual fees, and no ongoing charges. We make our money when your customers successfully access finance, so our incentives are fully aligned with yours.</p></div>
+        </details>
+        <details class="hiw-faq-item">
+          <summary class="hiw-faq-q">What happens after I refer a customer? <i class="lucide-icon" data-lucide="plus"></i></summary>
+          <div class="hiw-faq-a"><p>Once you refer a customer, one of our business finance specialists will contact them within the hour. From there, we handle everything — the assessment, application, lender search, and documentation. You'll receive updates throughout the process so you always know what's happening.</p></div>
+        </details>
+        <details class="hiw-faq-item">
+          <summary class="hiw-faq-q">How long does the whole process take? <i class="lucide-icon" data-lucide="plus"></i></summary>
+          <div class="hiw-faq-a"><p>In most cases, from initial referral to funds being released takes 24–72 hours. Some straightforward cases can be approved and funded on the same day. Larger or more complex finance requirements may take a little longer, but we'll always keep you and your customer informed at every stage.</p></div>
+        </details>
+        <details class="hiw-faq-item">
+          <summary class="hiw-faq-q">Do I need to be involved throughout the process? <i class="lucide-icon" data-lucide="plus"></i></summary>
+          <div class="hiw-faq-a"><p>Not at all. Once you've made the referral, we take care of everything. You won't need to fill in any forms, chase paperwork, or manage the lender relationship. Our team handles the entire process on your behalf, letting you focus on running your business.</p></div>
+        </details>
+        <details class="hiw-faq-item">
+          <summary class="hiw-faq-q">When and how do I get paid? <i class="lucide-icon" data-lucide="plus"></i></summary>
+          <div class="hiw-faq-a"><p>Payment is released to you upon receipt of the signed finance agreement from your customer. This means you get paid faster — often before you've even delivered the goods or services — with zero credit risk to your business.</p></div>
+        </details>
+        <details class="hiw-faq-item">
+          <summary class="hiw-faq-q">What types of finance are available to my customers? <i class="lucide-icon" data-lucide="plus"></i></summary>
+          <div class="hiw-faq-a"><p>We offer access to a wide range of commercial finance products including asset finance, equipment finance, business loans, hire purchase, leasing and more — with terms from 3 months to 10 years and finance amounts from £1,000 to several million pounds.</p></div>
+        </details>
+        <details class="hiw-faq-item">
+          <summary class="hiw-faq-q">What are the eligibility requirements for my customers? <i class="lucide-icon" data-lucide="plus"></i></summary>
+          <div class="hiw-faq-a"><p>Requirements vary by lender, but in general your customers should be a UK-registered business with at least 6 months of trading history. Our team will carry out a full assessment and will identify the most suitable lenders based on your customer's profile and circumstances.</p></div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA BAND ──────────────────────────────────── -->
+<section class="cta-band library-section" id="hiw-cta" aria-label="CTA - Become a Partner">
+  <div class="container">
+    <div class="cta-card-inner">
+      <div class="cta-card-copy">
+        <h2>Ready to start offering finance to your customers?</h2>
+        <p>Joining the Stonebridge partner network takes minutes and costs nothing. Start referring customers today and unlock a powerful new revenue stream for your business.</p>
+        <ul aria-label="Partner benefits" class="cta-pills">
+          <li>No set-up costs</li>
+          <li>100+ lender access</li>
+          <li>Same-day response</li>
+          <li>Ongoing support</li>
+        </ul>
+        <div class="cta-card-actions">
+          <a class="btn btn-primary" href="/Stonebridge_Website/partner-with-us/become-a-partner" data-text="Become a Partner" style="background-color: var(--c-green) !important; color: var(--c-white) !important;"><span>Become a Partner</span></a>
+          <a class="btn btn-outline" href="/Stonebridge_Website/partner-with-us" data-text="Partner Finance Overview" style="color:var(--c-purple) !important; border-color:var(--c-purple);"><span>Partner Finance Overview</span></a>
+        </div>
+      </div>
+      <div class="cta-image-placeholder">
+        <img alt="Partner finance consultation" decoding="async" loading="lazy" src="https://images.pexels.com/photos/34164498/pexels-photo-34164498.jpeg?auto=compress&cs=tinysrgb&w=900&h=520&fit=crop"/>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main> <footer class="footer" id="section-footer">
 <div class="container">
 <div class="footer-grid">
 <div class="footer-col">

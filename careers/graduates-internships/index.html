@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"> <head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Graduates and Internships | Stonebridge</title><meta content="Start your finance career with Stonebridge through graduate and internship opportunities, hands-on learning, and clear progression." name="description"/><link href="/Stonebridge_Website/img/SVG/updated_fav.svg" rel="icon" type="image/svg+xml"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;family=Playfair+Display:ital,wght@1,400&amp;display=swap" rel="stylesheet"/><script src="/Stonebridge_Website/_astro/BaseLayout.astro_astro_type_script_index_0_lang.CN6pKSHs.js" type="module"></script><link href="/Stonebridge_Website/css/design-tokens.css?v=v2" rel="stylesheet"/><link href="/Stonebridge_Website/css/styles.css?v=v2" rel="stylesheet"/><style>
+<html lang="en"> <head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><title>Graduates & Internships | Stonebridge Careers</title><meta content="Offer partner and vendor finance through Stonebridge to help your customers buy with confidence and grow your sales." name="description"/><link href="/Stonebridge_Website/img/SVG/updated_fav.svg" rel="icon" type="image/svg+xml"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;family=Playfair+Display:ital,wght@1,400&amp;display=swap" rel="stylesheet"/><script src="/Stonebridge_Website/_astro/BaseLayout.astro_astro_type_script_index_0_lang.CN6pKSHs.js" type="module"></script><link href="/Stonebridge_Website/css/design-tokens.css?v=v2" rel="stylesheet"/><link href="/Stonebridge_Website/css/styles.css?v=v2" rel="stylesheet"/><style>
     /* STRICT ENFORCEMENT OF DESIGN TOKENS & WOW-FACTOR UPGRADES */
     /* 1. Global Reset for Lucide SVG Setup & Layout Constraints */
     .container { width: 100%; max-width: none; margin: 0; padding: 0 20.4px; }
@@ -112,15 +112,6 @@
     .product-card:hover { transform: none; border-color: inherit !important; box-shadow: none; }
     .product-card:hover .product-card-header { background: var(--c-purple-bg); }
 
-    .product-card:hover .product-link .lucide-icon { transform: rotate(-45deg); filter: blur(0.2px); }
-    .products-grid:has(.product-card:hover) .product-card {
-      filter: blur(1.8px);
-      opacity: 0.78;
-    }
-    .products-grid:has(.product-card:hover) .product-card:hover {
-      filter: blur(0);
-      opacity: 1;
-    }
     .product-card:nth-child(4n+1) .product-card-header,
     .product-card:nth-child(4n+1) .product-card-body { background: #f8f5ff; }
     .product-card:nth-child(4n+1) .product-card-body ul li,
@@ -2979,10 +2970,882 @@
         grid-template-columns: 1fr;
       }
     }
+
+    /* ═══════════════════════════════════════════════════
+       PARTNER FINANCE PAGE — NEW SECTION STYLES
+       ═══════════════════════════════════════════════════ */
+
+    /* ── Why Choose section (dark bg) ── */
+    .partner-why-section {
+      background: var(--c-dark);
+      padding: var(--section-padding-y-desktop) 0;
+    }
+    .partner-why-inner { text-align: center; }
+    .partner-why-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: rgba(108,93,211,0.22);
+      border: 1px solid rgba(108,93,211,0.35);
+      color: rgba(255,255,255,0.74);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      margin-bottom: 22px;
+    }
+    .partner-why-inner h2 {
+      font-size: clamp(30px, 3.8vw, 52px);
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      color: var(--c-white);
+      max-width: 820px;
+      margin: 0 auto 16px;
+    }
+    .partner-why-inner > p {
+      font-size: 17px;
+      line-height: 1.65;
+      color: rgba(255,255,255,0.54);
+      max-width: 700px;
+      margin: 0 auto 52px;
+    }
+    .partner-stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+      max-width: 1020px;
+      margin: 0 auto;
+    }
+    .partner-stat-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 6px;
+      padding: 28px 24px;
+      text-align: left;
+      transition: background 0.24s ease, border-color 0.24s ease;
+    }
+    .partner-stat-card:hover {
+      background: rgba(108,93,211,0.16);
+      border-color: rgba(108,93,211,0.42);
+    }
+    .partner-stat-icon {
+      width: 40px; height: 40px;
+      border-radius: 6px;
+      background: rgba(108,93,211,0.28);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 18px; color: var(--c-white);
+    }
+    .partner-stat-icon svg, .partner-stat-icon i { width: 20px; height: 20px; margin: 0; }
+    .partner-stat-value {
+      display: block;
+      font-size: clamp(24px, 2.6vw, 36px);
+      font-weight: 900;
+      color: var(--c-white);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .partner-stat-label {
+      display: block;
+      font-size: 14px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.52);
+      line-height: 1.45;
+    }
+    @media (max-width: 900px) { .partner-stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; } }
+    @media (max-width: 480px) { .partner-stats-grid { grid-template-columns: 1fr; } }
+
+    /* ── Partnership Tiers section ── */
+    .partner-tiers-section {
+      background: var(--c-purple-bg);
+      padding: var(--section-padding-y-desktop) 0;
+      border-top: 1px solid var(--c-purple-light);
+    }
+    .partner-tiers-header {
+      text-align: center;
+      max-width: 820px;
+      margin: 0 auto var(--space-lg);
+    }
+    .partner-tiers-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: rgba(0,137,123,0.10);
+      color: var(--c-green);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    .partner-tiers-header h2 {
+      font-size: clamp(30px, 3.8vw, 52px);
+      line-height: 1.08;
+      color: var(--c-dark);
+      margin: 0 0 14px;
+      letter-spacing: -0.02em;
+    }
+    .partner-tiers-header p {
+      font-size: 17px;
+      line-height: 1.65;
+      color: var(--c-grey);
+      margin: 0;
+    }
+    .partner-tiers-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+    }
+    .partner-tier-card {
+      background: var(--c-white);
+      border: 1px solid rgba(108,93,211,0.14);
+      border-radius: 6px 50px 6px 6px;
+      padding: 32px 28px 28px;
+      display: flex;
+      flex-direction: column;
+      transition: border-color 0.24s ease, box-shadow 0.24s ease;
+    }
+    .partner-tier-card:hover {
+      border-color: var(--c-purple);
+      box-shadow: 0 14px 40px rgba(91,45,142,0.10);
+    }
+    .partner-tier-card.is-featured {
+      background: var(--c-purple);
+      border-color: var(--c-purple);
+    }
+    .partner-tier-card.is-featured .partner-tier-label,
+    .partner-tier-card.is-featured .partner-tier-name,
+    .partner-tier-card.is-featured .partner-tier-desc { color: rgba(255,255,255,0.90) !important; }
+    .partner-tier-card.is-featured .partner-tier-label { background: rgba(255,255,255,0.14); color: var(--c-white) !important; }
+    .partner-tier-card.is-featured .partner-tier-icon-wrap { background: rgba(255,255,255,0.14); }
+    .partner-tier-card.is-featured .partner-tier-icon-wrap svg,
+    .partner-tier-card.is-featured .partner-tier-icon-wrap i { color: var(--c-white); }
+    .partner-tier-card.is-featured .btn-tier-cta { background: var(--c-white) !important; color: var(--c-purple) !important; }
+    .partner-tier-card.is-featured:hover { box-shadow: 0 14px 40px rgba(91,45,142,0.28); }
+    .partner-tier-icon-wrap {
+      width: 48px; height: 48px;
+      border-radius: 6px;
+      background: rgba(91,45,142,0.08);
+      display: flex; align-items: center; justify-content: center;
+      margin-bottom: 20px;
+    }
+    .partner-tier-icon-wrap svg, .partner-tier-icon-wrap i { width: 22px; height: 22px; color: var(--c-purple); margin: 0; }
+    .partner-tier-label {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: rgba(108,93,211,0.10);
+      color: var(--c-purple);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      width: fit-content;
+    }
+    .partner-tier-name {
+      font-size: clamp(22px, 2vw, 28px);
+      font-weight: 900;
+      line-height: 1.1;
+      color: var(--c-dark);
+      margin: 0 0 12px;
+    }
+    .partner-tier-desc {
+      font-size: 15px;
+      line-height: 1.62;
+      color: var(--c-grey);
+      margin: 0 0 28px;
+      flex: 1;
+    }
+    .btn-tier-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 48px;
+      padding: 0 22px;
+      border-radius: var(--radius-btn);
+      background: var(--c-purple);
+      color: var(--c-white);
+      font: inherit;
+      font-size: 14px;
+      font-weight: 900;
+      text-decoration: none;
+      transition: background 0.22s ease, transform 0.22s ease;
+      width: 100%;
+      border: 0;
+      cursor: pointer;
+    }
+    .btn-tier-cta:hover { background: var(--c-purple-dark); transform: translateY(-1px); }
+    .btn-tier-cta i, .btn-tier-cta svg { width: 15px; height: 15px; margin: 0; }
+    @media (max-width: 900px) {
+      .partner-tiers-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+    }
+
+    /* ── Success Stories / Testimonials ── */
+    .partner-stories-section {
+      background: var(--c-white);
+      padding: var(--section-padding-y-desktop) 0;
+      border-top: 1px solid rgba(108,93,211,0.10);
+    }
+    .partner-stories-header {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto var(--space-lg);
+    }
+    .partner-stories-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: rgba(108,93,211,0.08);
+      color: var(--c-purple);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    .partner-stories-header h2 {
+      font-size: clamp(30px, 3.8vw, 50px);
+      line-height: 1.08;
+      color: var(--c-dark);
+      margin: 0 0 14px;
+      letter-spacing: -0.02em;
+    }
+    .partner-stories-header p {
+      font-size: 17px;
+      line-height: 1.65;
+      color: var(--c-grey);
+      margin: 0;
+    }
+    .partner-stories-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+      gap: 24px;
+      align-items: stretch;
+    }
+    .partner-case-card {
+      background: linear-gradient(135deg, rgba(91,45,142,0.03), rgba(0,137,123,0.05));
+      border: 1px solid rgba(108,93,211,0.14);
+      border-radius: 6px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+    .partner-case-image {
+      position: relative;
+      height: 220px;
+      overflow: hidden;
+      background: var(--c-purple-bg);
+    }
+    .partner-case-image img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .partner-case-image::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 40%, rgba(26,26,46,0.48));
+      pointer-events: none;
+    }
+    .partner-case-content { padding: 28px; flex: 1; display: flex; flex-direction: column; }
+    .partner-case-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 12px;
+      border-radius: 999px;
+      background: rgba(0,137,123,0.10);
+      color: var(--c-green);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+      width: fit-content;
+    }
+    .partner-case-tag i, .partner-case-tag svg { width: 12px; height: 12px; margin: 0; }
+    .partner-case-title {
+      font-size: clamp(20px, 1.9vw, 26px);
+      font-weight: 900;
+      line-height: 1.2;
+      color: var(--c-dark);
+      margin: 0 0 12px;
+    }
+    .partner-case-desc {
+      font-size: 15px;
+      line-height: 1.62;
+      color: var(--c-grey);
+      margin: 0 0 22px;
+      flex: 1;
+    }
+    .partner-case-outcomes { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+    .partner-case-outcome {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      border-radius: 999px;
+      background: rgba(0,137,123,0.08);
+      color: var(--c-green);
+      font-size: 13px;
+      font-weight: 800;
+    }
+    .partner-case-outcome i, .partner-case-outcome svg { width: 12px; height: 12px; margin: 0; color: var(--c-green); }
+    .partner-case-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--c-purple);
+      font-size: 14px;
+      font-weight: 900;
+      text-decoration: none;
+      transition: gap 0.22s ease;
+    }
+    .partner-case-link:hover { gap: 13px; }
+    .partner-case-link i, .partner-case-link svg { width: 15px; height: 15px; margin: 0; }
+    .partner-testi-card {
+      background: var(--c-purple);
+      border-radius: 6px;
+      padding: 36px 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      color: var(--c-white);
+    }
+    .partner-testi-quote-wrap { opacity: 0.28; }
+    .partner-testi-quote-wrap svg { width: 48px; height: 48px; }
+    .partner-testi-quote {
+      font-size: clamp(16px, 1.5vw, 19px);
+      line-height: 1.70;
+      font-weight: 500;
+      color: rgba(255,255,255,0.88);
+      margin: 0;
+      flex: 1;
+      font-style: italic;
+    }
+    .partner-testi-author {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255,255,255,0.16);
+    }
+    .partner-testi-avatar {
+      width: 48px; height: 48px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.16);
+      border: 2px solid rgba(255,255,255,0.32);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 20px; font-weight: 900; color: var(--c-white);
+      flex-shrink: 0;
+    }
+    .partner-testi-name { display: block; font-size: 16px; font-weight: 900; color: var(--c-white); margin-bottom: 3px; }
+    .partner-testi-role { display: block; font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.54); }
+    .partner-testi-stars { display: flex; gap: 3px; margin-top: 7px; }
+    .partner-testi-stars i, .partner-testi-stars svg { width: 14px; height: 14px; margin: 0; color: #f4b400; fill: #f4b400; }
+    @media (max-width: 900px) { .partner-stories-grid { grid-template-columns: 1fr; } }
+
+    /* ── How It Works ── */
+    .partner-how-section {
+      background: var(--c-dark);
+      padding: var(--section-padding-y-desktop) 0;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+    .partner-how-header {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto var(--space-lg);
+    }
+    .partner-how-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: rgba(0,137,123,0.20);
+      color: var(--c-green);
+      font-size: 11px;
+      font-weight: 900;
+      letter-spacing: 0.10em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    .partner-how-header h2 {
+      font-size: clamp(28px, 3.6vw, 50px);
+      line-height: 1.08;
+      color: var(--c-white);
+      margin: 0 0 14px;
+      letter-spacing: -0.02em;
+    }
+    .partner-how-header p {
+      font-size: 17px;
+      line-height: 1.65;
+      color: rgba(255,255,255,0.50);
+      margin: 0;
+    }
+    .partner-how-steps {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(0, 1fr));
+      gap: 0;
+      position: relative;
+    }
+    .partner-how-steps::before {
+      content: '';
+      position: absolute;
+      top: 27px;
+      left: calc(10% + 14px);
+      right: calc(10% + 14px);
+      height: 2px;
+      background: linear-gradient(90deg, rgba(108,93,211,0.55), rgba(0,137,123,0.55));
+      z-index: 0;
+    }
+    .partner-how-step {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 0 14px;
+      position: relative;
+      z-index: 1;
+    }
+    .partner-how-step-num {
+      width: 56px; height: 56px;
+      border-radius: 50%;
+      background: var(--c-purple);
+      border: 3px solid rgba(108,93,211,0.45);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 18px; font-weight: 900; color: var(--c-white);
+      margin-bottom: 22px;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 1;
+    }
+    .partner-how-step:nth-child(2) .partner-how-step-num { background: rgba(108,93,211,0.78); }
+    .partner-how-step:nth-child(3) .partner-how-step-num { background: rgba(0,137,123,0.58); }
+    .partner-how-step:nth-child(4) .partner-how-step-num { background: rgba(0,137,123,0.80); }
+    .partner-how-step:nth-child(5) .partner-how-step-num { background: var(--c-green); border-color: rgba(0,137,123,0.45); }
+    .partner-how-step-title {
+      font-size: 16px;
+      font-weight: 900;
+      color: var(--c-white);
+      margin: 0 0 8px;
+      line-height: 1.2;
+    }
+    .partner-how-step-desc {
+      font-size: 13px;
+      line-height: 1.55;
+      color: rgba(255,255,255,0.48);
+      margin: 0;
+    }
+    .partner-how-cta {
+      display: flex;
+      justify-content: center;
+      margin-top: 58px;
+    }
+    @media (max-width: 900px) {
+      .partner-how-steps {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        max-width: 480px;
+        margin: 0 auto;
+      }
+      .partner-how-steps::before { display: none; }
+      .partner-how-step {
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+        gap: 20px;
+      }
+      .partner-how-step-num { flex-shrink: 0; margin-bottom: 0; }
+    }
+
+    /* ── Inline CTA band tweaks ── */
+    .cta-band .cta-pills li { padding: 6px 14px; }
+
     main [id] {
       scroll-margin-top: 150px;
     }
-  </style></head> <body> <header class="header" id="header">
+  
+    /* ═══════════════════════════════════════════
+       GRADUATES & INTERNSHIPS PAGE REDESIGN 
+       ═══════════════════════════════════════════ */
+
+    /* Hero Section */
+    .grad-hero {
+      position: relative;
+      background: var(--c-dark);
+      padding: 100px 0 120px;
+      overflow: hidden;
+    }
+    .grad-hero-bg {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      z-index: 1;
+    }
+    .grad-hero-orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(100px);
+      opacity: 0.5;
+    }
+    .orb-1 {
+      width: 600px; height: 600px;
+      background: var(--c-purple);
+      top: -200px; right: -100px;
+    }
+    .orb-2 {
+      width: 500px; height: 500px;
+      background: var(--c-green);
+      bottom: -300px; left: -200px;
+    }
+    
+    .grad-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .grad-eyebrow {
+      display: inline-block;
+      color: var(--c-green);
+      font-size: 13px;
+      font-weight: 900;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 24px;
+      border: 1px solid rgba(0,137,123,0.3);
+      padding: 6px 20px;
+      border-radius: 999px;
+      background: rgba(0,137,123,0.1);
+    }
+    .grad-hero-title {
+      color: var(--c-white);
+      font-size: clamp(40px, 6vw, 72px);
+      line-height: 1.05;
+      font-weight: 800;
+      margin-bottom: 24px;
+      letter-spacing: -0.02em;
+    }
+    .grad-hero-subtitle {
+      color: rgba(255,255,255,0.75);
+      font-size: clamp(16px, 2vw, 20px);
+      line-height: 1.6;
+      margin-bottom: 40px;
+      max-width: 700px;
+      margin-inline: auto;
+    }
+    .grad-hero-actions {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      margin-bottom: 80px;
+      flex-wrap: wrap;
+    }
+    .grad-hero-stats {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .grad-stat-glass {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.1);
+      padding: 24px 32px;
+      border-radius: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 200px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    .grad-stat-glass strong {
+      color: var(--c-green);
+      font-size: 32px;
+      font-weight: 900;
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .grad-stat-glass span {
+      color: var(--c-white);
+      font-size: 13px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Section Headers */
+    .grad-section-header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+    .grad-section-header h2 {
+      font-size: clamp(32px, 4vw, 48px);
+      font-weight: 900;
+      color: var(--c-dark);
+      margin-bottom: 16px;
+      letter-spacing: -0.02em;
+    }
+    .grad-section-header p {
+      font-size: 18px;
+      color: var(--c-grey);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+    .grad-section-header.light h2 { color: var(--c-white); }
+    .grad-section-header.light p { color: rgba(255,255,255,0.7); }
+
+    /* Bento Box Section */
+    .grad-bento-section {
+      background: var(--c-purple-bg);
+      padding: 100px 0;
+    }
+    .grad-bento-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .grad-bento-card {
+      background: var(--c-white);
+      border-radius: 20px;
+      padding: 40px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(91,45,142,0.05);
+      border: 1px solid rgba(108,93,211,0.1);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+    }
+    .grad-bento-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 40px rgba(91,45,142,0.12);
+    }
+    .grad-bento-icon {
+      width: 56px;
+      height: 56px;
+      background: rgba(108,93,211,0.1);
+      color: var(--c-purple);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 24px;
+    }
+    .grad-bento-icon svg { width: 28px; height: 28px; stroke-width:2; }
+    .grad-bento-card h3 {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--c-dark);
+      margin-bottom: 12px;
+    }
+    .grad-bento-card p {
+      font-size: 15px;
+      line-height: 1.6;
+      color: var(--c-grey);
+      margin: 0;
+      position: relative;
+      z-index: 2;
+    }
+    
+    .card-large {
+      grid-column: span 1;
+      grid-row: span 2;
+      padding: 0;
+    }
+    .card-large h3, .card-large p {
+      padding: 0 40px;
+    }
+    .card-large p { margin-bottom: 32px; }
+    .card-large .grad-bento-icon { margin: 40px 40px 24px 40px; }
+    .grad-bento-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      margin-top: auto;
+      border-radius: 0 0 20px 20px;
+    }
+    
+    .card-wide {
+      grid-column: span 2;
+      display: flex;
+      flex-direction: row;
+      padding: 0;
+      align-items: center;
+    }
+    .grad-bento-content {
+      padding: 40px;
+      flex: 1;
+    }
+    .grad-bento-wide-img {
+      width: 45%;
+      height: 100%;
+      position: relative;
+    }
+    .grad-bento-wide-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0; left: 0;
+    }
+
+    @media(max-width: 900px) {
+      .grad-bento-grid { grid-template-columns: 1fr; }
+      .card-large { grid-column: 1; grid-row: auto; }
+      .card-wide { grid-column: 1; flex-direction: column; }
+      .grad-bento-wide-img { width: 100%; height: 250px; }
+      .grad-bento-wide-img img { position: relative; }
+    }
+
+    /* Programmes Glass Cards */
+    .grad-programmes-section {
+      background: var(--c-purple);
+      padding: 100px 0;
+      position: relative;
+    }
+    .grad-prog-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 32px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .grad-prog-card {
+      background: var(--c-white);
+      border-radius: 20px;
+      padding: 48px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+    }
+    .prog-badge {
+      display: inline-block;
+      background: rgba(108,93,211,0.1);
+      color: var(--c-purple);
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.1em;
+      padding: 6px 14px;
+      border-radius: 999px;
+      margin-bottom: 20px;
+      align-self: flex-start;
+    }
+    .prog-badge.green {
+      background: rgba(0,137,123,0.1);
+      color: var(--c-green);
+    }
+    .grad-prog-card h3 {
+      font-size: 28px;
+      font-weight: 900;
+      color: var(--c-dark);
+      margin-bottom: 16px;
+    }
+    .grad-prog-card p {
+      font-size: 16px;
+      color: var(--c-grey);
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+    .prog-list {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 40px 0;
+      flex: 1;
+    }
+    .prog-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      margin-bottom: 16px;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--c-dark);
+      line-height: 1.4;
+    }
+    .prog-list .lucide-icon {
+      color: var(--c-green);
+      width: 20px; height: 20px;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+
+    @media(max-width: 768px) {
+      .grad-prog-grid { grid-template-columns: 1fr; }
+    }
+
+    /* Timeline Section */
+    .grad-timeline-section {
+      background: var(--c-white);
+      padding: 100px 0;
+    }
+    .grad-timeline-wrapper {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .grad-timeline {
+      position: relative;
+      margin-top: 60px;
+    }
+    .grad-timeline::before {
+      content: '';
+      position: absolute;
+      top: 0; bottom: 0;
+      left: 24px;
+      width: 2px;
+      background: var(--c-purple-light);
+    }
+    .timeline-item {
+      position: relative;
+      padding-left: 72px;
+      margin-bottom: 48px;
+    }
+    .timeline-item:last-child { margin-bottom: 0; }
+    .timeline-dot {
+      position: absolute;
+      left: 0; top: 0;
+      width: 50px; height: 50px;
+      border-radius: 50%;
+      background: var(--c-purple);
+      color: var(--c-white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: 900;
+      box-shadow: 0 0 0 6px var(--c-white);
+      z-index: 2;
+    }
+    .timeline-content {
+      background: var(--c-purple-bg);
+      padding: 32px;
+      border-radius: 16px;
+      border: 1px solid rgba(108,93,211,0.1);
+    }
+    .timeline-content h4 {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--c-dark);
+      margin-bottom: 12px;
+    }
+    .timeline-content p {
+      font-size: 15px;
+      color: var(--c-grey);
+      margin: 0;
+      line-height: 1.6;
+    }
+</style></head> <body> <header class="header" id="header">
 <div class="container header-inner">
 <a class="logo" href="/Stonebridge_Website/">
 <img alt="Stonebridge Business Finance" src="/Stonebridge_Website/img/2x/Main_logo_updated@2x.png"/>
@@ -3276,281 +4139,176 @@
 <a class="btn btn-primary" data-text="Check Eligibility" href="/Stonebridge_Website/check-eligibility"><span>Check Eligibility</span></a>
 <a class="btn btn-secondary" data-text="Apply Now" href="/Stonebridge_Website/apply"><span>Apply Now</span></a>
 </div>
-</div> <main> <section aria-label="Hero - Split Finance Intro" class="hero library-section" data-content-key="careers-graduates.section-hero" data-page-variant="careers-graduates" data-section-id="01" data-section-name="Hero - Split Finance Intro" data-section-type="hero" data-section-use="Homepage opening section with headline, CTAs, partner trust signal, and finance proof cards" data-source-id="section-hero" id="careers-graduates__section-hero">
-<div class="container">
-<div class="hero-content-wrapper">
-<div class="hero-text-col">
-<div class="hero-rating-pill">
-<span>4.8 stars rating</span>
-<span aria-label="5 stars" class="hero-rating-stars">
-<i class="lucide-icon" data-lucide="star"></i>
-<i class="lucide-icon" data-lucide="star"></i>
-<i class="lucide-icon" data-lucide="star"></i>
-<i class="lucide-icon" data-lucide="star"></i>
-<i class="lucide-icon" data-lucide="star"></i>
-</span>
-</div>
-<h1><span class="hero-title-line"><span class="heading-playfair-word">Graduates</span> <span class="heading-playfair-word">and</span></span><span class="hero-title-line">Internships</span><span class="hero-title-line">at Stonebridge</span></h1>
-<p class="subtext">Start your finance career with hands-on responsibility, structured support, and clear progression opportunities.</p>
-<div class="hero-actions">
-<a class="btn btn-primary" data-text="Apply Now" href="/Stonebridge_Website/careers/vacancies"><span>Apply Now</span></a>
-<a class="btn btn-secondary" data-text="View All Vacancies" href="/Stonebridge_Website/careers/vacancies"><span>View All Vacancies</span></a>
-</div>
-<div class="hero-partner-label">Trusted by:</div>
-<div class="hero-partner-logo">
-<img alt="NACFB logo" src="/Stonebridge_Website/img/NACFB_Logo_with_strapline_Inverse_RGB.png"/>
-</div>
-</div>
-<div class="hero-img-col">
-<div class="hero-image-placeholder">
-<div aria-label="Business finance hero image slider" class="hero-image-slider-viewport">
-<div class="hero-image-slider-track"><div class="hero-image-slide"><img alt="Business partners reviewing plans in an office meeting" decoding="async" fetchpriority="high" loading="eager" src="https://images.pexels.com/photos/7433867/pexels-photo-7433867.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;w=1600&amp;h=1000&amp;dpr=1"/></div><div class="hero-image-slide"><img alt="Business professional working with reports and laptop in an office" decoding="async" loading="lazy" src="https://images.pexels.com/photos/5918386/pexels-photo-5918386.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;w=1600&amp;h=1000&amp;dpr=1"/></div><div class="hero-image-slide"><img alt="Team discussing strategy around laptops in a modern office" decoding="async" loading="lazy" src="https://images.pexels.com/photos/7652054/pexels-photo-7652054.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;w=1600&amp;h=1000&amp;dpr=1"/></div><div class="hero-image-slide"><img alt="Business team collaborating in a conference room" decoding="async" loading="lazy" src="https://images.pexels.com/photos/10375897/pexels-photo-10375897.jpeg?auto=compress&amp;cs=tinysrgb&amp;fit=crop&amp;w=1600&amp;h=1000&amp;dpr=1"/></div></div>
-</div>
-<div class="hero-benefits">
-<div class="hero-benefit-card">
-<strong data-roll-number="50+">50+</strong>
-<span>Lenders searched for the right fit</span>
-</div>
-<div class="hero-benefit-card">
-<strong data-roll-number="24h">24h</strong>
-<span>Fast decisions to keep plans moving</span>
-</div>
-<div class="hero-benefit-card">
-<strong data-roll-number="£25m">£25m</strong>
-<span>Funding support for bigger goals</span>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section><div aria-label="Trust Ticker - Proof Bar" class="trust-ticker library-section" data-content-key="careers-graduates.trustTicker" data-page-variant="careers-graduates" data-section-id="02" data-section-name="Trust Ticker - Proof Bar" data-section-type="trust-bar" data-section-use="Scrolling trust and credibility proof points below hero sections" data-source-id="trustTicker" id="careers-graduates__trustTicker" role="region">
-<div class="trust-ticker-track">
-<div class="trust-ticker-item"><i data-lucide="check"></i> Award-winning finance brokers</div>
-<div class="trust-ticker-item"><i data-lucide="check"></i> Funding from £20k - £25m</div>
-<div class="trust-ticker-item"><i data-lucide="check"></i> Flexible repayment terms</div>
-<div class="trust-ticker-item"><i data-lucide="check"></i> Low interest rates available</div>
-<div class="trust-ticker-item"><i data-lucide="check"></i> Fast lender search</div>
-<div class="trust-ticker-item"><i data-lucide="check"></i> Over 60 years expertise</div>
-<div class="trust-ticker-item"><i data-lucide="check"></i> Award-winning finance brokers</div>
-<div class="trust-ticker-item"><i data-lucide="check"></i> Funding from £20k - £25m</div>
-<div class="trust-ticker-item"><i data-lucide="check"></i> Flexible repayment terms</div>
-<div class="trust-ticker-item"><i data-lucide="check"></i> Low interest rates available</div>
-<div class="trust-ticker-item"><i data-lucide="check"></i> Fast lender search</div>
-<div class="trust-ticker-item"><i data-lucide="check"></i> Over 60 years expertise</div>
-</div>
-</div><section aria-label="What Stonebridge does for your business" class="team-story-section library-section" data-content-key="careers-graduates.section-team-story" data-page-variant="careers-graduates" data-section-id="12B" data-section-name="Team Story - Success" data-section-type="editorial-image-feature" data-section-use="Editorial product explanation section with feature cards and compact value props" data-source-id="section-team-story" id="careers-graduates__section-team-story">
-<div class="container">
-<div class="team-story-header">
-<div class="team-story-header-left">
-<h2 class="team-story-title"><span style="white-space:nowrap;">What to expect</span><br/><span style="white-space:nowrap;">from our programme</span></h2>
-<p class="team-story-copy">You will gain practical experience, direct mentoring, and opportunities to contribute from day one.</p>
-</div>
-</div>
-<div class="team-story-grid">
-<article class="team-story-feature-card is-compact">
-<p class="rate">Contribute to<br/>live cases<br/>early</p>
-<p class="meta">Work on projects that directly support clients and commercial outcomes.</p>
-</article>
-<article class="team-story-feature-card is-compact">
-<p class="rate">Guidance from<br/>experienced<br/>leaders</p>
-<p class="meta">Learn directly from senior brokers and cross-functional specialists.</p>
-</article>
-<article class="team-story-feature-card is-compact">
-<p class="rate">Understand<br/>products and<br/>credit appetite</p>
-<p class="meta">Build confidence working across lenders, clients, and internal teams.</p>
-</article>
-<article class="team-story-feature-card is-compact">
-<p class="rate">Grow from<br/>entry-level<br/>to specialist</p>
-<p class="meta">Clear progression routes help you build a long-term career in finance.</p>
-</article>
-</div>
-</div>
-</section><section aria-label="Available Opportunities" class="opportunities-section library-section" data-content-key="careers-graduates.section-available-opportunities" data-page-variant="careers-graduates" data-section-id="12A" data-section-name="Available Opportunities - Open Positions" data-section-type="careers-jobs-grid" data-section-use="Careers recruitment section with open role cards, summaries, and job meta details" data-source-id="section-available-opportunities" id="careers-graduates__section-available-opportunities">
-<div class="container">
-<div class="opportunities-board">
-<h3>Graduate Roles Available</h3>
-<div class="jobs-grid">
-<article class="job-card">
-<div class="job-card-head">
-<div>
-<h4>Finance Broker Trainee</h4>
-<p class="job-type">Hybrid / Graduate Programme</p>
-</div>
-<span aria-hidden="true" class="job-open"><i class="lucide-icon" data-lucide="arrow-up-right"></i></span>
-</div>
-<p>Design and optimize borrower journeys across lead forms, onboarding screens, and product discovery tools.</p>
-<div class="job-meta">
-<span><i class="lucide-icon" data-lucide="map-pin"></i> London, UK</span>
-<span><i class="lucide-icon" data-lucide="badge-pound-sterling"></i> £42K-£58K</span>
-</div>
-<a class="btn btn-primary" data-text="Apply Now" href="/Stonebridge_Website/careers/vacancies"><span>Apply Now</span></a>
-</article>
-<article class="job-card">
-<div class="job-card-head">
-<div>
-<h4>Business Development Associate</h4>
-<p class="job-type">Hybrid / Early Career</p>
-</div>
-<span aria-hidden="true" class="job-open"><i class="lucide-icon" data-lucide="arrow-up-right"></i></span>
-</div>
-<p>Build campaigns and short-form content for business finance audiences across LinkedIn and paid channels.</p>
-<div class="job-meta">
-<span><i class="lucide-icon" data-lucide="map-pin"></i> United Kingdom</span>
-<span><i class="lucide-icon" data-lucide="badge-pound-sterling"></i> £33K-£40K</span>
-</div>
-<a class="btn btn-primary" data-text="Apply Now" href="/Stonebridge_Website/careers/vacancies"><span>Apply Now</span></a>
-</article>
-<article class="job-card">
-<div class="job-card-head">
-<div>
-<h4>Graduate Finance Analyst</h4>
-<p class="job-type">Hybrid / Graduate Role</p>
-</div>
-<span aria-hidden="true" class="job-open"><i class="lucide-icon" data-lucide="arrow-up-right"></i></span>
-</div>
-<p>Ship high-performance pages and reusable front-end components for lender matching and customer journeys.</p>
-<div class="job-meta">
-<span><i class="lucide-icon" data-lucide="map-pin"></i> Manchester, UK</span>
-<span><i class="lucide-icon" data-lucide="badge-pound-sterling"></i> £38K-£55K</span>
-</div>
-<a class="btn btn-primary" data-text="Apply Now" href="/Stonebridge_Website/careers/vacancies"><span>Apply Now</span></a>
-</article>
-<article class="job-card" style="display:none;">
-<div class="job-card-head">
-<div>
-<h4>Graphic Designer</h4>
-<p class="job-type">Full Time</p>
-</div>
-<span aria-hidden="true" class="job-open"><i class="lucide-icon" data-lucide="arrow-up-right"></i></span>
-</div>
-<p>Create visual assets for digital campaigns, pitch decks, and brand materials across our partner network.</p>
-<div class="job-meta">
-<span><i class="lucide-icon" data-lucide="map-pin"></i> Bristol, UK</span>
-<span><i class="lucide-icon" data-lucide="badge-pound-sterling"></i> £30K-£42K</span>
-</div>
-<a class="btn btn-primary" data-text="Apply Now" href="/Stonebridge_Website/careers/vacancies"><span>Apply Now</span></a>
-</article>
-<article class="job-card" style="display:none;">
-<div class="job-card-head">
-<div>
-<h4>VP of Growth Marketing</h4>
-<p class="job-type">Full Time</p>
-</div>
-<span aria-hidden="true" class="job-open"><i class="lucide-icon" data-lucide="arrow-up-right"></i></span>
-</div>
-<p>Lead demand generation strategy, attribution, and growth experiments across inbound and outbound channels.</p>
-<div class="job-meta">
-<span><i class="lucide-icon" data-lucide="map-pin"></i> Leeds, UK</span>
-<span><i class="lucide-icon" data-lucide="badge-pound-sterling"></i> £85K-£110K</span>
-</div>
-<a class="btn btn-primary" data-text="Apply Now" href="/Stonebridge_Website/careers/vacancies"><span>Apply Now</span></a>
-</article>
-<article class="job-card" style="display:none;">
-<div class="job-card-head">
-<div>
-<h4>Lead Product Designer</h4>
-<p class="job-type">Remote Friendly</p>
-</div>
-<span aria-hidden="true" class="job-open"><i class="lucide-icon" data-lucide="arrow-up-right"></i></span>
-</div>
-<p>Define product design systems and mentor a cross-functional team building modern finance experiences.</p>
-<div class="job-meta">
-<span><i class="lucide-icon" data-lucide="map-pin"></i> United Kingdom</span>
-<span><i class="lucide-icon" data-lucide="badge-pound-sterling"></i> £70K-£95K</span>
-</div>
-<a class="btn btn-primary" data-text="Apply Now" href="/Stonebridge_Website/careers/vacancies"><span>Apply Now</span></a>
-</article>
-</div>
-</div>
-</div>
-</section><section aria-label="FAQ - Accordion" class="faq-section library-section" data-content-key="careers-graduates.section-faq" data-page-variant="careers-graduates" data-section-id="12" data-section-name="FAQ - Accordion" data-section-type="faq-accordion" data-section-use="Two-column FAQ accordion section for common objections and support questions" data-source-id="section-faq" id="careers-graduates__section-faq">
-<div class="container">
-<div class="faq-layout">
-<div class="faq-heading">
-<span class="faq-pill">Internship Programme</span>
-<h2>How internships work<span>Everything you need to know before applying</span></h2>
-</div>
-<div class="faq-list">
-<details class="faq-item">
-<summary class="faq-question">How long is the internship?</summary>
-<div class="faq-answer">
-<p>Our internship programme is typically 10 weeks in the summer with project-based learning.</p>
-</div>
-</details>
-<details class="faq-item">
-<summary class="faq-question">Will I get real project work?</summary>
-<div class="faq-answer">
-<p>Yes. Interns work on live projects, join team sessions, and support client-facing initiatives.</p>
-</div>
-</details>
-<details class="faq-item">
-<summary class="faq-question">Can internships convert to full-time roles?</summary>
-<div class="faq-answer">
-<p>High-performing interns may be considered for graduate or full-time opportunities when available.</p>
-</div>
-</details>
-<details class="faq-item">
-<summary class="faq-question">How do I apply?</summary>
-<div class="faq-answer">
-<p>Submit your CV and a short covering note through our vacancies route and our recruitment team will respond.</p>
-</div>
-</details>
-<details class="faq-item">
-<summary class="faq-question">Will applying affect my credit score?</summary>
-<div class="faq-answer">
-<p>Initial eligibility conversations are designed to understand your needs before any formal lender checks. If a credit search is required later, we will explain that before it happens.</p>
-</div>
-</details>
-<details class="faq-item">
-<summary class="faq-question">Do you work with start-ups?</summary>
-<div class="faq-answer">
-<p>Yes, some lenders can support newer businesses depending on the finance type, trading history, security, projections, and director background.</p>
-</div>
-</details>
-<details class="faq-item">
-<summary class="faq-question">Is there a limit to how much I can borrow?</summary>
-<div class="faq-answer">
-<p>Funding amounts depend on the product, lender appetite, business profile, affordability, and available security. Stonebridge can support requirements from smaller working capital needs through to larger facilities.</p>
-</div>
-</details>
-<details class="faq-item">
-<summary class="faq-question">Are there any sectors you do not support?</summary>
-<div class="faq-answer">
-<p>Most mainstream UK business sectors can be considered. Some lenders may have restrictions, so we check your sector and funding purpose early in the process.</p>
-</div>
-</details>
-<details class="faq-item">
-<summary class="faq-question">Still undecided?</summary>
-<div class="faq-answer">
-<p>You can start with a simple conversation. We will help you understand what may be possible before you commit to a full application.</p>
-</div>
-</details>
-</div>
-</div>
-</div>
-</section><section aria-label="CTA - Final Conversion Band" class="cta-band library-section" data-content-key="careers-graduates.section-cta" data-page-variant="careers-graduates" data-section-id="13" data-section-name="CTA - Final Conversion Band" data-section-type="conversion-cta" data-section-use="High-intent final call-to-action band with benefit pills, buttons, and supporting image" data-source-id="section-cta" id="careers-graduates__section-cta">
-<div class="container">
-<div class="cta-card-inner">
-<div class="cta-card-copy">
-<h2>Ready to start your finance career?</h2>
-<p>Apply today and take your first step into a high-growth team where learning and progression are part of every role.</p>
-<ul aria-label="Finance enquiry benefits" class="cta-pills">
-<li>Graduate and internship pathways</li>
-<li>Mentoring and structured development</li>
-<li>Real business impact from day one</li>
-</ul>
-<div class="cta-card-actions">
-<a class="btn btn-primary" data-text="Apply Now" href="/Stonebridge_Website/careers/vacancies" style="background-color: var(--c-green) !important; color: var(--c-white) !important;"><span>Apply Now</span></a>
-<a class="btn btn-outline" data-text="Talk to Recruitment" href="/Stonebridge_Website/contact" style="color:var(--c-purple) !important; border-color:var(--c-purple);"><span>Talk to Recruitment</span></a>
-</div>
-</div>
-<div class="cta-image-placeholder">
-<img alt="Business finance consultation" decoding="async" loading="lazy" src="https://images.pexels.com/photos/34164498/pexels-photo-34164498.jpeg?auto=compress&amp;cs=tinysrgb&amp;w=900&amp;h=520&amp;fit=crop"/>
-</div>
-</div>
-</div>
-</section> </main> <footer class="footer" id="section-footer">
+</div> <main>
+
+<!-- ── HERO SECTION ───────────────────────────── -->
+<section class="grad-hero library-section" aria-label="Graduates Hero">
+  <div class="grad-hero-bg">
+    <div class="grad-hero-orb orb-1"></div>
+    <div class="grad-hero-orb orb-2"></div>
+  </div>
+  <div class="container">
+    <div class="grad-hero-content">
+      <div class="grad-eyebrow">EARLY CAREERS AT STONEBRIDGE</div>
+      <h1 class="grad-hero-title">Your Future Starts <br><span class="heading-playfair-word" style="color:var(--c-green);">Here.</span></h1>
+      <p class="grad-hero-subtitle">Join a fast-growing, innovative finance company where you get real responsibility from day one. We're looking for ambitious graduates and interns to shape the future of UK business finance.</p>
+      
+      <div class="grad-hero-actions">
+        <a href="#programmes" class="btn btn-primary" data-text="View Programmes"><span>View Programmes</span></a>
+        <a href="/Stonebridge_Website/careers/vacancies" class="btn btn-secondary" data-text="All Open Roles"><span>All Open Roles</span></a>
+      </div>
+      
+      <div class="grad-hero-stats">
+        <div class="grad-stat-glass">
+          <strong>100%</strong>
+          <span>Mentorship Guarantee</span>
+        </div>
+        <div class="grad-stat-glass">
+          <strong>Fast-Track</strong>
+          <span>Career Progression</span>
+        </div>
+        <div class="grad-stat-glass">
+          <strong>30+</strong>
+          <span>Graduates Hired in 2025</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── WHY JOIN US (BENTO BOX) ────────────────── -->
+<section class="grad-bento-section library-section">
+  <div class="container">
+    <div class="grad-section-header">
+      <h2 class="no-emphasis">Why Start With Us?</h2>
+      <p>We don’t do "coffee-fetching" internships. You are a core part of the team from day one.</p>
+    </div>
+    
+    <div class="grad-bento-grid">
+      <!-- Large Card -->
+      <div class="grad-bento-card card-large">
+        <div class="grad-bento-icon"><i class="lucide-icon" data-lucide="sparkles"></i></div>
+        <h3>Real Responsibility, Fast</h3>
+        <p>Forget shadowing for months. At Stonebridge, our graduates manage live client portfolios, underwrite real deals, and contribute to company-wide strategy within their first 6 months. We empower you to make decisions that actually impact the business.</p>
+        <img src="https://images.pexels.com/photos/7433822/pexels-photo-7433822.jpeg?auto=compress&cs=tinysrgb&w=800&h=500&fit=crop" class="grad-bento-img" alt="Responsibility">
+      </div>
+      
+      <!-- Medium Card 1 -->
+      <div class="grad-bento-card">
+        <div class="grad-bento-icon"><i class="lucide-icon" data-lucide="graduation-cap"></i></div>
+        <h3>Structured Mentorship</h3>
+        <p>You’ll be paired with a senior director who acts as your dedicated mentor. Weekly 1-on-1s ensure you are constantly developing your skill set and navigating your career path effectively.</p>
+      </div>
+      
+      <!-- Medium Card 2 -->
+      <div class="grad-bento-card">
+        <div class="grad-bento-icon"><i class="lucide-icon" data-lucide="trending-up"></i></div>
+        <h3>Unlimited Growth</h3>
+        <p>We promote based on merit, not tenure. Many of our current department heads started in our graduate scheme. If you prove yourself, the sky's the limit.</p>
+      </div>
+      
+      <!-- Wide Card -->
+      <div class="grad-bento-card card-wide">
+        <div class="grad-bento-content">
+          <h3>Vibrant Culture & Perks</h3>
+          <p>Regular team socials, a comprehensive wellness package, gym memberships, and a flexible hybrid working model designed to keep you energized and balanced.</p>
+        </div>
+        <div class="grad-bento-wide-img">
+          <img src="https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=600&h=300&fit=crop" alt="Culture">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── THE PROGRAMMES ─────────────────────────── -->
+<section id="programmes" class="grad-programmes-section library-section">
+  <div class="container">
+    <div class="grad-section-header light">
+      <h2 class="no-emphasis">Our Early Careers Programmes</h2>
+      <p>Choose the path that fits your current stage of study.</p>
+    </div>
+    
+    <div class="grad-prog-grid">
+      
+      <div class="grad-prog-card">
+        <div class="prog-badge">2 YEARS</div>
+        <h3>The Graduate Scheme</h3>
+        <p>A rotational 24-month programme designed to give you comprehensive exposure across our entire business operations.</p>
+        
+        <ul class="prog-list">
+          <li><i class="lucide-icon" data-lucide="check-circle-2"></i> 4 rotations (Sales, Underwriting, Ops, Strategy)</li>
+          <li><i class="lucide-icon" data-lucide="check-circle-2"></i> Permanent contract from day one</li>
+          <li><i class="lucide-icon" data-lucide="check-circle-2"></i> £32,000 starting salary + performance bonuses</li>
+          <li><i class="lucide-icon" data-lucide="check-circle-2"></i> Full sponsorship for professional qualifications</li>
+        </ul>
+        
+        <a href="/Stonebridge_Website/careers/vacancies" class="btn btn-primary" data-text="View Graduate Roles" style="width:100%;"><span>View Graduate Roles</span></a>
+      </div>
+
+      <div class="grad-prog-card">
+        <div class="prog-badge green">10 WEEKS</div>
+        <h3>The Summer Internship</h3>
+        <p>An immersive 10-week summer internship for penultimate-year university students looking to secure a grad role early.</p>
+        
+        <ul class="prog-list">
+          <li><i class="lucide-icon" data-lucide="check-circle-2"></i> Dedicated real-world summer project</li>
+          <li><i class="lucide-icon" data-lucide="check-circle-2"></i> Highly competitive pro-rata salary</li>
+          <li><i class="lucide-icon" data-lucide="check-circle-2"></i> Networking events with senior leadership</li>
+          <li><i class="lucide-icon" data-lucide="check-circle-2"></i> Fast-track to a graduate offer for top performers</li>
+        </ul>
+        
+        <a href="/Stonebridge_Website/careers/vacancies" class="btn btn-primary" data-text="View Internships" style="width:100%;"><span>View Internships</span></a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ── APPLICATION PROCESS TIMELINE ───────────── -->
+<section class="grad-timeline-section library-section">
+  <div class="container">
+    <div class="grad-timeline-wrapper">
+      <div class="grad-section-header">
+        <h2 class="no-emphasis">The Application Journey</h2>
+        <p>We've designed our process to be transparent, fast, and focused on discovering your true potential.</p>
+      </div>
+      
+      <div class="grad-timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot">1</div>
+          <div class="timeline-content">
+            <h4>Submit Your Application</h4>
+            <p>Send us your CV and a brief cover letter outlining why you want to join Stonebridge. No lengthy psychometric tests required at this stage.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot">2</div>
+          <div class="timeline-content">
+            <h4>Initial Video Interview</h4>
+            <p>A relaxed 30-minute chat with our Early Careers team to get to know you, understand your ambitions, and assess cultural fit.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot">3</div>
+          <div class="timeline-content">
+            <h4>Assessment Centre</h4>
+            <p>A half-day immersive experience at our HQ. You’ll participate in a group case study, a partner interview, and get a chance to meet our current grads.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot">4</div>
+          <div class="timeline-content">
+            <h4>The Offer</h4>
+            <p>We move fast. Expect to hear back within 48 hours of your assessment centre with a final decision and formal offer.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main> <footer class="footer" id="section-footer">
 <div class="container">
 <div class="footer-grid">
 <div class="footer-col">
@@ -3973,7 +4731,7 @@ document.addEventListener('DOMContentLoaded', function() {
           }
         };
 
-        document.querySelectorAll("main section h1, main section h2").forEach((heading) => {
+        document.querySelectorAll("main section h1:not(.no-emphasis), main section h2:not(.no-emphasis)").forEach((heading) => {
           wrapFirstTwoWords(heading);
         });
       })();
