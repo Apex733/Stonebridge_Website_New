@@ -505,10 +505,9 @@
       100% { transform: translateX(0); }
     }
     @keyframes heroImageSlideLeft {
-      0%, 20% { transform: translateX(0); }
-      25%, 45% { transform: translateX(-100%); }
-      50%, 70% { transform: translateX(-200%); }
-      75%, 95% { transform: translateX(-300%); }
+      0%, 27% { transform: translateX(0); }
+      33%, 60% { transform: translateX(-100%); }
+      66%, 93% { transform: translateX(-200%); }
       100% { transform: translateX(0); }
     }
     
@@ -1236,6 +1235,12 @@
     .why-panel > .btn,
     .why-choose-us > .container > .goals-grid {
       display: none !important;
+    }
+    .why-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
     }
     .why-carousel {
       --why-card-width: clamp(280px, 31vw, 420px);
@@ -3307,16 +3312,13 @@
 <div aria-label="Business finance hero image slider" class="hero-image-slider-viewport">
 <div class="hero-image-slider-track">
 <div class="hero-image-slide">
-<img alt="Business finance hero slide 1" src="https://images.pexels.com/photos/5920774/pexels-photo-5920774.jpeg"/>
+<img alt="Business finance hero slide 1" src="https://images.pexels.com/photos/8117545/pexels-photo-8117545.jpeg"/>
 </div>
 <div class="hero-image-slide">
-<img alt="Business finance hero slide 2" src="https://images.pexels.com/photos/8475204/pexels-photo-8475204.jpeg"/>
+<img alt="Business finance hero slide 2" src="https://images.pexels.com/photos/7693114/pexels-photo-7693114.jpeg"/>
 </div>
 <div class="hero-image-slide">
-<img alt="Business finance hero slide 3" src="https://images.pexels.com/photos/6205520/pexels-photo-6205520.jpeg"/>
-</div>
-<div class="hero-image-slide">
-<img alt="Business finance hero slide 4" src="https://images.pexels.com/photos/6720592/pexels-photo-6720592.jpeg"/>
+<img alt="Business finance hero slide 3" src="https://images.pexels.com/photos/7994325/pexels-photo-7994325.jpeg"/>
 </div>
 </div>
 </div>
@@ -3359,127 +3361,178 @@
 <h2>Find business finance solutions to achieve your goals</h2>
 <p class="subtext" style="margin: var(--space-sm) 0 0;">Stonebridge offers solutions customised to any funding requirement or business type. Enjoy flexible terms, competitive rates and hassle-free finance.</p>
 <div style="margin-top: var(--space-md);">
-<a class="btn btn-outline" data-text="Explore Our Solutions" href="/Stonebridge_Website/finance-products" style="color:var(--c-purple); border-color:var(--c-purple);"><span>Explore Our Solutions <i class="lucide-icon" data-lucide="arrow-right" style="margin-left: 8px;"></i></span></a>
+<a class="btn btn-outline" data-text="Explore Our Solutions" href="/Stonebridge_Website/services" style="color:var(--c-purple); border-color:var(--c-purple);"><span>Explore Our Solutions <i class="lucide-icon" data-lucide="arrow-right" style="margin-left: 8px;"></i></span></a>
 </div>
 </div>
 <div class="products-grid" style="display: flex; flex-wrap: wrap; gap: var(--gap-cards-desktop); justify-content: center;">
 <div class="product-card">
 <div class="product-card-header">
-<div class="product-icon"><i class="lucide-icon" data-lucide="briefcase"></i></div>
-<h3>Business Loans</h3>
-</div>
-<div class="product-card-body">
-<p>Compare secured and unsecured business loan options with Stonebridge and get expert guidance from enquiry to funding.</p>
-<ul>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> For any business purpose</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Up to 10 years repayment terms</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Funding approved within 8 hours</li>
-</ul>
-</div>
-<div class="product-card-footer">
-<a class="product-link" href="/Stonebridge_Website/finance-products/business-loans">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></a>
-</div>
-</div>
-<div class="product-card">
-<div class="product-card-header">
-<div class="product-icon"><i class="lucide-icon" data-lucide="shield-check"></i></div>
-<h3>Growth Guarantee Scheme</h3>
-</div>
-<div class="product-card-body">
-<p>Access Growth Guarantee Scheme funding backed by the government to support your UK business growth.</p>
-<ul>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Government-backed scheme</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Up to £2m facility limit</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Flexible borrowing terms</li>
-</ul>
-</div>
-<div class="product-card-footer">
-<a class="product-link" href="/Stonebridge_Website/finance-products/growth-guarantee-scheme">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></a>
-</div>
-</div>
-<div class="product-card">
-<div class="product-card-header">
-<div class="product-icon"><i class="lucide-icon" data-lucide="sliders-horizontal"></i></div>
-<h3>Flexible Business Loans</h3>
-</div>
-<div class="product-card-body">
-<p>Get flexible business loan options with structured repayments designed around your business cash flow.</p>
-<ul>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Adaptable repayment structures</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Unsecured & secured options</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Quick decision and setup</li>
-</ul>
-</div>
-<div class="product-card-footer">
-<a class="product-link" href="/Stonebridge_Website/finance-products/flexible-business-loans">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></a>
-</div>
-</div>
-<div class="product-card">
-<div class="product-card-header">
 <div class="product-icon"><i class="lucide-icon" data-lucide="trending-up"></i></div>
-<h3>Cashflow Loans</h3>
+<h3>Grow My Business</h3>
 </div>
 <div class="product-card-body">
-<p>Secure cashflow loans to manage seasonal dips, cover invoice delays, and maintain healthy working capital.</p>
+<p>Funding routes for expansion, recruitment, marketing, stock, equipment, and new opportunities.</p>
 <ul>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Cover working capital gaps</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> No asset security required</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Repayments match cycles</li>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Expansion funding</li>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Recruitment and marketing</li>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Flexible growth support</li>
 </ul>
 </div>
 <div class="product-card-footer">
-<a class="product-link" href="/Stonebridge_Website/finance-products/cashflow-loans">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></a>
+<a class="product-link" href="/Stonebridge_Website/finance-solutions/grow-my-business">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></a>
 </div>
 </div>
 <div class="product-card">
 <div class="product-card-header">
-<div class="product-icon"><i class="lucide-icon" data-lucide="briefcase"></i></div>
-<h3>Working Capital Loans</h3>
+<div class="product-icon"><i class="lucide-icon" data-lucide="wallet-cards"></i></div>
+<h3>Manage Cashflow</h3>
 </div>
 <div class="product-card-body">
-<p>Fuel day-to-day operations with working capital loans for rent, wages, stock, and general expenses.</p>
+<p>Smooth seasonal dips, late payments, supplier costs, and short-term working capital pressure.</p>
 <ul>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Fund day-to-day operations</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Cover stock, rent, or wages</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Access funds within 24 hours</li>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Cashflow support</li>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Short-term pressure</li>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Keep operations moving</li>
 </ul>
 </div>
 <div class="product-card-footer">
-<a class="product-link" href="/Stonebridge_Website/finance-products/working-capital-loans">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></a>
+<a class="product-link" href="/Stonebridge_Website/finance-solutions/manage-cashflow">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></a>
 </div>
 </div>
 <div class="product-card">
 <div class="product-card-header">
-<div class="product-icon"><i class="lucide-icon" data-lucide="file-text"></i></div>
-<h3>Tax Bill Loans</h3>
+<div class="product-icon"><i class="lucide-icon" data-lucide="receipt"></i></div>
+<h3>Pay a Tax Bill</h3>
 </div>
 <div class="product-card-body">
-<p>Spread the cost of VAT, Corporation Tax, or self-assessment liabilities with dedicated tax bill loans.</p>
+<p>Spread VAT, Corporation Tax, or other HMRC liabilities without draining day-to-day cash reserves.</p>
 <ul>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Spread HMRC tax cost</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Avoid late payment penalties</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Structured monthly payments</li>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> HMRC payment support</li>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Structured repayments</li>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Protect working capital</li>
 </ul>
 </div>
 <div class="product-card-footer">
-<a class="product-link" href="/Stonebridge_Website/finance-products/tax-bill-loans">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></a>
+<a class="product-link" href="/Stonebridge_Website/finance-solutions/pay-a-tax-bill">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></a>
 </div>
 </div>
 <div class="product-card">
 <div class="product-card-header">
-<div class="product-icon"><i class="lucide-icon" data-lucide="trending-up"></i></div>
-<h3>Business Growth Loans</h3>
+<div class="product-icon"><i class="lucide-icon" data-lucide="briefcase-business"></i></div>
+<h3>Working Capital</h3>
 </div>
 <div class="product-card-body">
-<p>Invest in expansion, marketing, and recruitment with business loans tailored for growth.</p>
+<p>Access flexible funding for wages, rent, supplier invoices, stock, and everyday trading needs.</p>
 <ul>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Finance marketing & hires</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Unsecured options to £500k</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Flexible 1-5 year terms</li>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Day-to-day funding</li>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Supplier and payroll costs</li>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Fast access to capital</li>
 </ul>
 </div>
 <div class="product-card-footer">
-<a class="product-link" href="/Stonebridge_Website/finance-products/business-growth-loans">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></a>
+<a class="product-link" href="/Stonebridge_Website/finance-solutions/working-capital">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></a>
+</div>
+</div>
+<div class="product-card">
+<div class="product-card-header">
+<div class="product-icon"><i class="lucide-icon" data-lucide="wrench"></i></div>
+<h3>Buying Equipment & Machinery</h3>
+</div>
+<div class="product-card-body">
+<p>Finance essential machinery, tools, technology, or equipment without paying everything upfront.</p>
+<ul>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Machinery purchases</li>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Equipment upgrades</li>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Preserve cash reserves</li>
+</ul>
+</div>
+<div class="product-card-footer">
+<a class="product-link" href="/Stonebridge_Website/finance-solutions/buying-equipment-machinery">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></a>
+</div>
+</div>
+<div class="product-card">
+<div class="product-card-header">
+<div class="product-icon"><i class="lucide-icon" data-lucide="boxes"></i></div>
+<h3>Stock & Inventory Finance</h3>
+</div>
+<div class="product-card-body">
+<p>Fund seasonal stock, bulk purchases, materials, and inventory so you can meet customer demand.</p>
+<ul>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Seasonal stock</li>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Bulk purchasing</li>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Match sales cycles</li>
+</ul>
+</div>
+<div class="product-card-footer">
+<a class="product-link" href="/Stonebridge_Website/finance-solutions/stock-inventory-finance">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></a>
+</div>
+</div>
+<div class="product-card">
+<div class="product-card-header">
+<div class="product-icon"><i class="lucide-icon" data-lucide="refresh-cw"></i></div>
+<h3>Refinance Debt Consolidation</h3>
+</div>
+<div class="product-card-body">
+<p>Restructure existing borrowing into a clearer facility that may reduce monthly pressure.</p>
+<ul>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Consolidate borrowing</li>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Simplify repayments</li>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Release cashflow</li>
+</ul>
+</div>
+<div class="product-card-footer">
+<a class="product-link" href="/Stonebridge_Website/finance-solutions/refinance-debt-consolidation">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></a>
+</div>
+</div>
+<div class="product-card">
+<div class="product-card-header">
+<div class="product-icon"><i class="lucide-icon" data-lucide="paintbrush"></i></div>
+<h3>Refurbishment Finance</h3>
+</div>
+<div class="product-card-body">
+<p>Finance shop fits, office upgrades, renovations, and improvements that help your business grow.</p>
+<ul>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Premises upgrades</li>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Fit-out projects</li>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Renovation funding</li>
+</ul>
+</div>
+<div class="product-card-footer">
+<a class="product-link" href="/Stonebridge_Website/finance-solutions/refurbishment-finance">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></a>
+</div>
+</div>
+<div class="product-card">
+<div class="product-card-header">
+<div class="product-icon"><i class="lucide-icon" data-lucide="building-2"></i></div>
+<h3>Property Development Finance</h3>
+</div>
+<div class="product-card-body">
+<p>Support development projects, refurbishments, site purchases, and staged property funding needs.</p>
+<ul>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Development projects</li>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Staged drawdowns</li>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Property-led funding</li>
+</ul>
+</div>
+<div class="product-card-footer">
+<a class="product-link" href="/Stonebridge_Website/finance-solutions/property-development-finance">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></a>
+</div>
+</div>
+<div class="product-card">
+<div class="product-card-header">
+<div class="product-icon"><i class="lucide-icon" data-lucide="landmark"></i></div>
+<h3>Buying a Business</h3>
+</div>
+<div class="product-card-body">
+<p>Access acquisition finance for business purchases, management buyouts, or strategic growth plans.</p>
+<ul>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Acquisition funding</li>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Management buyouts</li>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Strategic expansion</li>
+</ul>
+</div>
+<div class="product-card-footer">
+<a class="product-link" href="/Stonebridge_Website/finance-solutions/buying-a-business">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></a>
 </div>
 </div>
 <div class="product-card">
@@ -3488,338 +3541,32 @@
 <h3>Commercial Vehicle Finance</h3>
 </div>
 <div class="product-card-body">
-<p>Acquire cars, vans, trucks, or fleets with competitive vehicle leasing and hire purchase options.</p>
+<p>Finance vans, cars, trucks, and fleets with routes shaped around how your business trades.</p>
 <ul>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Acquire cars, vans & trucks</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Leasing & purchase routes</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Flexible deposit options</li>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Vehicle purchases</li>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Fleet expansion</li>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Flexible deposits</li>
 </ul>
 </div>
 <div class="product-card-footer">
-<a class="product-link" href="/Stonebridge_Website/finance-products/commercial-vehicle-finance">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></a>
+<a class="product-link" href="/Stonebridge_Website/finance-solutions/commercial-vehicle-finance">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></a>
 </div>
 </div>
 <div class="product-card">
 <div class="product-card-header">
-<div class="product-icon"><i class="lucide-icon" data-lucide="zap"></i></div>
-<h3>Same Day Business Loans</h3>
-</div>
-<div class="product-card-body">
-<p>Access fast business funding approved and released on the same day when timing is critical.</p>
-<ul>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Urgent capital requirements</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Fast 4-hour decision times</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Funds cleared in same day</li>
-</ul>
-</div>
-<div class="product-card-footer">
-<a class="product-link" href="/Stonebridge_Website/finance-products/same-day-business-loans">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></a>
-</div>
-</div>
-<div class="product-card">
-<div class="product-card-header">
-<div class="product-icon"><i class="lucide-icon" data-lucide="clock"></i></div>
-<h3>Quick Business Loans</h3>
-</div>
-<div class="product-card-body">
-<p>Get quick business loans with minimal paperwork and automated decisions for immediate needs.</p>
-<ul>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Minimal documentation needed</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Automated lending matches</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Decisions within minutes</li>
-</ul>
-</div>
-<div class="product-card-footer">
-<a class="product-link" href="/Stonebridge_Website/finance-products/quick-business-loans">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></a>
-</div>
-</div>
-<div class="product-card">
-<div class="product-card-header">
-<div class="product-icon"><i class="lucide-icon" data-lucide="building"></i></div>
-<h3>Large Business Loans</h3>
-</div>
-<div class="product-card-body">
-<p>Compare high-value business loans from £100k to £25m with structured repayment plans.</p>
-<ul>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Borrow from £100k up to £25m</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Secured property facilities</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Long-term structured terms</li>
-</ul>
-</div>
-<div class="product-card-footer">
-<a class="product-link" href="/Stonebridge_Website/finance-products/large-business-loans">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></a>
-</div>
-</div>
-<div class="product-card">
-<div class="product-card-header">
-<div class="product-icon"><i class="lucide-icon" data-lucide="user"></i></div>
-<h3>Small Business Loans</h3>
-</div>
-<div class="product-card-body">
-<p>Secure affordable small business loans with flexible terms to support your daily operations.</p>
-<ul>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Borrow up to £100k fast</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Flexible unsecured terms</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Ideal for daily operations</li>
-</ul>
-</div>
-<div class="product-card-footer">
-<a class="product-link" href="/Stonebridge_Website/finance-products/small-business-loans">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></a>
-</div>
-</div>
-<div class="product-card">
-<div class="product-card-header">
-<div class="product-icon"><i class="lucide-icon" data-lucide="refresh-cw"></i></div>
-<h3>Refinance Business Loans</h3>
-</div>
-<div class="product-card-body">
-<p>Consolidate existing debts or refinance assets to lower monthly outgoings and release cash.</p>
-<ul>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Consolidate outstanding debt</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Release equity from assets</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Reduce monthly commitments</li>
-</ul>
-</div>
-<div class="product-card-footer">
-<a class="product-link" href="/Stonebridge_Website/finance-products/refinance-business-loans">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></a>
-</div>
-</div>
-<div class="product-card">
-<div class="product-card-header">
-<div class="product-icon"><i class="lucide-icon" data-lucide="unlock"></i></div>
-<h3>Unsecured Business Loans</h3>
-</div>
-<div class="product-card-body">
-<p>Borrow up to £500k without backing the loan with physical assets or property.</p>
-<ul>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> No physical assets needed</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Borrow up to £500,000</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Simple director guarantee</li>
-</ul>
-</div>
-<div class="product-card-footer">
-<a class="product-link" href="/Stonebridge_Website/finance-products/unsecured-business-loans">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></a>
-</div>
-</div>
-<div class="product-card">
-<div class="product-card-header">
-<div class="product-icon"><i class="lucide-icon" data-lucide="building"></i></div>
-<h3>Commercial Property Finance</h3>
-</div>
-<div class="product-card-body">
-<p>Fund the purchase, build, or refurbishment of commercial premises with property loans.</p>
-<ul>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Purchase or build premises</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Competitive mortgage rates</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Interest-only options</li>
-</ul>
-</div>
-<div class="product-card-footer">
-<a class="product-link" href="/Stonebridge_Website/finance-products/commercial-property-finance">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></a>
-</div>
-</div>
-<div class="product-card">
-<div class="product-card-header">
-<div class="product-icon"><i class="lucide-icon" data-lucide="arrow-left-right"></i></div>
-<h3>Business Bridging Loans</h3>
-</div>
-<div class="product-card-body">
-<p>Secure short-term bridging finance to bridge property purchases, tax bills, or general cash flow gaps.</p>
-<ul>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Short-term bridging facilities</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Fast property acquisition</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> 1 to 24 month loan terms</li>
-</ul>
-</div>
-<div class="product-card-footer">
-<a class="product-link" href="/Stonebridge_Website/finance-products/business-bridging-loans">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></a>
-</div>
-</div>
-<div class="product-card">
-<div class="product-card-header">
-<div class="product-icon"><i class="lucide-icon" data-lucide="cpu"></i></div>
-<h3>Business Asset Loans</h3>
-</div>
-<div class="product-card-body">
-<p>Release equity from existing machinery or purchase new business assets with asset finance.</p>
-<ul>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Acquire machinery & tools</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Refinance existing equipment</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Spread purchase costs</li>
-</ul>
-</div>
-<div class="product-card-footer">
-<a class="product-link" href="/Stonebridge_Website/finance-products/business-asset-loans">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></a>
-</div>
-</div>
-<div class="product-card">
-<div class="product-card-header">
-<div class="product-icon"><i class="lucide-icon" data-lucide="combine"></i></div>
-<h3>Business Consolidation Loans</h3>
-</div>
-<div class="product-card-body">
-<p>Combine multiple business debts into a single manageable monthly loan payment.</p>
-<ul>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Combine multiple facilities</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Single simple monthly payment</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Clear path to debt reduction</li>
-</ul>
-</div>
-<div class="product-card-footer">
-<a class="product-link" href="/Stonebridge_Website/finance-products/business-consolidation-loans">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></a>
-</div>
-</div>
-<div class="product-card">
-<div class="product-card-header">
-<div class="product-icon"><i class="lucide-icon" data-lucide="wrench"></i></div>
-<h3>Equipment Purchase Loans</h3>
-</div>
-<div class="product-card-body">
-<p>Finance machinery, IT hardware, tools, and office equipment with structured lease agreements.</p>
-<ul>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Finance tools and hardware</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Tax-efficient lease routes</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Maintain working capital</li>
-</ul>
-</div>
-<div class="product-card-footer">
-<a class="product-link" href="/Stonebridge_Website/finance-products/equipment-purchase-loans">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></a>
-</div>
-</div>
-<div class="product-card">
-<div class="product-card-header">
-<div class="product-icon"><i class="lucide-icon" data-lucide="calendar"></i></div>
-<h3>Long-Term Business Loans</h3>
-</div>
-<div class="product-card-body">
-<p>Spread repayments over 3 to 10 years for sustained business investments and stability.</p>
-<ul>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Spread costs up to 10 years</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Low fixed interest rates</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Sustained expansion support</li>
-</ul>
-</div>
-<div class="product-card-footer">
-<a class="product-link" href="/Stonebridge_Website/finance-products/long-term-business-loans">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></a>
-</div>
-</div>
-<div class="product-card">
-<div class="product-card-header">
-<div class="product-icon"><i class="lucide-icon" data-lucide="wrench"></i></div>
-<h3>Refurbishment Loans</h3>
-</div>
-<div class="product-card-body">
-<p>Finance office fit-outs, shop refurbishments, or property renovations to boost value.</p>
-<ul>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Fit-out offices or shops</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Acquire renovation finance</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Enhance asset values</li>
-</ul>
-</div>
-<div class="product-card-footer">
-<a class="product-link" href="/Stonebridge_Website/finance-products/refurbishment-loans">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></a>
-</div>
-</div>
-<div class="product-card">
-<div class="product-card-header">
-<div class="product-icon"><i class="lucide-icon" data-lucide="lock"></i></div>
-<h3>Secured Business Loans</h3>
-</div>
-<div class="product-card-body">
-<p>Access larger loan amounts and lower rates by securing finance against assets or property.</p>
-<ul>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Secure against property/assets</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Higher borrowing limits</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Longer term options</li>
-</ul>
-</div>
-<div class="product-card-footer">
-<a class="product-link" href="/Stonebridge_Website/finance-products/secured-business-loans">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></a>
-</div>
-</div>
-<div class="product-card">
-<div class="product-card-header">
-<div class="product-icon"><i class="lucide-icon" data-lucide="box"></i></div>
-<h3>Stock Finance Loans</h3>
-</div>
-<div class="product-card-body">
-<p>Purchase inventory and materials ahead of seasonal peaks with dedicated stock funding.</p>
-<ul>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Finance seasonal inventory</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Bulk purchase discounts</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Match sales cycles</li>
-</ul>
-</div>
-<div class="product-card-footer">
-<a class="product-link" href="/Stonebridge_Website/finance-products/stock-finance-loans">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></a>
-</div>
-</div>
-<div class="product-card">
-<div class="product-card-header">
-<div class="product-icon"><i class="lucide-icon" data-lucide="building-2"></i></div>
-<h3>Limited Company Business Loans</h3>
-</div>
-<div class="product-card-body">
-<p>Compare business loans structured specifically for UK limited companies and directors.</p>
-<ul>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Structured for UK companies</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> No personal asset security</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Fast director approval</li>
-</ul>
-</div>
-<div class="product-card-footer">
-<a class="product-link" href="/Stonebridge_Website/finance-products/limited-company-business-loans">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></a>
-</div>
-</div>
-<div class="product-card">
-<div class="product-card-header">
-<div class="product-icon"><i class="lucide-icon" data-lucide="shopping-cart"></i></div>
-<h3>E-commerce Business Loans</h3>
-</div>
-<div class="product-card-body">
-<p>Fund inventory, marketing, and expansion for Amazon, Shopify, or online retail stores.</p>
-<ul>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Online retail cash flow</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Fund ad spend & inventory</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Repay based on revenue</li>
-</ul>
-</div>
-<div class="product-card-footer">
-<a class="product-link" href="/Stonebridge_Website/finance-products/ecommerce-business-loans">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></a>
-</div>
-</div>
-<div class="product-card">
-<div class="product-card-header">
-<div class="product-icon"><i class="lucide-icon" data-lucide="receipt"></i></div>
+<div class="product-icon"><i class="lucide-icon" data-lucide="file-text"></i></div>
 <h3>Invoice Finance</h3>
 </div>
 <div class="product-card-body">
-<p>Release up to 90% of your unpaid invoice values immediately to eliminate payment delays.</p>
+<p>Release cash tied up in unpaid invoices to improve working capital and reduce payment delays.</p>
 <ul>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Get paid for invoices instantly</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Up to 90% invoice value</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> No more 30-day waiting</li>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Unlock invoice value</li>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Reduce payment delays</li>
+<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Improve working capital</li>
 </ul>
 </div>
 <div class="product-card-footer">
-<a class="product-link" href="/Stonebridge_Website/finance-products/invoice-finance">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></a>
-</div>
-</div>
-<div class="product-card">
-<div class="product-card-header">
-<div class="product-icon"><i class="lucide-icon" data-lucide="credit-card"></i></div>
-<h3>Merchant Cash Advance</h3>
-</div>
-<div class="product-card-body">
-<p>Borrow finance linked to your card terminal sales with flexible repay-as-you-earn terms.</p>
-<ul>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Linked to card transactions</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> Pay back as you trade</li>
-<li><i class="lucide-icon" data-lucide="check" style="color:var(--c-green);"></i> No fixed monthly payments</li>
-</ul>
-</div>
-<div class="product-card-footer">
-<a class="product-link" href="/Stonebridge_Website/finance-products/merchant-cash-advance">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></a>
+<a class="product-link" href="/Stonebridge_Website/finance-solutions/invoice-finance">Explore <i class="lucide-icon" data-lucide="arrow-right"></i></a>
 </div>
 </div>
 </div>
@@ -3931,7 +3678,7 @@
 <h2>Why choose Stonebridge?</h2>
 <p class="subtext">Business finance should feel clear, practical, and built around the way your company actually operates. We combine market access, experienced guidance, and a straightforward process so you can compare options, move faster, and fund your next step with confidence.</p>
 <p class="subtext" style="margin: var(--space-sm) 0 var(--space-md); color: var(--c-purple-light);">When we launched Stonebridge Business Finance, we set out to transform the business finance market, making it easier to navigate and more accessible for SMEs. And that’s exactly what we’re doing.</p>
-<div class="why-buttons" style="display: flex; gap: 16px; flex-wrap: wrap;">
+<div class="why-buttons">
 <a class="btn btn-primary" data-text="About Us" href="/Stonebridge_Website/about/"><span>About Us</span></a>
 <a class="btn btn-primary" data-text="Try our Calculator" href="/Stonebridge_Website/knowledge-hub/finance-calculator" style="background-color: var(--c-green) !important;"><span>Try our Calculator</span></a>
 </div>
