@@ -170,7 +170,8 @@
       align-items: center !important;
       justify-content: center !important;
       padding: clamp(52px, 7vw, 88px) 0 !important;
-      background: var(--c-purple) !important;
+      background: #ffffff !important;
+      border-bottom: 1px solid rgba(108,93,211,0.12);
       overflow: hidden;
     }
     .hero-bg-overlay {
@@ -180,7 +181,7 @@
       position: relative;
       z-index: 5;
       display: grid;
-      grid-template-columns: minmax(0, 0.9fr) minmax(360px, 1.1fr);
+      grid-template-columns: minmax(0, 0.95fr) minmax(340px, 1.05fr);
       gap: clamp(28px, 5vw, 64px);
       align-items: center;
       width: 100%;
@@ -201,7 +202,7 @@
       font-size: clamp(38px, 4.8vw, 64px) !important;
       line-height: 1.08 !important;
       font-weight: 800 !important;
-      color: var(--c-white) !important;
+      color: var(--c-dark) !important;
       margin-top: 0;
       margin-bottom: 20px;
       letter-spacing: 0;
@@ -209,17 +210,17 @@
     .hero-fullbleed-subtext {
       font-size: clamp(16px, 1.8vw, 20px) !important;
       line-height: 1.55 !important;
-      color: rgba(255, 255, 255, 0.85) !important;
+      color: var(--c-grey) !important;
       margin-bottom: 28px;
       max-width: 580px;
     }
     .hero-fullbleed-actions .btn-primary {
-      background-color: var(--c-purple-light, #E8E0F5) !important;
-      color: var(--c-purple, #4b17a6) !important;
+      background-color: var(--c-purple) !important;
+      color: var(--c-white) !important;
       border: none !important;
     }
     .hero-fullbleed-actions .btn-primary:hover {
-      background-color: var(--c-white, #ffffff) !important;
+      background-color: var(--c-purple-dark) !important;
     }
 
     .hero-fullbleed-actions {
@@ -249,21 +250,21 @@
     }
     .btn-outline-hero {
       background-color: transparent !important;
-      color: #ffffff !important;
+      color: var(--c-dark) !important;
       font-weight: 700 !important;
       text-transform: uppercase !important;
       letter-spacing: 0.05em !important;
       padding: 14px 28px !important;
       border-radius: var(--radius-btn) !important;
-      border: 1px solid rgba(255, 255, 255, 0.6) !important;
+      border: 2px solid var(--c-purple) !important;
       display: inline-flex !important;
       align-items: center !important;
       backdrop-filter: blur(4px);
       transition: border-color 0.2s ease, background-color 0.2s ease !important;
     }
     .btn-outline-hero:hover {
-      border-color: #ffffff !important;
-      background-color: rgba(255, 255, 255, 0.15) !important;
+      border-color: var(--c-purple-dark) !important;
+      background-color: rgba(108, 93, 211, 0.08) !important;
     }
     .hero-fullbleed-trust {
       position: relative;
@@ -287,25 +288,25 @@
     }
     .business-loans-hero-media {
       position: relative;
-      min-height: clamp(420px, 52vw, 620px);
+      width: 100%;
+      max-width: 520px;
+      aspect-ratio: 1 / 1;
+      margin: 0 auto;
       overflow: hidden;
-      border-radius: 8px 8px 8px 50%;
-      background: var(--c-purple-bg);
-      box-shadow: none;
+      border-radius: 0 !important;
+      background: #ffffff !important;
+      border: 4px solid var(--c-purple) !important;
+      box-shadow: 0 16px 36px rgba(91,45,142,0.12);
     }
     .business-loans-hero-media img {
       width: 100%;
       height: 100%;
-      min-height: inherit;
       object-fit: cover;
       display: block;
+      border-radius: 0 !important;
     }
     .business-loans-hero-media::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(91,45,142,0.12), rgba(0,137,123,0.16));
-      pointer-events: none;
+      display: none !important;
     }
     @media (max-width: 768px) {
       .hero.hero-fullbleed {
@@ -344,8 +345,11 @@
         justify-content: center;
       }
       .business-loans-hero-media {
-        min-height: 360px;
-        border-radius: 8px 8px 8px 42%;
+        min-height: 0 !important;
+        width: 100%;
+        max-width: 360px;
+        aspect-ratio: 1 / 1;
+        border-radius: 0 !important;
       }
     }
     .hero-rating-pill {
