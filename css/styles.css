@@ -234,41 +234,277 @@ p.subtext {
   cursor: pointer;
 }
 
-/* Dropdown */
+/* 1B. Premium Redesigned Brand Dropdown Menu */
 .dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: -20px;
-  background-color: var(--c-white);
-  min-width: 200px;
-  padding: 16px;
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-hover);
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(10px);
-  transition: all 0.2s ease;
-  z-index: 10;
+  position: absolute !important;
+  top: calc(100% + 10px) !important;
+  left: 0 !important;
+  background: #ffffff !important;
+  min-width: 240px !important;
+  padding: 12px 10px !important;
+  border-radius: 14px !important;
+  border: 1px solid rgba(91, 45, 142, 0.14) !important;
+  border-top: 3.5px solid var(--c-purple) !important;
+  box-shadow: 0 18px 42px -8px rgba(91, 45, 142, 0.22), 0 6px 16px rgba(26, 26, 46, 0.06) !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transform: translateY(8px) !important;
+  transition: opacity 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.22s cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 0.22s !important;
+  z-index: 1000 !important;
 }
-
+.dropdown-menu::before {
+  content: '' !important;
+  position: absolute !important;
+  top: -14px !important;
+  left: 0 !important;
+  right: 0 !important;
+  height: 14px !important;
+  display: block !important;
+}
 .desktop-nav li:hover .dropdown-menu {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important;
+}
+.desktop-nav li:hover .nav-link {
+  color: var(--c-purple) !important;
+}
+.desktop-nav .nav-link .lucide-icon,
+.desktop-nav .nav-link svg {
+  transition: transform 0.22s ease, stroke 0.2s ease !important;
+}
+.desktop-nav li:hover .nav-link .lucide-icon,
+.desktop-nav li:hover .nav-link svg {
+  transform: rotate(180deg) !important;
+  stroke: var(--c-purple) !important;
 }
 
+/* Mega Menu Layout with Dynamic Live Preview Panel */
+.dropdown-menu.mega-menu {
+  min-width: min(94vw, 940px) !important;
+  left: 50% !important;
+  transform: translate(-50%, 8px) !important;
+  display: grid !important;
+  grid-template-columns: 1fr 280px !important;
+  gap: 16px !important;
+  padding: 16px 18px !important;
+  background: linear-gradient(180deg, #ffffff 0%, var(--c-purple-bg) 100%) !important;
+}
+.desktop-nav li:hover .dropdown-menu.mega-menu {
+  transform: translate(-50%, 0) !important;
+}
+
+.mega-menu-links {
+  display: grid !important;
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  gap: 5px 8px !important;
+  max-height: min(70vh, 520px) !important;
+  overflow-y: auto !important;
+  padding-right: 6px !important;
+  scrollbar-width: thin !important;
+  scrollbar-color: rgba(91, 45, 142, 0.3) transparent !important;
+}
+.mega-menu-links::-webkit-scrollbar {
+  width: 5px !important;
+}
+.mega-menu-links::-webkit-scrollbar-thumb {
+  background-color: rgba(91, 45, 142, 0.25) !important;
+  border-radius: 99px !important;
+}
+.mega-menu-links::-webkit-scrollbar-thumb:hover {
+  background-color: var(--c-purple) !important;
+}
+
+/* Live Preview Showcase Panel */
+.mega-menu-preview {
+  display: flex !important;
+  flex-direction: column !important;
+  background: #ffffff !important;
+  border: 1px solid rgba(91, 45, 142, 0.14) !important;
+  border-radius: 12px !important;
+  padding: 12px !important;
+  box-shadow: 0 8px 24px rgba(91, 45, 142, 0.08) !important;
+  position: sticky !important;
+  top: 0 !important;
+  align-self: start !important;
+}
+.preview-card {
+  display: flex !important;
+  flex-direction: column !important;
+}
+.preview-img-wrap {
+  width: 100% !important;
+  height: 160px !important;
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  position: relative !important;
+  background: var(--c-purple-bg) !important;
+  border: 1px solid rgba(91, 45, 142, 0.1) !important;
+  margin-bottom: 12px !important;
+}
+.preview-img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block !important;
+  transition: opacity 0.22s ease, transform 0.3s ease !important;
+}
+.preview-card:hover .preview-img {
+  transform: scale(1.04);
+}
+.preview-info {
+  display: flex !important;
+  flex-direction: column !important;
+}
+.preview-badge {
+  display: inline-block !important;
+  align-self: flex-start !important;
+  padding: 3px 8px !important;
+  background: var(--c-purple-bg) !important;
+  color: var(--c-purple) !important;
+  border: 1px solid rgba(91, 45, 142, 0.18) !important;
+  border-radius: 999px !important;
+  font-size: 10px !important;
+  font-weight: 800 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.06em !important;
+  margin-bottom: 8px !important;
+}
+.preview-title {
+  font-size: 15px !important;
+  line-height: 1.25 !important;
+  font-weight: 800 !important;
+  color: var(--c-dark) !important;
+  margin: 0 0 6px 0 !important;
+}
+.preview-desc {
+  font-size: 12px !important;
+  line-height: 1.4 !important;
+  color: #5c5c72 !important;
+  margin: 0 0 12px 0 !important;
+  min-height: 34px !important;
+}
+.preview-cta {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 6px !important;
+  font-size: 12.5px !important;
+  font-weight: 700 !important;
+  color: var(--c-purple) !important;
+  text-decoration: none !important;
+  padding: 7px 12px !important;
+  background: var(--c-purple-bg) !important;
+  border: 1px solid rgba(91, 45, 142, 0.2) !important;
+  border-radius: 6px !important;
+  transition: all 0.2s ease !important;
+  width: fit-content !important;
+}
+.preview-cta:hover {
+  background: var(--c-purple) !important;
+  color: #ffffff !important;
+}
+
+/* Compact Menu with Live Preview Layout */
+.dropdown-menu.compact-menu.with-preview {
+  min-width: 480px !important;
+  max-width: 520px !important;
+  display: grid !important;
+  grid-template-columns: 1fr 220px !important;
+  gap: 14px !important;
+  padding: 14px !important;
+  background: linear-gradient(180deg, #ffffff 0%, var(--c-purple-bg) 100%) !important;
+}
+.compact-menu-links {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 2px !important;
+  justify-content: center !important;
+}
+.compact-menu-preview {
+  display: flex !important;
+  flex-direction: column !important;
+  background: #ffffff !important;
+  border: 1px solid rgba(91, 45, 142, 0.14) !important;
+  border-radius: 12px !important;
+  padding: 10px !important;
+  box-shadow: 0 6px 18px rgba(91, 45, 142, 0.08) !important;
+  align-self: start !important;
+}
+.compact-menu-preview .preview-img-wrap {
+  height: 125px !important;
+  margin-bottom: 10px !important;
+}
+.compact-menu-preview .preview-title {
+  font-size: 13.5px !important;
+  margin-bottom: 4px !important;
+}
+.compact-menu-preview .preview-desc {
+  font-size: 11.5px !important;
+  line-height: 1.35 !important;
+  margin-bottom: 10px !important;
+  min-height: 32px !important;
+}
+.compact-menu-preview .preview-cta {
+  font-size: 11.5px !important;
+  padding: 5px 10px !important;
+}
+
+/* Compact Menu Alignment */
+.dropdown-menu.compact-menu {
+  min-width: 250px !important;
+  padding: 10px !important;
+  background: #ffffff !important;
+}
+.desktop-nav li:nth-last-child(-n+2) .dropdown-menu.compact-menu {
+  left: auto !important;
+  right: 0 !important;
+}
+
+/* Interactive Dropdown Links */
 .dropdown-menu a {
-  display: block;
-  padding: 8px 12px;
-  font-size: 14px;
-  color: var(--c-grey);
-  border-radius: var(--radius-sm);
-  font-weight: 500;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 8.5px 12px !important;
+  font-size: 13px !important;
+  color: #2c2c3e !important;
+  border-radius: 8px !important;
+  font-weight: 600 !important;
+  line-height: 1.35 !important;
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1) !important;
+  position: relative !important;
+  border-left: 3px solid transparent !important;
+  background-color: transparent !important;
+  text-decoration: none !important;
 }
-
-.dropdown-menu a:hover {
-  background-color: var(--c-purple-bg);
-  color: var(--c-purple);
+.dropdown-menu a::after {
+  content: '→' !important;
+  font-size: 13px !important;
+  color: var(--c-green) !important;
+  opacity: 0 !important;
+  transform: translateX(-6px) !important;
+  transition: all 0.18s ease !important;
+  font-weight: 700 !important;
+  margin-left: 8px !important;
+  flex-shrink: 0 !important;
+}
+.dropdown-menu a:hover,
+.dropdown-menu a.is-preview-active {
+  background-color: #ffffff !important;
+  color: var(--c-purple) !important;
+  border-left: 3px solid var(--c-purple) !important;
+  transform: translateX(4px) !important;
+  box-shadow: 0 4px 12px rgba(91, 45, 142, 0.1) !important;
+}
+.dropdown-menu.compact-menu a:hover {
+  background-color: var(--c-purple-bg) !important;
+}
+.dropdown-menu a:hover::after,
+.dropdown-menu a.is-preview-active::after {
+  opacity: 1 !important;
+  transform: translateX(0) !important;
 }
 
 .dropdown-menu .menu-label,
@@ -1437,35 +1673,6 @@ a[data-disabled-product-link],
 /* Navigation dropdown expansion */
 .desktop-nav ul {
   gap: 18px;
-}
-
-.dropdown-menu.mega-menu {
-  min-width: min(92vw, 760px);
-  left: 50%;
-  transform: translate(-50%, 10px);
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 6px 18px;
-  max-height: min(70vh, 620px);
-  overflow-y: auto;
-}
-
-.desktop-nav li:hover .dropdown-menu.mega-menu {
-  transform: translate(-50%, 0);
-}
-
-.dropdown-menu.compact-menu {
-  min-width: 280px;
-}
-
-.dropdown-menu .dropdown-heading {
-  display: block;
-  padding: 8px 12px 4px;
-  color: var(--c-dark);
-  font-size: 12px;
-  font-weight: 900;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
 }
 
 @media (max-width: 1023px) {

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en"> <head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/><meta http-equiv="Pragma" content="no-cache"/><meta http-equiv="Expires" content="0"/><title>Business Bridging Loans | Stonebridge</title><meta content="Compare secured and unsecured business bridging loan options with Stonebridge and get expert guidance from enquiry to funding." name="description"/><link href="/Stonebridge_Website_New/img/SVG/updated_fav.svg" rel="icon" type="image/svg+xml"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;family=Playfair+Display:ital,wght@1,400&amp;display=swap" rel="stylesheet"/><script src="/Stonebridge_Website_New/_astro/BaseLayout.astro_astro_type_script_index_0_lang.CN6pKSHs.js" type="module"></script><link href="/Stonebridge_Website_New/css/design-tokens.css?v=v2" rel="stylesheet"/><link href="/Stonebridge_Website_New/css/styles.css?v=v2" rel="stylesheet"/><style>
+<html lang="en"> <head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/><meta http-equiv="Pragma" content="no-cache"/><meta http-equiv="Expires" content="0"/><title>Business Bridging Loans | Stonebridge</title><meta content="Compare secured and unsecured business bridging loan options with Stonebridge and get expert guidance from enquiry to funding." name="description"/><link href="/Stonebridge_Website_New/img/SVG/updated_fav.svg" rel="icon" type="image/svg+xml"/><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&amp;family=Playfair+Display:ital,wght@1,400&amp;display=swap" rel="stylesheet"/><script src="/Stonebridge_Website_New/_astro/BaseLayout.astro_astro_type_script_index_0_lang.CN6pKSHs.js" type="module"></script><link href="/Stonebridge_Website_New/css/design-tokens.css?v=v2" rel="stylesheet"/><link href="/Stonebridge_Website_New/css/styles.css?v=v3" rel="stylesheet"/><style>
     /* STRICT ENFORCEMENT OF DESIGN TOKENS & WOW-FACTOR UPGRADES */
     /* 1. Global Reset for Lucide SVG Setup & Layout Constraints */
     .container { width: 100%; max-width: none; margin: 0; padding: 0 20.4px; }
@@ -170,7 +170,8 @@
       align-items: center !important;
       justify-content: center !important;
       padding: clamp(52px, 7vw, 88px) 0 !important;
-      background: var(--c-purple) !important;
+      background: var(--c-white) !important;
+      border-bottom: 1px solid rgba(108,93,211,0.12);
       overflow: hidden;
     }
     .hero-bg-overlay {
@@ -201,7 +202,7 @@
       font-size: clamp(38px, 4.8vw, 64px) !important;
       line-height: 1.08 !important;
       font-weight: 800 !important;
-      color: var(--c-white) !important;
+      color: var(--c-dark) !important;
       margin-top: 0;
       margin-bottom: 20px;
       letter-spacing: 0;
@@ -209,17 +210,18 @@
     .hero-fullbleed-subtext {
       font-size: clamp(16px, 1.8vw, 20px) !important;
       line-height: 1.55 !important;
-      color: rgba(255, 255, 255, 0.85) !important;
+      color: rgba(26, 26, 46, 0.78) !important;
       margin-bottom: 28px;
       max-width: 580px;
     }
     .hero-fullbleed-actions .btn-primary {
-      background-color: var(--c-purple-light, #E8E0F5) !important;
-      color: var(--c-purple, #4b17a6) !important;
+      background-color: var(--c-purple) !important;
+      color: var(--c-white) !important;
       border: none !important;
     }
     .hero-fullbleed-actions .btn-primary:hover {
-      background-color: var(--c-white, #ffffff) !important;
+      background-color: var(--c-purple-dark) !important;
+      color: var(--c-white) !important;
     }
 
     .hero-fullbleed-actions {
@@ -287,25 +289,26 @@
     }
     .business-bridging-loans-hero-media {
       position: relative;
-      min-height: clamp(420px, 52vw, 620px);
+      width: 100%;
+      max-width: 650px;
+      aspect-ratio: 1 / 1;
       overflow: hidden;
-      border-radius: 8px 8px 8px 50%;
+      border-radius: 20px !important;
+      border: 4px solid var(--c-purple) !important;
       background: var(--c-purple-bg);
-      box-shadow: none;
+      box-shadow: 0 16px 36px rgba(91, 45, 142, 0.12);
+      justify-self: center;
     }
     .business-bridging-loans-hero-media img {
       width: 100%;
       height: 100%;
-      min-height: inherit;
+      aspect-ratio: 1 / 1;
       object-fit: cover;
       display: block;
+      border-radius: 16px !important;
     }
     .business-bridging-loans-hero-media::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(135deg, rgba(91,45,142,0.12), rgba(0,137,123,0.16));
-      pointer-events: none;
+      display: none !important;
     }
     @media (max-width: 768px) {
       .hero.hero-fullbleed {
@@ -344,8 +347,11 @@
         justify-content: center;
       }
       .business-bridging-loans-hero-media {
-        min-height: 360px;
-        border-radius: 8px 8px 8px 42%;
+        min-height: unset !important;
+        max-width: min(100%, 450px);
+        aspect-ratio: 1 / 1 !important;
+        border-radius: 0 !important;
+        margin: 0 auto;
       }
     }
     .hero-rating-pill {
@@ -906,7 +912,7 @@
     /* Left panel - dark purple */
     .cdp-left {
       background: var(--c-purple);
-      border-radius: 24px 120px 24px 120px;
+      border-radius: 24px;
       padding: clamp(26px, 3vw, 40px);
       display: flex;
       flex-direction: column;
@@ -3433,199 +3439,239 @@
       }
     }
 
-    .grow-benefits-grid {
-      display: flex !important;
-      flex-wrap: wrap;
+    /* Modern Geometric Shape Grid - Business Bridging Loans */
+    #business-bridging-loans__section-benefits .bl-benefits-header {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto var(--space-xl);
+    }
+    #business-bridging-loans__section-benefits .bl-benefits-header h2 {
+      font-size: clamp(30px, 3.2vw, 44px);
+      font-weight: 800;
+      color: var(--c-dark);
+      letter-spacing: -0.02em;
+      margin-bottom: 14px;
+    }
+    #business-bridging-loans__section-benefits .bl-benefits-header p {
+      font-size: 17px;
+      color: var(--c-grey);
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    #business-bridging-loans__section-benefits .bl-shape-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-bottom: var(--space-xl);
+    }
+
+    #business-bridging-loans__section-benefits .bl-shape-card {
+      position: relative;
+      padding: 40px 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      min-height: 290px;
+      box-shadow: 0 10px 30px rgba(26,26,46,0.08);
+      transition: transform 0.3s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    }
+    #business-bridging-loans__section-benefits .bl-shape-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 40px rgba(26,26,46,0.14);
+    }
+
+    /* Architectural contours with solid brand fills */
+    #business-bridging-loans__section-benefits .card-arch-purple {
+      background: var(--c-purple) !important;
+      border-radius: 90px 90px 24px 24px;
+    }
+    #business-bridging-loans__section-benefits .card-leaf-teal {
+      background: var(--c-green) !important;
+      border-radius: 24px 100px 24px 24px;
+    }
+    #business-bridging-loans__section-benefits .card-crest-dark {
+      background: var(--c-dark) !important;
+      border-radius: 24px 24px 100px 24px;
+    }
+    #business-bridging-loans__section-benefits .card-arch-teal {
+      background: var(--c-green) !important;
+      border-radius: 90px 90px 24px 24px;
+    }
+    #business-bridging-loans__section-benefits .card-leaf-purple {
+      background: var(--c-purple) !important;
+      border-radius: 100px 24px 24px 24px;
+    }
+    #business-bridging-loans__section-benefits .card-crest-purple {
+      background: var(--c-dark) !important;
+      border-radius: 24px 24px 24px 100px;
+    }
+
+    #business-bridging-loans__section-benefits .bl-shape-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 24px;
+    }
+    #business-bridging-loans__section-benefits .bl-shape-num {
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.95);
+      background: rgba(255, 255, 255, 0.16);
+      padding: 4px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.25);
+    }
+    #business-bridging-loans__section-benefits .bl-shape-icon {
+      width: 54px;
+      height: 54px;
+      border-radius: 16px;
+      background: #ffffff;
+      display: flex;
+      align-items: center;
       justify-content: center;
-      align-items: stretch;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    }
+    #business-bridging-loans__section-benefits .card-arch-purple .bl-shape-icon,
+    #business-bridging-loans__section-benefits .card-leaf-purple .bl-shape-icon {
+      color: var(--c-purple);
+    }
+    #business-bridging-loans__section-benefits .card-leaf-teal .bl-shape-icon,
+    #business-bridging-loans__section-benefits .card-arch-teal .bl-shape-icon {
+      color: var(--c-green);
+    }
+    #business-bridging-loans__section-benefits .card-crest-dark .bl-shape-icon,
+    #business-bridging-loans__section-benefits .card-crest-purple .bl-shape-icon {
+      color: var(--c-dark);
+    }
+    #business-bridging-loans__section-benefits .bl-shape-icon i {
+      width: 26px;
+      height: 26px;
     }
 
-    .grow-benefits-grid > div {
-      flex: 0 1 calc((100% - 72px) / 4);
-      max-width: calc((100% - 72px) / 4);
-      min-width: 0;
-      border-radius: 100% 100% 16px 16px !important;
-      text-align: center !important;
+    #business-bridging-loans__section-benefits .bl-shape-title {
+      font-size: 21px;
+      font-weight: 800;
+      color: #ffffff !important;
+      margin-bottom: 12px;
+      line-height: 1.25;
+      letter-spacing: -0.01em;
+    }
+    #business-bridging-loans__section-benefits .bl-shape-desc {
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.88) !important;
+      line-height: 1.65;
+      margin: 0;
+      font-weight: 450;
     }
 
-    .grow-benefits-grid > div:nth-child(odd) {
-      background: #f8f5ff !important;
-      border-color: #e8def3 !important;
-    }
-
-    .grow-benefits-grid > div:nth-child(even) {
-      background: #eff8f7 !important;
-      border-color: #cde7e3 !important;
-    }
-
-    .grow-benefits-grid > div:nth-child(odd) > div:first-child {
-      background: #e8def3 !important;
-      color: var(--c-purple) !important;
-    }
-
-    .grow-benefits-grid > div:nth-child(even) > div:first-child {
-      background: #dff0ed !important;
-      color: var(--c-green) !important;
-    }
-
-    .grow-benefits-grid > div > div:first-child {
-      margin-left: auto !important;
-      margin-right: auto !important;
-    }
-
-    .grow-benefits-cta {
+    /* Geometric CTA Strip */
+    #business-bridging-loans__section-benefits .grow-benefits-cta {
       position: relative;
       overflow: hidden;
-      margin-top: 4px;
-      padding: clamp(28px, 4vw, 42px);
-      min-height: 320px;
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 8px 120px 120px 8px;
+      margin-top: 8px;
+      padding: clamp(36px, 5vw, 56px) clamp(24px, 4vw, 48px);
+      border-radius: 28px;
       background: #1a1a2e;
       color: var(--c-white);
+      box-shadow: 0 16px 44px rgba(26,26,46,0.16);
     }
-
-    .grow-benefits-cta::before,
-    .grow-benefits-cta::after {
+    #business-bridging-loans__section-benefits .grow-benefits-cta::before {
       content: '';
       position: absolute;
       inset: 0;
+      background-image: radial-gradient(circle at 10% 20%, rgba(91,45,142,0.45) 0%, transparent 40%),
+                        radial-gradient(circle at 90% 80%, rgba(0,137,123,0.38) 0%, transparent 45%);
       pointer-events: none;
     }
-
-    .grow-benefits-cta::before {
-      width: 64%;
-      background:
-        radial-gradient(110% 130% at 72% 50%, rgba(0,137,123,0.92) 0 46%, transparent 47%),
-        linear-gradient(135deg, rgba(0,137,123,0.68) 0 32%, transparent 33%);
-      opacity: 0.96;
-    }
-
-    .grow-benefits-cta::after {
-      background:
-        radial-gradient(86% 118% at 74% 112%, rgba(91,45,142,0.68) 0 54%, transparent 55%),
-        linear-gradient(90deg, transparent 0 58%, rgba(26,26,46,0.72) 59% 100%);
-    }
-
-    .grow-benefits-cta-copy {
+    #business-bridging-loans__section-benefits .grow-benefits-cta-copy {
       position: relative;
       z-index: 2;
-      max-width: 620px;
+      max-width: 680px;
       margin: 0 auto;
       text-align: center;
     }
-
-    .grow-benefits-cta-copy::before {
-      content: '';
-      position: absolute;
-      z-index: -1;
-      width: 420px;
-      height: 420px;
-      left: -260px;
-      top: -210px;
-      border-radius: 50%;
-      background: rgba(26,26,46,0.76);
-      pointer-events: none;
-    }
-
-    .grow-benefits-cta-kicker {
+    #business-bridging-loans__section-benefits .grow-benefits-cta-kicker {
       display: inline-flex;
       align-items: center;
       min-height: 28px;
-      margin-bottom: 14px;
-      padding: 0 12px;
+      margin-bottom: 16px;
+      padding: 4px 14px;
       border-radius: 999px;
-      background: rgba(255,255,255,0.12);
-      color: rgba(255,255,255,0.78);
+      background: rgba(91,45,142,0.4);
+      border: 1px solid rgba(255,255,255,0.2);
+      color: #ffffff;
       font-size: 12px;
-      font-weight: 900;
-      letter-spacing: 0.06em;
+      font-weight: 800;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
     }
-
-    .grow-benefits-cta h3 {
-      margin: 0 0 10px;
-      color: var(--c-white);
-      font-size: clamp(28px, 3vw, 42px);
-      line-height: 1.08;
+    #business-bridging-loans__section-benefits .grow-benefits-cta h3 {
+      margin: 0 0 12px;
+      color: #ffffff;
+      font-size: clamp(26px, 3.2vw, 38px);
+      line-height: 1.15;
       font-weight: 900;
-      letter-spacing: 0;
     }
-
-    .grow-benefits-cta p {
-      max-width: 680px;
+    #business-bridging-loans__section-benefits .grow-benefits-cta p {
+      max-width: 620px;
       margin: 0 auto;
-      color: rgba(255,255,255,0.82);
-      font-size: 17px;
+      color: rgba(255,255,255,0.85);
+      font-size: 16px;
       line-height: 1.65;
-      font-weight: 650;
+      font-weight: 450;
     }
-
-    .grow-benefits-cta-actions {
+    #business-bridging-loans__section-benefits .grow-benefits-cta-actions {
       position: relative;
       z-index: 2;
       display: flex;
-      margin-top: 24px;
+      margin-top: 28px;
       gap: 12px;
-      flex-wrap: wrap;
       justify-content: center;
     }
-
-    .grow-benefits-cta-primary {
-      background: var(--c-white) !important;
-      color: var(--c-purple) !important;
-    }
-
-    .grow-benefits-cta-primary span,
-    .grow-benefits-cta-primary::after {
-      color: var(--c-purple) !important;
-    }
-
-    .grow-benefits-cta-primary:hover {
+    #business-bridging-loans__section-benefits .grow-benefits-cta-primary {
       background: var(--c-green) !important;
       color: var(--c-white) !important;
+      font-weight: 700 !important;
+      padding: 14px 34px !important;
+      border-radius: 999px !important;
+      border: 1px solid transparent !important;
+      box-shadow: 0 6px 20px rgba(0,137,123,0.35) !important;
+      transition: all 0.25s ease !important;
     }
-
-    .grow-benefits-cta-primary:hover span,
-    .grow-benefits-cta-primary:hover::after {
+    #business-bridging-loans__section-benefits .grow-benefits-cta-primary span,
+    #business-bridging-loans__section-benefits .grow-benefits-cta-primary::after {
       color: var(--c-white) !important;
     }
-
-    @media (max-width: 1023px) {
-      .grow-benefits-grid > div {
-        flex-basis: calc((100% - 24px) / 2);
-        max-width: calc((100% - 24px) / 2);
-      }
-
-      .grow-benefits-cta-actions {
-        justify-content: center;
-      }
-
-      .grow-benefits-cta::before {
-        width: 100%;
-        opacity: 0.72;
-        background:
-          radial-gradient(120% 110% at 80% 40%, rgba(0,137,123,0.74) 0 34%, transparent 35%),
-          linear-gradient(135deg, rgba(0,137,123,0.42) 0 38%, transparent 39%);
-      }
-
-      .grow-benefits-cta::after {
-        background: radial-gradient(120% 100% at 94% 105%, rgba(91,45,142,0.55) 0 52%, transparent 53%);
-      }
+    #business-bridging-loans__section-benefits .grow-benefits-cta-primary:hover {
+      background: #00796B !important;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 26px rgba(0,137,123,0.45) !important;
     }
 
+    @media (max-width: 991px) {
+      #business-bridging-loans__section-benefits .bl-shape-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+    }
     @media (max-width: 640px) {
-      .grow-benefits-grid > div {
-        flex-basis: 100%;
-        max-width: 100%;
+      #business-bridging-loans__section-benefits .bl-shape-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
       }
-
-      .grow-benefits-cta-actions .btn {
+      #business-bridging-loans__section-benefits .bl-shape-card {
+        padding: 32px 24px;
+        min-height: auto;
+      }
+      #business-bridging-loans__section-benefits .grow-benefits-cta {
+        padding: 36px 20px;
+        border-radius: 20px;
+      }
+      #business-bridging-loans__section-benefits .grow-benefits-cta-actions .btn {
         width: 100%;
-      }
-
-      .grow-benefits-cta {
-        border-radius: 8px 64px 64px 8px;
       }
     }
 
@@ -3657,131 +3703,236 @@
 <li><a class="nav-link" href="/Stonebridge_Website_New/">Home</a></li>
 <li>
 <a class="nav-link" href="/Stonebridge_Website_New/about/">Welcome <i class="lucide-icon" data-lucide="chevron-down"></i></a>
-<div class="dropdown-menu compact-menu">
-<a href="/Stonebridge_Website_New/about/">About</a>
-<a href="/Stonebridge_Website_New/join-our-team">Join Our Team</a>
-<a href="/Stonebridge_Website_New/sections">Sections</a>
-<a href="/Stonebridge_Website_New/faqs">FAQs</a>
-<a href="/Stonebridge_Website_New/contact">Contact Us</a>
-<a href="/Stonebridge_Website_New/check-eligibility">Check Eligibility</a>
-<a href="/Stonebridge_Website_New/apply">Apply Now</a>
+<div class="dropdown-menu compact-menu with-preview">
+<div class="compact-menu-links">
+<a href="/Stonebridge_Website_New/about/" data-preview-img="https://images.pexels.com/photos/36733315/pexels-photo-36733315.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="About Stonebridge" data-preview-desc="Specialised UK commercial finance brokerage helping businesses secure tailored funding." data-preview-badge="Welcome">About</a>
+<a href="/Stonebridge_Website_New/join-our-team" data-preview-img="https://images.pexels.com/photos/7693700/pexels-photo-7693700.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Join Our Team" data-preview-desc="Build an exciting career in finance within an ambitious, supportive team." data-preview-badge="Welcome">Join Our Team</a>
+<a href="/Stonebridge_Website_New/sections" data-preview-img="https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Website Sections" data-preview-desc="Explore our comprehensive directory of finance products, solutions, and resources." data-preview-badge="Welcome">Sections</a>
+<a href="/Stonebridge_Website_New/faqs" data-preview-img="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="FAQs" data-preview-desc="Clear, transparent answers about eligibility, interest rates, and broker fees." data-preview-badge="Welcome">FAQs</a>
+<a href="/Stonebridge_Website_New/contact" data-preview-img="https://images.pexels.com/photos/9050637/pexels-photo-9050637.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Contact Us" data-preview-desc="Speak directly with an experienced commercial finance broker today." data-preview-badge="Welcome">Contact Us</a>
+<a href="/Stonebridge_Website_New/check-eligibility" data-preview-img="https://images.pexels.com/photos/20450985/pexels-photo-20450985.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Check Eligibility" data-preview-desc="Instant online assessment across 70+ UK lenders with zero credit impact." data-preview-badge="Welcome">Check Eligibility</a>
+<a href="/Stonebridge_Website_New/apply" data-preview-img="https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Apply Now" data-preview-desc="Quick, hassle-free commercial finance application process with dedicated support." data-preview-badge="Welcome">Apply Now</a>
+</div>
+<div class="compact-menu-preview">
+<div class="preview-card">
+<div class="preview-img-wrap">
+<img alt="Welcome preview" class="preview-img" src="https://images.pexels.com/photos/36733315/pexels-photo-36733315.jpeg?auto=compress&cs=tinysrgb&w=800"/>
+</div>
+<div class="preview-info">
+<span class="preview-badge">Welcome</span>
+<h4 class="preview-title">About Stonebridge</h4>
+<p class="preview-desc">Specialised UK commercial finance brokerage helping businesses secure tailored funding.</p>
+<a class="preview-cta" href="/Stonebridge_Website_New/about/">Learn More →</a>
+</div>
+</div>
+</div>
 </div>
 </li>
 <li>
 <a class="nav-link" href="/Stonebridge_Website_New/services">Solutions <i class="lucide-icon" data-lucide="chevron-down"></i></a>
-<div class="dropdown-menu mega-menu">
-<a href="/Stonebridge_Website_New/finance-solutions/grow-my-business">Grow My Business</a>
-<a href="/Stonebridge_Website_New/finance-solutions/manage-cashflow">Manage Cashflow</a>
-<a href="/Stonebridge_Website_New/finance-solutions/pay-a-tax-bill">Pay a Tax Bill</a>
-<a href="/Stonebridge_Website_New/finance-solutions/working-capital">Working Capital</a>
-<a href="/Stonebridge_Website_New/finance-solutions/buying-equipment-machinery">Buying Equipment &amp; Machinery</a>
-<a href="/Stonebridge_Website_New/finance-solutions/stock-inventory-finance">Stock &amp; Inventory Finance</a>
-<a href="/Stonebridge_Website_New/finance-solutions/refinance-debt-consolidation">Refinance Debt Consolidation</a>
-<a href="/Stonebridge_Website_New/finance-solutions/refurbishment-finance">Refurbishment Finance</a>
-<a href="/Stonebridge_Website_New/finance-solutions/property-development-finance">Property Development Finance</a>
-<a href="/Stonebridge_Website_New/finance-solutions/buying-a-business">Buying a Business</a>
-<a href="/Stonebridge_Website_New/finance-solutions/business-asset-equipment-finance">Business Asset &amp; Equipment Finance</a>
-<a href="/Stonebridge_Website_New/finance-solutions/commercial-property-finance">Commercial Property Finance</a>
-<a href="/Stonebridge_Website_New/finance-solutions/commercial-vehicle-finance">Commercial Vehicle Finance</a>
-<a href="/Stonebridge_Website_New/finance-solutions/corporate-property-finance">Corporate Property Finance</a>
-<a href="/Stonebridge_Website_New/finance-solutions/growth-guarantee-scheme">Growth Guarantee Scheme</a>
-<a href="/Stonebridge_Website_New/finance-solutions/invoice-finance">Invoice Finance</a>
-<a href="/Stonebridge_Website_New/finance-solutions/merchant-cash-advance">Merchant Cash Advance</a>
-<a href="/Stonebridge_Website_New/finance-solutions/professions-finance">Professions Finance</a>
+<div class="dropdown-menu mega-menu with-preview">
+<div class="mega-menu-links">
+<a href="/Stonebridge_Website_New/finance-solutions/grow-my-business" data-preview-img="https://images.pexels.com/photos/7289728/pexels-photo-7289728.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Grow My Business" data-preview-desc="Unlock vital commercial funding backing to expand operations and grow your enterprise." data-preview-badge="Finance Solutions">Grow My Business</a>
+<a href="/Stonebridge_Website_New/finance-solutions/manage-cashflow" data-preview-img="https://images.pexels.com/photos/4963354/pexels-photo-4963354.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Manage Cashflow" data-preview-desc="Bridge short-term gaps, cover essential costs, and maintain seamless liquidity." data-preview-badge="Finance Solutions">Manage Cashflow</a>
+<a href="/Stonebridge_Website_New/finance-solutions/pay-a-tax-bill" data-preview-img="https://images.pexels.com/photos/3184611/pexels-photo-3184611.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Pay A Tax Bill" data-preview-desc="Spread Corporation Tax, VAT, and self-assessment liabilities into manageable payments." data-preview-badge="Finance Solutions">Pay A Tax Bill</a>
+<a href="/Stonebridge_Website_New/finance-solutions/working-capital" data-preview-img="https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Working Capital" data-preview-desc="Inject accessible working capital to hire staff, purchase stock, and fuel daily operations." data-preview-badge="Finance Solutions">Working Capital</a>
+<a href="/Stonebridge_Website_New/finance-solutions/buying-equipment-machinery" data-preview-img="https://images.pexels.com/photos/842567/pexels-photo-842567.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Buying Equipment & Machinery" data-preview-desc="Specialist asset and hire purchase options to acquire vital equipment without depleting cash." data-preview-badge="Finance Solutions">Buying Equipment & Machinery</a>
+<a href="/Stonebridge_Website_New/finance-solutions/stock-inventory-finance" data-preview-img="https://images.pexels.com/photos/8204399/pexels-photo-8204399.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Stock & Inventory Finance" data-preview-desc="Release cash tied up in supply chains, seasonal inventory, and bulk purchase orders." data-preview-badge="Finance Solutions">Stock & Inventory Finance</a>
+<a href="/Stonebridge_Website_New/finance-solutions/refinance-debt-consolidation" data-preview-img="https://images.pexels.com/photos/789822/pexels-photo-789822.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Refinance Debt Consolidation" data-preview-desc="Combine existing debts into a single structured facility with lower monthly repayments." data-preview-badge="Finance Solutions">Refinance Debt Consolidation</a>
+<a href="/Stonebridge_Website_New/finance-solutions/refurbishment-finance" data-preview-img="https://images.pexels.com/photos/7792831/pexels-photo-7792831.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Refurbishment Finance" data-preview-desc="Fund commercial fit-outs, renovations, and property modernization projects." data-preview-badge="Finance Solutions">Refurbishment Finance</a>
+<a href="/Stonebridge_Website_New/finance-solutions/property-development-finance" data-preview-img="https://images.pexels.com/photos/8837201/pexels-photo-8837201.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Property Development Finance" data-preview-desc="Comprehensive development funding for residential and commercial ground-up builds." data-preview-badge="Finance Solutions">Property Development Finance</a>
+<a href="/Stonebridge_Website_New/finance-solutions/buying-a-business" data-preview-img="https://images.pexels.com/photos/23495755/pexels-photo-23495755.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Buying A Business" data-preview-desc="Tailored acquisition finance for mergers, management buy-outs (MBO), and buy-ins." data-preview-badge="Finance Solutions">Buying A Business</a>
+<a href="/Stonebridge_Website_New/finance-solutions/business-asset-equipment-finance" data-preview-img="https://images.pexels.com/photos/20955066/pexels-photo-20955066.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Business Asset & Equipment Finance" data-preview-desc="Leasing and refinancing solutions for commercial vehicles, plant, and high-tech assets." data-preview-badge="Finance Solutions">Business Asset & Equipment Finance</a>
+<a href="/Stonebridge_Website_New/finance-solutions/commercial-property-finance" data-preview-img="https://images.pexels.com/photos/5428998/pexels-photo-5428998.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Commercial Property Finance" data-preview-desc="Competitive mortgages and bridging facilities for commercial trading premises." data-preview-badge="Finance Solutions">Commercial Property Finance</a>
+<a href="/Stonebridge_Website_New/finance-solutions/commercial-vehicle-finance" data-preview-img="https://images.pexels.com/photos/20955035/pexels-photo-20955035.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Commercial Vehicle Finance" data-preview-desc="Flexible finance packages for single commercial vehicles or nationwide logistics fleets." data-preview-badge="Finance Solutions">Commercial Vehicle Finance</a>
+<a href="/Stonebridge_Website_New/finance-solutions/corporate-property-finance" data-preview-img="https://images.pexels.com/photos/6612861/pexels-photo-6612861.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Corporate Property Finance" data-preview-desc="High-value capital structures for established property investors and developer portfolios." data-preview-badge="Finance Solutions">Corporate Property Finance</a>
+<a href="/Stonebridge_Website_New/finance-solutions/growth-guarantee-scheme" data-preview-img="https://images.pexels.com/photos/7582629/pexels-photo-7582629.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Growth Guarantee Scheme" data-preview-desc="Government-backed lending scheme designed to assist expanding UK small & medium businesses." data-preview-badge="Finance Solutions">Growth Guarantee Scheme</a>
+<a href="/Stonebridge_Website_New/finance-solutions/invoice-finance" data-preview-img="https://images.pexels.com/photos/4963354/pexels-photo-4963354.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Invoice Finance" data-preview-desc="Unlock up to 90% of outstanding invoice values within 24 hours of customer billing." data-preview-badge="Finance Solutions">Invoice Finance</a>
+<a href="/Stonebridge_Website_New/finance-solutions/merchant-cash-advance" data-preview-img="https://images.pexels.com/photos/3184611/pexels-photo-3184611.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Merchant Cash Advance" data-preview-desc="Flexible advances repaid naturally as a small percentage of future card sales." data-preview-badge="Finance Solutions">Merchant Cash Advance</a>
+<a href="/Stonebridge_Website_New/finance-solutions/professions-finance" data-preview-img="https://images.pexels.com/photos/927022/pexels-photo-927022.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Professions Finance" data-preview-desc="Bespoke unsecured loan products designed specifically for professional practices." data-preview-badge="Finance Solutions">Professions Finance</a>
+</div>
+<div class="mega-menu-preview">
+<div class="preview-card">
+<div class="preview-img-wrap">
+<img alt="Solutions preview" class="preview-img" src="https://images.pexels.com/photos/7289728/pexels-photo-7289728.jpeg?auto=compress&cs=tinysrgb&w=800"/>
+</div>
+<div class="preview-info">
+<span class="preview-badge">Finance Solutions</span>
+<h4 class="preview-title">Grow My Business</h4>
+<p class="preview-desc">Unlock vital commercial funding backing to expand operations and grow your enterprise.</p>
+<a class="preview-cta" href="/Stonebridge_Website_New/finance-solutions/grow-my-business">Explore Solution →</a>
+</div>
+</div>
+</div>
 </div>
 </li>
 <li>
 <a class="nav-link" href="/Stonebridge_Website_New/products">Products <i class="lucide-icon" data-lucide="chevron-down"></i></a>
-<div class="dropdown-menu mega-menu">
-<a href="/Stonebridge_Website_New/finance-products/business-loans">Business Loans</a>
-<a href="/Stonebridge_Website_New/finance-products/growth-guarantee-scheme">Growth Guarantee Scheme</a>
-<a href="/Stonebridge_Website_New/finance-products/flexible-business-loans">Flexible Business Loans</a>
-<a href="/Stonebridge_Website_New/finance-products/cashflow-loans">Cashflow Loans</a>
-<a href="/Stonebridge_Website_New/finance-products/working-capital-loans">Working Capital Loans</a>
-<a href="/Stonebridge_Website_New/finance-products/tax-bill-loans">Tax Bill Loans</a>
-<a href="/Stonebridge_Website_New/finance-products/business-growth-loans">Business Growth Loans</a>
-<a href="/Stonebridge_Website_New/finance-products/commercial-vehicle-finance">Commercial Vehicle Finance</a>
-<a href="/Stonebridge_Website_New/finance-products/same-day-business-loans">Same Day Business Loans</a>
-<a href="/Stonebridge_Website_New/finance-products/quick-business-loans">Quick Business Loans</a>
-<a href="/Stonebridge_Website_New/finance-products/large-business-loans">Large Business Loans</a>
-<a href="/Stonebridge_Website_New/finance-products/small-business-loans">Small Business Loans</a>
-<a href="/Stonebridge_Website_New/finance-products/refinance-business-loans">Refinance Business Loans</a>
-<a href="/Stonebridge_Website_New/finance-products/unsecured-business-loans">Unsecured Business Loans</a>
-<a href="/Stonebridge_Website_New/finance-products/commercial-property-finance">Commercial Property Finance</a>
-<a href="/Stonebridge_Website_New/finance-products/business-bridging-loans">Business Bridging Loans</a>
-<a href="/Stonebridge_Website_New/finance-products/business-asset-loans">Business Asset Loans</a>
-<a href="/Stonebridge_Website_New/finance-products/business-consolidation-loans">Business Consolidation Loans</a>
-<a href="/Stonebridge_Website_New/finance-products/equipment-purchase-loans">Equipment Purchase Loans</a>
-<a href="/Stonebridge_Website_New/finance-products/long-term-business-loans">Long-Term Business Loans</a>
-<a href="/Stonebridge_Website_New/finance-products/refurbishment-loans">Refurbishment Loans</a>
-<a href="/Stonebridge_Website_New/finance-products/secured-business-loans">Secured Business Loans</a>
-<a href="/Stonebridge_Website_New/finance-products/stock-finance-loans">Stock Finance Loans</a>
-<a href="/Stonebridge_Website_New/finance-products/limited-company-business-loans">Limited Company Business Loans</a>
-<a href="/Stonebridge_Website_New/finance-products/ecommerce-business-loans">E-commerce Business Loans</a>
-<a href="/Stonebridge_Website_New/finance-products/invoice-finance">Invoice Finance</a>
-<a href="/Stonebridge_Website_New/finance-products/merchant-cash-advance">Merchant Cash Advance</a>
+<div class="dropdown-menu mega-menu with-preview">
+<div class="mega-menu-links">
+<a href="/Stonebridge_Website_New/finance-products/business-loans" data-preview-img="https://images.pexels.com/photos/3775553/pexels-photo-3775553.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Business Loans" data-preview-desc="Term funding tailored to your cashflow needs and expansion opportunities." data-preview-badge="Finance Products">Business Loans</a>
+<a href="/Stonebridge_Website_New/finance-products/growth-guarantee-scheme" data-preview-img="https://images.pexels.com/photos/7582629/pexels-photo-7582629.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Growth Guarantee Scheme" data-preview-desc="British Business Bank backed facility supporting viable UK businesses." data-preview-badge="Finance Products">Growth Guarantee Scheme</a>
+<a href="/Stonebridge_Website_New/finance-products/flexible-business-loans" data-preview-img="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Flexible Business Loans" data-preview-desc="Revolving and flexible credit facilities with adaptable repayment schedules." data-preview-badge="Finance Products">Flexible Business Loans</a>
+<a href="/Stonebridge_Website_New/finance-products/cashflow-loans" data-preview-img="https://images.pexels.com/photos/36812093/pexels-photo-36812093.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Cashflow Loans" data-preview-desc="Bridge unexpected expenditure and smooth out seasonal revenue dips." data-preview-badge="Finance Products">Cashflow Loans</a>
+<a href="/Stonebridge_Website_New/finance-products/working-capital-loans" data-preview-img="https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Working Capital Loans" data-preview-desc="Working capital injections to keep daily operations running smoothly." data-preview-badge="Finance Products">Working Capital Loans</a>
+<a href="/Stonebridge_Website_New/finance-products/tax-bill-loans" data-preview-img="https://images.pexels.com/photos/6863183/pexels-photo-6863183.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Tax Bill Loans" data-preview-desc="Spread HMRC liabilities over 3 to 12 months to protect working reserves." data-preview-badge="Finance Products">Tax Bill Loans</a>
+<a href="/Stonebridge_Website_New/finance-products/business-growth-loans" data-preview-img="https://images.pexels.com/photos/36763595/pexels-photo-36763595.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Business Growth Loans" data-preview-desc="Strategic finance to fund team expansion, technology upgrades, and new premises." data-preview-badge="Finance Products">Business Growth Loans</a>
+<a href="/Stonebridge_Website_New/finance-products/commercial-vehicle-finance" data-preview-img="https://images.pexels.com/photos/20955035/pexels-photo-20955035.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Commercial Vehicle Finance" data-preview-desc="Finance vans, HGVs, and specialized commercial transport fleets." data-preview-badge="Finance Products">Commercial Vehicle Finance</a>
+<a href="/Stonebridge_Website_New/finance-products/same-day-business-loans" data-preview-img="https://images.pexels.com/photos/3760067/pexels-photo-3760067.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Same Day Business Loans" data-preview-desc="Rapid approvals and expedited disbursement for urgent business requirements." data-preview-badge="Finance Products">Same Day Business Loans</a>
+<a href="/Stonebridge_Website_New/finance-products/quick-business-loans" data-preview-img="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Quick Business Loans" data-preview-desc="Streamlined online applications with funding decisions in as little as 4 hours." data-preview-badge="Finance Products">Quick Business Loans</a>
+<a href="/Stonebridge_Website_New/finance-products/large-business-loans" data-preview-img="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Large Business Loans" data-preview-desc="Substantial debt facilities from £250,000 to £5M+ for established firms." data-preview-badge="Finance Products">Large Business Loans</a>
+<a href="/Stonebridge_Website_New/finance-products/small-business-loans" data-preview-img="https://images.pexels.com/photos/3810792/pexels-photo-3810792.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Small Business Loans" data-preview-desc="Accessible loan facilities designed for UK micro-enterprises and SMEs." data-preview-badge="Finance Products">Small Business Loans</a>
+<a href="/Stonebridge_Website_New/finance-products/refinance-business-loans" data-preview-img="https://images.pexels.com/photos/789822/pexels-photo-789822.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Refinance Business Loans" data-preview-desc="Restructure costly existing borrowing to improve your monthly margin." data-preview-badge="Finance Products">Refinance Business Loans</a>
+<a href="/Stonebridge_Website_New/finance-products/unsecured-business-loans" data-preview-img="https://images.pexels.com/photos/3760069/pexels-photo-3760069.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Unsecured Business Loans" data-preview-desc="Fast commercial lending without requiring property as security." data-preview-badge="Finance Products">Unsecured Business Loans</a>
+<a href="/Stonebridge_Website_New/finance-products/commercial-property-finance" data-preview-img="https://images.pexels.com/photos/5428998/pexels-photo-5428998.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Commercial Property Finance" data-preview-desc="Competitive rates for buying, refinancing, or developing commercial premises." data-preview-badge="Finance Products">Commercial Property Finance</a>
+<a href="/Stonebridge_Website_New/finance-products/business-bridging-loans" data-preview-img="https://images.pexels.com/photos/925786/pexels-photo-925786.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Business Bridging Loans" data-preview-desc="Short-term property bridging finance to secure quick asset purchases." data-preview-badge="Finance Products">Business Bridging Loans</a>
+<a href="/Stonebridge_Website_New/finance-products/business-asset-loans" data-preview-img="https://images.pexels.com/photos/7679903/pexels-photo-7679903.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Business Asset Loans" data-preview-desc="Leverage existing machinery and equipment to unlock instant capital." data-preview-badge="Finance Products">Business Asset Loans</a>
+<a href="/Stonebridge_Website_New/finance-products/business-consolidation-loans" data-preview-img="https://images.pexels.com/photos/22046239/pexels-photo-22046239.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Business Consolidation Loans" data-preview-desc="Consolidate multiple lender debts into a single, clean monthly payment." data-preview-badge="Finance Products">Business Consolidation Loans</a>
+<a href="/Stonebridge_Website_New/finance-products/equipment-purchase-loans" data-preview-img="https://images.pexels.com/photos/842567/pexels-photo-842567.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Equipment Purchase Loans" data-preview-desc="Acquire tools, technology, and plant machinery with flexible repayment terms." data-preview-badge="Finance Products">Equipment Purchase Loans</a>
+<a href="/Stonebridge_Website_New/finance-products/long-term-business-loans" data-preview-img="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Long Term Business Loans" data-preview-desc="Fixed-rate stability over terms of 3 to 10 years for strategic planning." data-preview-badge="Finance Products">Long Term Business Loans</a>
+<a href="/Stonebridge_Website_New/finance-products/refurbishment-loans" data-preview-img="https://images.pexels.com/photos/7792831/pexels-photo-7792831.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Refurbishment Loans" data-preview-desc="Funding to renovate and repurpose commercial and semi-commercial property." data-preview-badge="Finance Products">Refurbishment Loans</a>
+<a href="/Stonebridge_Website_New/finance-products/secured-business-loans" data-preview-img="https://images.pexels.com/photos/3760072/pexels-photo-3760072.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Secured Business Loans" data-preview-desc="Competitive interest rates backed by commercial or residential equity." data-preview-badge="Finance Products">Secured Business Loans</a>
+<a href="/Stonebridge_Website_New/finance-products/stock-finance-loans" data-preview-img="https://images.pexels.com/photos/8204399/pexels-photo-8204399.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Stock Finance Loans" data-preview-desc="Pre-fund purchase orders and bulk stock supplies seamlessly." data-preview-badge="Finance Products">Stock Finance Loans</a>
+<a href="/Stonebridge_Website_New/finance-products/limited-company-business-loans" data-preview-img="https://images.pexels.com/photos/3184433/pexels-photo-3184433.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Limited Company Business Loans" data-preview-desc="Tailored loan facilities for UK registered Limited Companies." data-preview-badge="Finance Products">Limited Company Business Loans</a>
+<a href="/Stonebridge_Website_New/finance-products/ecommerce-business-loans" data-preview-img="https://images.pexels.com/photos/34577/pexels-photo.jpg?auto=compress&cs=tinysrgb&w=800" data-preview-title="E-commerce Business Loans" data-preview-desc="Funding optimized for digital brands, Shopify, and Amazon marketplace sellers." data-preview-badge="Finance Products">E-commerce Business Loans</a>
+<a href="/Stonebridge_Website_New/finance-products/invoice-finance" data-preview-img="https://images.pexels.com/photos/4963354/pexels-photo-4963354.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Invoice Finance" data-preview-desc="Release cash trapped in customer invoices without waiting 30 to 90 days." data-preview-badge="Finance Products">Invoice Finance</a>
+<a href="/Stonebridge_Website_New/finance-products/merchant-cash-advance" data-preview-img="https://images.pexels.com/photos/3184611/pexels-photo-3184611.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Merchant Cash Advance" data-preview-desc="Flexible repayments matched to your daily card terminal revenue." data-preview-badge="Finance Products">Merchant Cash Advance</a>
+</div>
+<div class="mega-menu-preview">
+<div class="preview-card">
+<div class="preview-img-wrap">
+<img alt="Products preview" class="preview-img" src="https://images.pexels.com/photos/3775553/pexels-photo-3775553.jpeg?auto=compress&cs=tinysrgb&w=800"/>
+</div>
+<div class="preview-info">
+<span class="preview-badge">Finance Products</span>
+<h4 class="preview-title">Business Loans</h4>
+<p class="preview-desc">Term funding tailored to your cashflow needs and expansion opportunities.</p>
+<a class="preview-cta" href="/Stonebridge_Website_New/finance-products/business-loans">Explore Product →</a>
+</div>
+</div>
+</div>
 </div>
 </li>
 <li>
 <a class="nav-link" href="/Stonebridge_Website_New/sectors">Sectors <i class="lucide-icon" data-lucide="chevron-down"></i></a>
-<div class="dropdown-menu mega-menu">
-<a href="/Stonebridge_Website_New/sectors/agriculture">Agriculture</a>
-<a href="/Stonebridge_Website_New/sectors/amusements-gaming">Amusements &amp; Gaming</a>
-<a href="/Stonebridge_Website_New/sectors/beauty-wellbeing">Beauty &amp; Wellbeing</a>
-<a href="/Stonebridge_Website_New/sectors/brewing-distilling">Brewing &amp; Distilling</a>
-<a href="/Stonebridge_Website_New/sectors/construction">Construction</a>
-<a href="/Stonebridge_Website_New/sectors/ecommerce">E-commerce</a>
-<a href="/Stonebridge_Website_New/sectors/energy-renewables">Energy &amp; Renewables</a>
-<a href="/Stonebridge_Website_New/sectors/fitness-gyms-recreation">Fitness, Gyms &amp; Recreation</a>
-<a href="/Stonebridge_Website_New/sectors/farming">Farming</a>
-<a href="/Stonebridge_Website_New/sectors/franchising">Franchising</a>
-<a href="/Stonebridge_Website_New/sectors/garage-car-sales">Garage &amp; Car Sales</a>
-<a href="/Stonebridge_Website_New/sectors/healthcare">Healthcare</a>
-<a href="/Stonebridge_Website_New/sectors/holiday-parks-camping">Holiday Parks &amp; Camping</a>
-<a href="/Stonebridge_Website_New/sectors/hospitality-leisure">Hospitality &amp; Leisure</a>
-<a href="/Stonebridge_Website_New/sectors/it-technology">IT &amp; Technology</a>
-<a href="/Stonebridge_Website_New/sectors/manufacturing-engineering">Manufacturing &amp; Engineering</a>
-<a href="/Stonebridge_Website_New/sectors/media-comms">Media &amp; Comms</a>
-<a href="/Stonebridge_Website_New/sectors/medical-dental">Medical &amp; Dental</a>
-<a href="/Stonebridge_Website_New/sectors/plant-machinery">Plant &amp; Machinery</a>
-<a href="/Stonebridge_Website_New/sectors/printing-packaging">Printing &amp; Packaging</a>
-<a href="/Stonebridge_Website_New/sectors/professional-services">Professional Services</a>
-<a href="/Stonebridge_Website_New/sectors/property">Property</a>
-<a href="/Stonebridge_Website_New/sectors/recycling-waste-management">Recycling &amp; Waste Management</a>
-<a href="/Stonebridge_Website_New/sectors/residential-care">Residential Care</a>
-<a href="/Stonebridge_Website_New/sectors/retail">Retail</a>
-<a href="/Stonebridge_Website_New/sectors/solar-renewable">Solar &amp; Renewable</a>
-<a href="/Stonebridge_Website_New/sectors/transport-logistics">Transport &amp; Logistics</a>
-<a href="/Stonebridge_Website_New/sectors/utilities-waste">Utilities &amp; Waste</a>
-<a href="/Stonebridge_Website_New/sectors/vehicle-hire">Vehicle Hire</a>
-<a href="/Stonebridge_Website_New/sectors/wholesale">Wholesale</a>
+<div class="dropdown-menu mega-menu with-preview">
+<div class="mega-menu-links">
+<a href="/Stonebridge_Website_New/sectors/agriculture" data-preview-img="https://images.pexels.com/photos/10849317/pexels-photo-10849317.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Agriculture" data-preview-desc="Specialist financial solutions and flexible borrowing tailored to the Agriculture sector." data-preview-badge="Sector Expertise">Agriculture</a>
+<a href="/Stonebridge_Website_New/sectors/amusements-gaming" data-preview-img="https://images.pexels.com/photos/159369/xbox-xbox-one-microsoft-console-159369.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Amusements & Gaming" data-preview-desc="Specialist financial solutions and flexible borrowing tailored to the Amusements & Gaming sector." data-preview-badge="Sector Expertise">Amusements & Gaming</a>
+<a href="/Stonebridge_Website_New/sectors/beauty-wellbeing" data-preview-img="https://images.pexels.com/photos/7314281/pexels-photo-7314281.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Beauty & Wellbeing" data-preview-desc="Specialist financial solutions and flexible borrowing tailored to the Beauty & Wellbeing sector." data-preview-badge="Sector Expertise">Beauty & Wellbeing</a>
+<a href="/Stonebridge_Website_New/sectors/brewing-distilling" data-preview-img="https://images.pexels.com/photos/36729740/pexels-photo-36729740.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Brewing & Distilling" data-preview-desc="Specialist financial solutions and flexible borrowing tailored to the Brewing & Distilling sector." data-preview-badge="Sector Expertise">Brewing & Distilling</a>
+<a href="/Stonebridge_Website_New/sectors/construction" data-preview-img="https://images.pexels.com/photos/2209529/pexels-photo-2209529.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Construction" data-preview-desc="Specialist financial solutions and flexible borrowing tailored to the Construction sector." data-preview-badge="Sector Expertise">Construction</a>
+<a href="/Stonebridge_Website_New/sectors/ecommerce" data-preview-img="https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="E-commerce" data-preview-desc="Specialist financial solutions and flexible borrowing tailored to the E-commerce sector." data-preview-badge="Sector Expertise">E-commerce</a>
+<a href="/Stonebridge_Website_New/sectors/energy-renewables" data-preview-img="https://images.pexels.com/photos/356036/pexels-photo-356036.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Energy & Renewables" data-preview-desc="Specialist financial solutions and flexible borrowing tailored to the Energy & Renewables sector." data-preview-badge="Sector Expertise">Energy & Renewables</a>
+<a href="/Stonebridge_Website_New/sectors/fitness-gyms-recreation" data-preview-img="https://images.pexels.com/photos/1954524/pexels-photo-1954524.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Fitness, Gyms & Recreation" data-preview-desc="Specialist financial solutions and flexible borrowing tailored to the Fitness, Gyms & Recreation sector." data-preview-badge="Sector Expertise">Fitness, Gyms & Recreation</a>
+<a href="/Stonebridge_Website_New/sectors/farming" data-preview-img="https://images.pexels.com/photos/2165688/pexels-photo-2165688.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Farming" data-preview-desc="Specialist financial solutions and flexible borrowing tailored to the Farming sector." data-preview-badge="Sector Expertise">Farming</a>
+<a href="/Stonebridge_Website_New/sectors/franchising" data-preview-img="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Franchising" data-preview-desc="Specialist financial solutions and flexible borrowing tailored to the Franchising sector." data-preview-badge="Sector Expertise">Franchising</a>
+<a href="/Stonebridge_Website_New/sectors/garage-car-sales" data-preview-img="https://images.pexels.com/photos/4489749/pexels-photo-4489749.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Garage & Car Sales" data-preview-desc="Specialist financial solutions and flexible borrowing tailored to the Garage & Car Sales sector." data-preview-badge="Sector Expertise">Garage & Car Sales</a>
+<a href="/Stonebridge_Website_New/sectors/healthcare" data-preview-img="https://images.pexels.com/photos/4021775/pexels-photo-4021775.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Healthcare" data-preview-desc="Specialist financial solutions and flexible borrowing tailored to the Healthcare sector." data-preview-badge="Sector Expertise">Healthcare</a>
+<a href="/Stonebridge_Website_New/sectors/holiday-parks-camping" data-preview-img="https://images.pexels.com/photos/1687845/pexels-photo-1687845.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Holiday Parks & Camping" data-preview-desc="Specialist financial solutions and flexible borrowing tailored to the Holiday Parks & Camping sector." data-preview-badge="Sector Expertise">Holiday Parks & Camping</a>
+<a href="/Stonebridge_Website_New/sectors/hospitality-leisure" data-preview-img="https://images.pexels.com/photos/262047/pexels-photo-262047.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Hospitality & Leisure" data-preview-desc="Specialist financial solutions and flexible borrowing tailored to the Hospitality & Leisure sector." data-preview-badge="Sector Expertise">Hospitality & Leisure</a>
+<a href="/Stonebridge_Website_New/sectors/it-technology" data-preview-img="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="IT & Technology" data-preview-desc="Specialist financial solutions and flexible borrowing tailored to the IT & Technology sector." data-preview-badge="Sector Expertise">IT & Technology</a>
+<a href="/Stonebridge_Website_New/sectors/manufacturing-engineering" data-preview-img="https://images.pexels.com/photos/3846558/pexels-photo-3846558.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Manufacturing & Engineering" data-preview-desc="Specialist financial solutions and flexible borrowing tailored to the Manufacturing & Engineering sector." data-preview-badge="Sector Expertise">Manufacturing & Engineering</a>
+<a href="/Stonebridge_Website_New/sectors/media-comms" data-preview-img="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Media & Comms" data-preview-desc="Specialist financial solutions and flexible borrowing tailored to the Media & Comms sector." data-preview-badge="Sector Expertise">Media & Comms</a>
+<a href="/Stonebridge_Website_New/sectors/medical-dental" data-preview-img="https://images.pexels.com/photos/3845625/pexels-photo-3845625.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Medical & Dental" data-preview-desc="Specialist financial solutions and flexible borrowing tailored to the Medical & Dental sector." data-preview-badge="Sector Expertise">Medical & Dental</a>
+<a href="/Stonebridge_Website_New/sectors/plant-machinery" data-preview-img="https://images.pexels.com/photos/1078884/pexels-photo-1078884.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Plant & Machinery" data-preview-desc="Specialist financial solutions and flexible borrowing tailored to the Plant & Machinery sector." data-preview-badge="Sector Expertise">Plant & Machinery</a>
+<a href="/Stonebridge_Website_New/sectors/printing-packaging" data-preview-img="https://images.pexels.com/photos/414837/pexels-photo-414837.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Printing & Packaging" data-preview-desc="Specialist financial solutions and flexible borrowing tailored to the Printing & Packaging sector." data-preview-badge="Sector Expertise">Printing & Packaging</a>
+<a href="/Stonebridge_Website_New/sectors/professional-services" data-preview-img="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Professional Services" data-preview-desc="Specialist financial solutions and flexible borrowing tailored to the Professional Services sector." data-preview-badge="Sector Expertise">Professional Services</a>
+<a href="/Stonebridge_Website_New/sectors/property" data-preview-img="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Property" data-preview-desc="Specialist financial solutions and flexible borrowing tailored to the Property sector." data-preview-badge="Sector Expertise">Property</a>
+<a href="/Stonebridge_Website_New/sectors/recycling-waste-management" data-preview-img="https://images.pexels.com/photos/280221/pexels-photo-280221.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Recycling & Waste Management" data-preview-desc="Specialist financial solutions and flexible borrowing tailored to the Recycling & Waste Management sector." data-preview-badge="Sector Expertise">Recycling & Waste Management</a>
+<a href="/Stonebridge_Website_New/sectors/residential-care" data-preview-img="https://images.pexels.com/photos/3768131/pexels-photo-3768131.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Residential Care" data-preview-desc="Specialist financial solutions and flexible borrowing tailored to the Residential Care sector." data-preview-badge="Sector Expertise">Residential Care</a>
+<a href="/Stonebridge_Website_New/sectors/retail" data-preview-img="https://images.pexels.com/photos/1036857/pexels-photo-1036857.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Retail" data-preview-desc="Specialist financial solutions and flexible borrowing tailored to the Retail sector." data-preview-badge="Sector Expertise">Retail</a>
+<a href="/Stonebridge_Website_New/sectors/solar-renewable" data-preview-img="https://images.pexels.com/photos/356036/pexels-photo-356036.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Solar & Renewable" data-preview-desc="Specialist financial solutions and flexible borrowing tailored to the Solar & Renewable sector." data-preview-badge="Sector Expertise">Solar & Renewable</a>
+<a href="/Stonebridge_Website_New/sectors/transport-logistics" data-preview-img="https://images.pexels.com/photos/2199293/pexels-photo-2199293.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Transport & Logistics" data-preview-desc="Specialist financial solutions and flexible borrowing tailored to the Transport & Logistics sector." data-preview-badge="Sector Expertise">Transport & Logistics</a>
+<a href="/Stonebridge_Website_New/sectors/utilities-waste" data-preview-img="https://images.pexels.com/photos/280221/pexels-photo-280221.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Utilities & Waste" data-preview-desc="Specialist financial solutions and flexible borrowing tailored to the Utilities & Waste sector." data-preview-badge="Sector Expertise">Utilities & Waste</a>
+<a href="/Stonebridge_Website_New/sectors/vehicle-hire" data-preview-img="https://images.pexels.com/photos/164634/pexels-photo-164634.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Vehicle Hire" data-preview-desc="Specialist financial solutions and flexible borrowing tailored to the Vehicle Hire sector." data-preview-badge="Sector Expertise">Vehicle Hire</a>
+<a href="/Stonebridge_Website_New/sectors/wholesale" data-preview-img="https://images.pexels.com/photos/4481259/pexels-photo-4481259.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Wholesale" data-preview-desc="Specialist financial solutions and flexible borrowing tailored to the Wholesale sector." data-preview-badge="Sector Expertise">Wholesale</a>
+</div>
+<div class="mega-menu-preview">
+<div class="preview-card">
+<div class="preview-img-wrap">
+<img alt="Sectors preview" class="preview-img" src="https://images.pexels.com/photos/10849317/pexels-photo-10849317.jpeg?auto=compress&cs=tinysrgb&w=800"/>
+</div>
+<div class="preview-info">
+<span class="preview-badge">Sector Expertise</span>
+<h4 class="preview-title">Agriculture</h4>
+<p class="preview-desc">Specialist financial solutions and flexible borrowing tailored to the Agriculture sector.</p>
+<a class="preview-cta" href="/Stonebridge_Website_New/sectors/agriculture">View Sector →</a>
+</div>
+</div>
+</div>
 </div>
 </li>
 <li>
 <a class="nav-link" href="/Stonebridge_Website_New/partner-with-us">Partner with us <i class="lucide-icon" data-lucide="chevron-down"></i></a>
-<div class="dropdown-menu compact-menu">
-<a href="/Stonebridge_Website_New/partner-with-us">Partner Finance</a>
-<a href="/Stonebridge_Website_New/partner-with-us/partners-hub">Partners Hub</a>
-<a href="/Stonebridge_Website_New/partner-with-us/how-it-works/">How it works</a>
-<a href="/Stonebridge_Website_New/partner-with-us/for-accountants">For Accountants</a>
-<a href="/Stonebridge_Website_New/partner-with-us/become-a-partner">Become Partner</a>
+<div class="dropdown-menu compact-menu with-preview">
+<div class="compact-menu-links">
+<a href="/Stonebridge_Website_New/partner-with-us" data-preview-img="https://images.pexels.com/photos/7792829/pexels-photo-7792829.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Partner Finance" data-preview-desc="Lucrative referral partnerships for commercial brokers, advisors, and consultants." data-preview-badge="Partnerships">Partner Finance</a>
+<a href="/Stonebridge_Website_New/partner-with-us/partners-hub" data-preview-img="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Partners Hub" data-preview-desc="Complete broker resources, deal tracking, marketing materials, and commissions." data-preview-badge="Partnerships">Partners Hub</a>
+<a href="/Stonebridge_Website_New/partner-with-us/how-it-works/" data-preview-img="https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="How It Works" data-preview-desc="Simple 3-step referral pipeline with full visibility and rapid deal payouts." data-preview-badge="Partnerships">How it works</a>
+<a href="/Stonebridge_Website_New/partner-with-us/for-accountants" data-preview-img="https://images.pexels.com/photos/6863183/pexels-photo-6863183.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="For Accountants" data-preview-desc="Enhance your practice offering with trusted commercial funding advisory." data-preview-badge="Partnerships">For Accountants</a>
+<a href="/Stonebridge_Website_New/partner-with-us/become-a-partner" data-preview-img="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Become a Partner" data-preview-desc="Register as an introducer and start monetizing your business client network." data-preview-badge="Partnerships">Become Partner</a>
+</div>
+<div class="compact-menu-preview">
+<div class="preview-card">
+<div class="preview-img-wrap">
+<img alt="Partner preview" class="preview-img" src="https://images.pexels.com/photos/7792829/pexels-photo-7792829.jpeg?auto=compress&cs=tinysrgb&w=800"/>
+</div>
+<div class="preview-info">
+<span class="preview-badge">Partnerships</span>
+<h4 class="preview-title">Partner Finance</h4>
+<p class="preview-desc">Lucrative referral partnerships for commercial brokers, advisors, and consultants.</p>
+<a class="preview-cta" href="/Stonebridge_Website_New/partner-with-us">View Partner Info →</a>
+</div>
+</div>
+</div>
 </div>
 </li>
 <li>
 <a class="nav-link" href="/Stonebridge_Website_New/knowledge-hub/industry-insights">Knowledge Hub <i class="lucide-icon" data-lucide="chevron-down"></i></a>
-<div class="dropdown-menu compact-menu">
-<a href="/Stonebridge_Website_New/knowledge-hub/industry-insights">Industry Insights</a>
-<a href="/Stonebridge_Website_New/knowledge-hub/solution-guides">Solution Guides</a>
-<a href="/Stonebridge_Website_New/knowledge-hub/finance-calculator">Finance Calculator</a>
+<div class="dropdown-menu compact-menu with-preview">
+<div class="compact-menu-links">
+<a href="/Stonebridge_Website_New/knowledge-hub/industry-insights" data-preview-img="https://images.pexels.com/photos/3184433/pexels-photo-3184433.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Industry Insights" data-preview-desc="In-depth market commentary, lender policies, and UK economic briefings." data-preview-badge="Knowledge Hub">Industry Insights</a>
+<a href="/Stonebridge_Website_New/knowledge-hub/solution-guides" data-preview-img="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Solution Guides" data-preview-desc="Practical guides helping you compare and choose suitable financing structures." data-preview-badge="Knowledge Hub">Solution Guides</a>
+<a href="/Stonebridge_Website_New/knowledge-hub/finance-calculator" data-preview-img="https://images.pexels.com/photos/3760069/pexels-photo-3760069.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Finance Calculator" data-preview-desc="Calculate estimated monthly repayments and explore rates for business borrowing." data-preview-badge="Knowledge Hub">Finance Calculator</a>
+</div>
+<div class="compact-menu-preview">
+<div class="preview-card">
+<div class="preview-img-wrap">
+<img alt="Knowledge preview" class="preview-img" src="https://images.pexels.com/photos/3184433/pexels-photo-3184433.jpeg?auto=compress&cs=tinysrgb&w=800"/>
+</div>
+<div class="preview-info">
+<span class="preview-badge">Knowledge Hub</span>
+<h4 class="preview-title">Industry Insights</h4>
+<p class="preview-desc">In-depth market commentary, lender policies, and UK economic briefings.</p>
+<a class="preview-cta" href="/Stonebridge_Website_New/knowledge-hub/industry-insights">Explore Insights →</a>
+</div>
+</div>
+</div>
 </div>
 </li>
 <li>
 <a class="nav-link" href="/Stonebridge_Website_New/careers">Careers <i class="lucide-icon" data-lucide="chevron-down"></i></a>
-<div class="dropdown-menu compact-menu">
-<a href="/Stonebridge_Website_New/careers">Careers at Stonebridge</a>
-<a href="/Stonebridge_Website_New/careers/graduates-internships">Graduates &amp; Internships</a>
-<a href="/Stonebridge_Website_New/careers/vacancies">Current Vacancies</a>
-<a href="/Stonebridge_Website_New/about/">Why Choose Stonebridge</a>
+<div class="dropdown-menu compact-menu with-preview">
+<div class="compact-menu-links">
+<a href="/Stonebridge_Website_New/careers" data-preview-img="https://images.pexels.com/photos/7693700/pexels-photo-7693700.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Careers at Stonebridge" data-preview-desc="Join our energetic, fast-growing team delivering top-rated finance brokerage." data-preview-badge="Careers">Careers at Stonebridge</a>
+<a href="/Stonebridge_Website_New/careers/graduates-internships" data-preview-img="https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Graduates & Internships" data-preview-desc="Structured training, real-world finance experience, and fast-track progression." data-preview-badge="Careers">Graduates &amp; Internships</a>
+<a href="/Stonebridge_Website_New/careers/vacancies" data-preview-img="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Current Vacancies" data-preview-desc="View open positions for brokers, underwriters, and relationship managers." data-preview-badge="Careers">Current Vacancies</a>
+<a href="/Stonebridge_Website_New/about/" data-preview-img="https://images.pexels.com/photos/36733315/pexels-photo-36733315.jpeg?auto=compress&cs=tinysrgb&w=800" data-preview-title="Why Choose Stonebridge" data-preview-desc="Learn about our competitive rewards, inclusive culture, and industry recognition." data-preview-badge="Careers">Why Choose Stonebridge</a>
+</div>
+<div class="compact-menu-preview">
+<div class="preview-card">
+<div class="preview-img-wrap">
+<img alt="Careers preview" class="preview-img" src="https://images.pexels.com/photos/7693700/pexels-photo-7693700.jpeg?auto=compress&cs=tinysrgb&w=800"/>
+</div>
+<div class="preview-info">
+<span class="preview-badge">Careers</span>
+<h4 class="preview-title">Careers at Stonebridge</h4>
+<p class="preview-desc">Join our energetic, fast-growing team delivering top-rated finance brokerage.</p>
+<a class="preview-cta" href="/Stonebridge_Website_New/careers">View Careers →</a>
+</div>
+</div>
+</div>
 </div>
 </li>
 </ul>
@@ -4016,63 +4167,81 @@
 </article>
 </div>
 </div>
-</section><section id="business-bridging-loans__section-benefits" style="padding: var(--section-padding-y-desktop) 0; background: var(--c-white); border-top: 1px solid rgba(108,93,211,0.10);">
+</section><section id="business-bridging-loans__section-benefits" style="padding: var(--section-padding-y-desktop) 0; background: #fbf9ff; border-top: 1px solid rgba(91,45,142,0.12);">
 <div class="container">
 <!-- Section Header -->
-<div style="text-align: center; max-width: 760px; margin: 0 auto var(--space-xl);">
+<div class="bl-benefits-header">
 <span class="section-eyebrow">Business Bridging Loans</span>
 <h2>Business Bridging Loans arranged around your business goals</h2>
-<p style="font-size: 17px; color: var(--c-grey); line-height: 1.7; margin: 0;">A business bridging loan provides short-term secured finance to cover urgent gaps — from property purchases and auction completions to cash flow emergencies and chain breaks. Stonebridge finds the right bridging lender for your exit strategy and security position.</p>
+<p>A business bridging loan provides short-term secured finance to cover urgent gaps — from property purchases and auction completions to cash flow emergencies and chain breaks. Stonebridge finds the right bridging lender for your exit strategy and security position.</p>
 </div>
-<!-- Benefits Grid -->
-<div class="grow-benefits-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: var(--space-xl);">
-<!-- Benefit 1 -->
-<div style="background: rgba(108,93,211,0.04); border: 1px solid rgba(108,93,211,0.14); border-radius: 16px 80px 16px 16px; padding: 32px 28px;">
-<div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(108,93,211,0.10); color: var(--c-purple); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-<i class="lucide-icon" data-lucide="plus-circle" style="width: 26px; height: 26px;"></i>
+<!-- Benefits Shape Grid -->
+<div class="bl-shape-grid">
+<!-- Benefit 1: Arch Top Purple -->
+<div class="bl-shape-card card-arch-purple">
+<div class="bl-shape-header">
+<span class="bl-shape-num">01</span>
+<div class="bl-shape-icon">
+<i class="lucide-icon" data-lucide="zap"></i>
 </div>
-<h3 style="font-size: 19px; font-weight: 800; color: var(--c-dark); margin-bottom: 10px; line-height: 1.25;">Working Capital Loans</h3>
-<p style="font-size: 15px; color: var(--c-grey); line-height: 1.6; margin: 0;">Keep day-to-day operations moving with funding for wages, suppliers, rent, bills, or short-term gaps while income or invoices are still due.</p>
 </div>
-<!-- Benefit 2 -->
-<div style="background: rgba(108,93,211,0.04); border: 1px solid rgba(108,93,211,0.14); border-radius: 16px 80px 16px 16px; padding: 32px 28px;">
-<div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(108,93,211,0.10); color: var(--c-purple); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-<i class="lucide-icon" data-lucide="sliders-horizontal" style="width: 26px; height: 26px;"></i>
+<h3 class="bl-shape-title">Fast Capital Deployment</h3>
+<p class="bl-shape-desc">Access urgent short-term finance in days rather than weeks to capitalize on time-sensitive commercial opportunities.</p>
 </div>
-<h3 style="font-size: 19px; font-weight: 800; color: var(--c-dark); margin-bottom: 10px; line-height: 1.25;">Secured &amp; Unsecured Routes</h3>
-<p style="font-size: 15px; color: var(--c-grey); line-height: 1.6; margin: 0;">Explore suitable borrowing routes based on your loan amount, available security, business history, credit profile, and repayment preferences.</p>
+<!-- Benefit 2: Leaf Scoop Teal -->
+<div class="bl-shape-card card-leaf-teal">
+<div class="bl-shape-header">
+<span class="bl-shape-num">02</span>
+<div class="bl-shape-icon">
+<i class="lucide-icon" data-lucide="building"></i>
 </div>
-<!-- Benefit 3 -->
-<div style="background: rgba(108,93,211,0.04); border: 1px solid rgba(108,93,211,0.14); border-radius: 16px 80px 16px 16px; padding: 32px 28px;">
-<div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(108,93,211,0.10); color: var(--c-purple); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-<i class="lucide-icon" data-lucide="tag" style="width: 26px; height: 26px;"></i>
 </div>
-<h3 style="font-size: 19px; font-weight: 800; color: var(--c-dark); margin-bottom: 10px; line-height: 1.25;">Lender Panel Comparison</h3>
-<p style="font-size: 15px; color: var(--c-grey); line-height: 1.6; margin: 0;">We compare options across our lender panel to help identify a business bridging loan with appropriate pricing, terms, and eligibility criteria.</p>
+<h3 class="bl-shape-title">Property &amp; Auction Purchase</h3>
+<p class="bl-shape-desc">Secure auction acquisitions, bridge delayed property sales, or complete purchases ahead of long-term mortgage refinancing.</p>
 </div>
-<!-- Benefit 4 -->
-<div style="background: rgba(108,93,211,0.04); border: 1px solid rgba(108,93,211,0.14); border-radius: 16px 80px 16px 16px; padding: 32px 28px;">
-<div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(108,93,211,0.10); color: var(--c-purple); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-<i class="lucide-icon" data-lucide="calendar-check" style="width: 26px; height: 26px;"></i>
+<!-- Benefit 3: Diagonal Crest Dark Navy -->
+<div class="bl-shape-card card-crest-dark">
+<div class="bl-shape-header">
+<span class="bl-shape-num">03</span>
+<div class="bl-shape-icon">
+<i class="lucide-icon" data-lucide="tag"></i>
 </div>
-<h3 style="font-size: 19px; font-weight: 800; color: var(--c-dark); margin-bottom: 10px; line-height: 1.25;">Repayments Around Cash Flow</h3>
-<p style="font-size: 15px; color: var(--c-grey); line-height: 1.6; margin: 0;">Choose from loan terms and repayment structures that can be shaped around trading cycles, affordability, and the purpose of the borrowing.</p>
 </div>
-<!-- Benefit 5 -->
-<div style="background: rgba(108,93,211,0.04); border: 1px solid rgba(108,93,211,0.14); border-radius: 16px 80px 16px 16px; padding: 32px 28px;">
-<div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(108,93,211,0.10); color: var(--c-purple); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-<i class="lucide-icon" data-lucide="layout-grid" style="width: 26px; height: 26px;"></i>
+<h3 class="bl-shape-title">Specialist Bridging Panel</h3>
+<p class="bl-shape-desc">Compare boutique bridging lenders, private debt funds, and challenger banks for the most competitive monthly rates.</p>
 </div>
-<h3 style="font-size: 19px; font-weight: 800; color: var(--c-dark); margin-bottom: 10px; line-height: 1.25;">Funding for Key Priorities</h3>
-<p style="font-size: 15px; color: var(--c-grey); line-height: 1.6; margin: 0;">Use a business bridging loan for stock, equipment, refurbishment, marketing, tax bills, recruitment, expansion, or refinancing existing borrowing.</p>
+<!-- Benefit 4: Arch Top Teal -->
+<div class="bl-shape-card card-arch-teal">
+<div class="bl-shape-header">
+<span class="bl-shape-num">04</span>
+<div class="bl-shape-icon">
+<i class="lucide-icon" data-lucide="calendar-check"></i>
 </div>
-<!-- Benefit 6 -->
-<div style="background: rgba(108,93,211,0.04); border: 1px solid rgba(108,93,211,0.14); border-radius: 16px 80px 16px 16px; padding: 32px 28px;">
-<div style="width: 52px; height: 52px; border-radius: 14px; background: rgba(108,93,211,0.10); color: var(--c-purple); display: flex; align-items: center; justify-content: center; margin-bottom: 20px;">
-<i class="lucide-icon" data-lucide="trending-up" style="width: 26px; height: 26px;"></i>
 </div>
-<h3 style="font-size: 19px; font-weight: 800; color: var(--c-dark); margin-bottom: 10px; line-height: 1.25;">Support Through the Application</h3>
-<p style="font-size: 15px; color: var(--c-grey); line-height: 1.6; margin: 0;">Your Stonebridge finance specialist helps package the application, manage lender questions, and keep the process moving toward a decision.</p>
+<h3 class="bl-shape-title">Flexible Exit Strategies</h3>
+<p class="bl-shape-desc">Align bridging terms from 1 to 24 months with your clear exit plan, including refinance, asset sale, or contract settlements.</p>
+</div>
+<!-- Benefit 5: Leaf Scoop Purple -->
+<div class="bl-shape-card card-leaf-purple">
+<div class="bl-shape-header">
+<span class="bl-shape-num">05</span>
+<div class="bl-shape-icon">
+<i class="lucide-icon" data-lucide="coins"></i>
+</div>
+</div>
+<h3 class="bl-shape-title">Rolled-Up Interest Options</h3>
+<p class="bl-shape-desc">Retain day-to-day cash flow by rolling up or deferring interest payments until the end of the loan term.</p>
+</div>
+<!-- Benefit 6: Round Crest Dark Navy -->
+<div class="bl-shape-card card-crest-purple">
+<div class="bl-shape-header">
+<span class="bl-shape-num">06</span>
+<div class="bl-shape-icon">
+<i class="lucide-icon" data-lucide="trending-up"></i>
+</div>
+</div>
+<h3 class="bl-shape-title">Dedicated Bridging Specialist</h3>
+<p class="bl-shape-desc">Your Stonebridge broker coordinates valuations, legal undertakings, and lender underwriters for expedited drawdown.</p>
 </div>
 </div>
 <!-- CTA strip -->
@@ -4161,6 +4330,13 @@
 <div>
 <strong style="display: block; color: var(--c-white); font-size: 18px; margin-bottom: 4px;">Apply with support</strong>
 <span style="display: block; color: rgba(255,255,255,0.76); line-height: 1.55;">Your finance specialist helps prepare the application and manage lender questions.</span>
+</div>
+</div>
+<div style="display: grid; grid-template-columns: 44px 1fr; gap: 14px; align-items: flex-start;">
+<span style="width: 44px; height: 44px; border-radius: 999px; background: rgba(0, 137, 123, 0.35); border: 1px solid rgba(0, 200, 150, 0.4); color: var(--c-white); display: inline-flex; align-items: center; justify-content: center; font-weight: 900;">4</span>
+<div>
+<strong style="display: block; color: var(--c-white); font-size: 18px; margin-bottom: 4px;">Congratulations, your FINANCE is approved!</strong>
+<span style="display: block; color: rgba(255,255,255,0.82); line-height: 1.55;">Your loan application is approved for payout.</span>
 </div>
 </div>
 </div>
@@ -4642,7 +4818,7 @@
 </div>
 <div class="footer-wordmark">Stonebridge</div>
 </div>
-</footer> <script src="/Stonebridge_Website_New/js/scripts.js?v=v2"></script>
+</footer> <script src="/Stonebridge_Website_New/js/scripts.js?v=v3"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() {
   const calculator = document.querySelector('[data-finance-calculator]');
