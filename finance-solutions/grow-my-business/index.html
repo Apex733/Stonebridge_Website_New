@@ -186,35 +186,40 @@
       background-repeat: no-repeat !important;
       border-radius: 20px !important;
       overflow: hidden !important;
-      box-shadow: 0 20px 48px rgba(91, 45, 142, 0.16) !important;
+      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.08) !important;
     }
     .hero-bg-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(90deg, rgba(91, 45, 142, 0.92) 0%, rgba(91, 45, 142, 0.78) 50%, rgba(91, 45, 142, 0.55) 100%) !important;
+      background: none !important;
+      display: none !important;
       z-index: 1;
     }
     .hero-fullbleed-content {
-      max-width: 650px;
+      max-width: 620px;
       position: relative;
       z-index: 5;
       text-align: left;
-      transform: translateY(15px);
+      background: #ffffff !important;
+      padding: clamp(32px, 4.5vw, 48px) !important;
+      border-radius: 16px !important;
+      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.12) !important;
+      border: 1px solid rgba(0, 0, 0, 0.06);
     }
     .hero-fullbleed-title {
-      font-size: clamp(38px, 4.8vw, 64px) !important;
-      line-height: 1.08 !important;
-      font-weight: 700 !important;
-      color: #ffffff !important;
-      margin-top: 16px;
-      margin-bottom: 20px;
+      font-size: clamp(34px, 4.2vw, 56px) !important;
+      line-height: 1.1 !important;
+      font-weight: 800 !important;
+      color: var(--c-dark) !important;
+      margin-top: 0 !important;
+      margin-bottom: 18px !important;
       letter-spacing: -0.02em;
     }
     .hero-fullbleed-subtext {
-      font-size: clamp(16px, 1.8vw, 20px) !important;
-      line-height: 1.5 !important;
-      color: rgba(255, 255, 255, 0.88) !important;
-      margin-bottom: 32px;
+      font-size: clamp(15px, 1.6vw, 18px) !important;
+      line-height: 1.55 !important;
+      color: #4A4A68 !important;
+      margin-bottom: 28px !important;
       max-width: 580px;
     }
     .hero-fullbleed-actions {
@@ -222,7 +227,7 @@
       align-items: center;
       gap: 16px;
       flex-wrap: wrap;
-      margin-bottom: 36px;
+      margin-bottom: 0 !important;
     }
     .btn-green-hero {
       background-color: var(--c-green) !important;
@@ -268,7 +273,7 @@
       display: flex;
       align-items: center;
       gap: 12px;
-      background: rgba(61, 0, 128, 0.65) !important;
+      background: rgba(26, 26, 46, 0.75) !important;
       padding: 10px 18px;
       border-radius: 12px;
       backdrop-filter: blur(12px);
@@ -288,7 +293,7 @@
         margin: 0 auto !important;
         border-radius: 16px !important;
         background-position: center center !important;
-        padding: 48px 20px 110px !important;
+        padding: 48px 16px 110px !important;
         min-height: auto !important;
       }
       .hero-fullbleed-content {
@@ -297,6 +302,9 @@
         flex-direction: column;
         align-items: center;
         margin: 0 auto;
+        padding: 28px 20px !important;
+        width: 100%;
+        max-width: 100%;
       }
       .hero-fullbleed-title, .hero-fullbleed-subtext {
         text-align: center !important;
@@ -1756,8 +1764,8 @@
       padding: 0;
       text-align: left;
       display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(280px, 0.85fr);
-      gap: clamp(24px, 5vw, 72px);
+      grid-template-columns: minmax(0, 0.9fr) minmax(320px, 1.02fr);
+      gap: clamp(24px, 5vw, 64px);
       align-items: center;
     }
     .cta-card-inner h2,
@@ -1811,14 +1819,17 @@
       border-color: var(--c-white) !important;
     }
     .cta-image-placeholder {
-      min-height: 260px;
-      border-radius: 0;
+      width: 100%;
+      min-height: 280px;
+      border-radius: 16px 120px 16px 16px !important;
+      overflow: hidden !important;
       background: transparent;
       border: 0;
       display: flex;
       align-items: center;
       justify-content: center;
       color: var(--c-dark);
+      box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
     }
     .cta-image-placeholder svg {
       width: 56px;
@@ -1828,7 +1839,7 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      border-radius: 6px;
+      border-radius: 16px 120px 16px 16px !important;
       display: block;
     }
     @media (max-width: 820px) {
@@ -1840,6 +1851,7 @@
       }
       .cta-image-placeholder {
         min-height: 220px;
+        border-radius: 16px 120px 16px 16px !important;
       }
     }
     .application-section {
@@ -3473,41 +3485,36 @@
       position: relative;
       overflow: hidden;
       margin-top: 4px;
-      padding: clamp(28px, 4vw, 42px);
-      min-height: 320px;
-      border: 1px solid rgba(255,255,255,0.12);
-      border-radius: 8px 120px 120px 8px;
-      background: linear-gradient(135deg, var(--c-purple) 0%, #45348f 100%);
-      color: var(--c-white);
+      padding: clamp(40px, 5vw, 60px) clamp(24px, 4vw, 48px) !important;
+      min-height: 380px;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: flex-start !important;
+      border: 1px solid rgba(0,0,0,0.06) !important;
+      border-radius: 20px !important;
+      background-image: url('/Stonebridge_Website_New/img/why-simple-application.jpg') !important;
+      background-position: center right !important;
+      background-size: cover !important;
+      background-repeat: no-repeat !important;
+      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.08) !important;
     }
 
     .grow-benefits-cta::before,
     .grow-benefits-cta::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-    }
-
-    .grow-benefits-cta::before {
-      left: auto;
-      width: 58%;
-      background: url('/Stonebridge_Website_New/img/why-simple-application.jpg') center right / cover no-repeat;
-      opacity: 0.58;
-      -webkit-mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.24) 18%, #000 48%);
-      mask-image: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.24) 18%, #000 48%);
-    }
-
-    .grow-benefits-cta::after {
-      background:
-        linear-gradient(90deg, rgba(91,45,142,1) 0%, rgba(91,45,142,0.96) 36%, rgba(91,45,142,0.68) 62%, rgba(91,45,142,0.24) 100%),
-        linear-gradient(0deg, rgba(0,137,123,0.16), rgba(255,255,255,0.08));
+      display: none !important;
+      background: none !important;
     }
 
     .grow-benefits-cta-copy {
       position: relative;
-      z-index: 2;
+      z-index: 5;
       max-width: 620px;
+      text-align: left;
+      background: #ffffff !important;
+      padding: clamp(32px, 4.5vw, 44px) !important;
+      border-radius: 16px !important;
+      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.12) !important;
+      border: 1px solid rgba(0, 0, 0, 0.06);
     }
 
     .grow-benefits-cta-kicker {
@@ -3515,10 +3522,11 @@
       align-items: center;
       min-height: 28px;
       margin-bottom: 14px;
-      padding: 0 12px;
+      padding: 4px 14px;
       border-radius: 999px;
-      background: rgba(255,255,255,0.12);
-      color: rgba(255,255,255,0.78);
+      background: var(--c-purple-bg) !important;
+      color: var(--c-purple) !important;
+      border: 1px solid rgba(91, 45, 142, 0.18) !important;
       font-size: 12px;
       font-weight: 900;
       letter-spacing: 0.06em;
@@ -3526,21 +3534,21 @@
     }
 
     .grow-benefits-cta h3 {
-      margin: 0 0 10px;
-      color: var(--c-white);
-      font-size: clamp(28px, 3vw, 42px);
-      line-height: 1.08;
-      font-weight: 900;
-      letter-spacing: 0;
+      margin: 0 0 12px;
+      color: var(--c-dark) !important;
+      font-size: clamp(26px, 3vw, 38px);
+      line-height: 1.15;
+      font-weight: 800;
+      letter-spacing: -0.01em;
     }
 
     .grow-benefits-cta p {
-      max-width: 680px;
+      max-width: 580px;
       margin: 0;
-      color: rgba(255,255,255,0.82);
-      font-size: 17px;
-      line-height: 1.65;
-      font-weight: 650;
+      color: #4A4A68 !important;
+      font-size: 16px;
+      line-height: 1.6;
+      font-weight: 500;
     }
 
     .grow-benefits-cta-actions {
@@ -3554,17 +3562,19 @@
     }
 
     .grow-benefits-cta-primary {
-      background: var(--c-white) !important;
-      color: var(--c-purple) !important;
+      background: var(--c-purple) !important;
+      color: var(--c-white) !important;
+      border-radius: var(--radius-btn) !important;
+      border: none !important;
     }
 
     .grow-benefits-cta-primary span,
     .grow-benefits-cta-primary::after {
-      color: var(--c-purple) !important;
+      color: var(--c-white) !important;
     }
 
     .grow-benefits-cta-primary:hover {
-      background: var(--c-green) !important;
+      background: var(--c-purple-dark) !important;
       color: var(--c-white) !important;
     }
 
@@ -3582,15 +3592,6 @@
       .grow-benefits-cta-actions {
         justify-content: flex-start;
       }
-
-      .grow-benefits-cta::before {
-        width: 100%;
-        opacity: 0.24;
-      }
-
-      .grow-benefits-cta::after {
-        background: linear-gradient(90deg, rgba(91,45,142,0.98) 0%, rgba(91,45,142,0.9) 100%);
-      }
     }
 
     @media (max-width: 640px) {
@@ -3605,12 +3606,29 @@
         border-radius: 16px 40px 16px 16px;
       }
 
-      .grow-benefits-cta-actions .btn {
-        width: 100%;
+      .grow-benefits-cta {
+        padding: 28px 16px !important;
+        border-radius: 16px !important;
       }
 
-      .grow-benefits-cta {
-        border-radius: 8px 64px 64px 8px;
+      .grow-benefits-cta-copy {
+        width: 100%;
+        max-width: 100%;
+        padding: 28px 20px !important;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .grow-benefits-cta-actions {
+        width: 100%;
+        justify-content: center;
+      }
+
+      .grow-benefits-cta-actions .btn {
+        width: 100%;
+        justify-content: center;
       }
     }
 
